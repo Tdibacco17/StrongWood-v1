@@ -1,0 +1,14 @@
+.container-section-footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+
+    min-height: 4rem;
+    max-height: 4rem;
+    min-width: 100vw;
+    max-width: 100vw;
+
+    border-top: 2px solid var(--strong-primary-color);
+
+    overflow: hidden;
+}
