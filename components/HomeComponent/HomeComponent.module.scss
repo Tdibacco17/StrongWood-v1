@@ -2,7 +2,6 @@
     --videobanner-width-image: 100vw;
     --videobanner-height-image: 100vh;
 
-
     min-width: var(--videobanner-width-image);
     max-width: var(--videobanner-width-image);
 
@@ -10,45 +9,83 @@
     flex-direction: column;
     align-items: center;
     gap: 3rem;
-    
+
     .container-videobanner {
         .container-outer-image {
-
+            min-height: 100vh;
+            max-height: 100vh;
+            min-width: 100vw;
+            max-width: 100vw;
 
             position: relative;
             overflow: hidden;
-
-            min-height: var(--videobanner-height-image);
-            max-height: var(--videobanner-height-image);
-            min-width: var(--videobanner-width-image);
-            max-width: var(--videobanner-width-image);
 
             display: flex;
             justify-content: center;
             align-items: center;
 
-            .container-inner-image {}
 
-            .container-overlay-image {}
+            .container-inner-videobanner {
+                position: relative;
+                min-height: 100vh;
+                max-height: 100vh;
+                min-width: 100vw;
+                max-width: 100vw;
+            }
+
+            .container-overlay-image {
+                position: absolute;
+                min-width: 100%;
+                max-width: 100%;
+                min-height: 100%;
+                max-height: 100%;
+                background: var(--strong-background-color-transparency)
+            }
         }
     }
 
-    .container-two-images {
+    .container-general-categories {
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
+        align-items: center;
         gap: 3rem;
 
+        padding-bottom: 3rem;
+
         .container-outer-image {
+            --general-categoires-image-width: 80vw;
+            --general-categoires-proportion: calc(100vw * 0.665343915);
+
+            min-height: 70vh;
+            max-height: 70vh;
+            min-width: var(--general-categoires-image-width);
+            max-width: var(--general-categoires-image-width);
+
             position: relative;
+            overflow: hidden;
 
-            min-height: 65vh;
-            max-height: 65vh;
-            min-width: 80vw;
-            max-width: 80vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-            .container-inner-image {}
+            .container-inner-image {
+                position: relative;
+                min-height: var(--general-categoires-proportion);
+                max-height: var(--general-categoires-proportion);
+                min-width: 100vw;
+                max-width: 100vw;
+
+            }
+
+            .container-overlay-image {
+                position: absolute;
+                min-width: 100%;
+                max-width: 100%;
+                min-height: 100%;
+                max-height: 100%;
+                background: var(--strong-background-color-transparency)
+            }
         }
     }
 }

@@ -18,7 +18,7 @@ export default function HomeComponent() {
                 </div>
             </div>
 
-            <div className={styles["container-two-images"]}>
+            <div className={styles["container-general-categories"]}>
                 <div className={styles["container-outer-image"]}>
                     <div className={styles["container-inner-image"]}>
                         <Image
