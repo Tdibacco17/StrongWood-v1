@@ -1,10 +1,10 @@
-import VideoBannerComponent from "@/components/VideoBannerComponent/VideoBannerComponent";
+import HomeComponent from "@/components/HomeComponent/HomeComponent";
 import LayoutComponent from "@/layout/LayoutComponent";
 
 export default function HomePage() {
   return (
     <LayoutComponent>
-      <VideoBannerComponent />
+      <HomeComponent />
     </LayoutComponent>
   )
 }
