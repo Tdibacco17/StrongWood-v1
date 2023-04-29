@@ -1,17 +1,23 @@
-import useScrollPosition from "@/utils/scroll/useScrollPosition";
+import { useScrollPosition, NAVBAR_HEIGHT } from "@/utils/scroll/useScrollPosition";
 import styles from "./NavbarComponent.module.scss";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function NavbarComponent() {
-    const scrolledDown = useScrollPosition() === -80; // 80px === 5rem
-    const [hidden, setHidden] = useState<boolean>(false);
+    const { isScrolled, isAtTop, scrollPosition } = useScrollPosition() // === -NAVBAR_HEIGHT; // 80px === 5rem
+    const hiddenRef = useRef<boolean>(false);
 
     useEffect(() => {
-        setHidden(scrolledDown);
-    }, [scrolledDown]);
+        hiddenRef.current = isScrolled === -NAVBAR_HEIGHT;
+    }, [isScrolled]);
+
+    console.log("[scrollPosition] :", scrollPosition);
+    console.log("[isAtTop] :", isAtTop);
 
     return (
-        <div className={`${styles["container-section-navbar"]} ${hidden ? styles.hidden : ""}`}>
+        <div
+            className={`${styles["container-section-navbar"]} ${hiddenRef.current ? styles["hidden"] : ""
+                } ${isAtTop ? styles["isTransparency"] : styles["isBlackBackground"]}`}
+        >
             <h2 className={styles["title"]}>STRONG WOOD</h2>
         </div>
     );
