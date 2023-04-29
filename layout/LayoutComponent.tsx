@@ -4,7 +4,13 @@ import styles from "./LayoutComponent.module.scss"
 
 import Head from "next/head";
 
-export default function LayoutComponent({ children }: { children: React.ReactNode }) {
+export default function LayoutComponent({
+    children,
+    isHomePage
+}: {
+    children: React.ReactNode,
+    isHomePage: boolean
+}) {
     return (
         <>
             <Head>
@@ -15,7 +21,7 @@ export default function LayoutComponent({ children }: { children: React.ReactNod
             </Head>
 
             <main>
-                <NavbarComponent />
+                <NavbarComponent isHomePage={isHomePage} />
                 {children}
                 <FooterComponent />
             </main>

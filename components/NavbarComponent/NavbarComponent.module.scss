@@ -35,14 +35,29 @@
         transform: translateY(-5rem);
         transition: transform 0.3s ease-in-out;
     }
-}
 
-.isTransparency {
-    background: transparent;
-    border-bottom: 2px solid var(--strong-tertiary-color);
-}
+    &.isTransparency {
+        background: transparent;
+        border-bottom: 2px solid var(--strong-tertiary-color);
 
-.isBlackBackground {
-    background: var(--strong-secondary-color);
-    border-bottom: 2px solid var(--strong-secondary-color);
+        &:hover {
+            background: var(--strong-secondary-color);
+            border-bottom: 2px solid var(--strong-secondary-color);
+            transition: 0.3s ease-in-out;
+        }
+    }
+
+    &.isDark {
+        background: var(--strong-secondary-color);
+        border-bottom: 2px solid var(--strong-secondary-color);
+    }
+
+    &.isOtherSection {
+        background: var(--strong-primary-color);
+        border-bottom: 2px solid var(--strong-tertiary-color);
+
+        .title {
+            color: var(--strong-tertiary-color);
+        }
+    }
 }

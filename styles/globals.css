@@ -100,8 +100,8 @@ body {
 
 body {
   margin: 0;
-  margin-bottom: 4rem;
-  /* footer height */
+  margin-bottom: 7rem;
+  /* footer height + padding separador*/
 
   height: 100%;
   min-height: 100%;

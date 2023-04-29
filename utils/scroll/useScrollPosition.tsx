@@ -4,6 +4,7 @@ export const NAVBAR_HEIGHT: number = 80;
 
 export const useScrollPosition = () => {
     const [isAtTop, setIsAtTop] = useState<boolean>(true);
+    
     const [scrollPosition, setScrollPosition] = useState<number>(0);
     const [previousPosition, setPreviousPosition] = useState<number>(0);
     const scrollPositionRef = useRef<number>(0);

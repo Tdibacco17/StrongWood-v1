@@ -3,7 +3,7 @@ import LayoutComponent from "@/layout/LayoutComponent";
 
 export default function HomePage() {
   return (
-    <LayoutComponent>
+    <LayoutComponent isHomePage={true} >
       <HomeComponent />
     </LayoutComponent>
   )
