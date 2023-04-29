@@ -1,0 +1,52 @@
+.container-section-banner {
+    //4024 % 6048 => 0,665
+    //4024 % 6048 => 1,502
+    --banner-image-outer-height: 100vh;
+    --banner-image-outer-width: 100vw;
+
+    --banner-image-inner-height: 100vw;
+    --banner-image-proportion: calc((var(--banner-image-inner-height)) * 1.502);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+
+    min-width: 100vw;
+    max-width: 100vw;
+    min-height: 100vh;
+    max-height: 100vh;
+
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    .container-outer-image {
+        position: relative;
+        min-height: var(--banner-image-outer-height);
+        max-height: var(--banner-image-outer-height);
+        min-width: var(--banner-image-outer-width);
+        max-width: var(--banner-image-outer-width);
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+
+        overflow: hidden;
+
+        .container-inner-image {
+            position: relative;
+            min-height: var(--banner-image-inner-height);
+            max-height: var(--banner-image-inner-height);
+            min-width: var(--banner-image-proportion);
+            max-width: var(--banner-image-proportion);
+        }
+
+        .container-overlay-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
