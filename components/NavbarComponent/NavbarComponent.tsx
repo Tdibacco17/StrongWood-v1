@@ -1,4 +1,4 @@
-import useScrollPosition from "@/hooks/useScrollPosition";
+import useScrollPosition from "@/utils/scroll/useScrollPosition";
 import styles from "./NavbarComponent.module.scss";
 import { useEffect, useState } from "react";
 
