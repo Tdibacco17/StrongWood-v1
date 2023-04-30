@@ -4,7 +4,6 @@ export default function test() {
 
   return (
     <LayoutComponent isHomePage={false}>
-      
     </LayoutComponent>
   )
 }
