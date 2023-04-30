@@ -48,7 +48,7 @@
   --strong-secondary-color: #1a1a1a;
   --strong-tertiary-color: #333;
 
-  --strong-bg-color-transparency: rgba(0, 0, 0, 0.55);
+  --strong-bg-color-transparency: rgba(0, 0, 0, 0.3);
   --strong-bg-gradient-img: linear-gradient(to bottom, transparent 55%, var(--strong-secondary-color));
 }
 
