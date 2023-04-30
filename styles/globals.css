@@ -32,7 +32,7 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
-  
+
   /* colores tipografia */
   --strong-bs-gray-100: #f8f9fa;
   --strong-bs-gray-200: #e9ecef;
@@ -47,7 +47,7 @@
   --strong-primary-color: #ebebeb;
   --strong-secondary-color: #1a1a1a;
   --strong-tertiary-color: #333;
-  
+
   --strong-bg-color-transparency: rgba(0, 0, 0, 0.55);
   --strong-bg-gradient-img: linear-gradient(to bottom, transparent 55%, var(--strong-secondary-color));
 }
@@ -100,8 +100,8 @@ body {
 
 body {
   margin: 0;
-  margin-bottom: 7rem;
-  /* footer height + padding separador*/
+  margin-bottom: 6rem;
+  /* footer height 6rem (padding + gap) - 2.5padding top para igualar el gap de lahome*/
 
   height: 100%;
   min-height: 100%;
@@ -111,6 +111,20 @@ body {
 
   color: rgb(var(--foreground-rgb));
   background: var(--strong-secondary-color);
+}
+
+/* barra lateral de scroll*/
+body::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
 }
 
 a {

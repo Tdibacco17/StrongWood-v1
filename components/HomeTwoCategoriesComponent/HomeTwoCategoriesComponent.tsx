@@ -10,7 +10,7 @@ export default function HomeTwoCategoriesComponent() {
                     <div className={styles["container-inner-image"]}>
                         <Image
                             src={"/assets/img/home/twoCategories/strong1.jpg"}
-                            alt="Video banner"
+                            alt="Image banner"
                             fill
                             priority
                         />
@@ -25,7 +25,7 @@ export default function HomeTwoCategoriesComponent() {
                     <div className={styles["container-inner-image"]}>
                         <Image
                             src={"/assets/img/home/twoCategories/strong2.jpg"}
-                            alt="Video banner"
+                            alt="Image banner"
                             fill
                             priority
                         />
