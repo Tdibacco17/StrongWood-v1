@@ -45,6 +45,7 @@
   --strong-bs-gray-900: #212529;
 
   --strong-primary-color: #ebebeb;
+  --strong-primary-color-blurred: #ebebeba1;
   --strong-secondary-color: #1a1a1a;
   --strong-tertiary-color: #333;
 
@@ -115,7 +116,7 @@ body {
 
 /* barra lateral de scroll*/
 body::-webkit-scrollbar {
-  width: 0.4rem;
+  width: 0.5rem;
 }
 
 body::-webkit-scrollbar-track {

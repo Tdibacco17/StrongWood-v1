@@ -1,12 +1,11 @@
-import Image from "next/image"
 import styles from "./HomeComponent.module.scss"
 import HomeTwoCategoriesComponent from "../HomeTwoCategoriesComponent/HomeTwoCategoriesComponent"
-import HomeBannerComponent from "../HomeBannerComponent/HomeBannerComponent"
+import HomeSliderComponent from "../HomeSliderComponent/HomeSliderComponent"
 
 export default function HomeComponent() {
     return (
         <div className={styles["container-section-home"]}>
-            <HomeBannerComponent />
+            <HomeSliderComponent />
             <HomeTwoCategoriesComponent />
         </div>
     )

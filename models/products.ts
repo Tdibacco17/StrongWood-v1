@@ -1,6 +1,6 @@
-import { ProjectDataInterface } from "@/types/ProductsTypes";
+// import { ProjectDataInterface } from "@/types/ProductsTypes";
 
-export const productsData: ProjectDataInterface = {
+export const productsData /*: ProjectDataInterface */ = {
     "project-1": {
         title: "Axis Miami",
         image: "/assets/img/project-detail/project-1/project-1-portrait.webp",
