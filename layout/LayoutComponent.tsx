@@ -1,6 +1,5 @@
 import FooterComponent from "@/components/FooterComponent/FooterComponent";
 import NavbarComponent from "@/components/NavbarComponent/NavbarComponent";
-import styles from "./LayoutComponent.module.scss"
 
 import Head from "next/head";
 

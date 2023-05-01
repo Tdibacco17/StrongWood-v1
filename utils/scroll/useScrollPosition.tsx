@@ -31,7 +31,6 @@ export const useScrollPosition = () => {
 
     return {
         isScrolled: scrollPosition > previousPosition ? -NAVBAR_HEIGHT : 0,
-        scrollPosition,
         isAtTop
     }
 };

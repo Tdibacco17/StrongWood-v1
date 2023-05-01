@@ -50,7 +50,8 @@
   --strong-tertiary-color: #333;
 
   --strong-bg-color-transparency: rgba(0, 0, 0, 0.3);
-  --strong-bg-gradient-img: linear-gradient(to bottom, transparent 55%, var(--strong-secondary-color));
+  --strong-bg-gradient-img-gray: linear-gradient(to bottom, transparent 45%, var(--strong-secondary-color));
+  --strong-bg-gradient-img-black: linear-gradient(to bottom, transparent 75%, black 100%);
 }
 
 @media (prefers-color-scheme: dark) {

@@ -8,7 +8,7 @@
     max-width: 100vw;
 
     background: transparent;
-    border-bottom: 2px dotted var(--strong-tertiary-color);
+    border-bottom: 1px dotted var(--strong-tertiary-color);
 
     display: flex;
     justify-content: center;
@@ -23,12 +23,14 @@
         font-size: 2rem;
         font-weight: 900;
         letter-spacing: 0.25rem;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+
         color: var(--strong-primary-color);
     }
 
     &:hover {
         background: var(--strong-secondary-color);
-        border-bottom: 2px solid var(--strong-secondary-color);
+        border-bottom: 1px solid var(--strong-secondary-color);
         transition: 0.3s ease-in-out;
     }
 
@@ -39,23 +41,23 @@
 
     &.isTransparency {
         background: transparent;
-        border-bottom: 2px solid var(--strong-tertiary-color);
+        border-bottom: none; // 1px solid var(--strong-secondary-color);
 
         &:hover {
             background: var(--strong-secondary-color);
-            border-bottom: 2px solid var(--strong-secondary-color);
+            border-bottom: none; // 1px solid var(--strong-secondary-color);
             transition: 0.3s ease-in-out;
         }
     }
 
     &.isDark {
         background: var(--strong-secondary-color);
-        border-bottom: 2px solid var(--strong-secondary-color);
+        border-bottom: 1px solid var(--strong-secondary-color);
     }
 
     &.isOtherSection {
         background: var(--strong-primary-color);
-        border-bottom: 2px solid var(--strong-tertiary-color);
+        border-bottom: 1px solid var(--strong-tertiary-color);
 
         .title {
             color: var(--strong-tertiary-color);

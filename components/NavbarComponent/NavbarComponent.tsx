@@ -5,15 +5,13 @@ import Link from "next/link";
 
 export default function NavbarComponent({ isHomePage }: { isHomePage: Boolean }) {
 
-    const { isScrolled, isAtTop, scrollPosition } = useScrollPosition() // 80px === 5rem
+    const { isScrolled, isAtTop } = useScrollPosition() // 80px === 5rem
     const hiddenRef = useRef<boolean>(false);
 
     useEffect(() => {
         hiddenRef.current = isScrolled === -NAVBAR_HEIGHT;
     }, [isScrolled]);
 
-    // console.log("[scrollPosition] :", scrollPosition);
-    // console.log("[isAtTop] :", isAtTop);
     return (
         <div
             className={`
