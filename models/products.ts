@@ -1,134 +1,52 @@
-// import { ProjectDataInterface } from "@/types/ProductsTypes";
+// import { ProductDataInterface } from "@/types/Interfaces";
 
-export const productsData /*: ProjectDataInterface */ = {
-    "project-1": {
-        title: "Axis Miami",
-        image: "/assets/img/project-detail/project-1/project-1-portrait.webp",
-        projectSlug: "project-1",
-        textNumber: "01 /",
-        year: "2022",
-        location: "Florida, Estados Unidos",
-        detail: {
-            portraitImg: {
-                imgSrc: "/assets/img/project-detail/project-1/project-1-portrait.webp",
-                imgAlt: "Living room photo",
-                imgProportionsX: 1.777,
-                imgProportionsY: 0.562,
-            },
-            technicalInfo: {
-                title: "Axis Miami",
-                description: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu scelerisque ante pulvinar. Donec ut rhoncus ex. 
-                <br />
-                Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus. Tempor quis eros tempus lacinia.</p>`,
-                footer: {
-                    architects: [
-                        {
-                            name: "Belén Arato",
-                        },
-                        {
-                            name: "Josefina Falco",
-                        },
-                    ],
-                    proposalType: "ARQ + INTERIORISMO",
-                    year: "2022",
-                    location: "MIAMI, U.S.A.",
-                },
-                blueprintInfo: {
-                    imgSrc: "/assets/img/project-detail/project-1/project_detail2.png",
-                    imgAlt: "blueprint",
-                    imgProportionsX: 1.025,
-                },
-            },
-            firstTwoSmallImg: [
-                {
-                    imgSrc: "/assets/img/project-detail/project-1/project_detail3.png",
-                    imgAlt: "project",
-                },
-                {
-                    imgSrc: "/assets/img/project-detail/project-1/project_detail4.png",
-                    imgAlt: "project",
-                },
-            ],
-            secondTwoSmallImg: [
-                {
-                    imgSrc: "/assets/img/project-detail/project-1/project_detail6.png",
-                    imgAlt: "project",
-                },
-                {
-                    imgSrc: "/assets/img/project-detail/project-1/project_detail7.png",
-                    imgAlt: "project",
-                },
-            ],
-            optionalProjectLogo: {
-                imgSrc: "/assets/img/project-detail/project-1/project_detail_logo.png",
-                imgAlt: "project logo",
-                imgProportionsY: 0.418,
-            },
+import { ProductDataInterface } from "@/types/Interfaces";
+
+export const productsData: ProductDataInterface = {
+    "mesa-de-luz-roma": {
+        productSlug: 1,
+        title: "mesa de luz roma",
+        price: 78610.00,
+        offerPrice: 54827.00,
+        offerPercentage: 30,
+        image: {
+            imgSlug: 1,
+            imgSrc: "/image.jpg",
+            imgAlt: "mesa de luz roma",
+            originalWidth: 800,
+            originalHeight: 900,
         },
-    },
-    "project-2": {
-        title: "Axis Miami",
-        image: "/assets/img/project-detail/project-1/project-1-portrait.webp",
-        projectSlug: "project-1",
-        textNumber: "01 /",
-        year: "2022",
-        location: "Florida, Estados Unidos",
         detail: {
-            portraitImg: {
-                imgSrc: "/assets/img/project-detail/project-1/project-1-portrait.webp",
-                imgAlt: "Living room photo",
-                imgProportionsX: 1.777,
-                imgProportionsY: 0.562,
+            description: {
+                title: "Mesa de luz ideal para lucir tu cuarto más elegante.",
+                qualities: [
+                    "Gracias a su delicado recubrimiento de laca y a su gran dureza esta mesa te perdurará de por vida!",
+                    "Su amplia cajonera permitirá mantener el orden de tu cuarto.",
+                    "Asimismo, es importante destacar que gracias a sus gomas protectoras inferiores tus pisos no se verán dañados."
+                ],
+                measures: "80cm x 40 cm.",
+                materials: [
+                    "Pino",
+                    "Petiribi",
+                    "Roble"
+                ],
             },
-            technicalInfo: {
-                title: "Axis Miami",
-                description: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu scelerisque ante pulvinar. Donec ut rhoncus ex. 
-                <br />
-                Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus. Tempor quis eros tempus lacinia.</p>`,
-                footer: {
-                    architects: [
-                        {
-                            name: "Belén Arato",
-                        },
-                        {
-                            name: "Josefina Falco",
-                        },
-                    ],
-                    proposalType: "ARQ + INTERIORISMO",
-                    year: "2022",
-                    location: "MIAMI, U.S.A.",
-                },
-                blueprintInfo: {
-                    imgSrc: "/assets/img/project-detail/project-1/project_detail2.png",
-                    imgAlt: "blueprint",
-                    imgProportionsX: 1.025,
-                },
-            },
-            firstTwoSmallImg: [
+            images: [
                 {
-                    imgSrc: "/assets/img/project-detail/project-1/project_detail3.png",
-                    imgAlt: "project",
+                    imgSlug: 2,
+                    imgSrc: "/image.jpg",
+                    imgAlt: "mesa de luz roma",
+                    originalWidth: 800,
+                    originalHeight: 900,
                 },
                 {
-                    imgSrc: "/assets/img/project-detail/project-1/project_detail4.png",
-                    imgAlt: "project",
+                    imgSlug: 3,
+                    imgSrc: "/image.jpg",
+                    imgAlt: "mesa de luz roma",
+                    originalWidth: 800,
+                    originalHeight: 900,
                 },
             ],
-            secondTwoSmallImg: [
-                {
-                    imgSrc: "/assets/img/project-detail/project-1/project_detail6.png",
-                    imgAlt: "project",
-                },
-                {
-                    imgSrc: "/assets/img/project-detail/project-1/project_detail7.png",
-                    imgAlt: "project",
-                },
-            ],
-            optionalProjectLogo: {
-                imgSrc: "/assets/img/project-detail/project-1/project_detail_logo.png",
-                imgAlt: "project logo",
-                imgProportionsY: 0.418,
-            },
-        },
-    },
+        }
+    }
 }

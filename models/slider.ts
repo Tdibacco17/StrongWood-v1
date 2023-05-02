@@ -1,6 +1,6 @@
-import { DataSliderInterface } from "@/types/Interfaces";
+import { ImgDataInterface } from "@/types/Interfaces";
 
-export const dataSlider: DataSliderInterface[] = [
+export const dataSlider: ImgDataInterface[] = [
     {
         imgSlug: 1,
         imgSrc: "/assets/img/home/slider/strong3.jpg",
