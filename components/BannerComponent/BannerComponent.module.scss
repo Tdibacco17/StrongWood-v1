@@ -6,16 +6,21 @@
     --banner-image-proportion: calc((var(--banner-image-inner-height)) * (var(--original-width)) / (var(--original-height)));
 
     position: relative;
-    min-height: var(--banner-image-outer-height);
-    max-height: var(--banner-image-outer-height);
-    min-width: var(--banner-image-outer-width);
-    max-width: var(--banner-image-outer-width);
+    min-height: 100vh;
+    max-height: 100vh;
+    min-width: 100vw;
+    max-width: 100vw;
 
     display: flex;
     align-items: flex-start;
     justify-content: center;
 
     overflow: hidden;
+
+    @media (max-width: 576px) {
+        --banner-image-inner-height: 100vh;
+        --banner-image-proportion: calc((var(--banner-image-inner-height)) * (var(--original-height)) / (var(--original-width)));
+    }
 
     .container-inner-image {
         position: relative;
