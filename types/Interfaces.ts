@@ -10,8 +10,8 @@ export interface ProductInterface {
     productSlug: number,
     title: string,
     image: ImgDataInterface,
-    price: number,
-    offerPrice?: number,
+    price: string,
+    offerPrice?: string,
     offerPercentage?: number,
     detail: {
         description?: DescriptionInterface,

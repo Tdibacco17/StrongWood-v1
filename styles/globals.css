@@ -134,6 +134,10 @@ a {
   text-decoration: none;
 }
 
+.wrapper-navbar {
+  padding-top: 5rem;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

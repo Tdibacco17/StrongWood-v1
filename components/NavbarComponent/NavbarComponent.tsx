@@ -13,18 +13,24 @@ export default function NavbarComponent({ isHomePage }: { isHomePage: Boolean })
     }, [isScrolled]);
 
     return (
-        <div
-            className={`
-            ${styles["container-section-navbar"]} 
-            ${hiddenRef.current ? styles["hidden"] : ""} 
-            ${isHomePage ?
+        <div className={`${styles['container-section-navbar']} ${hiddenRef.current ? styles["hidden"] : ""}`}>
+            <div className={`
+                    ${styles['container-primary-nav']}
+                    ${isHomePage ?
                     isAtTop ? styles["isTransparency"] : styles["isDark"]
-                    : styles["isOtherSection"]
-                }
-            `}>
-            <Link href={"/"}>
-                <h2 className={styles["title"]}>STRONG WOOD</h2>
-            </Link>
+                    : styles["isOtherSection"]}
+                `}>
+                <Link href={"/"}>
+                    <h2 className={styles["title"]}>STRONG WOOD</h2>
+                </Link>
+            </div>
+
+            {
+                !isHomePage &&
+                <div className={styles['container-secondary-nav']}>
+                    <h2 className={styles["title"]}>funcionalidades</h2>
+                </div>
+            }
         </div>
     );
 }

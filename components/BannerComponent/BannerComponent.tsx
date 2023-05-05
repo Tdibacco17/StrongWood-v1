@@ -29,8 +29,13 @@ export default function BannerComponent({
     return (
         <div className={styles["container-outer-image"]} style={newValues}>
             <div className={styles["container-inner-image"]}>
-                <Image src={imgSrc} alt={imgAlt} fill priority />
+                <Image
+                    src={imgSrc}
+                    alt={imgAlt}
+                    fill
+                    priority />
             </div>
+            <div className={styles["container-overlay-image"]} />
         </div>
     );
 }

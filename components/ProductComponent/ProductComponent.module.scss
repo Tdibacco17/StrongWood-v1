@@ -1,0 +1,22 @@
+.container-section-products {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 100vw;
+    max-width: 100vw;
+
+    padding-top: 12.5rem;
+
+    .container-cards-products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 3rem;
+
+        min-width: calc(100% - 7rem);
+        max-width: calc(100% - 7rem);
+
+        background: green;
+    }
+}
