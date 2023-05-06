@@ -415,4 +415,280 @@ export const productsData: ProductDataInterface = {
             ],
         }
     },
+    "llavero-corfu": {
+        productSlug: "llavero-corfu",
+        title: "Llavero Corfu",
+        price: "78,610.00",
+        offerPrice: "54,827.00",
+        offerPercentage: 24,
+        image: {
+            imgSlug: 1,
+            imgSrc: "/assets/img/strongWood/llaveroCorfu/llaveroCorfu1.webp",
+            imgAlt: "Llavero Corfu",
+            originalWidth: 4016,
+            originalHeight: 4016,
+        },
+        detail: {
+            images: [
+                {
+                    imgSlug: 2,
+                    imgSrc: "/assets/img/strongWood/llaveroCorfu/llaveroCorfu2.webp",
+                    imgAlt: "Llavero Corfu",
+                    originalWidth: 4016,
+                    originalHeight: 4016,
+                },
+                {
+                    imgSlug: 3,
+                    imgSrc: "/assets/img/strongWood/llaveroCorfu/llaveroCorfu3.webp",
+                    imgAlt: "Llavero Corfu",
+                    originalWidth: 4016,
+                    originalHeight: 4016,
+                },
+                {
+                    imgSlug: 4,
+                    imgSrc: "/assets/img/strongWood/llaveroCorfu/llaveroCorfu4.webp",
+                    imgAlt: "Llavero Corfu",
+                    originalWidth: 4016,
+                    originalHeight: 4016,
+                },
+            ],
+        }
+    },
+    "llavero-viena": {
+        productSlug: "llavero-viena",
+        title: "Llavero Viena",
+        price: "78,610.00",
+        offerPrice: "54,827.00",
+        offerPercentage: 24,
+        image: {
+            imgSlug: 1,
+            imgSrc: "/assets/img/strongWood/llaveroViena/llaveroViena1.webp",
+            imgAlt: "Llavero Viena",
+            originalWidth: 3696,
+            originalHeight: 3696,
+        },
+        detail: {
+            images: [
+                {
+                    imgSlug: 2,
+                    imgSrc: "/assets/img/strongWood/llaveroViena/llaveroViena2.webp",
+                    imgAlt: "Llavero Viena",
+                    originalWidth: 4016,
+                    originalHeight: 4016,
+                },
+                {
+                    imgSlug: 3,
+                    imgSrc: "/assets/img/strongWood/llaveroViena/llaveroViena3.webp",
+                    imgAlt: "Llavero Viena",
+                    originalWidth: 3838,
+                    originalHeight: 3838,
+                },
+                {
+                    imgSlug: 4,
+                    imgSrc: "/assets/img/strongWood/llaveroViena/llaveroViena4.webp",
+                    imgAlt: "Llavero Viena",
+                    originalWidth: 4016,
+                    originalHeight: 4016,
+                },
+                {
+                    imgSlug: 5,
+                    imgSrc: "/assets/img/strongWood/llaveroViena/llaveroViena5.webp",
+                    imgAlt: "Llavero Viena",
+                    originalWidth: 3862,
+                    originalHeight: 3862,
+                },
+            ],
+        }
+    },
+    "leñero": {
+        productSlug: "leñero",
+        title: "Leñero",
+        price: "78,610.00",
+        offerPrice: "54,827.00",
+        offerPercentage: 24,
+        image: {
+            imgSlug: 1,
+            imgSrc: "/assets/img/strongWood/leñero/leñero1.webp",
+            imgAlt: "Leñero",
+            originalWidth: 4016,
+            originalHeight: 4016,
+        },
+        detail: {
+            images: [
+                {
+                    imgSlug: 2,
+                    imgSrc: "/assets/img/strongWood/leñero/leñero2.webp",
+                    imgAlt: "Llavero Viena",
+                    originalWidth: 4016,
+                    originalHeight: 4016,
+                },
+                {
+                    imgSlug: 3,
+                    imgSrc: "/assets/img/strongWood/leñero/leñero3.webp",
+                    imgAlt: "Llavero Viena",
+                    originalWidth: 4016,
+                    originalHeight: 4016,
+                },
+                {
+                    imgSlug: 4,
+                    imgSrc: "/assets/img/strongWood/leñero/leñero4.webp",
+                    imgAlt: "Llavero Viena",
+                    originalWidth: 4016,
+                    originalHeight: 4016,
+                },
+            ],
+        }
+    },
+    "rack-tv-cordoba": {
+        productSlug: "rack-tv-cordoba",
+        title: "Rack TV Cordoba",
+        price: "78,610.00",
+        offerPrice: "54,827.00",
+        offerPercentage: 24,
+        image: {
+            imgSlug: 1,
+            imgSrc: "/assets/img/strongWood/rackTvCordoba/rackTvCordoba1.webp",
+            imgAlt: "Rack TV Cordoba",
+            originalWidth: 4016,
+            originalHeight: 4016,
+        },
+        detail: {
+            images: [
+                {
+                    imgSlug: 2,
+                    imgSrc: "/assets/img/strongWood/rackTvCordoba/rackTvCordoba2.webp",
+                    imgAlt: "Rack TV Cordoba",
+                    originalWidth: 4016,
+                    originalHeight: 4016,
+                },
+                {
+                    imgSlug: 3,
+                    imgSrc: "/assets/img/strongWood/rackTvCordoba/rackTvCordoba3.webp",
+                    imgAlt: "Rack TV Cordoba",
+                    originalWidth: 4016,
+                    originalHeight: 4016,
+                },
+                {
+                    imgSlug: 4,
+                    imgSrc: "/assets/img/strongWood/rackTvCordoba/rackTvCordoba4.webp",
+                    imgAlt: "Rack TV Cordoba",
+                    originalWidth: 4016,
+                    originalHeight: 4016,
+                },
+                {
+                    imgSlug: 5,
+                    imgSrc: "/assets/img/strongWood/rackTvCordoba/rackTvCordoba5.webp",
+                    imgAlt: "Rack TV Cordoba",
+                    originalWidth: 4016,
+                    originalHeight: 4016,
+                },
+                {
+                    imgSlug: 6,
+                    imgSrc: "/assets/img/strongWood/rackTvCordoba/rackTvCordoba6.webp",
+                    imgAlt: "Rack TV Cordoba",
+                    originalWidth: 4016,
+                    originalHeight: 4016,
+                },
+                {
+                    imgSlug: 7,
+                    imgSrc: "/assets/img/strongWood/rackTvCordoba/rackTvCordoba7.webp",
+                    imgAlt: "Rack TV Cordoba",
+                    originalWidth: 4016,
+                    originalHeight: 4016,
+                },
+            ],
+        }
+    },
+    "toallero-matera": {
+        productSlug: "toallero-matera",
+        title: "Toallero Matera",
+        price: "78,610.00",
+        offerPrice: "54,827.00",
+        offerPercentage: 24,
+        image: {
+            imgSlug: 1,
+            imgSrc: "/assets/img/strongWood/toalleroMatera/toalleroMatera1.webp",
+            imgAlt: "Toallero Matera",
+            originalWidth: 4016,
+            originalHeight: 4016,
+        },
+        detail: {
+            images: [
+                {
+                    imgSlug: 2,
+                    imgSrc: "/assets/img/strongWood/toalleroMatera/toalleroMatera2.webp",
+                    imgAlt: "Toallero Matera",
+                    originalWidth: 4016,
+                    originalHeight: 4016,
+                },
+                {
+                    imgSlug: 3,
+                    imgSrc: "/assets/img/strongWood/toalleroMatera/toalleroMatera3.webp",
+                    imgAlt: "Toallero Matera",
+                    originalWidth: 4016,
+                    originalHeight: 4016,
+                },
+                {
+                    imgSlug: 4,
+                    imgSrc: "/assets/img/strongWood/toalleroMatera/toalleroMatera4.webp",
+                    imgAlt: "Toallero Matera",
+                    originalWidth: 4016,
+                    originalHeight: 4016,
+                },
+            ],
+        }
+    },
+    "toallero-cuenca": {
+        productSlug: "toallero-cuenca",
+        title: "Toallero Cuenca",
+        price: "78,610.00",
+        offerPrice: "54,827.00",
+        offerPercentage: 24,
+        image: {
+            imgSlug: 1,
+            imgSrc: "/assets/img/strongWood/toalleroCuenca/toalleroCuenca1.webp",
+            imgAlt: "Toallero Cuenca",
+            originalWidth: 3928,
+            originalHeight: 3928,
+        },
+        detail: {
+            images: [
+                {
+                    imgSlug: 2,
+                    imgSrc: "/assets/img/strongWood/toalleroCuenca/toalleroCuenca2.webp",
+                    imgAlt: "Toallero Cuenca",
+                    originalWidth: 4016,
+                    originalHeight: 4016,
+                },
+                {
+                    imgSlug: 3,
+                    imgSrc: "/assets/img/strongWood/toalleroCuenca/toalleroCuenca3.webp",
+                    imgAlt: "Toallero Cuenca",
+                    originalWidth: 4016,
+                    originalHeight: 4016,
+                },
+                {
+                    imgSlug: 4,
+                    imgSrc: "/assets/img/strongWood/toalleroCuenca/toalleroCuenca4.webp",
+                    imgAlt: "Toallero Cuenca",
+                    originalWidth: 4016,
+                    originalHeight: 4016,
+                },
+                {
+                    imgSlug: 5,
+                    imgSrc: "/assets/img/strongWood/toalleroCuenca/toalleroCuenca5.webp",
+                    imgAlt: "Toallero Cuenca",
+                    originalWidth: 3928,
+                    originalHeight: 3928,
+                },
+                {
+                    imgSlug: 6,
+                    imgSrc: "/assets/img/strongWood/toalleroCuenca/toalleroCuenca6.webp",
+                    imgAlt: "Toallero Cuenca",
+                    originalWidth: 3965,
+                    originalHeight: 3965,
+                },
+            ],
+        }
+    },
 }
