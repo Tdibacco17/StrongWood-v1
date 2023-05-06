@@ -1,7 +1,7 @@
-import React from "react"
 import styles from "./ProductComponent.module.scss"
 import { productsData } from "@/models/products"
 import ProductCardComponent from "../ProductCardComponent/ProductCardComponent"
+import Link from "next/link"
 
 export default function ProductComponent() {
 
@@ -10,11 +10,11 @@ export default function ProductComponent() {
             <div className={styles["container-cards-products"]}>
                 {productsData &&
                     Object.keys(productsData).map(
-                        (productKey: string, index: number) => {
+                        (productKey: string) => {
                             return (
-                                <React.Fragment key={`${productKey}`}>
+                                <Link href={`/products/${productKey}`} key={`${productKey}`}>
                                     <ProductCardComponent product={productsData[productKey]} />
-                                </React.Fragment>
+                                </Link>
                             )
                         }
                     )}
