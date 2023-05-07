@@ -11,9 +11,6 @@ export default function ProductCardComponent({
         "--original-width": `${product.image.originalWidth}`,
         "--original-height": `${product.image.originalHeight}`,
         "--price-line-through": `${product.offerPrice ? "line-through" : "none"}`,
-        "--card-product-image-proportion": `${product.image.originalWidth > product.image.originalHeight ?
-            "calc((var(--card-product-image-outer-width)) * (var(--original-height)) / (var(--original-width)));" :
-            "calc((var(--card-product-image-outer-width)) * (var(--original-width)) / (var(--original-height)));"}`,
     };
 
     return (

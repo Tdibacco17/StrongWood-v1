@@ -1005,8 +1005,8 @@ export const productsData: ProductDataInterface = {
             imgSlug: 1,
             imgSrc: "/assets/img/strongWood/tablaAsado/tablaAsado1.webp",
             imgAlt: "Tabla Asado",
-            originalWidth: 6048,
-            originalHeight: 4024,
+            originalWidth: 4016,
+            originalHeight: 4016,
         },
         detail: {
             images: [

@@ -1,7 +1,8 @@
 .container-section-product-card {
     --card-product-image-outer-height: 20rem;
-    --card-product-image-outer-width: 15rem; //tamaño card
+    --card-product-image-outer-width: 17rem; //tamaño card
 
+    --card-product-image-proportion: calc((var(--card-product-image-outer-width)) * (var(--original-width)) / (var(--original-height)));
     --card-product-section-info: 3.5rem;
 
     min-height: var(--card-product-image-proportion) + var(--card-product-section-info);
