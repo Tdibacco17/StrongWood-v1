@@ -1,4 +1,9 @@
 .container-outer-image {
+    --card-image-outer-height: 28.5rem;
+    --card-image-outer-width: 28.5rem;
+
+    --card-image-inner-height: 28.5rem;
+
     --card-image-proportion: calc((var(--card-image-inner-height)) * (var(--original-width)) / (var(--original-height)));
 
     position: relative;
@@ -17,13 +22,48 @@
     cursor: pointer;
     overflow: hidden;
 
+    @media (max-width: 992px) {
+        --card-image-outer-height: 35rem;
+        --card-image-outer-width: 35rem;
+        --card-image-inner-height: 35rem;
+    }
+
+    @media (max-width: 768px) {
+        --card-image-outer-height: 31.5rem;
+        --card-image-outer-width: 31.5rem;
+        --card-image-inner-height: 31.5rem;
+    }
+
+    @media (max-width: 576px) {
+        --card-image-outer-height: 26rem;
+        --card-image-outer-width: 26rem;
+        --card-image-inner-height: 26rem;
+    }
+
+    @media (max-width: 480px) {
+        --card-image-outer-height: 22.5rem;
+        --card-image-outer-width: 22.5rem;
+        --card-image-inner-height: 22.5rem;
+    }
+
+    @media (max-width: 400px) {
+        --card-image-outer-height: 18rem;
+        --card-image-outer-width: 18rem;
+        --card-image-inner-height: 18rem;
+    }
+
+    @media (max-width: 340px) {
+        --card-image-outer-height: 14.5rem;
+        --card-image-outer-width: 14.5rem;
+        --card-image-inner-height: 14.5rem;
+    }
+
     .container-inner-image {
         position: relative;
         min-height: var(--card-image-inner-height);
         max-height: var(--card-image-inner-height);
         min-width: var(--card-image-proportion);
         max-width: var(--card-image-proportion);
-        object-fit: cover;
         transition: 0.3s ease-in-out;
     }
 
@@ -43,22 +83,39 @@
         padding-left: 1.5rem;
         padding-bottom: 1.5rem;
 
+        @media (max-width: 768px) {
+            padding-left: 1.15rem;
+            padding-bottom: 1.15rem;
+        }
+
+        @media (max-width: 480px) {
+            padding-left: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+
         .title-overlay {
+            font-family: var(--strong-font-Roboto-Bold);
+            font-size: var(--strong-font-titles);
+            font-weight: var(--strong-Roboto-Bold-weight);
+
             color: var(--strong-primary-color);
-            font-family: "Roboto Condensed", sans-serif;
-
-            font-size: 2.2rem;
-            font-weight: 700;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-
             padding-bottom: 0.4rem;
+
+            @media (max-width: 768px) {
+                padding-bottom: 0.35rem;
+            }
+
+            @media (max-width: 480px) {
+                padding-bottom: 0.3rem;
+            }
         }
 
         .subtitle-overlay {
+            font-family: var(--strong-font-Roboto-Regular);
+            font-weight: var(--strong-Roboto-Regular-weight);
+            font-size: var(--strong-font-descriptions);
+
             color: var(--strong-primary-color);
-            font-family: "Roboto Condensed", sans-serif;
-            font-weight: 400;
-            font-size: 0.85rem;
         }
     }
 

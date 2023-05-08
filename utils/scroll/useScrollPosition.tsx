@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 
-export const NAVBAR_HEIGHT: number = 80;
+export const NAVBAR_HEIGHT: number = 64;
 
 export const useScrollPosition = () => {
     const [isAtTop, setIsAtTop] = useState<boolean>(true);

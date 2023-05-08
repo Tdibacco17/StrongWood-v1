@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function NavbarComponent({ isHomePage }: { isHomePage: Boolean }) {
 
-    const { isScrolled, isAtTop } = useScrollPosition() // 80px === 5rem
+    const { isScrolled, isAtTop } = useScrollPosition() // 64px === 5rem
     const hiddenRef = useRef<boolean>(false);
 
     useEffect(() => {

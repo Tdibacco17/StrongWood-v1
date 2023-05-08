@@ -7,9 +7,6 @@ export default function CardComponent({
     imgAlt,
     originalWidth,
     originalHeight,
-    outerHeight,
-    outerWidth,
-    size,
     title,
     subtitle
 }: {
@@ -17,9 +14,6 @@ export default function CardComponent({
     imgAlt: string,
     originalWidth: number,
     originalHeight: number,
-    outerHeight: number,
-    outerWidth: number,
-    size: number,
     title?: string,
     subtitle?: string,
 }) {
@@ -27,9 +21,6 @@ export default function CardComponent({
     const newValues: CustomStyles = {
         "--original-width": `${originalWidth}`,
         "--original-height": `${originalHeight}`,
-        "--card-image-outer-height": `${outerHeight}rem`,
-        "--card-image-outer-width": `${outerWidth}rem`,
-        "--card-image-inner-height": `${size}rem`,
     };
 
     return (

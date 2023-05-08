@@ -1,9 +1,6 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -33,7 +30,22 @@
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
 
-  /* colores tipografia */
+  /* tipografia */
+  --strong-font-Knucklehead: 'Knucklehead', sans-serif;
+  --strong-font-Roboto-Bold: 'Roboto-Bold', sans-serif;
+  --strong-font-Roboto-Regular: 'Roboto-Regular', sans-serif;
+
+  --strong-font-titles: 2.2rem;
+  --strong-font-subtitles: 0.9rem;
+  --strong-font-descriptions: 0.8rem;
+  --strong-font-small: 0.7rem;
+
+  --strong-Knucklehead-weight: 700;
+  --strong-Roboto-Bold-weight: 700;
+  --strong-Roboto-Regular-weight: 400;
+  /*****************/
+
+  /* escala de grises */
   --strong-bs-gray-100: #f8f9fa;
   --strong-bs-gray-200: #e9ecef;
   --strong-bs-gray-300: #dee2e6;
@@ -46,12 +58,13 @@
 
   --strong-primary-color: #ebebeb;
   --strong-primary-color-blurred: #ebebeba1;
-  --strong-secondary-color: #1a1a1a;
+  /* --strong-secondary-color: #1a1a1a; */
+  --strong-secondary-color: black;
   --strong-tertiary-color: #333;
 
   --strong-bg-color-transparency: rgba(0, 0, 0, 0.3);
   --strong-bg-gradient-img-gray: linear-gradient(to bottom, transparent 45%, var(--strong-secondary-color));
-  --strong-bg-gradient-img-black: linear-gradient(to bottom, transparent 75%, black 100%);
+  --strong-bg-gradient-img-black: linear-gradient(to bottom, transparent 75%, black 100%) !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -83,6 +96,27 @@
   }
 }
 
+@font-face {
+  font-family: 'Knucklehead';
+  src: url('/assets/fonts/Knucklehead.otf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('/assets/fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('/assets/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -107,7 +141,6 @@ body {
 
   height: 100%;
   min-height: 100%;
-  width: 100vw;
   min-width: 100vw;
   max-width: 100vw;
 
@@ -141,5 +174,27 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+@media (max-width: 992px) {}
+
+@media (max-width: 768px) {
+  :root {
+    --strong-font-titles: 1.6rem;
+    --strong-font-subtitles: 0.85rem;
+    --strong-font-descriptions: 0.75rem;
+    --strong-font-small: 0.65rem;
+  }
+}
+
+@media (max-width: 576px) {}
+
+@media (max-width: 480px) {
+  :root {
+    --strong-font-titles: 1.4rem;
+    --strong-font-subtitles: 0.8rem;
+    --strong-font-descriptions: 0.7rem;
+    --strong-font-small: 0.6rem;
   }
 }

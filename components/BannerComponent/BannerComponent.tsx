@@ -20,10 +20,24 @@ export default function BannerComponent({
     const newValues: CustomStyles = {
         "--original-width": `${originalWidth}`,
         "--original-height": `${originalHeight}`,
-        "--banner-image-inner-height": isPortrait ? "100vh" : "100vw",
+        "--banner-image-inner-width-height": isPortrait ? "100vh" : "100vw",
         "--banner-image-proportion": isPortrait
-            ? `calc((var(--banner-image-inner-height)) * (var(--original-height)) / (var(--original-width)))`
-            : `calc((var(--banner-image-inner-height)) * (var(--original-width)) / (var(--original-height)))`,
+            ? `calc((var(--banner-image-inner-width-height)) * (var(--original-height)) / (var(--original-width)));
+            .container-inner-image {
+                position: relative;
+                min-height: 75vh;
+                max-height: 75vh;
+                min-width: var(--banner-image-proportion);
+                max-width: var(--banner-image-proportion);
+            }`
+            : `calc((var(--banner-image-inner-width-height)) * (var(--original-height)) / (var(--original-width)));
+            .container-inner-image {
+                position: relative;
+                min-height: var(--banner-image-proportion);
+                max-height: var(--banner-image-proportion);
+                min-width: 100vw;
+                max-width: 100vw;
+            }`,
     };
 
     return (
