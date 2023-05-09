@@ -1,6 +1,6 @@
 .container-section-product-card {
     --card-product-image-outer-height: 20rem;
-    --card-product-image-outer-width: 16rem; //tamaño card
+    --card-product-image-outer-width: 19vw; //tamaño card
 
     --card-product-image-proportion: calc((var(--card-product-image-outer-width)) * (var(--original-width)) / (var(--original-height)));
     --card-product-section-info: 4.5rem;
@@ -19,27 +19,15 @@
     cursor: pointer;
 
     @media (max-width: 992px) {
-        --card-product-image-outer-width: 18rem;
+        --card-product-image-outer-width: calc(53vw - 7rem);
     }
 
     @media (max-width: 768px) {
-        --card-product-image-outer-width: 26rem;
-    }
-
-    @media (max-width: 576px) {
-        --card-product-image-outer-width: 22rem;
+        --card-product-image-outer-width: calc(100vw - 5rem);
     }
 
     @media (max-width: 480px) {
-        --card-product-image-outer-width: 20rem;
-    }
-
-    @media (max-width: 400px) {
-        --card-product-image-outer-width: 18rem;
-    }
-
-    @media (max-width: 340px) {
-        --card-product-image-outer-width: 14rem;
+        --card-product-image-outer-width: calc(100vw - 3rem);
     }
 
     .container-outer-image {

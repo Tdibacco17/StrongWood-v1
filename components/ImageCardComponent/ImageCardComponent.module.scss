@@ -1,8 +1,8 @@
 .container-outer-image {
-    --card-image-outer-height: 28.5rem;
-    --card-image-outer-width: 28.5rem;
+    --card-image-outer-height: calc(51.5vw - 7rem);
+    --card-image-outer-width: calc(51.5vw - 7rem);
 
-    --card-image-inner-height: 28.5rem;
+    --card-image-inner-height: calc(51.5vw - 7rem);
 
     --card-image-proportion: calc((var(--card-image-inner-height)) * (var(--original-width)) / (var(--original-height)));
 
@@ -23,39 +23,21 @@
     overflow: hidden;
 
     @media (max-width: 992px) {
-        --card-image-outer-height: 35rem;
-        --card-image-outer-width: 35rem;
-        --card-image-inner-height: 35rem;
+        --card-image-outer-height: calc(100vw - 7rem);
+        --card-image-outer-width: calc(100vw - 7rem);
+        --card-image-inner-height: calc(100vw - 7rem);
     }
 
     @media (max-width: 768px) {
-        --card-image-outer-height: 31.5rem;
-        --card-image-outer-width: 31.5rem;
-        --card-image-inner-height: 31.5rem;
-    }
-
-    @media (max-width: 576px) {
-        --card-image-outer-height: 26rem;
-        --card-image-outer-width: 26rem;
-        --card-image-inner-height: 26rem;
+        --card-image-outer-height: calc(100vw - 5rem);
+        --card-image-outer-width: calc(100vw - 5rem);
+        --card-image-inner-height: calc(100vw - 5rem);
     }
 
     @media (max-width: 480px) {
-        --card-image-outer-height: 22.5rem;
-        --card-image-outer-width: 22.5rem;
-        --card-image-inner-height: 22.5rem;
-    }
-
-    @media (max-width: 400px) {
-        --card-image-outer-height: 18rem;
-        --card-image-outer-width: 18rem;
-        --card-image-inner-height: 18rem;
-    }
-
-    @media (max-width: 340px) {
-        --card-image-outer-height: 14.5rem;
-        --card-image-outer-width: 14.5rem;
-        --card-image-inner-height: 14.5rem;
+        --card-image-outer-height: calc(100vw - 3rem);
+        --card-image-outer-width: calc(100vw - 3rem);
+        --card-image-inner-height: calc(100vw - 3rem);
     }
 
     .container-inner-image {
