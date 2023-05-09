@@ -27,10 +27,6 @@
     }
 
     @media (max-width: 768px) {
-        --card-product-image-outer-width: 39vw;
-    }
-
-    @media (max-width: 576px) {
         --card-product-image-outer-width: calc(100vw - 5rem);
     }
 

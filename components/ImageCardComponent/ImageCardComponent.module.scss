@@ -22,19 +22,7 @@
     cursor: pointer;
     overflow: hidden;
 
-    @media (max-width: 992px) {
-        --card-image-outer-height: 60vw;
-        --card-image-outer-width: 60vw;
-        --card-image-inner-height: 60vw;
-    }
-
     @media (max-width: 768px) {
-        --card-image-outer-height: calc(80vw - 5rem);
-        --card-image-outer-width: calc(80vw - 5rem);
-        --card-image-inner-height: calc(80vw - 5rem);
-    }
-
-    @media (max-width: 576px) {
         --card-image-outer-height: calc(100vw - 5rem);
         --card-image-outer-width: calc(100vw - 5rem);
         --card-image-inner-height: calc(100vw - 5rem);
