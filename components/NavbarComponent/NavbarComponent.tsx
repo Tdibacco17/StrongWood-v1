@@ -3,7 +3,7 @@ import styles from "./NavbarComponent.module.scss";
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 
-export default function NavbarComponent({ isHomePage }: { isHomePage: Boolean }) {
+export default function NavbarComponent({ isSlider }: { isSlider: Boolean }) {
 
     const { isScrolled, isAtTop } = useScrollPosition() // 64px === 5rem
     const hiddenRef = useRef<boolean>(false);
@@ -16,7 +16,7 @@ export default function NavbarComponent({ isHomePage }: { isHomePage: Boolean })
         <div className={`${styles['container-section-navbar']} ${hiddenRef.current ? styles["hidden"] : ""}`}>
             <div className={`
                     ${styles['container-primary-nav']}
-                    ${isHomePage ?
+                    ${isSlider ?
                     isAtTop ? styles["isTransparency"] : styles["isDark"]
                     : styles["isOtherSection"]}
                 `}>
@@ -26,7 +26,7 @@ export default function NavbarComponent({ isHomePage }: { isHomePage: Boolean })
             </div>
 
             {
-                !isHomePage &&
+                !isSlider &&
                 <div className={styles['container-secondary-nav']}>
                     <h2 className={styles["title"]}>funcionalidades</h2>
                 </div>

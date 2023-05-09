@@ -1,12 +1,12 @@
 import styles from "./HomeComponent.module.scss"
-import HomeCategoriesComponent from "../HomeCategoriesComponent/HomeCategoriesComponent"
-import HomeSliderContainer from "@/containers/HomeSliderContainer/HomeSliderContainer"
+import CategoriesComponent from "../CategoriesComponent/CategoriesComponent"
+import SliderContainer from "@/containers/SliderContainer/SliderContainer"
 
 export default function HomeComponent() {
     return (
         <div className={styles["container-section-home"]}>
-            <HomeSliderContainer />
-            <HomeCategoriesComponent />
+            <SliderContainer />
+            <CategoriesComponent />
         </div>
     )
 }

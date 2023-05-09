@@ -1,4 +1,4 @@
-import styles from "./ProductComponent.module.scss"
+import styles from "./ProductsComponent.module.scss"
 import { productsData } from "@/models/products"
 import ProductCardComponent from "../ProductCardComponent/ProductCardComponent"
 import Link from "next/link"

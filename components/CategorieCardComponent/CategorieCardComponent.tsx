@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./ImageCardComponent.module.scss"
+import styles from "./CategorieCardComponent.module.scss"
 import { CustomStyles } from "@/types/Interfaces";
 
 export default function CardComponent({

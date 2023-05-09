@@ -2,6 +2,8 @@ import { productsData } from "@/models/products"
 import { useRouter } from "next/router";
 
 import { ProductInterface } from "@/types/Interfaces";
+import LayoutComponent from "@/layout/LayoutComponent";
+import DetailProductComponent from "@/components/DetailProductComponent/DetailProductComponent";
 
 export default function ProductDetail() {
 
@@ -13,8 +15,8 @@ export default function ProductDetail() {
 
     console.log(product)
     return (
-        <div>
-            {product ? product.title : "no existe"}
-        </div>
+        <LayoutComponent isSlider={false}>
+            <DetailProductComponent product={product} />
+        </LayoutComponent>
     );
 };

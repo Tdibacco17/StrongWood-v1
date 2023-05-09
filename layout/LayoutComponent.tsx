@@ -5,10 +5,10 @@ import Head from "next/head";
 
 export default function LayoutComponent({
     children,
-    isHomePage
+    isSlider
 }: {
     children: React.ReactNode,
-    isHomePage: boolean
+    isSlider: boolean
 }) {
     return (
         <>
@@ -20,7 +20,7 @@ export default function LayoutComponent({
             </Head>
 
             <main>
-                <NavbarComponent isHomePage={isHomePage} />
+                <NavbarComponent isSlider={isSlider} />
                 {children}
                 <FooterComponent />
             </main>

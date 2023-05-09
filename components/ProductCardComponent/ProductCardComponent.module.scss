@@ -52,6 +52,7 @@
             max-height: var(--card-product-image-proportion);
             min-width: var(--card-product-image-outer-width);
             max-width: var(--card-product-image-outer-width);
+            transition: 0.3s ease-in-out;
         }
 
         .container-overlay-image {

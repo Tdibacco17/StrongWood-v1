@@ -1,8 +1,8 @@
-import HomeSliderComponent from "@/components/HomeSliderComponent/HomeSliderComponent";
+import HomeSliderComponent from "@/components/SliderComponent/SliderComponent";
 import { dataSlider } from "@/models/slider";
 import { useEffect, useRef, useState } from "react";
 
-export default function HomeSliderContainer() {
+export default function SliderContainer() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const numSlides = dataSlider.length;
     const timeInterval = 3000;

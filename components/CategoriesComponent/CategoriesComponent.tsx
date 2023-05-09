@@ -1,12 +1,12 @@
-import styles from "./HomeCategoriesComponent.module.scss"
+import styles from "./CategoriesComponent.module.scss"
 import Link from "next/link"
-import ImageCardComponent from "../ImageCardComponent/ImageCardComponent"
+import CategorieCardComponent from "../CategorieCardComponent/CategorieCardComponent"
 
 export default function HomeTwoCategoriesComponent() {
     return (
         <div className={styles["container-section-twoCategories"]}>
             <Link href={`/design`}>
-                <ImageCardComponent
+                <CategorieCardComponent
                     imgSrc="/assets/img/home/twoCategories/strong1.webp"
                     imgAlt="Imagen"
                     originalWidth={6048}
@@ -16,7 +16,7 @@ export default function HomeTwoCategoriesComponent() {
                 />
             </Link>
             <Link href={`/products`}>
-                <ImageCardComponent
+                <CategorieCardComponent
                     imgSrc="/assets/img/home/twoCategories/strong2.webp"
                     imgAlt="Imagen"
                     originalWidth={4016}

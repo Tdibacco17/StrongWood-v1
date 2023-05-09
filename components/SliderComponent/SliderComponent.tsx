@@ -1,4 +1,4 @@
-import styles from "./HomeSliderComponent.module.scss"
+import styles from "./SliderComponent.module.scss"
 import { dataSlider } from "@/models/slider";
 import BannerComponent from "../BannerComponent/BannerComponent";
 
