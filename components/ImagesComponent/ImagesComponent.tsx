@@ -24,6 +24,8 @@ export default function DetailImagesComponent({
     const newValues: CustomStyles = {
         "--original-width": `${originalWidth}`,
         "--original-height": `${originalHeight}`,
+        "--outer-width": `${outerWidth}`,
+        "--outer-height": `${outerHeight}`,
     };
 
     return (

@@ -17,6 +17,13 @@ export const productsData: ProductDataInterface = {
         detail: {
             images: [
                 {
+                    imgSlug: 1,
+                    imgSrc: "/assets/img/strongWood/mesaDeLuzRoma/mesaDeLuzRoma1.webp",
+                    imgAlt: "Mesa De Luz Roma",
+                    originalWidth: 4016,
+                    originalHeight: 4016,
+                },
+                {
                     imgSlug: 2,
                     imgSrc: "/assets/img/strongWood/mesaDeLuzRoma/mesaDeLuzRoma2.webp",
                     imgAlt: "Mesa De Luz Roma",

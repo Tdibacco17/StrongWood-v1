@@ -7,14 +7,12 @@ export default function ProductCardComponent({
 }: {
     product: ProductInterface
 }) {
-    const newValues: CustomStyles = {
-        "--original-width": `${product.image.originalWidth}`,
-        "--original-height": `${product.image.originalHeight}`,
+    const offerPrice: CustomStyles = {
         "--price-line-through": `${product.offerPrice ? "line-through" : "none"}`,
     };
 
     return (
-        <div className={styles["container-section-product-card"]} style={newValues} data-id={`${product.productSlug}`}>
+        <div className={styles["container-section-product-card"]} style={offerPrice} data-id={`${product.productSlug}`}>
             <div className={styles["container-outer-image"]}>
                 <div className={styles["container-inner-image"]}>
                     <Image

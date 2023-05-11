@@ -2,6 +2,9 @@
     --card-product-image-outer-height: 20rem;
     --card-product-image-outer-width: 19vw; //tamaño card
 
+    --original-width: 1;
+    --original-height: 1;
+
     --card-product-image-proportion: calc((var(--card-product-image-outer-width)) * (var(--original-width)) / (var(--original-height)));
     --card-product-section-info: 4.5rem;
 
