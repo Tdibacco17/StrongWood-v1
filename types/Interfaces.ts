@@ -2,21 +2,27 @@ export interface CustomStyles {
     [key: string]: string;
 }
 
+export interface ProductsDataContextInterface {
+    productsData?: ProductDataInterface;
+    handleProductDataChange?: Function;
+    productData?: ProductInterface;
+}
+
 export interface ProductDataInterface {
     [id: string]: ProductInterface;
 }
 
 export interface ProductInterface {
-    productSlug: string,
-    title: string,
-    image: ImgDataInterface,
-    price: string,
-    offerPrice?: string,
-    offerPercentage?: number,
-    detail: {
+    productSlug: string;
+    title: string;
+    image: ImgDataInterface;
+    price: string;
+    offerPrice?: string;
+    offerPercentage?: number;
+    detail?: {
         // payMethod?: [],
         // description?: DescriptionDataInterface,
-        images?: ImgDataInterface[],
+        images?: ImgDataInterface[];
     },
 }
 

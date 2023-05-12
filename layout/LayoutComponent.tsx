@@ -1,5 +1,6 @@
 import FooterComponent from "@/components/FooterComponent/FooterComponent";
 import NavbarComponent from "@/components/NavbarComponent/NavbarComponent";
+import { ProductsProvider } from "@/context/ProductsContextProvider";
 
 import Head from "next/head";
 
@@ -19,11 +20,15 @@ export default function LayoutComponent({
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main>
+            <div>
                 <NavbarComponent isSlider={isSlider} />
-                {children}
+                <main>
+                    <ProductsProvider>
+                        {children}
+                    </ProductsProvider>
+                </main>
                 <FooterComponent />
-            </main>
+            </div>
         </>
     )
 }

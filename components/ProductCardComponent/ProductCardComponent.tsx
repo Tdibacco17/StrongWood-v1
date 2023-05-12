@@ -7,6 +7,7 @@ export default function ProductCardComponent({
 }: {
     product: ProductInterface
 }) {
+
     const offerPrice: CustomStyles = {
         "--price-line-through": `${product.offerPrice ? "line-through" : "none"}`,
     };
@@ -20,6 +21,7 @@ export default function ProductCardComponent({
                         alt={`${product.image.imgAlt}`}
                         fill
                         priority
+                        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                 </div>
                 <div className={styles["container-overlay-image"]} />

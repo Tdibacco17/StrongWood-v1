@@ -1,15 +1,15 @@
-import { ImgDataInterface, ProductInterface } from "@/types/Interfaces"
+import { ImgDataInterface, ProductInterface, ProductsDataContextInterface } from "@/types/Interfaces"
 import styles from "./DetailProductComponent.module.scss"
 import ImagesComponent from "../ImagesComponent/ImagesComponent"
-import React, { useState } from "react"
+import React, { useContext, useMemo, useState } from "react"
 import Image from "next/image"
 import DetailImagesComponent from "../ImagesComponent/ImagesComponent"
+import { ProductDetailContext } from "@/context/ProductDetailProvider"
 
-export default function DetailProductComponent({
-    product
-}: {
-    product: ProductInterface
-}) {
+export default function DetailProductComponent() {
+    const { productData } = useContext(
+        ProductDetailContext
+    ) as ProductsDataContextInterface;
 
     const [activeImageIndex, setActiveImageIndex] = useState(0);
 
@@ -17,34 +17,43 @@ export default function DetailProductComponent({
         setActiveImageIndex(index);
     };
 
+    if (!productData) {
+        return null;
+    }
+    const activeImage = productData.detail?.images?.[activeImageIndex];
+
     return (
         <div className={styles["container-section-details"]}>
-
-            {product &&
-                <div className="product-detail">
-
-                    <div className="product-detail__image">
-                        <DetailImagesComponent
-                            imgSlug={product.image.imgSlug}
-                            imgSrc={product.detail.images ? (product.detail.images[activeImageIndex]?.imgSrc || '') : ''}
-                            imgAlt={product.image.imgAlt}
-                            originalWidth={product.image.originalWidth}
-                            originalHeight={product.image.originalHeight}
-                            outerWidth={10}
-                            outerHeight={10}
-                        />
-                    </div>
-                    <div className="product-detail__info">
-                        <h1>{product.title}</h1>
-                        <p>{product.title}</p>
-                        <p>Precio: {product.price}</p>
-                        {product.offerPrice && <p>Precio oferta: {product.offerPrice}</p>}
-                        {product.offerPercentage && <p>Descuento: {product.offerPercentage}%</p>}
-                    </div>
-                    {/* {product.detail && product.detail.images && (
-                        <div className="product-detail__gallery">
-                            <h2>Galería de imágenes</h2>
-                            {product.detail.images.map((image, index) => (
+            <div className="product-detail">
+                <div className="product-detail__image">
+                    <Image
+                        key={productData.productSlug}
+                        src={activeImage?.imgSrc ||
+                            productData.detail?.images?.[0]?.imgSrc ||
+                            "/images"}
+                        alt={productData.image.imgAlt}
+                        width={200}
+                        height={200}
+                        priority
+                        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                </div>
+                <div className="product-detail__info">
+                    <h1>{productData.title}</h1>
+                    <p>{productData.title}</p>
+                    <p>Precio: {productData.price}</p>
+                    {productData.offerPrice && (
+                        <p>Precio oferta: {productData.offerPrice}</p>
+                    )}
+                    {productData.offerPercentage && (
+                        <p>Descuento: {productData.offerPercentage}%</p>
+                    )}
+                </div>
+                {productData.detail && productData.detail.images && (
+                    <div className="product-detail__gallery">
+                        <h2>Galería de imágenes</h2>
+                        <div className="product-detail__gallery-images">
+                            {productData.detail.images.map((image, index) => (
                                 <Image
                                     key={image.imgSlug}
                                     src={image.imgSrc}
@@ -53,47 +62,14 @@ export default function DetailProductComponent({
                                     onClick={() => handleImageClick(index)}
                                     width={200}
                                     height={200}
+                                    priority
+                                    sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 />
                             ))}
                         </div>
-                    )} */}
-                </div>
-            }
-            {/* <div>
-                {
-                    product ? <ImagesComponent
-                        imgSlug={product.image.imgSlug}
-                        imgSrc={product.image.imgSrc}
-                        imgAlt={product.image.imgAlt}
-                        originalWidth={product.image.originalWidth}
-                        originalHeight={product.image.originalHeight}
-                        outerWidth={0}
-                        outerHeight={0}
-                    /> : <></>
-                }
-                {
-                    product ? product.detail.images && product.detail.images.map((e: ImgDataInterface) => {
-                        return (
-                            <React.Fragment key={e.imgSlug}>
-                                <ImagesComponent
-                                    imgSlug={e.imgSlug}
-                                    imgSrc={e.imgSrc}
-                                    imgAlt={e.imgAlt}
-                                    originalWidth={e.originalWidth}
-                                    originalHeight={e.originalHeight}
-                                    outerWidth={0}
-                                    outerHeight={0}
-                                />
-                            </React.Fragment>
-                        )
-                    }) : <></>
-                }
-            </div> */}
-
-
-            {/* <pre>
-                {product ? JSON.stringify(product, null, 2) : "no existe"}
-            </pre> */}
+                    </div>
+                )}
+            </div>
         </div>
-    )
+    );
 }

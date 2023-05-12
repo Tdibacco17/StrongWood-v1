@@ -1,10 +1,10 @@
-import ProductsComponent from "@/components/ProductsComponent/ProductsComponent";
+import ProductsContainer from "@/containers/ProductsContainer/ProductsContainer";
 import LayoutComponent from "@/layout/LayoutComponent";
 
 export default function ProductsPage() {
     return (
         <LayoutComponent isSlider={false}>
-            <ProductsComponent />
+            <ProductsContainer />
         </LayoutComponent>
     )
 }
