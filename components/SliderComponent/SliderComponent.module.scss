@@ -11,8 +11,8 @@
         width: 100vw;
         // height: 75vh;
         display: flex;
-        width: calc(100% * 3); //proporción del total de imágenes para el slider
-
+        width: calc(100% * 3);
+        
         .slide-item {
             position: relative;
             width: 100%;
@@ -24,40 +24,6 @@
                 opacity: 1.2;
                 transition: opacity 1.3s ease-in-out; // suavidad hacia la siguiente imagen
             }
-        }
-    }
-
-    .container-outer-image {
-        --banner-image-outer-height: 75vh;
-        --banner-image-outer-width: 100vw;
-
-        position: relative;
-        min-height: var(--banner-image-outer-height);
-        max-height: var(--banner-image-outer-height);
-        min-width: var(--banner-image-outer-width);
-        max-width: var(--banner-image-outer-width);
-
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-
-        overflow: hidden;
-
-        .container-inner-image {
-            position: relative;
-            // min-height: var(--banner-image-outer-height);
-            // max-height: var(--banner-image-outer-height);
-            min-width: var(--banner-image-outer-width);
-            max-width: var(--banner-image-outer-width);
-        }
-
-        .container-overlay-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--strong-bg-gradient-img-gray);
         }
     }
 

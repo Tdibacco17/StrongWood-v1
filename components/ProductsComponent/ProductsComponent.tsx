@@ -20,9 +20,9 @@ export default function ProductComponent() {
                     Object.keys(productsData).map(
                         (productKey: string) => {
                             return (
-                                <Link href={`/products/${productKey}`} key={`${productKey}`}>
-                                    <ProductCardComponent product={productsData[productKey]} />
-                                </Link>
+                                <ProductCardComponent
+                                    key={`${productKey}`}
+                                    product={productsData[productKey]} />
                             )
                         }
                     )}

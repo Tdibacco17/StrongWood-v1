@@ -1,4 +1,4 @@
-import { CustomStyles, ImgDataInterface } from "@/types/Interfaces";
+import { ImgDataInterface } from "@/types/Interfaces";
 import styles from "./ImagesComponent.module.scss"
 import Image from "next/image";
 

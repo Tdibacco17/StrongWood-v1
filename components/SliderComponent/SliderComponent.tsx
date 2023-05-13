@@ -2,8 +2,7 @@ import styles from "./SliderComponent.module.scss"
 import { useContext } from "react";
 import { HomeContext } from "@/context/HomeProvider";
 import { HomeDataContextInterface } from "@/types/Interfaces";
-import Image from "next/image";
-import { useWindowSize } from "@/utils/size/useWindowSIze";
+import BannerComponent from "../BannerComponent/BannerComponent";
 
 export default function HomeSliderComponent(
     {
@@ -18,9 +17,6 @@ export default function HomeSliderComponent(
         HomeContext
     ) as HomeDataContextInterface;
 
-    const { width, height } = useWindowSize();
-    const isPortrait = height > width;
-
     return (
         <div className={styles["container-section-slider"]}>
             <div className={styles["container-slider"]} >
@@ -29,19 +25,12 @@ export default function HomeSliderComponent(
                         <div
                             key={slide.imgSlug}
                             className={`${styles["slide-item"]} ${index === currentIndex ? styles["active"] : ""}`}>
-
-                            <div className={styles["container-outer-image"]}>
-                                <div key={slide.imgSlug} className={`${styles["container-inner-image"]}`}>
-                                    <Image
-                                        src={`${slide.imgSrc}`}
-                                        alt={`${slide.imgAlt}`}
-                                        fill
-                                        priority
-                                        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                    />
-                                </div>
-                                <div className={styles["container-overlay-image"]} />
-                            </div>
+                            <BannerComponent
+                                imgSrc={`${slide.imgSrc}`}
+                                imgAlt={`${slide.imgAlt}`}
+                                imgProportionsX={slide.imgProportionsX}
+                                imgProportionsY={slide.imgProportionsY}
+                            />
                         </div>
                     ))
                 }
@@ -61,14 +50,6 @@ export default function HomeSliderComponent(
             <style jsx>{`
                 .${styles["container-section-slider"]} .${styles["container-slider"]} {
                     transform: translateX(-${currentIndex * 33.333333}%);
-                }
-                .${styles["container-outer-image"]} {
-                    min-height: calc((var(--banner-image-outer-width)) * ${homeData?.sliderImages[0].imgProportionsY});
-                    max-height: calc((var(--banner-image-outer-width)) * ${homeData?.sliderImages[0].imgProportionsY});
-                }
-                .${styles["container-inner-image"]} {
-                    min-height: calc((var(--banner-image-outer-width)) * ${homeData?.sliderImages[0].imgProportionsY});
-                    max-height: calc((var(--banner-image-outer-width)) * ${homeData?.sliderImages[0].imgProportionsY});
                 }
             `}</style>
         </div>

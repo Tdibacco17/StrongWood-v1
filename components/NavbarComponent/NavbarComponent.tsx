@@ -2,6 +2,7 @@ import { useScrollPosition, NAVBAR_HEIGHT } from "@/utils/scroll/useScrollPositi
 import styles from "./NavbarComponent.module.scss";
 import { useEffect, useRef } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function NavbarComponent({ isSlider }: { isSlider: Boolean }) {
 
@@ -12,6 +13,8 @@ export default function NavbarComponent({ isSlider }: { isSlider: Boolean }) {
         hiddenRef.current = isScrolled === -NAVBAR_HEIGHT;
     }, [isScrolled]);
 
+    const router = useRouter()
+
     return (
         <div className={`${styles['container-section-navbar']} ${hiddenRef.current ? styles["hidden"] : ""}`}>
             <div className={`
@@ -20,15 +23,12 @@ export default function NavbarComponent({ isSlider }: { isSlider: Boolean }) {
                     isAtTop ? styles["isTransparency"] : styles["isDark"]
                     : styles["isOtherSection"]}
                 `}>
-                <Link href={"/"}>
-                    <h2 className={styles["title"]}>STRONG WOOD</h2>
-                </Link>
+                <h1 onClick={() => { router.push(`/`); }} className={styles["title"]}>STRONG WOOD</h1>
             </div>
-
             {
                 !isSlider &&
                 <div className={styles['container-secondary-nav']}>
-                    <h2 className={styles["title"]}>funcionalidades</h2>
+                    <h3 className={styles["title"]}>funcionalidades</h3>
                 </div>
             }
         </div>

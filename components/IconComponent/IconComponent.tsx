@@ -9,7 +9,9 @@ export default function FooterIconComponent({ imgSrc }: { imgSrc: string }) {
                     src={`${imgSrc}`}
                     alt="Icon"
                     fill
-                    priority
+                    // priority
+                    sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    loading="lazy"
                 />
             </div>
         </div>

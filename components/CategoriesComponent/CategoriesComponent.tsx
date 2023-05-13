@@ -1,19 +1,21 @@
 import styles from "./CategoriesComponent.module.scss"
-import Link from "next/link"
 import CategorieCardComponent from "../CategorieCardComponent/CategorieCardComponent"
 import { useContext } from "react";
 import { HomeContext } from "@/context/HomeProvider";
 import { HomeDataContextInterface } from "@/types/Interfaces";
+import { useRouter } from "next/router";
 
 export default function HomeTwoCategoriesComponent() {
     const { homeData } = useContext(
         HomeContext
     ) as HomeDataContextInterface;
 
+    const router= useRouter()
+
     return (
         <div className={styles["container-section-twoCategories"]}>
             {
-                homeData && <Link href={`/design`}>
+                homeData && <div onClick={() =>{router.push("/design")}}>
                     <CategorieCardComponent
                         imgSrc={`${homeData.categoriesImages[0].imgSrc}`}
                         imgAlt={`${homeData.categoriesImages[0].imgAlt}`}
@@ -22,10 +24,10 @@ export default function HomeTwoCategoriesComponent() {
                         title="Línea Design"
                         subtitle="El balance perfecto entre hierro y madera."
                     />
-                </Link>
+                </div>
             }
             {
-                homeData && <Link href={`/products`}>
+                homeData && <div onClick={() =>{router.push("/products")}}>
                     <CategorieCardComponent
                         imgSrc={`${homeData.categoriesImages[1].imgSrc}`}
                         imgAlt={`${homeData.categoriesImages[1].imgAlt}`}
@@ -34,7 +36,7 @@ export default function HomeTwoCategoriesComponent() {
                         title="Línea Wood"
                         subtitle="El balance perfecto entre hierro y madera."
                     />
-                </Link>
+                </div>
             }
         </div>
     )

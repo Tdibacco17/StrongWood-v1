@@ -1,8 +1,3 @@
-//SACARLO
-export interface CustomStyles {
-    [key: string]: string;
-}
-
 //home
 export interface HomeDataContextInterface {
     handleHomeDataChange?: Function;

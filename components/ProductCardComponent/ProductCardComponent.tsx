@@ -1,6 +1,7 @@
-import { CustomStyles, ProductInterface } from "@/types/Interfaces";
+import { ProductInterface } from "@/types/Interfaces";
 import styles from "./ProductCardComponent.module.scss"
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 export default function ProductCardComponent({
     product
@@ -8,8 +9,13 @@ export default function ProductCardComponent({
     product: ProductInterface
 }) {
 
+    const router = useRouter()
+
     return (
-        <div className={styles["container-section-product-card"]} data-id={`${product.productSlug}`}>
+        <div className={styles["container-section-product-card"]}
+            data-id={`${product.productSlug}`}
+            onClick={() => { router.push(`/products/${product.productSlug}`) }}
+        >
             <div className={styles["container-outer-image"]}>
                 <div className={styles["container-inner-image"]}>
                     <Image
@@ -24,9 +30,9 @@ export default function ProductCardComponent({
                 {
                     product.offerPrice &&
                     <div className={styles["container-offer-percentage"]}>
-                        <h3 className={styles["percentage"]}>
+                        <p className={styles["percentage"]}>
                             {`${product.offerPercentage} %`}
-                        </h3>
+                        </p>
                     </div>
                 }
             </div>
@@ -34,12 +40,12 @@ export default function ProductCardComponent({
             <div className={styles["container-info-product"]}>
                 <h4 className={styles["title-product"]}>{`${product.title}`}</h4>
                 <div className={styles["price-product"]}>
-                    <h5 className={styles["price"]}>
+                    <p className={styles["price"]}>
                         {`$ ${product.price}`}
-                    </h5>
-                    <h6 className={styles["offer"]}>
+                    </p>
+                    <p className={styles["offer"]}>
                         {`${product.offerPrice ? "$ " + product.offerPrice : ""}`}
-                    </h6>
+                    </p>
                 </div>
             </div>
             <style jsx>{`
