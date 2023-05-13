@@ -1,7 +1,20 @@
+//SACARLO
 export interface CustomStyles {
     [key: string]: string;
 }
 
+//home
+export interface HomeDataContextInterface {
+    handleHomeDataChange?: Function;
+    homeData?: HomeDataInterface;
+}
+
+export interface HomeDataInterface {
+    sliderImages: ImgDataInterface[];
+    categoriesImages: ImgDataInterface[];
+}
+
+//products
 export interface ProductsDataContextInterface {
     productsData?: ProductDataInterface;
     handleProductDataChange?: Function;
@@ -26,34 +39,13 @@ export interface ProductInterface {
     },
 }
 
+//image
 export interface ImgDataInterface {
     imgSlug: number,
     imgSrc: string,
     imgAlt: string,
-    originalWidth: number,
-    originalHeight: number,
+    originalWidth?: number,
+    originalHeight?: number,
+    imgProportionsX?: number; //dividir la anchura entre la altura
+    imgProportionsY?: number; //dividir la altura entre la anchura
 }
-
-/*
-export interface DescriptionDataInterface {
-    title: string,
-    qualities: string[]
-    measures: string,
-    materials: string[]
-}
-            description: {
-                title: "Mesa de luz ideal para lucir tu cuarto más elegante.",
-                qualities: [
-                    "Gracias a su delicado recubrimiento de laca y a su gran dureza esta mesa te perdurará de por vida!",
-                    "Su amplia cajonera permitirá mantener el orden de tu cuarto.",
-                    "Asimismo, es importante destacar que gracias a sus gomas protectoras inferiores tus pisos no se verán dañados."
-                ],
-                measures: "80cm x 40 cm.",
-                materials: [
-                    "Pino",
-                    "Petiribi",
-                    "Roble"
-                ],
-            },
-
-*/

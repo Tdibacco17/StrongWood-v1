@@ -8,12 +8,8 @@ export default function ProductCardComponent({
     product: ProductInterface
 }) {
 
-    const offerPrice: CustomStyles = {
-        "--price-line-through": `${product.offerPrice ? "line-through" : "none"}`,
-    };
-
     return (
-        <div className={styles["container-section-product-card"]} style={offerPrice} data-id={`${product.productSlug}`}>
+        <div className={styles["container-section-product-card"]} data-id={`${product.productSlug}`}>
             <div className={styles["container-outer-image"]}>
                 <div className={styles["container-inner-image"]}>
                     <Image
@@ -28,24 +24,30 @@ export default function ProductCardComponent({
                 {
                     product.offerPrice &&
                     <div className={styles["container-offer-percentage"]}>
-                        <h6 className={styles["percentage"]}>
+                        <h3 className={styles["percentage"]}>
                             {`${product.offerPercentage} %`}
-                        </h6>
+                        </h3>
                     </div>
                 }
             </div>
 
             <div className={styles["container-info-product"]}>
-                <h6 className={styles["title-product"]}>{`${product.title}`}</h6>
+                <h4 className={styles["title-product"]}>{`${product.title}`}</h4>
                 <div className={styles["price-product"]}>
-                    <h6 className={styles["price"]}>
+                    <h5 className={styles["price"]}>
                         {`$ ${product.price}`}
-                    </h6>
+                    </h5>
                     <h6 className={styles["offer"]}>
                         {`${product.offerPrice ? "$ " + product.offerPrice : ""}`}
                     </h6>
                 </div>
             </div>
+            <style jsx>{`
+                .${styles["container-section-product-card"]} {
+                    --price-line-through: ${product.offerPrice ? "line-through" : "none"};
+                    --card-product-image-proportion: calc((var(--card-product-image-outer-width)) * ${product.image.imgProportionsX});
+                }
+            `}</style>
         </div>
     )
 }

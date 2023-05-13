@@ -1,18 +1,25 @@
 import HomeSliderComponent from "@/components/SliderComponent/SliderComponent";
-import { dataSlider } from "@/models/slider";
-import { useEffect, useRef, useState } from "react";
+import { HomeContext } from "@/context/HomeProvider";
+import { HomeDataContextInterface } from "@/types/Interfaces";
+import { useContext, useEffect, useRef, useState } from "react";
 
 export default function SliderContainer() {
+    const { homeData } = useContext(
+        HomeContext
+    ) as HomeDataContextInterface;
+
     const [currentIndex, setCurrentIndex] = useState(0);
-    const numSlides = dataSlider.length;
+    const numSlides = homeData && homeData.sliderImages.length;
     const timeInterval = 3000;
     const timerRef = useRef<NodeJS.Timeout>();
 
     useEffect(() => {
         // Iniciamos el temporizador para cambiar de imagen cada 5 segundos
-        timerRef.current = setInterval(() => {
-            setCurrentIndex((currentIndex + 1) % numSlides);
-        }, timeInterval);
+        if (numSlides !== undefined) {
+            timerRef.current = setInterval(() => {
+                setCurrentIndex((currentIndex + 1) % numSlides);
+            }, timeInterval);
+        }
 
         // Limpiamos el temporizador cuando el componente se desmonte
         return () => clearInterval(timerRef.current);
@@ -26,9 +33,11 @@ export default function SliderContainer() {
         setCurrentIndex(index);
 
         // Iniciamos el temporizador nuevamente
-        timerRef.current = setInterval(() => {
-            setCurrentIndex((currentIndex + 1) % numSlides);
-        }, timeInterval);
+        if (numSlides !== undefined) {
+            timerRef.current = setInterval(() => {
+                setCurrentIndex((currentIndex + 1) % numSlides);
+            }, timeInterval);
+        }
     };
 
 

@@ -13,6 +13,8 @@ export const productsData: ProductDataInterface = {
             imgAlt: "Mesa De Luz Roma",
             originalWidth: 4016,
             originalHeight: 4016,
+            imgProportionsX: 1,
+            imgProportionsY: 1
         },
         detail: {
             images: [
@@ -80,6 +82,8 @@ export const productsData: ProductDataInterface = {
             imgAlt: "Mesa Cracovia",
             originalWidth: 4016,
             originalHeight: 4016,
+            imgProportionsX: 1,
+            imgProportionsY: 1
         },
         detail: {
             images: [
@@ -126,6 +130,8 @@ export const productsData: ProductDataInterface = {
             imgAlt: "Mesa Ratona Edimburgo",
             originalWidth: 4016,
             originalHeight: 4016,
+            imgProportionsX: 1,
+            imgProportionsY: 1
         },
         detail: {
             images: [
@@ -165,6 +171,8 @@ export const productsData: ProductDataInterface = {
             imgAlt: "Maceta Sintra",
             originalWidth: 4016,
             originalHeight: 4016,
+            imgProportionsX: 1,
+            imgProportionsY: 1
         },
         detail: {
             images: [
@@ -211,6 +219,8 @@ export const productsData: ProductDataInterface = {
             imgAlt: "Maceta Aviñon",
             originalWidth: 4016,
             originalHeight: 4016,
+            imgProportionsX: 1,
+            imgProportionsY: 1
         },
         detail: {
             images: [
@@ -250,6 +260,8 @@ export const productsData: ProductDataInterface = {
             imgAlt: "Estanteria Siena",
             originalWidth: 3760,
             originalHeight: 3760,
+            imgProportionsX: 1,
+            imgProportionsY: 1
         },
         detail: {
             images: [
@@ -310,6 +322,8 @@ export const productsData: ProductDataInterface = {
             imgAlt: "Estanteria Avila",
             originalWidth: 3645,
             originalHeight: 3645,
+            imgProportionsX: 1,
+            imgProportionsY: 1
         },
         detail: {
             images: [
@@ -342,6 +356,8 @@ export const productsData: ProductDataInterface = {
             imgAlt: "Estanteria Bath",
             originalWidth: 3859,
             originalHeight: 3859,
+            imgProportionsX: 1,
+            imgProportionsY: 1
         },
         detail: {
             images: [
@@ -367,6 +383,8 @@ export const productsData: ProductDataInterface = {
             imgAlt: "Estanteria Bergen",
             originalWidth: 4016,
             originalHeight: 4016,
+            imgProportionsX: 1,
+            imgProportionsY: 1
         },
         detail: {
             images: [
@@ -434,6 +452,8 @@ export const productsData: ProductDataInterface = {
             imgAlt: "Llavero Corfu",
             originalWidth: 4016,
             originalHeight: 4016,
+            imgProportionsX: 1,
+            imgProportionsY: 1
         },
         detail: {
             images: [
@@ -473,6 +493,8 @@ export const productsData: ProductDataInterface = {
             imgAlt: "Llavero Viena",
             originalWidth: 3696,
             originalHeight: 3696,
+            imgProportionsX: 1,
+            imgProportionsY: 1
         },
         detail: {
             images: [
@@ -519,6 +541,8 @@ export const productsData: ProductDataInterface = {
             imgAlt: "Leñero",
             originalWidth: 4016,
             originalHeight: 4016,
+            imgProportionsX: 1,
+            imgProportionsY: 1
         },
         detail: {
             images: [
@@ -558,6 +582,8 @@ export const productsData: ProductDataInterface = {
             imgAlt: "Rack TV Cordoba",
             originalWidth: 4016,
             originalHeight: 4016,
+            imgProportionsX: 1,
+            imgProportionsY: 1
         },
         detail: {
             images: [
@@ -618,6 +644,8 @@ export const productsData: ProductDataInterface = {
             imgAlt: "Toallero Matera",
             originalWidth: 4016,
             originalHeight: 4016,
+            imgProportionsX: 1,
+            imgProportionsY: 1
         },
         detail: {
             images: [
@@ -657,6 +685,8 @@ export const productsData: ProductDataInterface = {
             imgAlt: "Toallero Cuenca",
             originalWidth: 3928,
             originalHeight: 3928,
+            imgProportionsX: 1,
+            imgProportionsY: 1
         },
         detail: {
             images: [
@@ -710,6 +740,8 @@ export const productsData: ProductDataInterface = {
             imgAlt: "Bodega Segovia",
             originalWidth: 4016,
             originalHeight: 4016,
+            imgProportionsX: 1,
+            imgProportionsY: 1
         },
         detail: {
             images: [
@@ -763,6 +795,8 @@ export const productsData: ProductDataInterface = {
             imgAlt: "Porta Copas",
             originalWidth: 3471,
             originalHeight: 3471,
+            imgProportionsX: 1,
+            imgProportionsY: 1
         },
         detail: {
             images: [
@@ -802,6 +836,8 @@ export const productsData: ProductDataInterface = {
             imgAlt: "Porta Vinos",
             originalWidth: 3968,
             originalHeight: 3968,
+            imgProportionsX: 1,
+            imgProportionsY: 1
         },
         detail: {
             images: [
@@ -841,6 +877,8 @@ export const productsData: ProductDataInterface = {
             imgAlt: "Escritorio Brujas",
             originalWidth: 3968,
             originalHeight: 3968,
+            imgProportionsX: 1,
+            imgProportionsY: 1
         },
         detail: {
             images: [
@@ -887,6 +925,8 @@ export const productsData: ProductDataInterface = {
             imgAlt: "Perchero Oporto",
             originalWidth: 3968,
             originalHeight: 3968,
+            imgProportionsX: 1,
+            imgProportionsY: 1
         },
         detail: {
             images: [
@@ -947,6 +987,8 @@ export const productsData: ProductDataInterface = {
             imgAlt: "Recibidor Salamanca",
             originalWidth: 4016,
             originalHeight: 4016,
+            imgProportionsX: 1,
+            imgProportionsY: 1
         },
         detail: {
             images: [
@@ -1014,6 +1056,8 @@ export const productsData: ProductDataInterface = {
             imgAlt: "Tabla Asado",
             originalWidth: 4016,
             originalHeight: 4016,
+            imgProportionsX: 1,
+            imgProportionsY: 1
         },
         detail: {
             images: [
@@ -1081,6 +1125,8 @@ export const productsData: ProductDataInterface = {
             imgAlt: "Soporte Auricular",
             originalWidth: 4016,
             originalHeight: 4016,
+            imgProportionsX: 1,
+            imgProportionsY: 1
         },
         detail: {
             images: [

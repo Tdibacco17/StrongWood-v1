@@ -4,8 +4,6 @@
 
     --card-image-inner-height: 41.5vw;
 
-    --card-image-proportion: calc((var(--card-image-inner-height)) * (var(--original-width)) / (var(--original-height)));
-
     position: relative;
     min-height: var(--card-image-outer-height);
     max-height: var(--card-image-outer-height);
@@ -23,15 +21,19 @@
     overflow: hidden;
 
     @media (max-width: 768px) {
-        --card-image-outer-height: calc(100vw - 5rem);
-        --card-image-outer-width: calc(100vw - 5rem);
-        --card-image-inner-height: calc(100vw - 5rem);
+        --card-proportion-calculate: calc(100vw - 5rem);
+
+        --card-image-outer-height: var(--card-proportion-calculate);
+        --card-image-outer-width: var(--card-proportion-calculate);
+        --card-image-inner-height: var(--card-proportion-calculate);
     }
 
     @media (max-width: 480px) {
-        --card-image-outer-height: calc(100vw - 3rem);
-        --card-image-outer-width: calc(100vw - 3rem);
-        --card-image-inner-height: calc(100vw - 3rem);
+        --card-proportion-calculate: calc(100vw - 3rem);
+
+        --card-image-outer-height: var(--card-proportion-calculate);
+        --card-image-outer-width: var(--card-proportion-calculate);
+        --card-image-inner-height: var(--card-proportion-calculate);
     }
 
     .container-inner-image {

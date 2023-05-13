@@ -17,6 +17,7 @@ export default function LayoutComponent({
                 <title>Strong Wood</title>
                 <meta name="description" content="Strong Wood" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta http-equiv="Cache-Control" content="no-store" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
