@@ -52,7 +52,7 @@
             min-width: var(--card-product-image-outer-width);
             max-width: var(--card-product-image-outer-width);
             transition: 0.3s ease-in-out;
-            will-change: transform; 
+            
         }
 
         .container-overlay-image {
@@ -64,7 +64,7 @@
             background: rgba(0, 0, 0, 0.1);
 
             transition: 0.3s ease-in-out;
-            will-change: transform; 
+            
         }
 
         .container-offer-percentage {
@@ -153,6 +153,7 @@
         .container-inner-image {
             transform: scale(1.05);
             transition: 0.3s ease-in-out;
+            
         }
 
         .container-overlay-image {

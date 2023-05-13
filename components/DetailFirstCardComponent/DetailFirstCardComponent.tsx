@@ -1,8 +1,8 @@
 import { ImgDataInterface } from "@/types/Interfaces";
-import styles from "./ImagesComponent.module.scss"
+import styles from "./DetailFirstCardComponent.module.scss"
 import Image from "next/image";
 
-export default function ImagesComponent({
+export default function DetailFirstCardComponent({
     imgSlug,
     imgSrc,
     imgAlt,
@@ -27,6 +27,7 @@ export default function ImagesComponent({
                 alt={`${imgAlt}`}
                 fill
                 priority
+                sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
         </div>
     )

@@ -1,7 +1,7 @@
 import Image from "next/image";
-import styles from "./BannerComponent.module.scss";
+import styles from "./SliderCardComponent.module.scss";
 
-export default function BannerComponent({
+export default function SliderCardComponent({
     imgSrc,
     imgAlt,
     imgProportionsX,

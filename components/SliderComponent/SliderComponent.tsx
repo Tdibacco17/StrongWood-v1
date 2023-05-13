@@ -2,7 +2,7 @@ import styles from "./SliderComponent.module.scss"
 import { useContext } from "react";
 import { HomeContext } from "@/context/HomeProvider";
 import { HomeDataContextInterface } from "@/types/Interfaces";
-import BannerComponent from "../BannerComponent/BannerComponent";
+import SliderCardComponent from "../SliderCardComponent/SliderCardComponent";
 
 export default function HomeSliderComponent(
     {
@@ -25,7 +25,7 @@ export default function HomeSliderComponent(
                         <div
                             key={slide.imgSlug}
                             className={`${styles["slide-item"]} ${index === currentIndex ? styles["active"] : ""}`}>
-                            <BannerComponent
+                            <SliderCardComponent
                                 imgSrc={`${slide.imgSrc}`}
                                 imgAlt={`${slide.imgAlt}`}
                                 imgProportionsX={slide.imgProportionsX}

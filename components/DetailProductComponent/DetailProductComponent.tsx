@@ -1,9 +1,9 @@
 import { ImgDataInterface, ProductInterface, ProductsDataContextInterface } from "@/types/Interfaces"
 import styles from "./DetailProductComponent.module.scss"
-import ImagesComponent from "../ImagesComponent/ImagesComponent"
+import ImagesComponent from "../DetailFirstCardComponent/DetailFirstCardComponent"
 import React, { useContext, useMemo, useState } from "react"
 import Image from "next/image"
-import DetailImagesComponent from "../ImagesComponent/ImagesComponent"
+import DetailImagesComponent from "../DetailFirstCardComponent/DetailFirstCardComponent"
 import { ProductDetailContext } from "@/context/ProductDetailProvider"
 
 export default function DetailProductComponent() {
@@ -22,6 +22,8 @@ export default function DetailProductComponent() {
     }
     const activeImage = productData.detail?.images?.[activeImageIndex];
 
+
+    console.log(productData)
     return (
         <div className={styles["container-section-details"]}>
             <div className="product-detail">
@@ -49,7 +51,7 @@ export default function DetailProductComponent() {
                         <p>Descuento: {productData.offerPercentage}%</p>
                     )}
                 </div>
-                {productData.detail && productData.detail.images && (
+                {/* {productData.detail && productData.detail.images && (
                     <div className="product-detail__gallery">
                         <h2>Galería de imágenes</h2>
                         <div className="product-detail__gallery-images">
@@ -68,7 +70,7 @@ export default function DetailProductComponent() {
                             ))}
                         </div>
                     </div>
-                )}
+                )} */}
             </div>
         </div>
     );
