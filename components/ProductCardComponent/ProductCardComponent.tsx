@@ -51,7 +51,7 @@ export default function ProductCardComponent({
             <style jsx>{`
                 .${styles["container-section-product-card"]} {
                     --price-line-through: ${product.offerPrice ? "line-through" : "none"};
-                    --card-product-image-proportion: calc((var(--card-product-image-outer-width)) * ${product.image.imgProportionsX});
+                    --card-product-image-proportion: calc((var(--card-product-image-width)) * ${product.image.imgProportionsX});
                 }
             `}</style>
         </div>

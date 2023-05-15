@@ -1,14 +1,16 @@
 .container-section-product-card {
-    --card-product-image-outer-height: 20rem;
-    --card-product-image-outer-width: 19vw; //tamaño card
+    --card-product-image-height: 20rem;
+    --card-product-image-width: 19vw; //tamaño card
 
     --card-product-section-info: 4.5rem;
 
-    min-height: var(--card-product-image-proportion) + var(--card-product-section-info);
-    max-height: var(--card-product-image-proportion) + var(--card-product-section-info);
+    --card-product-image-height-total: calc(var(--card-product-image-proportion) + var(--card-product-section-info));
 
-    min-width: var(--card-product-image-outer-width);
-    max-width: var(--card-product-image-outer-width);
+    min-height: var(--card-product-image-height-total);
+    max-height: var(--card-product-image-height-total);
+
+    min-width: var(--card-product-image-width);
+    max-width: var(--card-product-image-width);
 
     display: flex;
     flex-direction: column;
@@ -18,27 +20,27 @@
     cursor: pointer;
 
     @media (max-width: 1067px) {
-        --card-product-image-outer-width: calc(37vw - 7rem);
+        --card-product-image-width: calc(37vw - 7rem);
     }
 
     @media (max-width: 992px) {
-        --card-product-image-outer-width: calc(53vw - 7rem);
+        --card-product-image-width: calc(53vw - 7rem);
     }
 
     @media (max-width: 768px) {
-        --card-product-image-outer-width: calc(100vw - 5rem);
+        --card-product-image-width: calc(100vw - 5rem);
     }
 
     @media (max-width: 480px) {
-        --card-product-image-outer-width: calc(100vw - 3rem);
+        --card-product-image-width: calc(100vw - 3rem);
     }
 
     .container-outer-image {
         position: relative;
         min-height: var(--card-product-image-proportion);
         max-height: var(--card-product-image-proportion);
-        min-width: var(--card-product-image-outer-width);
-        max-width: var(--card-product-image-outer-width);
+        min-width: var(--card-product-image-width);
+        max-width: var(--card-product-image-width);
 
         display: flex;
         justify-content: center;
@@ -49,10 +51,10 @@
             position: relative;
             min-height: var(--card-product-image-proportion);
             max-height: var(--card-product-image-proportion);
-            min-width: var(--card-product-image-outer-width);
-            max-width: var(--card-product-image-outer-width);
+            min-width: var(--card-product-image-width);
+            max-width: var(--card-product-image-width);
             transition: 0.3s ease-in-out;
-            
+
         }
 
         .container-overlay-image {
@@ -64,7 +66,7 @@
             background: rgba(0, 0, 0, 0.1);
 
             transition: 0.3s ease-in-out;
-            
+
         }
 
         .container-offer-percentage {
@@ -153,7 +155,7 @@
         .container-inner-image {
             transform: scale(1.05);
             transition: 0.3s ease-in-out;
-            
+
         }
 
         .container-overlay-image {

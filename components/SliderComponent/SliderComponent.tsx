@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { HomeContext } from "@/context/HomeProvider";
 import { HomeDataContextInterface } from "@/types/Interfaces";
 import SliderCardComponent from "../SliderCardComponent/SliderCardComponent";
+import PlaceholderImageComponent from "../PlaceholderImageComponent/PlaceholderImageComponent";
 
 export default function HomeSliderComponent(
     {
@@ -33,6 +34,11 @@ export default function HomeSliderComponent(
                             />
                         </div>
                     ))
+                    // : <>
+                    //     <div className={styles["container-outer-placeholder"]}>
+                    //         <PlaceholderImageComponent />
+                    //     </div>
+                    // </>
                 }
             </div>
             <div className={styles["container-controls"]}>

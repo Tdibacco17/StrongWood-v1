@@ -1,0 +1,24 @@
+.container-outer-image {
+    --card-carrousel-image-height: 12rem;
+    --card-carrousel-image-width: 12rem; //tamaño card
+
+    min-height: var(--card-carrousel-image-height);
+    max-height: var(--card-carrousel-image-height);
+    min-width: var(--card-carrousel-image-width);
+    max-width: var(--card-carrousel-image-width);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    background: green;
+
+    .container-inner-image {
+        position: relative;
+        min-height: var(--card-carrousel-image-proportion);
+        max-height: var(--card-carrousel-image-proportion);
+        min-width: var(--card-carrousel-image-width);
+        max-width: var(--card-carrousel-image-width);
+    }
+}

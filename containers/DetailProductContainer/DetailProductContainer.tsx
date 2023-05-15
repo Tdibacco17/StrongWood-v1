@@ -1,10 +1,10 @@
-import DetailProductComponent from "@/components/DetailProductComponent/DetailProductComponent";
+import DetailsProductComponent from "@/components/DetailsProductComponent/DetailsProductComponent";
 import { ProductDetailContext } from "@/context/ProductDetailProvider";
 import { ProductsDataContextInterface } from "@/types/Interfaces";
 import { useRouter } from "next/router";
 import { useContext, useEffect } from "react";
 
-export default function DetailProductContainer() {
+export default function DetailsProductContainer() {
     const router = useRouter();
 
     const { handleProductDataChange } = useContext(
@@ -31,5 +31,5 @@ export default function DetailProductContainer() {
         return () => { };
     }, [router.query]);
 
-    return <DetailProductComponent />
+    return <DetailsProductComponent />
 }

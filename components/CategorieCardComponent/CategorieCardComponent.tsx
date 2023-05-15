@@ -34,7 +34,7 @@ export default function CardComponent({
             </div>
             <style jsx>{`
                 .${styles["container-outer-image"]} {
-                --card-image-proportion: calc((var(--card-image-inner-height)) * ${imgProportionsX});
+                    --card-image-proportion: calc((var(--card-image-inner-height)) * ${imgProportionsX});
                 }
             `}</style>
         </div>

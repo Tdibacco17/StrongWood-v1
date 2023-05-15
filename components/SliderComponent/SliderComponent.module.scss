@@ -12,7 +12,7 @@
         // height: 75vh;
         display: flex;
         width: calc(100% * 3);
-        
+
         .slide-item {
             position: relative;
             width: 100%;
@@ -25,6 +25,15 @@
                 transition: opacity 1.3s ease-in-out; // suavidad hacia la siguiente imagen
             }
         }
+
+        // .container-outer-placeholder {
+        //     min-height: 75vh;
+        //     height: 75vh;
+        //     max-height: 75vh;
+        //     min-width: 100vw;
+        //     width: 100vw;
+        //     max-width: 100vw;
+        // }
     }
 
     .container-controls {
