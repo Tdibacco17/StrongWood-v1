@@ -4,7 +4,6 @@ import { useContext } from "react";
 import { HomeContext } from "@/context/HomeProvider";
 import { HomeDataContextInterface } from "@/types/Interfaces";
 import { useRouter } from "next/router";
-import PlaceholderImageComponent from "../PlaceholderImageComponent/PlaceholderImageComponent";
 
 export default function HomeTwoCategoriesComponent() {
     const { homeData } = useContext(
@@ -27,11 +26,6 @@ export default function HomeTwoCategoriesComponent() {
                         subtitle="El balance perfecto entre hierro y madera."
                     />
                 </div>
-                // : <>
-                //     <div className={styles["container-outer-placeholder"]}>
-                //         <PlaceholderImageComponent />
-                //     </div>
-                // </>
             }
             {
                 homeData &&
@@ -45,11 +39,6 @@ export default function HomeTwoCategoriesComponent() {
                         subtitle="El balance perfecto entre hierro y madera."
                     />
                 </div>
-                //  : <>
-                //     <div className={styles["container-outer-placeholder"]}>
-                //         <PlaceholderImageComponent />
-                //     </div>
-                // </>
             }
         </div>
     )

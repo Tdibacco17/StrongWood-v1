@@ -1,9 +1,9 @@
 import Image from "next/image"
 import styles from "./DetailsPrimaryImgComponent.module.scss"
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ProductDetailContext } from "@/context/ProductDetailProvider";
 import { ImgDataInterface, ProductsDataContextInterface } from "@/types/Interfaces";
-import PlaceholderImageComponent from "../PlaceholderImageComponent/PlaceholderImageComponent";
+
 
 export default function DetailsPrimaryImgComponent({
     activeImage,
@@ -11,9 +11,17 @@ export default function DetailsPrimaryImgComponent({
     activeImage: ImgDataInterface | undefined;
 }) {
 
+    const [loading, setLoading] = useState<boolean>(true);
+
+    const handleImageLoad = () => {
+        setLoading(false);
+    };
+
     return (
         <div className={styles["container-outer-image"]}>
-            {activeImage ?
+            {loading && <div className={styles["container-inner-placeholder"]}> Cargando.. </div>}
+            {
+                activeImage &&
                 <div className={styles["container-inner-image"]}>
                     <Image
                         src={activeImage?.imgSrc || "/image"}
@@ -21,13 +29,14 @@ export default function DetailsPrimaryImgComponent({
                         fill
                         priority
                         sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        onLoad={handleImageLoad}
                     />
-                </div> : <PlaceholderImageComponent />
+                </div>
             }
             <style jsx>{`
-          .${styles["container-outer-image"]} {
-            --card-details-image-proportion: calc((var(--card-details-image-width)) * ${activeImage?.imgProportionsX || 1});
-          }
+            .${styles["container-outer-image"]} {
+                --card-details-image-proportion: calc((var(--card-details-image-width)) * ${activeImage?.imgProportionsX || 1});
+            }
         `}</style>
         </div>
     );

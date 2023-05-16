@@ -32,20 +32,5 @@
         @media (max-width: 576px) {
             justify-content: center;
         }
-
-        // .container-outer-placeholder {
-        //     --card-product-image-height: 20rem;
-        //     --card-product-image-width: 19vw; //tamaño card
-
-        //     --card-product-section-info: 4.5rem;
-
-        //     min-height: calc(var(--card-product-image-width) + var(--card-product-section-info));
-        //     height: calc(var(--card-product-image-width) + var(--card-product-section-info));
-        //     max-height: calc(var(--card-product-image-width) + var(--card-product-section-info));
-
-        //     min-width: var(--card-product-image-width);
-        //     width: var(--card-product-image-width);
-        //     max-width: var(--card-product-image-width);
-        // }
     }
 }

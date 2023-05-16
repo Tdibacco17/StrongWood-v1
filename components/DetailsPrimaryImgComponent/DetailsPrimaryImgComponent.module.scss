@@ -20,4 +20,12 @@
         min-width: var(--card-details-image-width);
         max-width: var(--card-details-image-width);
     }
+
+    .container-inner-placeholder {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        color: var(--strong-secondary-color);
+    }
 }

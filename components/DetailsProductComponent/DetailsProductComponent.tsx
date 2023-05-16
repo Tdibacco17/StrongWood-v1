@@ -4,7 +4,6 @@ import { useContext, useState } from "react"
 import { ProductDetailContext } from "@/context/ProductDetailProvider"
 import DetailsPrimaryImgComponent from "../DetailsPrimaryImgComponent/DetailsPrimaryImgComponent"
 import DetailsCarrouselImgComponent from "../DetailsCarrouselImgComponent/DetailsCarrouselImgComponent"
-import PlaceholderImageComponent from "../PlaceholderImageComponent/PlaceholderImageComponent"
 
 export default function DetailsProductComponent() {
     const { productData } = useContext(
@@ -40,32 +39,26 @@ export default function DetailsProductComponent() {
                                     />
                                 )
                             })
-                            //  :
-                            // <>
-                            //     <div className={styles["container-outer-placeholder"]}>
-                            //         <PlaceholderImageComponent />
-                            //     </div>
-                            //     <div className={styles["container-outer-placeholder"]}>
-                            //         <PlaceholderImageComponent />
-                            //     </div>
-                            //     <div className={styles["container-outer-placeholder"]}>
-                            //         <PlaceholderImageComponent />
-                            //     </div>
-                            // </>
                         }
                     </div>
                 </div>
 
                 <div className={styles["container-section-info"]}>
-                    <div className="product-detail__info">
-                        <h1>{productData?.title}</h1>
-                        <p>{productData?.title}</p>
-                        <p>Precio: {productData?.price}</p>
+                    <h1 className={styles["product-title"]}>{productData?.title}</h1>
+                    <div className={styles["container-info-details"]}>
+                        {/* <p>{productData?.description}</p> */}
+                        <p className={styles["info-details"]}>
+                            Precio: {productData?.price}
+                        </p>
                         {productData?.offerPrice && (
-                            <p>Precio oferta: {productData?.offerPrice}</p>
+                            <p className={styles["info-details"]}>
+                                Precio oferta: {productData?.offerPrice}
+                            </p>
                         )}
                         {productData?.offerPercentage && (
-                            <p>Descuento: {productData?.offerPercentage}%</p>
+                            <p className={styles["info-details"]}>
+                                Descuento: {productData?.offerPercentage}%
+                            </p>
                         )}
                     </div>
                 </div>

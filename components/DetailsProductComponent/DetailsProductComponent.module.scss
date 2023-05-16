@@ -12,9 +12,15 @@
     .container-column-dividers {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         gap: 2rem;
+
+        // background: pink;
+
         --details-container-width: calc(100vw - 7rem);
+
+        min-width: var(--details-container-width);
+        max-width: var(--details-container-width);
 
         @media (max-width: 768px) {
             --details-container-width: calc(100vw - 5rem);
@@ -24,46 +30,61 @@
             --details-container-width: calc(100vw - 3rem);
         }
 
-        min-width: var(--details-container-width);
-        max-width: var(--details-container-width);
-        background: red;
-
         .container-section-images {
             display: flex;
             flex-direction: row-reverse;
+            gap: 1rem;
+            padding: 1rem;
+
+            background: var(--strong-primary-color);
+            overflow: hidden;
 
             .container-section-carrousel {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: flex-start;
+                row-gap: 1rem;
+                height: 25rem;
 
+                scroll-behavior: smooth;
                 overflow: hidden;
                 overflow-y: scroll;
-                gap: 1.5rem;
-                padding-top: 1.5rem;
-                padding-bottom: 1.5rem;
 
-                height: 25rem;
-                min-width: 15rem;
-                max-width: 15rem;
-
-                .container-outer-placeholder {
-                    min-height: 12rem;
-                    height: 12rem;
-                    max-height: 12rem;
-                    min-width: 12rem;
-                    width: 12rem;
-                    max-width: 12rem;
+                &::-webkit-scrollbar {
+                    width: 0px;
+                    /* Ancho de la barra de navegación */
+                    background-color: transparent;
+                    /* Color de fondo de la barra de navegación */
                 }
             }
         }
 
         .container-section-info {
-
             height: 25rem;
             width: 25rem;
-            background: blue;
+
+            .product-title {
+                font-family: var(--strong-font-Roboto-Bold);
+                font-size: var(--strong-font-titles);
+                font-weight: var(--strong-Roboto-Bold-weight);
+                color: var(--strong-primary-color);
+
+                padding-bottom: 1.5rem;
+            }
+
+            .container-info-details {
+                display: flex;
+                flex-direction: column;
+                gap: 0.7rem;
+
+                .info-details {
+                    font-family: var(--strong-font-Roboto-Regular);
+                    font-size: var(--strong-font-subtitles);
+                    font-weight: var(--strong-Roboto-Regular-weight);
+                    color: var(--strong-primary-color);
+                }
+            }
         }
     }
 }
