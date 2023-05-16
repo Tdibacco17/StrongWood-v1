@@ -12,21 +12,26 @@
     align-items: center;
 
     overflow: hidden;
-    cursor: pointer;
 
     .container-inner-image {
         position: relative;
-        min-height: var(--card-carrousel-image-proportion);
-        max-height: var(--card-carrousel-image-proportion);
-        min-width: var(--card-carrousel-image-width);
-        max-width: var(--card-carrousel-image-width);
+        min-height: var(--card-carrousel-image-height);
+        max-height: var(--card-carrousel-image-height);
+        min-width: var(--card-carrousel-image-proportion);
+        max-width: var(--card-carrousel-image-proportion);
+        cursor: pointer;
     }
 
     .container-inner-placeholder {
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
 
         color: var(--strong-secondary-color);
+        min-height: var(--card-carrousel-image-height);
+        max-height: var(--card-carrousel-image-height);
+        min-width: var(--card-carrousel-image-width);
+        max-width: var(--card-carrousel-image-width);
     }
 }

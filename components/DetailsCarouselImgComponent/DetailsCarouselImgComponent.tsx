@@ -1,8 +1,8 @@
-import { useState } from "react";
-import styles from "./DetailsCarrouselImgComponent.module.scss"
+import { useEffect, useState } from "react";
+import styles from "./DetailsCarouselImgComponent.module.scss"
 import Image from "next/image";
 
-export default function DetailsCarrouselImgComponent({
+export default function DetailsCarouselImgComponent({
     imgSrc,
     imgAlt,
     imgProportionsX,
@@ -16,29 +16,39 @@ export default function DetailsCarrouselImgComponent({
 
     const [loading, setLoading] = useState<boolean>(true);
 
-    const handleImageLoad = () => {
-        setLoading(false);
-    };
+    useEffect(() => {
+        setLoading(true);
+
+        const image = new window.Image();
+        image.src = imgSrc;
+        image.onload = () => {
+            setLoading(false);
+        };
+
+        return () => {
+            // Cancelar la carga de la imagen si el componente se desmonta antes de que se complete
+            image.onload = null;
+        };
+    }, [imgSrc]);
 
     return (
         <div className={styles["container-outer-image"]} onClick={handleImageClick}>
-            {
-                loading && <div className={styles["container-inner-placeholder"]} >
-                    Cargando..
+            {loading && (
+                <div className={styles["container-inner-placeholder"]}>
+                    Cargando...
                 </div>
-            }
-            {
-                imgSrc && <div className={styles["container-inner-image"]}>
+            )}
+            {!loading && imgSrc && (
+                <div className={styles["container-inner-image"]}>
                     <Image
-                        src={`${imgSrc}`}
-                        alt={`${imgAlt}`}
+                        src={imgSrc}
+                        alt={imgAlt}
                         fill
                         priority
                         sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        onLoad={handleImageLoad}
                     />
                 </div>
-            }
+            )}
             <style jsx>{`
                 .${styles["container-outer-image"]} {
                    --card-carrousel-image-proportion: calc((var(--card-carrousel-image-width)) * ${imgProportionsX});

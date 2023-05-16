@@ -29,7 +29,7 @@ export interface ProductInterface {
     offerPercentage?: number;
     detail?: {
         // payMethod?: [],
-        // description?: DescriptionDataInterface,
+        description?: DescriptionDataInterface,
         images?: ImgDataInterface[];
     },
 }
@@ -43,4 +43,10 @@ export interface ImgDataInterface {
     originalHeight?: number,
     imgProportionsX?: number; //dividir la anchura entre la altura
     imgProportionsY?: number; //dividir la altura entre la anchura
+}
+
+export interface DescriptionDataInterface {
+    title?: string,
+    itemsDescription?: string[],
+    measures?: string
 }

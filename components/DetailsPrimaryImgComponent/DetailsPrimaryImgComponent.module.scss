@@ -4,8 +4,8 @@
 
     min-height: var(--card-details-image-height);
     max-height: var(--card-details-image-height);
-    min-width: var(--card-details-image-height);
-    max-width: var(--card-details-image-height);
+    min-width: var(--card-details-image-width);
+    max-width: var(--card-details-image-width);
 
     display: flex;
     justify-content: center;
@@ -15,17 +15,21 @@
 
     .container-inner-image {
         position: relative;
-        min-height: var(--card-details-image-proportion);
-        max-height: var(--card-details-image-proportion);
-        min-width: var(--card-details-image-width);
-        max-width: var(--card-details-image-width);
+        min-height: var(--card-details-image-height);
+        max-height: var(--card-details-image-height);
+        min-width: var(--card-details-image-proportion);
+        max-width: var(--card-details-image-proportion);
     }
 
     .container-inner-placeholder {
         display: flex;
         justify-content: center;
         align-items: center;
-        
+
         color: var(--strong-secondary-color);
+        min-height: var(--card-details-image-height);
+        max-height: var(--card-details-image-height);
+        min-width: var(--card-details-image-height);
+        max-width: var(--card-details-image-height);
     }
 }

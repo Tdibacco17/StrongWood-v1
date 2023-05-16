@@ -1,7 +1,9 @@
 .container-section-details {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 2rem;
 
     min-width: 100vw;
     max-width: 100vw;
@@ -9,13 +11,12 @@
     padding-top: 12.5rem;
     padding-bottom: 5rem;
 
-    .container-column-dividers {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
 
-        // background: pink;
+    .container-row-dividers {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 3rem;
 
         --details-container-width: calc(100vw - 7rem);
 
@@ -28,63 +29,6 @@
 
         @media (max-width: 480px) {
             --details-container-width: calc(100vw - 3rem);
-        }
-
-        .container-section-images {
-            display: flex;
-            flex-direction: row-reverse;
-            gap: 1rem;
-            padding: 1rem;
-
-            background: var(--strong-primary-color);
-            overflow: hidden;
-
-            .container-section-carrousel {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-start;
-                row-gap: 1rem;
-                height: 25rem;
-
-                scroll-behavior: smooth;
-                overflow: hidden;
-                overflow-y: scroll;
-
-                &::-webkit-scrollbar {
-                    width: 0px;
-                    /* Ancho de la barra de navegación */
-                    background-color: transparent;
-                    /* Color de fondo de la barra de navegación */
-                }
-            }
-        }
-
-        .container-section-info {
-            height: 25rem;
-            width: 25rem;
-
-            .product-title {
-                font-family: var(--strong-font-Roboto-Bold);
-                font-size: var(--strong-font-titles);
-                font-weight: var(--strong-Roboto-Bold-weight);
-                color: var(--strong-primary-color);
-
-                padding-bottom: 1.5rem;
-            }
-
-            .container-info-details {
-                display: flex;
-                flex-direction: column;
-                gap: 0.7rem;
-
-                .info-details {
-                    font-family: var(--strong-font-Roboto-Regular);
-                    font-size: var(--strong-font-subtitles);
-                    font-weight: var(--strong-Roboto-Regular-weight);
-                    color: var(--strong-primary-color);
-                }
-            }
         }
     }
 }
