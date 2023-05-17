@@ -51,12 +51,10 @@ export const homeData: HomeDataInterface = {
         },
         {
             imgSlug: 2,
-            imgSrc: "/assets/img/home/twoCategories/strong2.webp",
+            imgSrc: "/assets/img/home/twoCategories/recibidorSalamancHD1.webp",
             imgAlt: "Image Categorie",
-            originalWidth: 4016,
-            originalHeight: 4016,
-            imgProportionsX: 1,
-            imgProportionsY: 1,
+            imgProportionsX: 1.502,
+            imgProportionsY: 0.665
         },
     ]
 }

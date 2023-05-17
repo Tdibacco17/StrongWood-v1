@@ -1,27 +1,103 @@
 .container-section-info {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: space-between;
 
-    .product-title {
-        font-family: var(--strong-font-Roboto-Bold);
-        font-size: var(--strong-font-titles);
-        font-weight: var(--strong-Roboto-Bold-weight);
-        color: var(--strong-primary-color);
-
-        padding-bottom: 1.5rem;
-    }
+    padding: 0px 1rem 1rem 3rem;
+    width: 100%;
 
     .container-info {
         display: flex;
         flex-direction: column;
-        gap: 0.7rem;
+        align-items: flex-start;
+        gap: 0.8rem;
 
-        .info-item {
-            font-family: var(--strong-font-Roboto-Regular);
-            font-size: var(--strong-font-subtitles);
-            font-weight: var(--strong-Roboto-Regular-weight);
+        width: 100%;
+
+        .product-title {
+            font-family: var(--strong-font-Roboto-Bold);
+            font-size: var(--strong-font-titles);
+            font-weight: var(--strong-Roboto-Bold-weight);
             color: var(--strong-primary-color);
+
+            padding-bottom: 1.5rem;
+        }
+
+        .product-price {
+            display: flex;
+            gap: 2.6rem;
+
+            .info-price {
+                font-family: var(--strong-font-Roboto-Regular);
+                font-size: var(--strong-font-subtitles);
+                font-weight: var(--strong-Roboto-Regular-weight);
+                color: var(--strong-primary-color);
+            }
+
+            .info-offerPrice {
+                font-family: var(--strong-font-Roboto-Regular);
+                font-size: var(--strong-font-subtitles);
+                font-weight: var(--strong-Roboto-Regular-weight);
+                color: var(--strong-primary-color);
+            }
+        }
+
+        .product-offerPercentage {
+            display: flex;
+            gap: 0.3rem;
+
+            .info-offerPercentage {
+                font-family: var(--strong-font-Roboto-Bold);
+                font-size: var(--strong-font-subtitles);
+                font-weight: var(--strong-Roboto-Bold-weight);
+                color: var(--strong-primary-color);
+            }
+
+            .info-text {
+                font-family: var(--strong-font-Roboto-Regular);
+                font-size: var(--strong-font-subtitles);
+                font-weight: var(--strong-Roboto-Regular-weight);
+                color: var(--strong-primary-color);
+            }
+        }
+    }
+
+
+
+    .container-section-icons {
+        display: flex;
+        justify-content: flex-start;
+        gap: 4rem;
+        gap: 2rem;
+        width: 100%;
+
+        .line-divider {
+            min-width: 0.05rem;
+            max-width: 0.05rem;
+            background: var(--strong-primary-color);
+        }
+
+        .icons-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.8rem;
+
+            .icons-title {
+                font-family: var(--strong-font-Roboto-Bold);
+                font-size: var(--strong-font-descriptions);
+                font-weight: var(--strong-Roboto-Bold-weight);
+                color: var(--strong-primary-color);
+                text-align: center;
+            }
+
+            .icons-subtitle {
+                font-family: var(--strong-font-Roboto-Regular);
+                font-size: var(--strong-font-small);
+                font-weight: var(--strong-Roboto-Regular-weight);
+                color: var(--strong-primary-color);
+                text-align: center;
+            }
         }
     }
 }

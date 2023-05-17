@@ -11,7 +11,7 @@ export default function DetailsDescriptionComponent() {
     return (
         <div className={styles["container-section-description"]}>
             <h1 className={styles["description-title"]}>
-                {productData?.detail?.description?.title}
+                {`${productData?.detail?.description?.title}`}
             </h1>
 
             <div className={styles["container-description"]}>
@@ -19,7 +19,7 @@ export default function DetailsDescriptionComponent() {
                     productData?.detail?.description?.itemsDescription?.map((item: string, index: number) => {
                         return (
                             <p className={styles["description-item"]} key={index}>
-                                {item}
+                                {`${item}`}
                             </p>
                         )
                     })

@@ -1,5 +1,5 @@
+import FooterIconComponent from "../FooterIconComponent/FooterIconComponent"
 import styles from "./FooterComponent.module.scss"
-import IconComponent from "../IconComponent/IconComponent"
 
 export default function FooterComponent() {
     return (
@@ -16,7 +16,7 @@ export default function FooterComponent() {
                         rel="preload" 
                         aria-label="Email StrongWood"
                     >
-                        <IconComponent imgSrc="/assets/icons/gmail.svg" />
+                        <FooterIconComponent imgSrc="/assets/icons/gmail.svg" />
                     </a>
                     <a
                         href="https://instagram.com/strongwood_ar"
@@ -24,7 +24,7 @@ export default function FooterComponent() {
                         rel="preload" 
                         aria-label="Instagram StrongWood"
                     >
-                        <IconComponent imgSrc="/assets/icons/instagram.svg" />
+                        <FooterIconComponent imgSrc="/assets/icons/instagram.svg" />
                     </a>
                     <a
                         href="https://wa.me/5491133346111"
@@ -32,7 +32,7 @@ export default function FooterComponent() {
                         rel="preload" 
                         aria-label="Whatsapp StrongWood"
                     >
-                        <IconComponent imgSrc="/assets/icons/whatsapp.svg" />
+                        <FooterIconComponent imgSrc="/assets/icons/whatsapp.svg" />
                     </a>
                 </div>
             </div>

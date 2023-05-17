@@ -28,7 +28,6 @@ export interface ProductInterface {
     offerPrice?: string;
     offerPercentage?: number;
     detail?: {
-        // payMethod?: [],
         description?: DescriptionDataInterface,
         images?: ImgDataInterface[];
     },
