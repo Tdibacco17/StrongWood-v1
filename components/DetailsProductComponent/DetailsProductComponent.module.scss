@@ -18,8 +18,15 @@
         min-width: var(--details-container-width);
         max-width: var(--details-container-width);
 
+        @media (max-width: 855px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
         @media (max-width: 768px) {
             --details-container-width: calc(100vw - 5rem);
+            align-items: revert;
         }
 
         @media (max-width: 480px) {

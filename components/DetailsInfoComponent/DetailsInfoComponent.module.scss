@@ -3,8 +3,14 @@
     flex-direction: column;
     justify-content: space-between;
 
-    padding: 0px 1rem 1rem 3rem;
+    padding: 0px 0px 0px 2rem;
     width: 100%;
+
+    @media (max-width: 855px) {
+        align-items: center;
+        padding: 0px;
+        height: 16rem;
+    }
 
     .container-info {
         display: flex;
@@ -14,62 +20,66 @@
 
         width: 100%;
 
-        .product-title {
-            font-family: var(--strong-font-Roboto-Bold);
-            font-size: var(--strong-font-titles);
-            font-weight: var(--strong-Roboto-Bold-weight);
-            color: var(--strong-primary-color);
-
-            padding-bottom: 1.5rem;
+        @media (max-width: 855px) {
+            align-items: center;
         }
 
-        .product-price {
-            display: flex;
-            gap: 2.6rem;
+        .product-title {
+            font-family: var(--strong-font-Roboto-Bold);
+            font-size: var(--strong-font-large);
+            font-weight: var(--strong-weight-700);
+            color: var(--strong-primary-color);
+            text-transform: uppercase;
+
+            padding-bottom: 1.5rem;
+
+            @media (max-width:992px) {
+                padding-bottom: 1rem;
+            }
+        }
+
+        .info-text {
+            font-family: var(--strong-font-Roboto-Regular);
+            font-size: var(--strong-font-xxsmall);
+            font-weight: var(--strong-weight-400);
+            color: var(--strong-primary-color);
 
             .info-price {
-                font-family: var(--strong-font-Roboto-Regular);
-                font-size: var(--strong-font-subtitles);
-                font-weight: var(--strong-Roboto-Regular-weight);
-                color: var(--strong-primary-color);
+                font-family: var(--strong-font-Roboto-Bold);
+                font-size: var(--strong-font-medium);
+                font-weight: var(--strong-weight-700);
+                padding-left: 1rem;
+                padding-left: 1rem;
             }
 
             .info-offerPrice {
-                font-family: var(--strong-font-Roboto-Regular);
-                font-size: var(--strong-font-subtitles);
-                font-weight: var(--strong-Roboto-Regular-weight);
-                color: var(--strong-primary-color);
+                font-family: var(--strong-font-Roboto-Bold);
+                font-size: var(--strong-font-medium);
+                font-weight: var(--strong-weight-700);
+                padding-left: 1rem;
             }
-        }
-
-        .product-offerPercentage {
-            display: flex;
-            gap: 0.3rem;
 
             .info-offerPercentage {
                 font-family: var(--strong-font-Roboto-Bold);
-                font-size: var(--strong-font-subtitles);
-                font-weight: var(--strong-Roboto-Bold-weight);
-                color: var(--strong-primary-color);
-            }
-
-            .info-text {
-                font-family: var(--strong-font-Roboto-Regular);
-                font-size: var(--strong-font-subtitles);
-                font-weight: var(--strong-Roboto-Regular-weight);
-                color: var(--strong-primary-color);
+                font-weight: var(--strong-weight-700);
+                line-height: 1.4rem;
             }
         }
     }
 
-
-
     .container-section-icons {
         display: flex;
         justify-content: flex-start;
-        gap: 4rem;
         gap: 2rem;
         width: 100%;
+
+        @media (max-width:1150px) {
+            gap: 1rem;
+        }
+
+        @media (max-width: 855px) {
+            justify-content: center;
+        }
 
         .line-divider {
             min-width: 0.05rem;
@@ -81,21 +91,20 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 0.8rem;
+            gap: 0.5rem;
+            color: var(--strong-primary-color);
 
             .icons-title {
                 font-family: var(--strong-font-Roboto-Bold);
-                font-size: var(--strong-font-descriptions);
-                font-weight: var(--strong-Roboto-Bold-weight);
-                color: var(--strong-primary-color);
+                font-size: var(--strong-font-xsmall);
+                font-weight: var(--strong-weight-700);
                 text-align: center;
             }
 
             .icons-subtitle {
                 font-family: var(--strong-font-Roboto-Regular);
                 font-size: var(--strong-font-small);
-                font-weight: var(--strong-Roboto-Regular-weight);
-                color: var(--strong-primary-color);
+                font-weight: var(--strong-weight-400);
                 text-align: center;
             }
         }

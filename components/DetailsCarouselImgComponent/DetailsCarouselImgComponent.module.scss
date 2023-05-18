@@ -13,13 +13,32 @@
 
     overflow: hidden;
 
+    @media (max-width:1150px) {
+        --card-carrousel-image-height: 9rem;
+        --card-carrousel-image-width: 9rem;
+    }
+
+    @media (max-width: 992px) {
+        --card-carrousel-image-height: 8rem;
+        --card-carrousel-image-width: 8rem;
+    }
+
+
+    @media (max-width: 855px) {
+        --card-carrousel-image-height: 8rem;
+        --card-carrousel-image-width: 8rem;
+    }
+
     .container-inner-image {
         position: relative;
         min-height: var(--card-carrousel-image-height);
         max-height: var(--card-carrousel-image-height);
         min-width: var(--card-carrousel-image-proportion);
         max-width: var(--card-carrousel-image-proportion);
-        cursor: pointer;
+    }
+
+    .container-inner-image * {
+        pointer-events: none;
     }
 
     .container-inner-placeholder {

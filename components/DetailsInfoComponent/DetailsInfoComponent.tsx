@@ -15,14 +15,29 @@ export default function DetailsInfoComponent() {
             <div className={styles["container-info"]}>
                 <h1 className={styles["product-title"]}>{productData?.title}</h1>
 
-                <div className={styles["product-price"]}>
-                    <p className={styles["info-price"]}>Precio:{` $${productData?.price}`}</p>
-                    <p className={styles["info-offerPrice"]}>Precio oferta:{` $${productData?.offerPrice}`}</p>
-                </div>
-                <div className={styles["product-offerPercentage"]}>
-                    <p className={styles["info-offerPercentage"]}>{` ${productData?.offerPercentage}% OFF`}</p>
-                    <p className={styles["info-text"]}>DE DESCUENTO PAGANDO EN EFECTIVO</p>
-                </div>
+                <p className={styles["info-text"]}>
+                    PRECIO:
+                    <span className={styles["info-price"]}>
+                        {` $${productData?.price}`}
+                    </span>
+                </p>
+
+                <p className={styles["info-text"]}>
+                    PRECIO OFERTA:
+                    <span className={styles["info-offerPrice"]}>
+                        {` $${productData?.offerPrice}`}
+                    </span>
+                </p>
+
+                <p className={styles["info-text"]}>
+                    <span className={styles["info-offerPercentage"]}>
+                        {` ${productData?.offerPercentage}% OFF `}
+                    </span>
+                    de descuento pagando en
+                    <span className={styles["info-offerPercentage"]}>
+                        {` EFECTIVO`}
+                    </span>
+                </p>
             </div>
             <div className={styles["container-section-icons"]}>
                 <div className={styles["icons-info"]}>

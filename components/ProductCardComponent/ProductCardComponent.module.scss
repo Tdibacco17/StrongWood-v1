@@ -88,8 +88,8 @@
                 border-bottom-left-radius: 0.2rem;
 
                 font-family: var(--strong-font-Roboto-Regular);
-                font-size: var(--strong-font-descriptions);
-                font-weight: var(--strong-Roboto-Regular-weight);
+                font-size: var(--strong-font-xsmall);
+                font-weight: var(--strong-weight-400);
 
                 color: var(--strong-primary-color);
 
@@ -120,8 +120,8 @@
             word-break: break-all;
 
             font-family: var(--strong-font-Roboto-Bold);
-            font-size: var(--strong-font-subtitles);
-            font-weight: var(--strong-Roboto-Bold-weight);
+            font-size: var(--strong-font-xxsmall);
+            font-weight: var(--strong-weight-700);
 
             color: var(--strong-primary-color);
         }
@@ -135,16 +135,16 @@
                 text-decoration: var(--price-line-through);
 
                 font-family: var(--strong-font-Roboto-Regular);
-                font-size: var(--strong-font-descriptions);
-                font-weight: var(--strong-Roboto-Regular-weight);
+                font-size: var(--strong-font-xsmall);
+                font-weight: var(--strong-weight-400);
 
                 color: var(--strong-primary-color);
             }
 
             .offer {
                 font-family: var(--strong-font-Roboto-Regular);
-                font-size: var(--strong-font-descriptions);
-                font-weight: var(--strong-Roboto-Regular-weight);
+                font-size: var(--strong-font-xsmall);
+                font-weight: var(--strong-weight-400);
 
                 color: var(--strong-primary-color);
             }

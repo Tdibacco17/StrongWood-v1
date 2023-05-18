@@ -229,13 +229,6 @@ export const productsData: ProductDataInterface = {
                     imgProportionsY: 1
                 },
                 {
-                    imgSlug: 1,
-                    imgSrc: "/assets/img/strongWood/macetaSintra/macetaSintra1.webp",
-                    imgAlt: "Maceta Sintra",
-                    imgProportionsX: 1,
-                    imgProportionsY: 1
-                },
-                {
                     imgSlug: 2,
                     imgSrc: "/assets/img/strongWood/macetaSintra/macetaSintra2.webp",
                     imgAlt: "Maceta Sintra",

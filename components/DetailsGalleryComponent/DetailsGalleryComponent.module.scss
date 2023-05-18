@@ -1,26 +1,37 @@
 .container-section-gallery {
+    --gallery-section-height: 30rem;
+    --gallery-section-width: 41rem;
+
     display: flex;
     flex-direction: row-reverse;
     gap: 1rem;
     padding: 1rem;
 
     background: var(--strong-primary-color);
-    min-height: 25rem;
-    max-height: 27rem;
-    min-width: 38rem;
-    max-width: 38rem;
+
+    min-height: var(--gallery-section-height);
+    max-height: var(--gallery-section-height);
+    min-width: var(--gallery-section-width);
+    max-width: var(--gallery-section-width);
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 
     .container-section-carousel {
+        --carousel-section-height: 28rem;
+        --carrousel-card-image: 10rem;
+
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
         row-gap: 1rem;
 
-        min-height: 25rem;
-        max-height: 27rem;
-        min-width: 10rem;
-        max-width: 10rem;
+        min-height: var(--carousel-section-height);
+        max-height: var(--carousel-section-height);
+        min-width: var(--carrousel-card-image);
+        max-width: var(--carrousel-card-image);
 
         scroll-behavior: smooth;
         overflow: hidden;
@@ -33,4 +44,84 @@
             /* Color de fondo de la barra de navegación */
         }
     }
+
+    @media (max-width: 1150px) {
+        --gallery-section-height: 26rem;
+        --gallery-section-width: 36rem;
+
+        .container-section-carousel {
+            --carousel-section-height: 24rem;
+            --carrousel-card-image: 9rem;
+        }
+    }
+
+    @media (max-width: 992px) {
+        --gallery-section-height: 22rem;
+        --gallery-section-width: 31rem;
+
+        .container-section-carousel {
+            --carousel-section-height: 20rem;
+            --carrousel-card-image: 8rem;
+        }
+    }
+
+    @media (max-width: 855px) {
+        --gallery-section-height: 24rem;
+        --gallery-section-width: 33rem;
+
+        .container-section-carousel {
+            --carousel-section-height: 22rem;
+            --carrousel-card-image: 8rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        min-height: calc((calc(100vw - 5rem)) + 9rem);
+        max-height: calc((calc(100vw - 5rem)) + 9rem);
+        min-width: calc(100vw - 5rem);
+        max-width: calc(100vw - 5rem);
+
+        .container-section-carousel {
+            --carousel-section-height: 10rem;
+
+            display: flex;
+            flex-direction: row;
+            align-items: revert;
+            justify-content: revert;
+            row-gap: revert;
+            column-gap: 1rem;
+
+            overflow-x: scroll;
+
+            min-height: var(--carousel-section-height);
+            max-height: var(--carousel-section-height);
+            min-width: 100%;
+            max-width: 100%;
+
+        }
+    }
+
+    @media (max-width: 480px) {
+        min-height: calc((calc(100vw - 3rem)) + 9rem);
+        max-height: calc((calc(100vw - 3rem)) + 9rem);
+        min-width: calc(100vw - 3rem);
+        max-width: calc(100vw - 3rem);
+    }
+}
+
+.container-section-carousel {
+    /* Resto de estilos... */
+
+    cursor: grab;
+    user-select: none;
+}
+
+.container-section-carousel:active {
+    cursor: grabbing;
+}
+
+.container-section-carousel {
+    /* Resto de estilos... */
+
+    user-select: none;
 }

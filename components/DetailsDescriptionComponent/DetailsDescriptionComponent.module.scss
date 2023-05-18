@@ -9,10 +9,22 @@
     min-width: var(--description-container-width);
     max-width: var(--description-container-width);
 
+    @media (max-width: 855px) {
+        // align-items: center;
+    }
+
+    @media (max-width: 768px) {
+        --description-container-width: calc(100vw - 5rem);
+    }
+
+    @media (max-width: 480px) {
+        --description-container-width: calc(100vw - 3rem);
+    }
+
     .description-title {
         font-family: var(--strong-font-Roboto-Regular);
-        font-size: var(--strong-font-subtitles);
-        font-weight: var(--strong-Roboto-Regular-weight);
+        font-size: var(--strong-font-medium);
+        font-weight: var(--strong-weight-400);
         color: var(--strong-primary-color);
 
         padding-bottom: 1.5rem;
@@ -25,8 +37,8 @@
 
         .description-item {
             font-family: var(--strong-font-Roboto-Regular);
-            font-size: var(--strong-font-subtitles);
-            font-weight: var(--strong-Roboto-Regular-weight);
+            font-size: var(--strong-font-xxsmall);
+            font-weight: var(--strong-weight-400);
             color: var(--strong-primary-color);
         }
     }

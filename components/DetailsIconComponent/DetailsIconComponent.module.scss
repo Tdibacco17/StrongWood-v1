@@ -12,21 +12,22 @@
 
     overflow: hidden;
 
-    // @media (max-width: 992px) {
-    //     --icon-image: 1.5rem;
-    // }
+    @media (max-width: 992px) {
+        --icon-image: 2rem;
+    }
 
-    // @media (max-width: 768px) {
-    //     --icon-image: 1.4rem;
-    // }
+    @media (max-width: 768px) {
+        --icon-image: 1.8rem;
+    }
 
-    // @media (max-width: 576px) {
-    //     --icon-image: 1.3rem;
-    // }
+    @media (max-width: 576px) {
+        --icon-image: 1.7rem;
+    }
 
-    // @media (max-width: 480px) {
-    //     --icon-image: 1.2rem;
-    // }
+    @media (max-width: 480px) {
+        --icon-image: 1.6rem;
+    }
+
 
     .container-inner-image {
         position: relative;
@@ -41,6 +42,6 @@
         // -moz-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg);
         // -ms-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg);
         // -o-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg);
-        
+
     }
 }

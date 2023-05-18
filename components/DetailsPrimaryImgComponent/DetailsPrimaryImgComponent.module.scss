@@ -1,6 +1,6 @@
 .container-outer-image {
-    --card-details-image-height: 25rem;
-    --card-details-image-width: 25rem; //tamaño card
+    --card-details-image-height: 28rem;
+    --card-details-image-width: 28rem; //tamaño card
 
     min-height: var(--card-details-image-height);
     max-height: var(--card-details-image-height);
@@ -31,5 +31,52 @@
         max-height: var(--card-details-image-height);
         min-width: var(--card-details-image-height);
         max-width: var(--card-details-image-height);
+    }
+
+    @media (max-width:1150px) {
+        --card-details-image-height: 24rem;
+        --card-details-image-width: 24rem;
+    }
+
+    @media (max-width:992px) {
+        --card-details-image-height: 20rem;
+        --card-details-image-width: 20rem;
+    }
+
+
+    @media (max-width: 855px) {
+        --card-details-image-height: 22rem;
+        --card-details-image-width: 22rem;
+    }
+
+    @media (max-width: 768px) {
+
+        min-height: calc(100vw - 7rem);
+        max-height: calc(100vw - 7rem);
+        min-width: calc(100vw - 7rem);
+        max-width: calc(100vw - 7rem);
+
+        .container-inner-image {
+
+            min-height: calc(100vw - 7rem);
+            max-height: calc(100vw - 7rem);
+            min-width: calc(100vw - 7rem);
+            max-width: calc(100vw - 7rem);
+        }
+    }
+
+    @media (max-width: 480px) {
+        min-height: calc(100vw - 5rem);
+        max-height: calc(100vw - 5rem);
+        min-width: calc(100vw - 5rem);
+        max-width: calc(100vw - 5rem);
+
+        .container-inner-image {
+
+            min-height: calc(100vw - 5rem);
+            max-height: calc(100vw - 5rem);
+            min-width: calc(100vw - 5rem);
+            max-width: calc(100vw - 5rem);
+        }
     }
 }

@@ -40,14 +40,20 @@
   --strong-font-Roboto-Bold: 'Roboto-Bold', var(--fallback-font-families);
   --strong-font-Roboto-Regular: 'Roboto-Regular', var(--fallback-font-families);
 
-  --strong-font-titles: 2.2rem;
-  --strong-font-subtitles: 0.9rem;
-  --strong-font-descriptions: 0.8rem;
-  --strong-font-small: 0.7rem;
+  --strong-font-large: 1.8rem;
+  --strong-font-xlarge: 2.2rem;
+  --strong-font-xxlarge: 2.4rem;
 
-  --strong-Knucklehead-weight: 700;
-  --strong-Roboto-Bold-weight: 700;
-  --strong-Roboto-Regular-weight: 400;
+  --strong-font-medium: 1rem;
+  --strong-font-xmedium: 1.1rem;
+  --strong-font-xxmedium: 1.2rem;
+
+  --strong-font-small: 0.7rem;
+  --strong-font-xsmall: 0.8rem;
+  --strong-font-xxsmall: 0.9rem;
+
+  --strong-weight-700: 700;
+  --strong-weight-400: 400;
   /*****************/
 
   /* escala de grises */
@@ -191,10 +197,17 @@ a {
 
 @media (max-width: 768px) {
   :root {
-    --strong-font-titles: 1.6rem;
-    --strong-font-subtitles: 0.85rem;
-    --strong-font-descriptions: 0.75rem;
+    --strong-font-large: 1.6rem;
+    --strong-font-xlarge: 2rem;
+    --strong-font-xxlarge: 2.2rem;
+
+    --strong-font-medium: 0.9rem;
+    --strong-font-xmedium: 1rem;
+    --strong-font-xxmedium: 1.1rem;
+
     --strong-font-small: 0.65rem;
+    --strong-font-xsmall: 0.75rem;
+    --strong-font-xxsmall: 0.85rem;
   }
 }
 
@@ -202,9 +215,16 @@ a {
 
 @media (max-width: 480px) {
   :root {
-    --strong-font-titles: 1.4rem;
-    --strong-font-subtitles: 0.8rem;
-    --strong-font-descriptions: 0.7rem;
+    --strong-font-large: 1.4rem;
+    --strong-font-xlarge: 1.8rem;
+    --strong-font-xxlarge: 2rem;
+
+    --strong-font-medium: 0.8rem;
+    --strong-font-xmedium: 0.9rem;
+    --strong-font-xxmedium: 1rem;
+
     --strong-font-small: 0.6rem;
+    --strong-font-xsmall: 0.7rem;
+    --strong-font-xxsmall: 0.8rem;
   }
 }

@@ -75,8 +75,8 @@
 
         .title-overlay {
             font-family: var(--strong-font-Roboto-Bold);
-            font-size: var(--strong-font-titles);
-            font-weight: var(--strong-Roboto-Bold-weight);
+            font-size: var(--strong-font-xlarge);
+            font-weight: var(--strong-weight-700);
 
             color: var(--strong-primary-color);
             padding-bottom: 0.4rem;
@@ -92,8 +92,8 @@
 
         .subtitle-overlay {
             font-family: var(--strong-font-Roboto-Regular);
-            font-weight: var(--strong-Roboto-Regular-weight);
-            font-size: var(--strong-font-descriptions);
+            font-weight: var(--strong-weight-400);
+            font-size: var(--strong-font-xsmall);
 
             color: var(--strong-primary-color);
         }
