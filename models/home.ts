@@ -42,7 +42,7 @@ export const homeData: HomeDataInterface = {
         },
         {
             imgSlug: 2,
-            imgSrc: "/assets/img/home/twoCategories/recibidorSalamancHD1.webp",
+            imgSrc: "/assets/img/home/twoCategories/strong2HD.webp",
             imgAlt: "Image Categorie",
             imgProportionsX: 1.502,
             imgProportionsY: 0.665

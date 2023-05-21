@@ -19,8 +19,6 @@ export default function ProductCardComponent({
             data-id={`${product.productSlug}`}
             onClick={() => { router.push(`/products/${product.productSlug}`) }}
         >
-            <div className={styles["container-overlay-image"]} />
-
             <div className={styles["container-outer-image"]}>
                 {loading && (
                     <div className={styles["container-inner-placeholder"]}>
