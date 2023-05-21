@@ -87,12 +87,12 @@
 
     @media (max-width: 768px) {
         --gallery-section-height: calc((calc(100vw - 5rem)) + 9rem);
-        --gallery-section-height: calc(100vw - 5rem);
+        --gallery-section-width: calc(100vw - 5rem);
 
         min-height: var(--gallery-section-height);
         max-height: var(--gallery-section-height);
-        min-width: var(--gallery-section-height);
-        max-width: var(--gallery-section-height);
+        min-width: var(--gallery-section-width);
+        max-width: var(--gallery-section-width);
 
         .container-section-carousel {
             --carousel-section-height: 10rem;
@@ -116,6 +116,6 @@
 
     @media (max-width: 480px) {
         --gallery-section-height: calc((calc(100vw - 3rem)) + 9rem);
-        --gallery-section-height: calc(100vw - 3rem);
+        --gallery-section-width: calc(100vw - 3rem);
     }
 }
