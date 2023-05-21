@@ -8,4 +8,39 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+
+    .title-slogan {
+        --slogan-title-width: calc(100vw - 7rem);
+        font-family: var(--strong-font-Knucklehead);
+        font-weight: var(--strong-weight-700);
+        font-size: var(--strong-font-slarge);
+        letter-spacing: 0.35rem;
+        color: var(--strong-primary-color);
+
+        text-align: center;
+        min-width: var(--slogan-title-width);
+        max-width: var(--slogan-title-width);
+        padding-top: 8rem;
+
+        animation: fade-in 1s ease-in-out;
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            --slogan-title-width: calc(100vw - 5rem);
+        }
+
+        @media (max-width: 480px) {
+            --slogan-title-width: calc(100vw - 3rem);
+        }
+    }
 }

@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
 import styles from "./DetailsCarouselImgComponent.module.scss"
 import Image from "next/image";
+import useImageLoading from "@/utils/img/useImageLoading";
 
 export default function DetailsCarouselImgComponent({
     imgSrc,
@@ -14,22 +14,8 @@ export default function DetailsCarouselImgComponent({
     handleImageClick: () => void;
 }) {
 
-    const [loading, setLoading] = useState<boolean>(true);
-
-    useEffect(() => {
-        setLoading(true);
-
-        const image = new window.Image();
-        image.src = imgSrc;
-        image.onload = () => {
-            setLoading(false);
-        };
-
-        return () => {
-            // Cancelar la carga de la imagen si el componente se desmonta antes de que se complete
-            image.onload = null;
-        };
-    }, [imgSrc]);
+    const imageUrl = imgSrc && imgSrc;
+    const loading = imageUrl ? useImageLoading(imageUrl) : false;
 
     return (
         <div className={styles["container-outer-image"]} onClick={handleImageClick}>

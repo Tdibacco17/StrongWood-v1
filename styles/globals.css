@@ -40,6 +40,7 @@
   --strong-font-Roboto-Bold: 'Roboto-Bold', var(--fallback-font-families);
   --strong-font-Roboto-Regular: 'Roboto-Regular', var(--fallback-font-families);
 
+  --strong-font-slarge: 1.6rem;
   --strong-font-large: 1.8rem;
   --strong-font-xlarge: 2.2rem;
   --strong-font-xxlarge: 2.4rem;
@@ -74,8 +75,8 @@
   --strong-tertiary-color: #333;
 
   --strong-bg-color-transparency: rgba(0, 0, 0, 0.3);
-  
-  
+
+
   --strong-bg-gradient-img-primary: rgba(0, 0, 0, 0) linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8196078431) 70%) 0% 0% no-repeat padding-box;
   --strong-bg-gradient-img-black: linear-gradient(to bottom, transparent 45%, var(--strong-secondary-color));
   /* --strong-bg-gradient-img-black: linear-gradient(to bottom, transparent 75%, black 100%) !important; */
@@ -200,6 +201,8 @@ a {
 
 @media (max-width: 768px) {
   :root {
+
+    --strong-font-slarge: 1.4rem;
     --strong-font-large: 1.6rem;
     --strong-font-xlarge: 2rem;
     --strong-font-xxlarge: 2.2rem;
@@ -218,6 +221,7 @@ a {
 
 @media (max-width: 480px) {
   :root {
+    --strong-font-slarge: 1.2rem;
     --strong-font-large: 1.4rem;
     --strong-font-xlarge: 1.8rem;
     --strong-font-xxlarge: 2rem;

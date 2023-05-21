@@ -47,6 +47,7 @@ export default function HomeSliderComponent(
                     ))
                 }
             </div>
+
             <style jsx>{`
                 .${styles["container-section-slider"]} .${styles["container-slider"]} {
                     transform: translateX(-${currentIndex * 33.333333}%);

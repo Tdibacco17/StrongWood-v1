@@ -38,7 +38,7 @@ export default function NavbarComponent({ isSlider, isBack }: { isSlider: Boolea
                 <div className={styles['container-secondary-nav']}>
                     {
                         isBack ?
-                            <h3 onClick={() => { router.push(`/products`); }} className={styles["back-title"]}>volver</h3>
+                            <h3 onClick={() => { router.push(`/products`); }} className={styles["back-title"]}>VOLVER</h3>
                             : <h3 className={styles["title"]}>FUNCIONALIDADES</h3>
                     }
                 </div>

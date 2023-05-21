@@ -2,13 +2,16 @@ import { ProductInterface } from "@/types/Interfaces";
 import styles from "./ProductCardComponent.module.scss"
 import Image from "next/image";
 import { useRouter } from "next/router";
+import useImageLoading from "@/utils/img/useImageLoading";
 
 export default function ProductCardComponent({
     product
 }: {
     product: ProductInterface
 }) {
-
+    const imageUrl = product?.image?.imgSrc;
+    const loading = imageUrl ? useImageLoading(imageUrl) : false;
+    
     const router = useRouter()
 
     return (
@@ -16,17 +19,25 @@ export default function ProductCardComponent({
             data-id={`${product.productSlug}`}
             onClick={() => { router.push(`/products/${product.productSlug}`) }}
         >
+            <div className={styles["container-overlay-image"]} />
+
             <div className={styles["container-outer-image"]}>
-                <div className={styles["container-inner-image"]}>
-                    <Image
-                        src={`${product.image.imgSrc}`}
-                        alt={`${product.image.imgAlt}`}
-                        fill
-                        priority
-                        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-                </div>
-                <div className={styles["container-overlay-image"]} />
+                {loading && (
+                    <div className={styles["container-inner-placeholder"]}>
+                        Cargando...
+                    </div>
+                )}
+                {!loading && product && (
+                    <div className={styles["container-inner-image"]}>
+                        <Image
+                            src={`${product.image.imgSrc}`}
+                            alt={`${product.image.imgAlt}`}
+                            fill
+                            priority
+                            sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
+                    </div>
+                )}
                 {
                     product.offerPrice &&
                     <div className={styles["container-offer-percentage"]}>

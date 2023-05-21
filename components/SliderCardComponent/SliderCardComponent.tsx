@@ -27,21 +27,24 @@ export default function SliderCardComponent({
             <div className={styles["container-overlay-image"]} />
             <style jsx>{`
                 .${styles["container-outer-image"]} {
+                    --banner-proportion-height:calc((var(--banner-image-outer-width)) * ${imgProportionsY});
+                    --banner-proportion-width: calc(100vh * ${imgProportionsX});
+
                     min-height: var(--banner-image-outer-height);
                     max-height: var(--banner-image-outer-height);
                     min-width: var(--banner-image-outer-width);
                     max-width: var(--banner-image-outer-width);
                     .${styles["container-inner-image"]} {
-                        min-height: calc((var(--banner-image-outer-width)) * ${imgProportionsY});
-                        max-height: calc((var(--banner-image-outer-width)) * ${imgProportionsY});
+                        min-height: var(--banner-proportion-height);
+                        max-height: var(--banner-proportion-height);
                         min-width: var(--banner-image-outer-width);
                         max-width: var(--banner-image-outer-width);
                     }
                 }
                 @media (max-width: 1100px) {
                     .${styles["container-outer-image"]} {
-                        min-height: calc((var(--banner-image-outer-width)) * ${imgProportionsY});
-                        max-height: calc((var(--banner-image-outer-width)) * ${imgProportionsY});
+                        min-height: var(--banner-proportion-height);
+                        max-height: var(--banner-proportion-height);
                         min-width: var(--banner-image-outer-width);
                         max-width: var(--banner-image-outer-width);
                     }
@@ -55,8 +58,8 @@ export default function SliderCardComponent({
                         .${styles["container-inner-image"]} {
                             min-height: 100vh;
                             max-height: 100vh;
-                            min-width: calc(100vh * ${imgProportionsX});
-                            max-width: calc(100vh * ${imgProportionsX});
+                            min-width: var(--banner-proportion-width);
+                            max-width: var(--banner-proportion-width);
                         }
                     }
                 }

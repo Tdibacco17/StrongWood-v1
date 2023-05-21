@@ -23,7 +23,7 @@ export default function HomeTwoCategoriesComponent() {
                         imgProportionsX={homeData.categoriesImages[0].imgProportionsX}
                         imgProportionsY={homeData.categoriesImages[0].imgProportionsY}
                         title="Línea Design"
-                        subtitle="El balance perfecto entre hierro y madera."
+                        subtitle="Diseña tu cocina"
                     />
                 </div>
             }
@@ -36,7 +36,7 @@ export default function HomeTwoCategoriesComponent() {
                         imgProportionsX={homeData.categoriesImages[1].imgProportionsX}
                         imgProportionsY={homeData.categoriesImages[1].imgProportionsY}
                         title="Línea Wood"
-                        subtitle="El balance perfecto entre hierro y madera."
+                        subtitle="Ver productos"
                     />
                 </div>
             }
