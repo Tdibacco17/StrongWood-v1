@@ -7,7 +7,6 @@ export default function HomeComponent() {
         <div className={styles["container-section-home"]}>
             <SliderContainer />
             <h2 className={styles["title-slogan"]}>EL BALANCE PERFECTO ENTRE HIERRO Y MADERA</h2>
-
             <CategoriesComponent />
         </div>
     )

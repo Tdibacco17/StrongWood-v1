@@ -19,13 +19,24 @@ export default function HomeSliderComponent(
 
     return (
         <div className={styles["container-section-slider"]}>
-            <div className={styles["container-slider"]} >
-                {
+            {/* <div className={styles["container-slider"]} > */}
+            {
+                homeData?.sliderImages &&
+                <SliderCardComponent
+                    imgSrc={`${homeData.sliderImages[0].imgSrc}`}
+                    imgAlt={`${homeData.sliderImages[0].imgAlt}`}
+                    imgProportionsX={homeData.sliderImages[0].imgProportionsX}
+                    imgProportionsY={homeData.sliderImages[0].imgProportionsY}
+                />
+            }
+            {/* {
                     homeData && homeData.sliderImages.map((slide, index) => (
                         <div
                             key={slide.imgSlug}
-                            className={`${styles["slide-item"]} ${index === currentIndex ? styles["active"] : ""}`}>
+                            className={`${styles["slide-item"]} ${index === currentIndex ? styles["active"] : ""}`}
+                        >
                             <SliderCardComponent
+                                key={slide.imgSlug}
                                 imgSrc={`${slide.imgSrc}`}
                                 imgAlt={`${slide.imgAlt}`}
                                 imgProportionsX={slide.imgProportionsX}
@@ -33,9 +44,9 @@ export default function HomeSliderComponent(
                             />
                         </div>
                     ))
-                }
-            </div>
-            <div className={styles["container-controls"]}>
+                } */}
+            {/* </div> */}
+            {/* <div className={styles["container-controls"]}>
                 {
                     homeData && homeData.sliderImages.map((slide, index) => (
                         <button
@@ -46,13 +57,13 @@ export default function HomeSliderComponent(
                         </button>
                     ))
                 }
-            </div>
+            </div> */}
 
-            <style jsx>{`
+            {/* <style jsx>{`
                 .${styles["container-section-slider"]} .${styles["container-slider"]} {
                     transform: translateX(-${currentIndex * 33.333333}%);
                 }
-            `}</style>
+            `}</style> */}
         </div>
     );
 }
