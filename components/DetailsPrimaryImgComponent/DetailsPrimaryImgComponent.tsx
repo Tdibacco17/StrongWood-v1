@@ -10,8 +10,8 @@ export default function DetailsPrimaryImgComponent({
     activeImage: ImgDataInterface | undefined;
 }) {
 
-    const imageUrl = activeImage?.imgSrc;
-    const loading = imageUrl ? useImageLoading(imageUrl) : false;
+    const imageUrl = activeImage?.imgSrc ?? "";
+    const loading = useImageLoading(imageUrl);
 
     return (
         <div className={styles["container-outer-image"]}>

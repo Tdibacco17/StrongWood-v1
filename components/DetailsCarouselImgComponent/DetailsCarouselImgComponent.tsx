@@ -15,7 +15,7 @@ export default function DetailsCarouselImgComponent({
 }) {
 
     const imageUrl = imgSrc && imgSrc;
-    const loading = imageUrl ? useImageLoading(imageUrl) : false;
+    const loading = useImageLoading(imageUrl);
 
     return (
         <div className={styles["container-outer-image"]} onClick={handleImageClick}>

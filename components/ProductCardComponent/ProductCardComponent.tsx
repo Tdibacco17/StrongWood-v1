@@ -10,8 +10,8 @@ export default function ProductCardComponent({
     product: ProductInterface
 }) {
     const imageUrl = product?.image?.imgSrc;
-    const loading = imageUrl ? useImageLoading(imageUrl) : false;
-    
+    const loading = useImageLoading(imageUrl);
+
     const router = useRouter()
 
     return (
