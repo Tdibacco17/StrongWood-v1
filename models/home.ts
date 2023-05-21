@@ -12,15 +12,6 @@ export const homeData: HomeDataInterface = {
             imgProportionsY: 0.6651
         },
         {
-            imgSlug: 2,
-            imgSrc: "/assets/img/home/slider/strong4.webp",
-            imgAlt: "Imagen Slider",
-            originalWidth: 6048,
-            originalHeight: 4024,
-            imgProportionsX: 1.5024,
-            imgProportionsY: 0.6651
-        },
-        {
             imgSlug: 3,
             imgSrc: "/assets/img/home/slider/strong5.webp",
             imgAlt: "Imagen Slider",
