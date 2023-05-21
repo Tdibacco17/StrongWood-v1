@@ -19,6 +19,10 @@
         max-height: var(--card-details-image-height);
         min-width: var(--card-details-image-proportion);
         max-width: var(--card-details-image-proportion);
+
+        * {
+            pointer-events: none;
+        }
     }
 
     .container-inner-placeholder {

@@ -36,7 +36,6 @@ export default function ProductCardComponent({
                     </div>
                 }
             </div>
-
             <div className={styles["container-info-product"]}>
                 <h4 className={styles["title-product"]}>{`${product.title}`}</h4>
                 <div className={styles["price-product"]}>

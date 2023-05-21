@@ -6,10 +6,12 @@ import Head from "next/head";
 
 export default function LayoutComponent({
     children,
-    isSlider
+    isSlider,
+    isBack
 }: {
     children: React.ReactNode,
-    isSlider: boolean
+    isSlider: boolean,
+    isBack: boolean
 }) {
     return (
         <>
@@ -22,7 +24,7 @@ export default function LayoutComponent({
             </Head>
 
             <div>
-                <NavbarComponent isSlider={isSlider} />
+                <NavbarComponent isSlider={isSlider} isBack={isBack} />
                 <main>
                     <ProductsProvider>
                         {children}

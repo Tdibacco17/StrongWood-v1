@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-export default function NavbarComponent({ isSlider }: { isSlider: Boolean }) {
+export default function NavbarComponent({ isSlider, isBack }: { isSlider: Boolean, isBack: Boolean }) {
 
     const { isScrolled, isAtTop } = useScrollPosition() // 64px === 5rem
     const hiddenRef = useRef<boolean>(false);
@@ -28,7 +28,11 @@ export default function NavbarComponent({ isSlider }: { isSlider: Boolean }) {
             {
                 !isSlider &&
                 <div className={styles['container-secondary-nav']}>
-                    <h3 className={styles["title"]}>funcionalidades</h3>
+                    {
+                        isBack ?
+                            <h3 onClick={() => { router.push(`/products`); }} className={styles["back-title"]}>volver</h3>
+                            : <h3 className={styles["title"]}>FUNCIONALIDADES</h3>
+                    }
                 </div>
             }
         </div>

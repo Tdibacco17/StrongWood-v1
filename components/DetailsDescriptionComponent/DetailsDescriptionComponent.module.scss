@@ -9,10 +9,6 @@
     min-width: var(--description-container-width);
     max-width: var(--description-container-width);
 
-    @media (max-width: 855px) {
-        // align-items: center;
-    }
-
     @media (max-width: 768px) {
         --description-container-width: calc(100vw - 5rem);
     }

@@ -13,12 +13,7 @@ export default function DetailsGalleryComponent() {
     const [activeImageIndex, setActiveImageIndex] = useState<number>(0);
 
     const handleImageClick = (index: number) => {
-        console.log("Clicked index:", index);
         setActiveImageIndex(index);
-        console.log("Active image index:", activeImageIndex);
-
-        console.log("handleImageClick: ", index);
-        console.log("carouselRef.current: ", carouselRef.current);
     };
 
     const activeImage: ImgDataInterface | undefined = productData?.detail?.images?.[activeImageIndex];
@@ -37,7 +32,7 @@ export default function DetailsGalleryComponent() {
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         if (isDragging && carouselRef.current) {
             const x = e.pageX - (carouselRef.current.offsetLeft || 0);
-            const walk = (x - startX) * 1.5; // Ajusta la velocidad del desplazamiento
+            const walk = (x - startX) * 1.2; // Ajusta la velocidad del desplazamiento
 
             carouselRef.current.scrollLeft = scrollLeft - walk;
         }

@@ -7,7 +7,7 @@
     gap: 1rem;
     padding: 1rem;
 
-    background: var(--strong-primary-color);
+    background: var(--strong-bs-gray-200);
 
     min-height: var(--gallery-section-height);
     max-height: var(--gallery-section-height);
@@ -36,12 +36,22 @@
         scroll-behavior: smooth;
         overflow: hidden;
         overflow-y: scroll;
+        user-select: none;
 
         &::-webkit-scrollbar {
             width: 0px;
             /* Ancho de la barra de navegación */
             background-color: transparent;
             /* Color de fondo de la barra de navegación */
+        }
+
+        @media (max-width: 768px) {
+
+            cursor: grab;
+
+            &:active {
+                cursor: grabbing;
+            }
         }
     }
 
@@ -76,10 +86,13 @@
     }
 
     @media (max-width: 768px) {
-        min-height: calc((calc(100vw - 5rem)) + 9rem);
-        max-height: calc((calc(100vw - 5rem)) + 9rem);
-        min-width: calc(100vw - 5rem);
-        max-width: calc(100vw - 5rem);
+        --gallery-section-height: calc((calc(100vw - 5rem)) + 9rem);
+        --gallery-section-height: calc(100vw - 5rem);
+
+        min-height: var(--gallery-section-height);
+        max-height: var(--gallery-section-height);
+        min-width: var(--gallery-section-height);
+        max-width: var(--gallery-section-height);
 
         .container-section-carousel {
             --carousel-section-height: 10rem;
@@ -102,26 +115,7 @@
     }
 
     @media (max-width: 480px) {
-        min-height: calc((calc(100vw - 3rem)) + 9rem);
-        max-height: calc((calc(100vw - 3rem)) + 9rem);
-        min-width: calc(100vw - 3rem);
-        max-width: calc(100vw - 3rem);
+        --gallery-section-height: calc((calc(100vw - 3rem)) + 9rem);
+        --gallery-section-height: calc(100vw - 3rem);
     }
-}
-
-.container-section-carousel {
-    /* Resto de estilos... */
-
-    cursor: grab;
-    user-select: none;
-}
-
-.container-section-carousel:active {
-    cursor: grabbing;
-}
-
-.container-section-carousel {
-    /* Resto de estilos... */
-
-    user-select: none;
 }
