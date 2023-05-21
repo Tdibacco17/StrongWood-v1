@@ -63,6 +63,10 @@
                 color: var(--strong-tertiary-color);
             }
         }
+
+        &.show-on-top {
+            transform: translateY(0);
+        }
     }
 
     .container-secondary-nav {
