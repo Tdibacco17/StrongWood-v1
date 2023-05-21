@@ -16,7 +16,7 @@ export const useScrollPosition = () => {
             scrollPositionRef.current = currentPosition;
             setScrollPosition(currentPosition);
 
-            if (currentPosition === 0) {
+            if (currentPosition <= NAVBAR_HEIGHT) {
                 setIsAtTop(true);
             } else {
                 setIsAtTop(false);
