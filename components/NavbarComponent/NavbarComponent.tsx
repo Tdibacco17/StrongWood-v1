@@ -16,12 +16,14 @@ export default function NavbarComponent({ isSlider, isBack }: { isSlider: Boolea
     const router = useRouter()
 
     return (
-        <div className={`${styles['container-section-navbar']} ${hiddenRef.current ? styles["hidden"] : ""}`}>
+        <div className={`${styles['container-section-navbar']} ${hiddenRef.current && !isAtTop ? styles["hidden"] : styles['show-on-top']}`}>
             <div className={`
                     ${styles['container-primary-nav']}
                     ${isSlider ?
-                    isAtTop ? `${styles['isTransparency']} ${styles['show-on-top']}` : styles["isDark"]
-                    : isAtTop ? `${styles['isOtherSection']} ${styles['show-on-top']}` : styles['isOtherSection']}
+                    (isAtTop ? `${styles['isTransparency']} ${styles['show-on-top']}` : styles["isDark"])
+                    :
+                    (isAtTop ? `${styles['isOtherSection']} ${styles['show-on-top']}` : styles['isOtherSection'])
+                }
                 `}>
                 <h1 onClick={() => { router.push(`/`); }} className={styles["title"]}>STRONG WOOD</h1>
             </div>

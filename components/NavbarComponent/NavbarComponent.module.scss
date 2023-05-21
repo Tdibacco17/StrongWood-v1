@@ -63,10 +63,6 @@
                 color: var(--strong-tertiary-color);
             }
         }
-
-        &.show-on-top {
-            transform: translateY(0);
-        }
     }
 
     .container-secondary-nav {
@@ -104,6 +100,11 @@
 
     &.hidden {
         transform: translateY(-4rem);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    &.show-on-top {
+        transform: translateY(0);
         transition: transform 0.3s ease-in-out;
     }
 }
