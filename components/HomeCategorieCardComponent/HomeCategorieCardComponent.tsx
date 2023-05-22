@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./CategorieCardComponent.module.scss"
+import styles from "./HomeCategorieCardComponent.module.scss"
 import useImageLoader from "@/utils/img/useImageLoader";
 
 export default function CardComponent({

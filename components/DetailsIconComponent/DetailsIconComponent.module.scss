@@ -38,10 +38,5 @@
         height: var(--icon-image); // Agregar esta línea
 
         filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg);
-        // -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg);
-        // -moz-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg);
-        // -ms-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg);
-        // -o-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg);
-
     }
 }

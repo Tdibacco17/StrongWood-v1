@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const useImageLoader = (imgSrc: string) => {
-    const [loading, setLoading] = useState<Boolean>(true);
+    const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
         const image = new Image();

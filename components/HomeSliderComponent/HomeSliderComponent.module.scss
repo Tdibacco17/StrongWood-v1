@@ -1,0 +1,53 @@
+.container-section-slider {
+    position: relative;
+    min-height: 75vh;
+    max-height: 75vh;
+    min-width: 100vw;
+    max-width: 100vw;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    --banner-proportion-height: calc(100vw * 0.6651);
+
+    @media (max-width: 1100px) {
+        min-height: var(--banner-proportion-height);
+        max-height: var(--banner-proportion-height);
+    }
+
+    @media (max-width: 768px) {
+        min-height: 100vh;
+        max-height: 100vh;
+    }
+
+    .slider-buttons {
+        position: absolute;
+        padding-bottom: 2rem;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        gap: 1rem;
+
+        .btn-item {
+            padding: 0.4rem;
+            border: none;
+            border-radius: 99rem;
+
+            background-color: var(--strong-bs-gray-300);
+            cursor: pointer;
+
+            &.active {
+                background-color: var(--strong-bs-gray-600);
+            }
+
+            @media (max-width: 768px) {
+                padding: 0.3rem;
+            }
+        }
+    }
+}

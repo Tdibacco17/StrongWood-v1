@@ -1,10 +1,9 @@
 import { useScrollPosition, NAVBAR_HEIGHT } from "@/utils/scroll/useScrollPosition";
 import styles from "./NavbarComponent.module.scss";
 import { useEffect, useRef } from "react";
-import Link from "next/link";
 import { useRouter } from "next/router";
 
-export default function NavbarComponent({ isSlider, isBack }: { isSlider: Boolean, isBack: Boolean }) {
+export default function NavbarComponent({ isSlider, isBack }: { isSlider: boolean, isBack: boolean }) {
 
     const { isScrolled, isAtTop } = useScrollPosition() // 64px === 5rem
     const hiddenRef = useRef<boolean>(false);

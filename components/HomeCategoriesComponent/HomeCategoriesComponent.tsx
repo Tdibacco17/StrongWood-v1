@@ -1,11 +1,11 @@
-import styles from "./CategoriesComponent.module.scss"
-import CategorieCardComponent from "../CategorieCardComponent/CategorieCardComponent"
+import styles from "./HomeCategoriesComponent.module.scss"
+import HomeCategorieCardComponent from "../HomeCategorieCardComponent/HomeCategorieCardComponent"
 import { useContext } from "react";
 import { HomeContext } from "@/context/HomeProvider";
 import { HomeDataContextInterface } from "@/types/Interfaces";
 import { useRouter } from "next/router";
 
-export default function HomeTwoCategoriesComponent() {
+export default function HomeCategoriesComponent() {
     const { homeData } = useContext(
         HomeContext
     ) as HomeDataContextInterface;
@@ -13,11 +13,11 @@ export default function HomeTwoCategoriesComponent() {
     const router = useRouter()
 
     return (
-        <div className={styles["container-section-twoCategories"]}>
+        <div className={styles["container-section-categories"]}>
             {
                 homeData &&
                 <div onClick={() => { router.push("/design") }}>
-                    <CategorieCardComponent
+                    <HomeCategorieCardComponent
                         imgSrc={`${homeData.categoriesImages[0].imgSrc}`}
                         imgAlt={`${homeData.categoriesImages[0].imgAlt}`}
                         imgProportionsX={homeData.categoriesImages[0].imgProportionsX}
@@ -30,7 +30,7 @@ export default function HomeTwoCategoriesComponent() {
             {
                 homeData &&
                 <div onClick={() => { router.push("/products") }}>
-                    <CategorieCardComponent
+                    <HomeCategorieCardComponent
                         imgSrc={`${homeData.categoriesImages[1].imgSrc}`}
                         imgAlt={`${homeData.categoriesImages[1].imgAlt}`}
                         imgProportionsX={homeData.categoriesImages[1].imgProportionsX}

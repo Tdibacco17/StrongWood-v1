@@ -1,12 +1,12 @@
-.container-section-twoCategories {
+.container-section-categories {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 
-    --twoCategories-container-width: calc(100vw - 7rem);
-    min-width: var(--twoCategories-container-width);
-    max-width: var(--twoCategories-container-width);
+    --categories-container-width: calc(100vw - 7rem);
+    min-width: var(--categories-container-width);
+    max-width: var(--categories-container-width);
 
     padding: 5rem 0px;
 

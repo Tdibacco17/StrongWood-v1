@@ -1,8 +1,8 @@
 import Image from "next/image";
-import styles from "./SliderCardComponent.module.scss";
+import styles from "./HomeSliderCardComponent.module.scss";
 import useImageLoader from "@/utils/img/useImageLoader";
 
-export default function SliderCardComponent({
+export default function HomeSliderCardComponent({
     imgSrc,
     imgAlt,
     imgProportionsX,
