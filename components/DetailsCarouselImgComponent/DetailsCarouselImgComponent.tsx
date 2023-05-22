@@ -1,5 +1,6 @@
 import styles from "./DetailsCarouselImgComponent.module.scss"
 import Image from "next/image";
+import useImageLoader from "@/utils/img/useImageLoader";
 
 export default function DetailsCarouselImgComponent({
     imgSrc,
@@ -13,10 +14,16 @@ export default function DetailsCarouselImgComponent({
     handleImageClick: () => void;
 }) {
 
+    const loading = useImageLoader(imgSrc)
+
     return (
         <div className={styles["container-outer-image"]} onClick={handleImageClick}>
-
-            {imgSrc ? (
+            {loading && (
+                <div className={styles["container-inner-placeholder"]}>
+                    Cargando...
+                </div>
+            )}
+            {!loading && (
                 <div className={styles["container-inner-image"]}>
                     <Image
                         src={imgSrc}
@@ -24,10 +31,6 @@ export default function DetailsCarouselImgComponent({
                         fill
                         priority
                     />
-                </div>
-            ) : (
-                <div className={styles["container-inner-placeholder"]}>
-                    Cargando...
                 </div>
             )}
 
