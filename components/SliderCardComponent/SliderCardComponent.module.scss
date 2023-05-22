@@ -24,6 +24,19 @@
         max-width: var(--banner-image-outer-width);
     }
 
+    .container-inner-placeholder {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: var(--strong-secondary-color);
+        min-height: var(--banner-proportion-height);
+        max-height: var(--banner-proportion-height);
+        min-width: var(--banner-image-outer-width);
+        max-width: var(--banner-image-outer-width);
+        color: var(--strong-primary-color);
+    }
+
     @media (max-width: 1100px) {
         min-height: var(--banner-proportion-height);
         max-height: var(--banner-proportion-height);

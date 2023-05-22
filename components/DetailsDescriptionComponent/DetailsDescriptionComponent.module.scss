@@ -4,6 +4,11 @@
     align-items: flex-start;
     justify-content: center;
 
+    padding: 1rem;
+    border-radius: 0.2rem;
+    background: var(--strong-bs-gray-300);
+    color: var(--strong-secondary-color);
+
     --description-container-width: calc(100vw - 7rem);
 
     min-width: var(--description-container-width);
@@ -19,11 +24,18 @@
 
     .description-title {
         font-family: var(--strong-font-Roboto-Regular);
+        font-size: var(--strong-font-xxmedium);
+        font-weight: var(--strong-weight-400);
+
+        padding-bottom: 1rem;
+    }
+
+    .description-subtitle {
+        font-family: var(--strong-font-Roboto-Regular);
         font-size: var(--strong-font-medium);
         font-weight: var(--strong-weight-400);
-        color: var(--strong-primary-color);
 
-        padding-bottom: 1.5rem;
+        padding-bottom: 1rem;
     }
 
     .container-description {
@@ -35,7 +47,7 @@
             font-family: var(--strong-font-Roboto-Regular);
             font-size: var(--strong-font-xxsmall);
             font-weight: var(--strong-weight-400);
-            color: var(--strong-primary-color);
+
         }
     }
 }

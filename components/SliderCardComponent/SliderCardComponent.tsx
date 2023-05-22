@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./SliderCardComponent.module.scss";
+import useImageLoading from "@/utils/img/useImageLoading";
 
 export default function SliderCardComponent({
     imgSrc,
@@ -13,17 +14,27 @@ export default function SliderCardComponent({
     imgProportionsY?: number;
 }) {
 
+    const imageUrl = imgSrc && imgSrc;
+    const loading = useImageLoading(imageUrl);
+
     return (
         <div className={styles["container-outer-image"]} >
-            <div className={styles["container-inner-image"]}>
-                <Image
-                    src={imgSrc}
-                    alt={imgAlt}
-                    fill
-                    priority
-                    sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-            </div>
+            {loading && (
+                <div className={styles["container-inner-placeholder"]}>
+                    Cargando...
+                </div>
+            )}
+            {!loading && imgSrc && (
+                <div className={styles["container-inner-image"]}>
+                    <Image
+                        src={imgSrc}
+                        alt={imgAlt}
+                        fill
+                        priority
+                        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                </div>
+            )}
             <div className={styles["container-overlay-image"]} />
             {/* <style jsx>{`
                 .${styles["container-outer-image"]} {
