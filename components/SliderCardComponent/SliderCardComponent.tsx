@@ -13,8 +13,6 @@ export default function SliderCardComponent({
     imgProportionsY?: number;
 }) {
 
-    console.log(imgProportionsY, imgProportionsX)
-
     return (
         <div className={styles["container-outer-image"]} >
             <div className={styles["container-inner-image"]}>

@@ -41,5 +41,5 @@ export default function SliderContainer() {
     };
 
 
-    return <HomeSliderComponent currentIndex={currentIndex} handleSlideChange={handleSlideChange} />
+    return <HomeSliderComponent /* currentIndex={currentIndex} handleSlideChange={handleSlideChange}*/ />
 }

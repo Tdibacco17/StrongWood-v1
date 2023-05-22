@@ -5,13 +5,13 @@ import { HomeDataContextInterface } from "@/types/Interfaces";
 import SliderCardComponent from "../SliderCardComponent/SliderCardComponent";
 
 export default function HomeSliderComponent(
-    {
-        currentIndex,
-        handleSlideChange
-    }: {
-        currentIndex: number,
-        handleSlideChange: (index: number) => void;
-    }
+    // {
+    //     currentIndex,
+    //     handleSlideChange
+    // }: {
+    //     currentIndex: number,
+    //     handleSlideChange: (index: number) => void;
+    // }
 ) {
     const { homeData } = useContext(
         HomeContext
