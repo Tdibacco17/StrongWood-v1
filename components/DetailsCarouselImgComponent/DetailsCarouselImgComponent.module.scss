@@ -2,6 +2,8 @@
     --card-carrousel-image-height: 10rem;
     --card-carrousel-image-width: 10rem; //tamaño card
 
+    //--card-carrousel-image-proportion: calc((var(--card-carrousel-image-width)) * ${imgProportionsX});
+
     min-height: var(--card-carrousel-image-height);
     max-height: var(--card-carrousel-image-height);
     min-width: var(--card-carrousel-image-width);
@@ -38,8 +40,8 @@
         position: relative;
         min-height: var(--card-carrousel-image-height);
         max-height: var(--card-carrousel-image-height);
-        min-width: var(--card-carrousel-image-proportion);
-        max-width: var(--card-carrousel-image-proportion);
+        min-width: var(--card-carrousel-image-width);
+        max-width: var(--card-carrousel-image-width);
 
         * {
             pointer-events: none;

@@ -36,7 +36,6 @@ export default function DetailsCarouselImgComponent({
 
             <style jsx>{`
                 .${styles["container-outer-image"]} {
-                   --card-carrousel-image-proportion: calc((var(--card-carrousel-image-width)) * ${imgProportionsX});
                 }
             `}</style>
         </div>

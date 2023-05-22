@@ -2,6 +2,8 @@
     --card-details-image-height: 28rem;
     --card-details-image-width: 28rem; //tamaño card
 
+    //--card-details-image-proportion: calc((var(--card-details-image-width)) * ${activeImage?.imgProportionsX || 1});
+
     min-height: var(--card-details-image-height);
     max-height: var(--card-details-image-height);
     min-width: var(--card-details-image-width);
@@ -17,8 +19,8 @@
         position: relative;
         min-height: var(--card-details-image-height);
         max-height: var(--card-details-image-height);
-        min-width: var(--card-details-image-proportion);
-        max-width: var(--card-details-image-proportion);
+        min-width: var(--card-details-image-width);
+        max-width: var(--card-details-image-width);
 
         * {
             pointer-events: none;

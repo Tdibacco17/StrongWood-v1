@@ -1,16 +1,15 @@
 .container-section-product-card {
-    --card-product-image-height: 20rem;
-    --card-product-image-width: 19vw; //tamaño card
+    --card-product-image: 19vw; //tamaño card
 
     --card-product-section-info: 4.5rem;
 
-    --card-product-image-height-total: calc(var(--card-product-image-proportion) + var(--card-product-section-info));
+    --card-product-image-height-total: calc(var(--card-product-image) + var(--card-product-section-info));
 
     min-height: var(--card-product-image-height-total);
     max-height: var(--card-product-image-height-total);
 
-    min-width: var(--card-product-image-width);
-    max-width: var(--card-product-image-width);
+    min-width: var(--card-product-image);
+    max-width: var(--card-product-image);
 
     display: flex;
     flex-direction: column;
@@ -24,27 +23,27 @@
 
 
     @media (max-width: 1067px) {
-        --card-product-image-width: calc(37vw - 7rem);
+        --card-product-image: calc(37vw - 7rem);
     }
 
     @media (max-width: 992px) {
-        --card-product-image-width: calc(53vw - 7rem);
+        --card-product-image: calc(53vw - 7rem);
     }
 
     @media (max-width: 768px) {
-        --card-product-image-width: calc(100vw - 5rem);
+        --card-product-image: calc(100vw - 5rem);
     }
 
     @media (max-width: 480px) {
-        --card-product-image-width: calc(100vw - 3rem);
+        --card-product-image: calc(100vw - 3rem);
     }
 
     .container-outer-image {
         position: relative;
-        min-height: var(--card-product-image-proportion);
-        max-height: var(--card-product-image-proportion);
-        min-width: var(--card-product-image-width);
-        max-width: var(--card-product-image-width);
+        min-height:var(--card-product-image);
+        max-height:var(--card-product-image);
+        min-width: var(--card-product-image);
+        max-width: var(--card-product-image);
 
         display: flex;
         justify-content: center;
@@ -53,10 +52,10 @@
 
         .container-inner-image {
             position: relative;
-            min-height: var(--card-product-image-proportion);
-            max-height: var(--card-product-image-proportion);
-            min-width: var(--card-product-image-width);
-            max-width: var(--card-product-image-width);
+            min-height:var(--card-product-image);
+            max-height:var(--card-product-image);
+            min-width: var(--card-product-image);
+            max-width: var(--card-product-image);
             transition: 0.3s ease-in-out;
         }
 
@@ -66,10 +65,10 @@
             align-items: center;
 
             color: var(--strong-primary-color);
-            min-height: var(--card-product-image-proportion);
-            max-height: var(--card-product-image-proportion);
-            min-width: var(--card-product-image-width);
-            max-width: var(--card-product-image-width);
+            min-height:var(--card-product-image);
+            max-height:var(--card-product-image);
+            min-width: var(--card-product-image);
+            max-width: var(--card-product-image);
         }
 
         .container-offer-percentage {

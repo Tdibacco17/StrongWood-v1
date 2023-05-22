@@ -24,11 +24,6 @@ export default function DetailsPrimaryImgComponent({
                     Cargando...
                 </div>
             )}
-            <style jsx>{`
-            .${styles["container-outer-image"]} {
-                --card-details-image-proportion: calc((var(--card-details-image-width)) * ${activeImage?.imgProportionsX || 1});
-            }
-        `}</style>
         </div>
     );
 }
