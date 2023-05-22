@@ -31,7 +31,6 @@ export default function DetailsCarouselImgComponent({
                         alt={imgAlt}
                         fill
                         priority
-                        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                 </div>
             )}

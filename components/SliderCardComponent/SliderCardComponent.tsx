@@ -16,7 +16,7 @@ export default function SliderCardComponent({
 
     const imageUrl = imgSrc && imgSrc;
     const loading = useImageLoading(imageUrl);
-
+    
     return (
         <div className={styles["container-outer-image"]} >
             {loading && (
@@ -31,7 +31,6 @@ export default function SliderCardComponent({
                         alt={imgAlt}
                         fill
                         priority
-                        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                 </div>
             )}

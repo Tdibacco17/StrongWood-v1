@@ -11,6 +11,18 @@
     min-width: var(--banner-image-outer-width);
     max-width: var(--banner-image-outer-width);
 
+    @media (max-width: 1100px) {
+        min-height: var(--banner-proportion-height);
+        max-height: var(--banner-proportion-height);
+    }
+
+    @media (max-width: 768px) {
+        min-height: 100vh;
+        max-height: 100vh;
+        min-width: var(--banner-image-outer-width);
+        max-width: var(--banner-image-outer-width);
+    }
+
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -22,6 +34,13 @@
         max-height: var(--banner-proportion-height);
         min-width: var(--banner-image-outer-width);
         max-width: var(--banner-image-outer-width);
+
+        @media (max-width: 768px) {
+            min-height: 100vh;
+            max-height: 100vh;
+            min-width: var(--banner-proportion-width);
+            max-width: var(--banner-proportion-width);
+        }
     }
 
     .container-inner-placeholder {
@@ -35,30 +54,8 @@
         min-width: var(--banner-image-outer-width);
         max-width: var(--banner-image-outer-width);
         color: var(--strong-primary-color);
-    }
 
-    @media (max-width: 1100px) {
-        min-height: var(--banner-proportion-height);
-        max-height: var(--banner-proportion-height);
-        min-width: var(--banner-image-outer-width);
-        max-width: var(--banner-image-outer-width);
-    }
-
-    @media (max-width: 768px) {
-        min-height: 100vh;
-        max-height: 100vh;
-        min-width: var(--banner-image-outer-width);
-        max-width: var(--banner-image-outer-width);
-
-        .container-inner-image {
-            min-height: 100vh;
-            max-height: 100vh;
-            min-width: var(--banner-proportion-width);
-            max-width: var(--banner-proportion-width);
-        }
-
-
-        .container-inner-placeholder {
+        @media (max-width: 768px) {
             min-height: 100vh;
             max-height: 100vh;
             min-width: var(--banner-proportion-width);
