@@ -56,6 +56,14 @@
             min-width: var(--banner-proportion-width);
             max-width: var(--banner-proportion-width);
         }
+
+
+        .container-inner-placeholder {
+            min-height: 100vh;
+            max-height: 100vh;
+            min-width: var(--banner-proportion-width);
+            max-width: var(--banner-proportion-width);
+        }
     }
 
     .container-overlay-image {
