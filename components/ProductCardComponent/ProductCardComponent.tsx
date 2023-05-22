@@ -2,15 +2,12 @@ import { ProductInterface } from "@/types/Interfaces";
 import styles from "./ProductCardComponent.module.scss"
 import Image from "next/image";
 import { useRouter } from "next/router";
-import useImageLoading from "@/utils/img/useImageLoading";
 
 export default function ProductCardComponent({
     product
 }: {
     product: ProductInterface
 }) {
-    const imageUrl = product?.image?.imgSrc;
-    const loading = useImageLoading(imageUrl);
 
     const router = useRouter()
 
@@ -20,12 +17,7 @@ export default function ProductCardComponent({
             onClick={() => { router.push(`/products/${product.productSlug}`) }}
         >
             <div className={styles["container-outer-image"]}>
-                {loading && (
-                    <div className={styles["container-inner-placeholder"]}>
-                        Cargando...
-                    </div>
-                )}
-                {!loading && product && (
+                {product ? (
                     <div className={styles["container-inner-image"]}>
                         <Image
                             src={`${product.image.imgSrc}`}
@@ -33,6 +25,10 @@ export default function ProductCardComponent({
                             fill
                             priority
                         />
+                    </div>
+                ) : (
+                    <div className={styles["container-inner-placeholder"]}>
+                        Cargando...
                     </div>
                 )}
                 {

@@ -1,6 +1,5 @@
 import styles from "./DetailsCarouselImgComponent.module.scss"
 import Image from "next/image";
-import useImageLoading from "@/utils/img/useImageLoading";
 
 export default function DetailsCarouselImgComponent({
     imgSrc,
@@ -14,17 +13,10 @@ export default function DetailsCarouselImgComponent({
     handleImageClick: () => void;
 }) {
 
-    const imageUrl = imgSrc && imgSrc;
-    const loading = useImageLoading(imageUrl);
-
     return (
         <div className={styles["container-outer-image"]} onClick={handleImageClick}>
-            {loading && (
-                <div className={styles["container-inner-placeholder"]}>
-                    Cargando...
-                </div>
-            )}
-            {!loading && imgSrc && (
+
+            {imgSrc ? (
                 <div className={styles["container-inner-image"]}>
                     <Image
                         src={imgSrc}
@@ -33,7 +25,12 @@ export default function DetailsCarouselImgComponent({
                         priority
                     />
                 </div>
+            ) : (
+                <div className={styles["container-inner-placeholder"]}>
+                    Cargando...
+                </div>
             )}
+
             <style jsx>{`
                 .${styles["container-outer-image"]} {
                    --card-carrousel-image-proportion: calc((var(--card-carrousel-image-width)) * ${imgProportionsX});

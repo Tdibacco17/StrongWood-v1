@@ -169,13 +169,6 @@ export const productsData: ProductDataInterface = {
                     imgProportionsY: 1
                 },
                 {
-                    imgSlug: 1,
-                    imgSrc: "/assets/img/strongWood/mesaRatonaEdimburgo/mesaRatonaEdimburgo1.webp",
-                    imgAlt: "Mesa Ratona Edimburgo",
-                    imgProportionsX: 1,
-                    imgProportionsY: 1
-                },
-                {
                     imgSlug: 2,
                     imgSrc: "/assets/img/strongWood/mesaRatonaEdimburgo/mesaRatonaEdimburgo2.webp",
                     imgAlt: "Mesa Ratona Edimburgo",
@@ -424,13 +417,6 @@ export const productsData: ProductDataInterface = {
                 measures: "70cm x 108cm x 25cm.",
             },
             images: [
-                {
-                    imgSlug: 1,
-                    imgSrc: "/assets/img/strongWood/estanteriaAvila/estanteriaAvila1.webp",
-                    imgAlt: "Estanteria Avila",
-                    imgProportionsX: 1,
-                    imgProportionsY: 1
-                },
                 {
                     imgSlug: 1,
                     imgSrc: "/assets/img/strongWood/estanteriaAvila/estanteriaAvila1.webp",

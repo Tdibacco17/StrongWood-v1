@@ -33,8 +33,8 @@
         color: var(--strong-secondary-color);
         min-height: var(--card-details-image-height);
         max-height: var(--card-details-image-height);
-        min-width: var(--card-details-image-height);
-        max-width: var(--card-details-image-height);
+        min-width: var(--card-details-image-width);
+        max-width: var(--card-details-image-width);
     }
 
     @media (max-width:1150px) {
@@ -47,40 +47,36 @@
         --card-details-image-width: 20rem;
     }
 
-
     @media (max-width: 855px) {
         --card-details-image-height: 22rem;
         --card-details-image-width: 22rem;
     }
 
     @media (max-width: 768px) {
+        --card-details-image-mobile: calc(100vw - 7rem);
 
-        min-height: calc(100vw - 7rem);
-        max-height: calc(100vw - 7rem);
-        min-width: calc(100vw - 7rem);
-        max-width: calc(100vw - 7rem);
+        min-height: var(--card-details-image-mobile);
+        max-height: var(--card-details-image-mobile);
+        min-width: var(--card-details-image-mobile);
+        max-width: var(--card-details-image-mobile);
 
         .container-inner-image {
 
-            min-height: calc(100vw - 7rem);
-            max-height: calc(100vw - 7rem);
-            min-width: calc(100vw - 7rem);
-            max-width: calc(100vw - 7rem);
+            min-height: var(--card-details-image-mobile);
+            max-height: var(--card-details-image-mobile);
+            min-width: var(--card-details-image-mobile);
+            max-width: var(--card-details-image-mobile);
+        }
+
+        .container-inner-placeholder {
+            min-height: var(--card-details-image-mobile);
+            max-height: var(--card-details-image-mobile);
+            min-width: var(--card-details-image-mobile);
+            max-width: var(--card-details-image-mobile);
         }
     }
 
     @media (max-width: 480px) {
-        min-height: calc(100vw - 5rem);
-        max-height: calc(100vw - 5rem);
-        min-width: calc(100vw - 5rem);
-        max-width: calc(100vw - 5rem);
-
-        .container-inner-image {
-
-            min-height: calc(100vw - 5rem);
-            max-height: calc(100vw - 5rem);
-            min-width: calc(100vw - 5rem);
-            max-width: calc(100vw - 5rem);
-        }
+        --card-details-image-mobile: calc(100vw - 5rem);
     }
 }

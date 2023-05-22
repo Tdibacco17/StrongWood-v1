@@ -11,6 +11,11 @@
     min-width: var(--banner-image-outer-width);
     max-width: var(--banner-image-outer-width);
 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+
     @media (max-width: 1100px) {
         min-height: var(--banner-proportion-height);
         max-height: var(--banner-proportion-height);
@@ -22,11 +27,6 @@
         min-width: var(--banner-image-outer-width);
         max-width: var(--banner-image-outer-width);
     }
-
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    overflow: hidden;
 
     .container-inner-image {
         position: relative;
@@ -48,9 +48,8 @@
         justify-content: center;
         align-items: center;
 
-        color: var(--strong-secondary-color);
-        min-height: var(--banner-proportion-height);
-        max-height: var(--banner-proportion-height);
+        min-height: var(--banner-image-outer-height);
+        max-height: var(--banner-image-outer-height);
         min-width: var(--banner-image-outer-width);
         max-width: var(--banner-image-outer-width);
         color: var(--strong-primary-color);
@@ -63,8 +62,8 @@
         @media (max-width: 768px) {
             min-height: 100vh;
             max-height: 100vh;
-            min-width: var(--banner-proportion-width);
-            max-width: var(--banner-proportion-width);
+            min-width: var(--banner-image-outer-width);
+            max-width: var(--banner-image-outer-width);
         }
     }
 

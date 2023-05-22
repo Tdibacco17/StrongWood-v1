@@ -45,17 +45,16 @@
         max-width: var(--card-image-proportion);
         transition: 0.3s ease-in-out;
     }
-    
+
     .container-inner-placeholder {
         display: flex;
         justify-content: center;
         align-items: center;
 
-        color: var(--strong-secondary-color);
-        min-height: var(--card-image-inner-height);
-        max-height: var(--card-image-inner-height);
-        min-width: var(--card-image-proportion);
-        max-width: var(--card-image-proportion);
+        min-height: var(--card-image-outer-height);
+        max-height: var(--card-image-outer-height);
+        min-width: var(--card-image-outer-width);
+        max-width: var(--card-image-outer-width);
         color: var(--strong-primary-color);
     }
 

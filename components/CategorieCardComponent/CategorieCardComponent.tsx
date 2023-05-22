@@ -1,6 +1,5 @@
 import Image from "next/image";
 import styles from "./CategorieCardComponent.module.scss"
-import useImageLoading from "@/utils/img/useImageLoading";
 
 export default function CardComponent({
     imgSrc,
@@ -18,17 +17,10 @@ export default function CardComponent({
     subtitle?: string,
 }) {
 
-    const imageUrl = imgSrc && imgSrc;
-    const loading = useImageLoading(imageUrl);
-
     return (
         <div className={styles["container-outer-image"]}>
-            {loading && (
-                <div className={styles["container-inner-placeholder"]}>
-                    Cargando...
-                </div>
-            )}
-            {!loading && imgSrc && (
+
+            {imgSrc ? (
                 <div className={styles["container-inner-image"]}>
                     <Image
                         src={`${imgSrc}`}
@@ -36,6 +28,10 @@ export default function CardComponent({
                         fill
                         priority
                     />
+                </div>
+            ) : (
+                <div className={styles["container-inner-placeholder"]}>
+                    Cargando...
                 </div>
             )}
 
