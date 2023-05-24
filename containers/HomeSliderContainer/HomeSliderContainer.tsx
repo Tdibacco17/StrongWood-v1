@@ -4,11 +4,13 @@ import { HomeDataContextInterface } from "@/types/Interfaces";
 import { useContext, useEffect, useRef, useState } from "react";
 
 export default function HomeSliderContainer() {
-    const { homeData } = useContext(HomeContext) as HomeDataContextInterface;
+    const { homeData } = useContext(
+        HomeContext
+    ) as HomeDataContextInterface;
 
     const [currentIndex, setCurrentIndex] = useState(0);
-    const numSlides = homeData?.sliderImages.length;
-    const timeInterval = 3000;
+    const numSlides = homeData && homeData.sliderImages.length;
+    const timeInterval = 5000;
     const timerRef = useRef<NodeJS.Timeout>();
 
     useEffect(() => {
@@ -20,12 +22,12 @@ export default function HomeSliderContainer() {
         }
 
         // Limpiamos el temporizador cuando el componente se desmonte
-        return () => clearInterval(timerRef.current!);
+        return () => clearInterval(timerRef.current);
     }, [currentIndex, numSlides]);
 
     const handleSlideChange = (index: number) => {
         // Detenemos el temporizador actual
-        clearInterval(timerRef.current!);
+        clearInterval(timerRef.current);
 
         // Actualizamos el índice actual
         setCurrentIndex(index);
@@ -38,5 +40,6 @@ export default function HomeSliderContainer() {
         }
     };
 
-    return <HomeSliderComponent currentIndex={currentIndex} handleSlideChange={handleSlideChange} />;
+
+    return <HomeSliderComponent currentIndex={currentIndex} handleSlideChange={handleSlideChange} />
 }

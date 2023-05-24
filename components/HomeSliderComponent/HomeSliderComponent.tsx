@@ -17,27 +17,39 @@ export default function HomeSliderComponent({
 
     return (
         <div className={styles["container-section-slider"]}>
-            {homeData?.sliderImages && (
-                <>
-                    <HomeSliderCardComponent
-                        imgSrc={homeData.sliderImages[currentIndex].imgSrc}
-                        imgAlt={homeData.sliderImages[currentIndex].imgAlt}
-                        imgProportionsX={homeData.sliderImages[currentIndex].imgProportionsX}
-                        imgProportionsY={homeData.sliderImages[currentIndex].imgProportionsY}
-                    />
-
-                </>
-            )}
-            <div className={styles["slider-buttons"]}>
-                {homeData?.sliderImages.map((_, index) => (
-                    <button
-                        key={index}
-                        onClick={() => handleSlideChange(index)}
-                        className={currentIndex === index ?
-                            `${styles["btn-item"]} ${styles["active"]}`
-                            : styles["btn-item"]} />
-                ))}
+            <div className={styles["container-slider"]} >
+                {
+                    homeData?.sliderImages?.map((slide, index) => (
+                        <div
+                            key={slide.imgSlug}
+                            className={`${styles["slide-item"]} ${index === currentIndex ? styles["active"] : ""}`}>
+                            <HomeSliderCardComponent
+                                imgSrc={`${slide.imgSrc}`}
+                                imgAlt={`${slide.imgAlt}`}
+                                imgProportionsX={slide.imgProportionsX}
+                                imgProportionsY={slide.imgProportionsY}
+                            />
+                        </div>
+                    ))
+                }
             </div>
-        </div >
+            <div className={styles["container-controls"]}>
+                {
+                    homeData?.sliderImages?.map((slide, index) => (
+                        <button
+                            key={slide.imgSlug}
+                            onClick={() => handleSlideChange(index)}
+                            className={`${styles["control-item"]} ${index === currentIndex ? styles["active"] : ""}`}
+                            aria-label={index === currentIndex ? `Imagen actual ${index + 1}` : `Cambiar a imagen ${index + 1}`}>
+                        </button>
+                    ))
+                }
+            </div>
+            <style jsx>{`
+                .${styles["container-section-slider"]} .${styles["container-slider"]} {
+                    transform: translateX(-${currentIndex * 33.333333}%);
+                }
+            `}</style>
+        </div>
     );
 }

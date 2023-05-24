@@ -6,7 +6,7 @@ export default function HomeSliderCardComponent({
     imgSrc,
     imgAlt,
     imgProportionsX,
-    imgProportionsY
+    imgProportionsY,
 }: {
     imgSrc: string;
     imgAlt: string;
