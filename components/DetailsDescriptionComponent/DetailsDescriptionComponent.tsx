@@ -8,8 +8,13 @@ export default function DetailsDescriptionComponent() {
         ProductDetailContext
     ) as ProductsDataContextInterface;
 
+    if (!(productData?.detail?.description)) {
+        return <></>
+    }
+
     return (
         <div className={styles["container-section-description"]}>
+
             <h1 className={styles["description-title"]}>DESCRIPCIÓN</h1>
             <h2 className={styles["description-subtitle"]}>
                 {`${productData?.detail?.description?.title}`}
@@ -24,6 +29,12 @@ export default function DetailsDescriptionComponent() {
                             </p>
                         )
                     })
+                }
+                {
+                    productData?.detail?.description?.measures &&
+                    <>
+                        <p className={styles["description-item"]}>{`Medidas: ${productData.detail.description.measures}`}</p>
+                    </>
                 }
             </div>
         </div>

@@ -2,6 +2,8 @@ import styles from "./DetailsProductComponent.module.scss"
 import DetailsGalleryComponent from "../DetailsGalleryComponent/DetailsGalleryComponent"
 import DetailsInfoComponent from "../DetailsInfoComponent/DetailsInfoComponent"
 import DetailsDescriptionComponent from "../DetailsDescriptionComponent/DetailsDescriptionComponent"
+import DetailsIconComponent from "../DetailsIconComponent/DetailsIconComponent";
+import DetailsServicesComponent from "../DetailsServicesComponent/DetailsServicesComponent";
 
 export default function DetailsProductComponent() {
 
@@ -13,6 +15,7 @@ export default function DetailsProductComponent() {
                 <DetailsGalleryComponent />
                 <DetailsInfoComponent />
             </div>
+            <DetailsServicesComponent />
             <DetailsDescriptionComponent />
         </div>
     );

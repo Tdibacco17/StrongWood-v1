@@ -33,7 +33,7 @@ export default function HomeSliderCardComponent({
                     />
                 </div>
             )}
-            <div className={styles["container-overlay-image"]} />
+            {/* <div className={styles["container-overlay-image"]} /> */}
         </div>
     );
 }

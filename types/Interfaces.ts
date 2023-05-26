@@ -4,6 +4,8 @@ export interface HomeDataContextInterface {
     homeData?: HomeDataInterface;
 }
 
+//** interface de homepage */
+
 export interface HomeDataInterface {
     sliderImages: ImgDataInterface[];
     categoriesImages: ImgDataInterface[];
@@ -15,6 +17,8 @@ export interface ProductsDataContextInterface {
     handleProductDataChange?: Function;
     productData?: ProductInterface;
 }
+
+//** interface de productos */
 
 export interface ProductDataInterface {
     [id: string]: ProductInterface;
@@ -28,6 +32,7 @@ export interface ProductInterface {
     offerPrice?: string;
     offerPercentage?: number;
     detail?: {
+        payment?: PaymentDataInterface;
         description?: DescriptionDataInterface,
         images?: ImgDataInterface[];
     },
@@ -44,8 +49,22 @@ export interface ImgDataInterface {
     imgProportionsY?: number; //dividir la altura entre la anchura
 }
 
+//product details
 export interface DescriptionDataInterface {
     title?: string,
     itemsDescription?: string[],
     measures?: string
+}
+
+export interface PaymentDataInterface {
+    cash: {
+        price: string,
+        offerPrice?: string,
+        offerPercentage?: number;
+    },
+    card?: {
+        price: string,
+        offerPrice?: string,
+        offerPercentage?: number;
+    }
 }

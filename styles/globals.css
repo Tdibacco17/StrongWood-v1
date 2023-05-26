@@ -40,7 +40,6 @@
   --strong-font-Roboto-Bold: 'Roboto-Bold', var(--fallback-font-families);
   --strong-font-Roboto-Regular: 'Roboto-Regular', var(--fallback-font-families);
 
-  --strong-font-slarge: 1.6rem;
   --strong-font-large: 1.8rem;
   --strong-font-xlarge: 2.2rem;
   --strong-font-xxlarge: 2.4rem;
@@ -202,7 +201,6 @@ a {
 @media (max-width: 768px) {
   :root {
 
-    --strong-font-slarge: 1.4rem;
     --strong-font-large: 1.6rem;
     --strong-font-xlarge: 2rem;
     --strong-font-xxlarge: 2.2rem;
@@ -221,7 +219,6 @@ a {
 
 @media (max-width: 480px) {
   :root {
-    --strong-font-slarge: 1.2rem;
     --strong-font-large: 1.4rem;
     --strong-font-xlarge: 1.8rem;
     --strong-font-xxlarge: 2rem;
