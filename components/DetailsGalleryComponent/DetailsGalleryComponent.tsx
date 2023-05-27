@@ -4,6 +4,7 @@ import { ProductDetailContext } from "@/context/ProductDetailProvider";
 import { ImgDataInterface, ProductsDataContextInterface } from "@/types/Interfaces";
 import styles from "./DetailsGalleryComponent.module.scss"
 import DetailsCarouselImgComponent from "../DetailsCarouselImgComponent/DetailsCarouselImgComponent";
+import { useWindowSize } from "@/utils/size/useWindowSIze";
 
 export default function DetailsGalleryComponent() {
     const { productData } = useContext(
@@ -20,10 +21,12 @@ export default function DetailsGalleryComponent() {
 
     const carouselRef = useRef<HTMLDivElement>(null);
 
+    const { width, height } = useWindowSize()
+
     const handleScrollUp = () => {
         if (carouselRef.current) {
             carouselRef.current.scrollBy({
-                top: -100, // Ajusta la cantidad de desplazamiento hacia arriba
+                top: -150, // Ajusta la cantidad de desplazamiento hacia arriba
                 behavior: "smooth",
             });
         }
@@ -32,19 +35,39 @@ export default function DetailsGalleryComponent() {
     const handleScrollDown = () => {
         if (carouselRef.current) {
             carouselRef.current.scrollBy({
-                top: 100, // Ajusta la cantidad de desplazamiento hacia abajo
+                top: 150, // Ajusta la cantidad de desplazamiento hacia abajo
                 behavior: "smooth",
             });
         }
     };
 
+    const handleScrollLeft = () => {
+        if (width < 768 && carouselRef.current) {
+            carouselRef.current.scrollBy({
+                top: -150, // Ajusta la cantidad de desplazamiento hacia arriba para formato desktop
+                left: -150, // Ajusta la cantidad de desplazamiento hacia la izquierda para formato mobile
+                behavior: 'smooth',
+            });
+        }
+    };
+
+    const handleScrollRight = () => {
+        if (width < 768 && carouselRef.current) {
+            carouselRef.current.scrollBy({
+                top: 150, // Ajusta la cantidad de desplazamiento hacia abajo para formato desktop
+                left: 150, // Ajusta la cantidad de desplazamiento hacia la derecha para formato mobile
+                behavior: 'smooth',
+            });
+        }
+    };
+
     return (
-        <div className={styles["container-section-gallery"]}>
+        <div className={styles['container-section-gallery']}>
             <DetailsPrimaryImgComponent activeImage={activeImage} />
-            <div className={styles["container-section-carousel"]} ref={carouselRef}>
-                <div className={styles["carousel"]}>
-                    {
-                        productData && Object.keys(productData).length > 0 &&
+            <div className={styles['container-section-carousel']}>
+                <div className={styles['carousel']} ref={carouselRef}>
+                    {productData &&
+                        Object.keys(productData).length > 0 &&
                         productData?.detail?.images?.map((image, index) => {
                             return (
                                 <DetailsCarouselImgComponent
@@ -54,20 +77,24 @@ export default function DetailsGalleryComponent() {
                                     imgProportionsX={image.imgProportionsX ? image.imgProportionsX : 1}
                                     handleImageClick={() => handleImageClick(index)}
                                 />
-                            )
-                        })
-                    }
+                            );
+                        })}
                 </div>
-                <div className={styles["carousel-buttons"]}>
-                    <button className={`${styles["carousel-arrow"]} ${styles["top"]}`} onClick={handleScrollUp}>
+                <div className={styles['carousel-buttons']}>
+                    <button
+                        className={`${styles['carousel-arrow']} 
+                        ${width < 768 ? styles['top'] : styles['left']}`}
+                        onClick={width < 768 ? handleScrollLeft : handleScrollUp}>
                         a
                     </button>
-                    <button className={`${styles["carousel-arrow"]} ${styles["bottom"]}`} onClick={handleScrollDown}>
+                    <button
+                        className={`${styles['carousel-arrow']} 
+                        ${width < 768 ? styles['bottom'] : styles['right']}`}
+                        onClick={width < 768 ? handleScrollRight : handleScrollDown}>
                         a
                     </button>
                 </div>
             </div>
         </div>
-    )
+    );
 }
-
