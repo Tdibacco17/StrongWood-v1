@@ -14,6 +14,7 @@
     align-items: center;
 
     overflow: hidden;
+    position: relative;
 
     .container-inner-image {
         position: relative;
@@ -21,12 +22,44 @@
         max-height: var(--card-details-image-height);
         min-width: var(--card-details-image-width);
         max-width: var(--card-details-image-width);
+        user-select: none;
 
         * {
             pointer-events: none;
         }
     }
 
+    .container-offer-percentage {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        overflow: hidden;
+
+        .percentage {
+            height: 1.7rem;
+            width: 5rem;
+            background: var(--strong-bs-gray-800);
+            border-bottom-left-radius: 0.2rem;
+
+            font-family: var(--strong-font-Roboto-Regular);
+            font-size: var(--strong-font-xxsmall);
+            font-weight: var(--strong-weight-400);
+
+            color: var(--strong-primary-color);
+
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 0.5rem;
+        }
+    }
+    
     .container-inner-placeholder {
         display: flex;
         justify-content: center;
@@ -63,7 +96,6 @@
         max-width: var(--card-details-image-mobile);
 
         .container-inner-image {
-
             min-height: var(--card-details-image-mobile);
             max-height: var(--card-details-image-mobile);
             min-width: var(--card-details-image-mobile);

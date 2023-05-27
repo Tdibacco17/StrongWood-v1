@@ -2,7 +2,6 @@ import { ProductDetailContext } from "@/context/ProductDetailProvider";
 import { ProductsDataContextInterface } from "@/types/Interfaces";
 import { useContext } from "react";
 import styles from "./DetailsInfoComponent.module.scss"
-import DetailsIconComponent from "../DetailsIconComponent/DetailsIconComponent";
 
 export default function DetailsInfoComponent() {
     const { productData } = useContext(
@@ -24,11 +23,11 @@ export default function DetailsInfoComponent() {
                             {`$${productData?.offerPrice}`}
                         </span>
                     </p>
-                    <p className={styles["info-text"]}>
+                    {/* <p className={styles["info-text"]}>
                         <span className={styles["info-offerPercentage"]}>
                             {` ${productData?.offerPercentage}% OFF `}
                         </span>
-                    </p>
+                    </p> */}
                 </>
 
             </div>

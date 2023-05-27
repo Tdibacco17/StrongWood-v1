@@ -1,6 +1,5 @@
 import HomeCategoriesComponent from "../HomeCategoriesComponent/HomeCategoriesComponent"
 import styles from "./HomeComponent.module.scss"
-// import SliderContainer from "@/containers/SliderContainer/SliderContainer"
 import HomeSliderContainer from "@/containers/HomeSliderContainer/HomeSliderContainer"
 
 export default function HomeComponent() {

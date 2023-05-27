@@ -1,7 +1,6 @@
 import styles from "./ProductsComponent.module.scss"
 import ProductCardComponent from "../ProductCardComponent/ProductCardComponent"
-import Link from "next/link"
-import { useContext, useEffect } from "react"
+import { useContext } from "react"
 import { ProductsDataContextInterface } from "@/types/Interfaces"
 import { ProductsContext } from "@/context/ProductsContextProvider"
 

@@ -37,7 +37,6 @@ export default function CardComponent({
                     />
                 </div>
             )}
-
             <div className={styles["container-overlay-image"]}>
                 <h2 className={styles["title-overlay"]}>{`${title ? title : ""}`}</h2>
                 <h3 className={styles["subtitle-overlay"]}>{`${subtitle ? subtitle : ""}`}</h3>

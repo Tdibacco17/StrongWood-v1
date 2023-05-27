@@ -9,7 +9,6 @@ export default function ProductCardComponent({
 }: {
     product: ProductInterface
 }) {
-
     const loading = useImageLoader(product.image.imgSrc);
 
     const router = useRouter()
@@ -17,8 +16,7 @@ export default function ProductCardComponent({
     return (
         <div className={styles["container-section-product-card"]}
             data-id={`${product.productSlug}`}
-            onClick={() => { router.push(`/products/${product.productSlug}`) }}
-        >
+            onClick={() => { router.push(`/products/${product.productSlug}`) }}>
             <div className={styles["container-outer-image"]}>
                 {loading && (
                     <div className={styles["container-inner-placeholder"]}>

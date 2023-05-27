@@ -44,6 +44,7 @@
         min-width: var(--card-image-proportion);
         max-width: var(--card-image-proportion);
         transition: 0.3s ease-in-out;
+        user-select: none;
     }
 
     .container-inner-placeholder {
