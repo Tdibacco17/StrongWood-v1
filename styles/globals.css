@@ -47,6 +47,7 @@
   --strong-font-medium: 1rem;
   --strong-font-xmedium: 1.1rem;
   --strong-font-xxmedium: 1.2rem;
+  --strong-font-xxxmedium: 1.4rem;
 
   --strong-font-small: 0.7rem;
   --strong-font-xsmall: 0.8rem;
@@ -208,6 +209,7 @@ a {
     --strong-font-medium: 0.9rem;
     --strong-font-xmedium: 1rem;
     --strong-font-xxmedium: 1.1rem;
+    --strong-font-xxxmedium: 1.3rem;
 
     --strong-font-small: 0.65rem;
     --strong-font-xsmall: 0.75rem;
@@ -226,6 +228,7 @@ a {
     --strong-font-medium: 0.8rem;
     --strong-font-xmedium: 0.9rem;
     --strong-font-xxmedium: 1rem;
+    --strong-font-xxxmedium: 1.2rem;
 
     --strong-font-small: 0.6rem;
     --strong-font-xsmall: 0.7rem;

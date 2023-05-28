@@ -1,7 +1,24 @@
-import CarouselButtonsComponent from "@/components/DetailsCarouselButtonsComponent/DetailsCarouselButtonsComponent";
+import DetailsGalleryComponent from "@/components/DetailsGalleryComponent/DetailsGalleryComponent";
+import { ProductDetailContext } from "@/context/ProductDetailProvider";
+import { ImgDataInterface, ProductsDataContextInterface } from "@/types/Interfaces";
 import { useWindowSize } from "@/utils/size/useWindowSIze";
+import { useContext, useRef, useState } from "react";
 
-export default function CarouselButtonsContainer({ carouselRef }: { carouselRef: any }) {
+export default function DetailsGalleryContainer() {
+    const { productData } = useContext(
+        ProductDetailContext
+    ) as ProductsDataContextInterface;
+
+    const [activeImageIndex, setActiveImageIndex] = useState<number>(0);
+
+    const handleImageClick = (index: number) => {
+        setActiveImageIndex(index);
+    };
+
+    const activeImage: ImgDataInterface | undefined = productData?.detail?.images?.[activeImageIndex];
+
+    const carouselRef = useRef<HTMLDivElement>(null);
+
     const { width } = useWindowSize()
 
     const handleScrollUp = () => {
@@ -42,11 +59,15 @@ export default function CarouselButtonsContainer({ carouselRef }: { carouselRef:
         }
     };
 
-    return <CarouselButtonsComponent
+
+    return <DetailsGalleryComponent
         width={width}
         handleScrollUp={handleScrollUp}
         handleScrollDown={handleScrollDown}
         handleScrollLeft={handleScrollLeft}
         handleScrollRight={handleScrollRight}
+        activeImage={activeImage}
+        carouselRef={carouselRef}
+        handleImageClick={handleImageClick}
     />
 }

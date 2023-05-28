@@ -6,10 +6,14 @@
     padding: 0px 0px 0px 2rem;
     width: 100%;
 
-    @media (max-width: 855px) {
+    @media (max-width: 992px) {
         align-items: center;
         padding: 0px;
         height: 16rem;
+    }
+
+    @media (max-width: 480px) {
+        height: 22rem;
     }
 
     .container-info {
@@ -20,7 +24,7 @@
 
         width: 100%;
 
-        @media (max-width: 855px) {
+        @media (max-width: 992px) {
             align-items: center;
         }
 
@@ -32,47 +36,83 @@
             text-transform: uppercase;
 
             padding-bottom: 1rem;
-
-            @media (max-width:992px) {
-                padding-bottom: rem;
-            }
         }
 
         .product-price {
-            font-family: var(--strong-font-Roboto-Bold);
-            font-size: var(--strong-font-medium);
-            font-weight: var(--strong-weight-700);
-            color: var(--strong-primary-color);
+            padding-bottom: 0.8rem;
 
             .info-price {
                 font-family: var(--strong-font-Roboto-Bold);
-                font-size: var(--strong-font-medium);
+                font-size: var(--strong-font-xxmedium);
                 font-weight: var(--strong-weight-700);
-                color: var(--strong-primary-color);
-
-                padding-left: 0.6rem;
+                color: var(--strong-primary-color-blurred);
             }
 
             .info-offerPrice {
                 font-family: var(--strong-font-Roboto-Bold);
-                font-size: var(--strong-font-large);
+                font-size: var(--strong-font-xxxmedium);
                 font-weight: var(--strong-weight-700);
-                padding-left: 0.6rem;
-            }
-        }
-
-        .info-text {
-            font-family: var(--strong-font-Roboto-Regular);
-            font-size: var(--strong-font-xxsmall);
-            font-weight: var(--strong-weight-400);
-            color: var(--strong-primary-color);
-
-            .info-offerPercentage {
-                font-family: var(--strong-font-Roboto-Bold);
-                font-weight: var(--strong-weight-700);
-                line-height: 1.4rem;
             }
         }
     }
 
+    .container-buttons-method {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+
+        @media (max-width:992px) {
+            flex-direction: row;
+        }
+
+        @media (max-width: 480px) {
+            flex-direction: column;
+        }
+
+        .button-method {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+
+            .title {
+                font-family: var(--strong-font-Roboto-Bold);
+                font-size: var(--strong-font-xxmedium);
+                font-weight: var(--strong-weight-700);
+                color: var(--strong-primary-color);
+            }
+
+            .button {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 1.5rem;
+
+                padding: 1rem;
+                border: none;
+                border-radius: 0.2rem;
+                background: var(--strong-bs-gray-300);
+                color: var(--strong-secondary-color);
+
+                font-family: var(--strong-font-Roboto-Bold);
+                font-size: var(--strong-font-medium);
+                font-weight: var(--strong-weight-700);
+
+                cursor: pointer;
+
+                transition: 0.25s ease-in-out;
+
+                &:hover {
+                    background: var(--strong-primary-color-blurred);
+                    transition: 0.25s ease-in-out;
+                }
+
+                .btn-price {
+                    font-family: var(--strong-font-Roboto-Bold);
+                    font-size: var(--strong-font-medium);
+                    font-weight: var(--strong-weight-400);
+                    color: var(--strong-secondary-color);
+                }
+            }
+        }
+    }
 }

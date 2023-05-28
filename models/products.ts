@@ -21,6 +21,11 @@ export const productsData: ProductDataInterface = {
                     offerPrice: "38.378,90",
                     offerPercentage: 30,
                 },
+                card: {
+                    price: "78,610.00",
+                    offerPrice: "54,827.00",
+                    offerPercentage: 30,
+                }
             },
             description: {
                 title: "Mesa de luz ideal para lucir tu cuarto más elegante.",
@@ -104,6 +109,11 @@ export const productsData: ProductDataInterface = {
                     offerPrice: "38.378,90",
                     offerPercentage: 30,
                 },
+                card: {
+                    price: "245,662.00",
+                    offerPrice: "174,000.00",
+                    offerPercentage: 29,
+                }
             },
             description: {
                 title: "Mesa ideal para compartir momentos inolvidables en familia.",
@@ -172,6 +182,11 @@ export const productsData: ProductDataInterface = {
                     offerPrice: "38.378,90",
                     offerPercentage: 30,
                 },
+                card: {
+                    price: "143,782.00",
+                    offerPrice: "123,311.00",
+                    offerPercentage: 14,
+                }
             },
             description: {
                 title: "Mesa ideal para compartir momentos inolvidables en familia.",
@@ -233,6 +248,11 @@ export const productsData: ProductDataInterface = {
                     offerPrice: "38.378,90",
                     offerPercentage: 30,
                 },
+                card: {
+                    price: "78,610.00",
+                    offerPrice: "54,827.00",
+                    offerPercentage: 30,
+                }
             },
             description: {
                 title: "Maceta ideal para cuidar y lucir tus plantas.",
@@ -300,6 +320,11 @@ export const productsData: ProductDataInterface = {
                     offerPrice: "38.378,90",
                     offerPercentage: 30,
                 },
+                card: {
+                    price: "78,610.00",
+                    offerPrice: "54,827.00",
+                    offerPercentage: 30,
+                }
             },
             description: {
                 title: "Maceta ideal para cuidar y lucir tus plantas.",
@@ -367,6 +392,11 @@ export const productsData: ProductDataInterface = {
                     offerPrice: "38.378,90",
                     offerPercentage: 30,
                 },
+                card: {
+                    price: "78,610.00",
+                    offerPrice: "54,827.00",
+                    offerPercentage: 24,
+                }
             },
             description: {
                 title: "Estanteria ideal para lucir tus hermosas fotografías familiares.",
@@ -456,6 +486,11 @@ export const productsData: ProductDataInterface = {
                     offerPrice: "38.378,90",
                     offerPercentage: 30,
                 },
+                card: {
+                    price: "78,610.00",
+                    offerPrice: "54,827.00",
+                    offerPercentage: 24,
+                }
             },
             description: {
                 title: "Estanteria ideal para lucir tus hermosas fotografías familiares.",
@@ -503,6 +538,11 @@ export const productsData: ProductDataInterface = {
                     offerPrice: "38.378,90",
                     offerPercentage: 30,
                 },
+                card: {
+                    price: "78,610.00",
+                    offerPrice: "54,827.00",
+                    offerPercentage: 24,
+                }
             },
             description: {
                 title: "Estanteria ideal para lucir tus hermosas fotografías familiares.",
@@ -557,6 +597,11 @@ export const productsData: ProductDataInterface = {
                     offerPrice: "38.378,90",
                     offerPercentage: 30,
                 },
+                card: {
+                    price: "78,610.00",
+                    offerPrice: "54,827.00",
+                    offerPercentage: 24,
+                }
             },
             description: {
                 title: "Estantería ideal para mantener el orden de tu hogar.",
@@ -646,6 +691,11 @@ export const productsData: ProductDataInterface = {
                     offerPrice: "38.378,90",
                     offerPercentage: 30,
                 },
+                card: {
+                    price: "78,610.00",
+                    offerPrice: "54,827.00",
+                    offerPercentage: 24,
+                }
             },
             description: {
                 title: "Llavero ideal para guardar tus llaves.",
@@ -714,6 +764,11 @@ export const productsData: ProductDataInterface = {
                     offerPrice: "38.378,90",
                     offerPercentage: 30,
                 },
+                card: {
+                    price: "78,610.00",
+                    offerPrice: "54,827.00",
+                    offerPercentage: 24,
+                }
             },
             description: {
                 title: "Llavero ideal para guardar tus llaves.",
@@ -782,6 +837,11 @@ export const productsData: ProductDataInterface = {
                     offerPrice: "38.378,90",
                     offerPercentage: 30,
                 },
+                card: {
+                    price: "78,610.00",
+                    offerPrice: "54,827.00",
+                    offerPercentage: 24,
+                }
             },
             description: {
                 title: "Leñero ideal para conservar la leña de una manera muy elegante.",
@@ -843,6 +903,11 @@ export const productsData: ProductDataInterface = {
                     offerPrice: "38.378,90",
                     offerPercentage: 30,
                 },
+                card: {
+                    price: "78,610.00",
+                    offerPrice: "54,827.00",
+                    offerPercentage: 24,
+                }
             },
             description: {
                 title: "Mira la tele de una manera elegante.",
@@ -925,6 +990,11 @@ export const productsData: ProductDataInterface = {
                     offerPrice: "38.378,90",
                     offerPercentage: 30,
                 },
+                card: {
+                    price: "78,610.00",
+                    offerPrice: "54,827.00",
+                    offerPercentage: 24,
+                }
             },
             description: {
                 title: "Toallero ideal para lucir tus hermosas toallas o repasadores.",
@@ -986,6 +1056,11 @@ export const productsData: ProductDataInterface = {
                     offerPrice: "38.378,90",
                     offerPercentage: 30,
                 },
+                card: {
+                    price: "78,610.00",
+                    offerPrice: "54,827.00",
+                    offerPercentage: 24,
+                }
             },
             description: {
                 title: "Toallero ideal para lucir tus hermosas toallas.",
@@ -1061,6 +1136,11 @@ export const productsData: ProductDataInterface = {
                     offerPrice: "38.378,90",
                     offerPercentage: 30,
                 },
+                card: {
+                    price: "78,610.00",
+                    offerPrice: "54,827.00",
+                    offerPercentage: 24,
+                }
             },
             description: {
                 title: "Bodega ideal para disfrutar un buen vino desde la comodidad de tu sillon.",
@@ -1137,6 +1217,11 @@ export const productsData: ProductDataInterface = {
                     offerPrice: "38.378,90",
                     offerPercentage: 30,
                 },
+                card: {
+                    price: "78,610.00",
+                    offerPrice: "54,827.00",
+                    offerPercentage: 24,
+                }
             },
             // description: {
             //     title: "",
@@ -1195,6 +1280,11 @@ export const productsData: ProductDataInterface = {
                     offerPrice: "38.378,90",
                     offerPercentage: 30,
                 },
+                card: {
+                    price: "78,610.00",
+                    offerPrice: "54,827.00",
+                    offerPercentage: 24,
+                }
             },
             description: {
                 title: "Porta Vino ideal para lucir tus mejores botellas de vino.",
@@ -1255,6 +1345,11 @@ export const productsData: ProductDataInterface = {
                     offerPrice: "38.378,90",
                     offerPercentage: 30,
                 },
+                card: {
+                    price: "78,610.00",
+                    offerPrice: "54,827.00",
+                    offerPercentage: 24,
+                }
             },
             description: {
                 title: "¿Buscas un escritorio fuerte y rígido el cual perdure en el tiempo? Nosotros te podemos ayudar!",
@@ -1324,6 +1419,11 @@ export const productsData: ProductDataInterface = {
                     offerPrice: "38.378,90",
                     offerPercentage: 30,
                 },
+                card: {
+                    price: "78,610.00",
+                    offerPrice: "54,827.00",
+                    offerPercentage: 24,
+                }
             },
             description: {
                 title: "Perchero ideal para mantener el orden y la limpieza de tu hogar.",
@@ -1406,6 +1506,11 @@ export const productsData: ProductDataInterface = {
                     offerPrice: "38.378,90",
                     offerPercentage: 30,
                 },
+                card: {
+                    price: "78,610.00",
+                    offerPrice: "54,827.00",
+                    offerPercentage: 24,
+                }
             },
             description: {
                 title: "Entra a tu hogar y sonreí! Este recibidor mantendrá el orden de tus visitas.",
@@ -1495,6 +1600,11 @@ export const productsData: ProductDataInterface = {
                     offerPrice: "38.378,90",
                     offerPercentage: 30,
                 },
+                card: {
+                    price: "78,610.00",
+                    offerPrice: "54,827.00",
+                    offerPercentage: 24,
+                }
             },
             description: {
                 title: "Tabla de Asado.",
@@ -1586,6 +1696,11 @@ export const productsData: ProductDataInterface = {
                     offerPrice: "38.378,90",
                     offerPercentage: 30,
                 },
+                card: {
+                    price: "78,610.00",
+                    offerPrice: "54,827.00",
+                    offerPercentage: 24,
+                }
             },
             description: {
                 title: "Soporte ideal para cuidar y lucir tus auriculares.",

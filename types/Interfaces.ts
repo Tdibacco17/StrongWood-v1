@@ -62,7 +62,7 @@ export interface PaymentDataInterface {
         offerPrice?: string,
         offerPercentage?: number;
     },
-    card?: {
+    card: {
         price: string,
         offerPrice?: string,
         offerPercentage?: number;

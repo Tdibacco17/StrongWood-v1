@@ -32,6 +32,14 @@
         min-width: var(--carrousel-card-image);
         max-width: var(--carrousel-card-image);
 
+        &:hover {
+            .carousel-buttons .carousel-arrow {
+                background-color: #333;
+                opacity: 1;
+                transition: background-color 0.25s ease, opacity 0.25s ease;
+            }
+        }
+
         .carousel {
             display: flex;
             flex-direction: column;
@@ -45,6 +53,62 @@
             &::-webkit-scrollbar {
                 width: 0px;
                 background-color: transparent;
+            }
+        }
+
+        .carousel-buttons {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-color: transparent;
+            pointer-events: none;
+
+            min-height: 100%;
+            max-height: 100%;
+            min-width: 100%;
+            max-width: 100%;
+            background: transparent;
+            background-color: transparent;
+
+            .carousel-arrow {
+                pointer-events: auto;
+
+                width: 2.5rem;
+                height: 2.5rem;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                opacity: 0;
+
+                transition: background-color 0.25s ease;
+                transition: opacity 0.25s ease;
+
+                @media (max-width: 992px) {
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+
+            @media (max-width: 768px) {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                background-color: transparent;
+
+                min-height: 8rem;
+                max-height: 8rem;
+                min-width: 100%;
+                max-width: 100%;
             }
         }
     }
@@ -107,6 +171,7 @@
                 flex-direction: row;
                 align-items: flex-start;
                 justify-content: revert;
+                overflow-x: scroll;
             }
         }
     }
