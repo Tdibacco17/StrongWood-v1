@@ -1,6 +1,6 @@
 import { ProductDetailContext } from "@/context/ProductDetailProvider";
 import { ProductsDataContextInterface } from "@/types/Interfaces";
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import styles from "./DetailsInfoComponent.module.scss"
 import Image from "next/image";
 
@@ -9,6 +9,44 @@ export default function DetailsInfoComponent() {
         ProductDetailContext
     ) as ProductsDataContextInterface;
 
+    const nameRef = useRef<HTMLInputElement>(null);
+    const phoneRef = useRef<HTMLInputElement>(null);
+    const emailRef = useRef<HTMLInputElement>(null);
+    const directiongeRef = useRef<HTMLInputElement>(null);
+    const productgeRef = useRef<HTMLInputElement>(null);
+
+    const handleSubmitEmail = async (e: any) => {
+        e.preventDefault();
+
+        let data = {
+            name: "tomas", // nameRef.current?.value,
+            phone: "tomas",//phoneRef.current?.value,
+            email: "tomas", //emailRef.current?.value,
+            direction: "tomas",// directiongeRef.current?.value,
+            product: "tomas", //productgeRef.current?.value,
+        };
+
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Accept": "application/json, text/plain",
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (response.status === 200) {
+                console.log("Email enviado con éxito");
+            } else {
+                console.log("Error al enviar el correo electrónico");
+            }
+        } catch (error) {
+            console.log("Error al enviar el correo electrónico:", error);
+        }
+    }
+
+    console.log(productData)
     return (
         <div className={styles["container-section-info"]}>
             <div className={styles["container-info"]}>
@@ -35,7 +73,9 @@ export default function DetailsInfoComponent() {
                     productData?.detail?.payment?.cash?.price &&
                     <div className={styles["button-method"]}>
                         <p className={styles["title"]}>Abonando en Efectivo</p>
-                        <button className={styles["button"]}>
+                        <button
+                            // onClick={handleSubmitEmail}
+                            className={styles["button"]}>
                             <Image
                                 src="/assets/icons/wallet.svg"
                                 alt="Icono Billetera"
