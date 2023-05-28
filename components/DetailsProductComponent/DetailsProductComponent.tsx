@@ -11,8 +11,8 @@ export default function DetailsProductComponent() {
                 <DetailsGalleryContainer />
                 <DetailsInfoComponent />
             </div>
-            <DetailsServicesComponent />
             <DetailsDescriptionComponent />
+            <DetailsServicesComponent />
         </div>
     );
 }

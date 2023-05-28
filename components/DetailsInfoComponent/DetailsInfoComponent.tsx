@@ -22,7 +22,7 @@ export default function DetailsInfoComponent() {
                     productData?.offerPrice &&
                     <p className={styles["product-price"]}>
                         <span className={styles["info-offerPrice"]}>
-                            {`Precio oferta: $ ${productData?.offerPrice}`}
+                            {`Precio en oferta: $ ${productData?.offerPrice}`}
                         </span>
                     </p>
                 }
