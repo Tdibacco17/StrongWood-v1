@@ -13,11 +13,14 @@ export default function DetailsInfoComponent() {
         <div className={styles["container-section-info"]}>
             <div className={styles["container-info"]}>
                 <h1 className={styles["product-title"]}>{productData?.title}</h1>
-                <p className={styles["product-price"]}>
-                    <span className={styles["info-price"]}>
-                        {`Precio: $ ${productData?.price}`}
-                    </span>
-                </p>
+                {
+                    productData?.price &&
+                    <p className={styles["product-price"]}>
+                        <span className={styles["info-price"]}>
+                            {`Precio: $ ${productData?.price}`}
+                        </span>
+                    </p>
+                }
                 {
                     productData?.offerPrice &&
                     <p className={styles["product-price"]}>
