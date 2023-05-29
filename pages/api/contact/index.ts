@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer"
 
 export default async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
-    const { name, email, phone, message } = req.body;
+    const { name, phone, email, direction, product, pago } = req.body;
 
     try {
         let transporter = nodemailer.createTransport({
@@ -23,10 +23,12 @@ export default async function sendEmail(req: NextApiRequest, res: NextApiRespons
             to: process.env.EMAIL_SENDER,
             subject: `${name} te envió un mensaje`,
             text: `
-                nombre= ${name}
-                email= ${email}
-                telefono= ${phone}
-                ${message}
+                nombre: ${name}
+                email: ${email}
+                telefono: ${phone}
+                direccion: ${direction}
+                producto: ${product}
+                abona en ${pago}
             `,
         });
 

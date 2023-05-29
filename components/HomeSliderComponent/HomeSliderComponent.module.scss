@@ -58,7 +58,7 @@
             cursor: pointer;
 
             &.active {
-                background-color: var(--strong-bs-gray-300);
+                background-color: var(--strong-primary-color);
             }
 
             @media (max-width: 768px) {

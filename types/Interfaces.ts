@@ -68,3 +68,14 @@ export interface PaymentDataInterface {
         offerPercentage?: number;
     }
 }
+
+//contact
+
+export interface ContactProductDataInterface{
+    name: string,
+    phone: string,
+    email: string,
+    direction: string,
+    product: string
+    pago: string
+}
