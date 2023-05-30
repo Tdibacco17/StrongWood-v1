@@ -7,21 +7,21 @@ export default async function sendEmail(req: NextApiRequest, res: NextApiRespons
 
     try {
         let transporter = nodemailer.createTransport({
-            host: process.env.EMAIL_SERVICE,
+            host: "smtp-mail.outlook.com" || process.env.EMAIL_SERVICE,
             port: 587,
             secure: false,
             tls: {
                 ciphers: 'SSLv3'
             },
             auth: {
-                user: process.env.EMAIL_USERNAME,
-                pass: process.env.EMAIL_PASSWORD,
+                user: "tdibacco-prueba25watts@outlook.com" || process.env.EMAIL_USERNAME,
+                pass: "Tomasdibacco25watts" || process.env.EMAIL_PASSWORD,
             },
         });
 
         let info = await transporter.sendMail({
-            from: process.env.EMAIL_SENDER,
-            to: process.env.EMAIL_SENDER,
+            from: "tdibacco-prueba25watts@outlook.com" || process.env.EMAIL_SENDER,
+            to: "tdibacco-prueba25watts@outlook.com" || process.env.EMAIL_SENDER,
             subject: `${name} te envió un mensaje`,
             text: `
                 nombre: ${name}
