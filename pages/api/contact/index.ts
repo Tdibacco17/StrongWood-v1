@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer"
+require("dotenv").config();
 
 export default async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
     const { name, phone, email, direction, product, pago } = req.body;
