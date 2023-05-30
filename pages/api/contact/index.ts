@@ -3,7 +3,7 @@ import nodemailer from "nodemailer"
 require("dotenv").config();
 
 export default async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
-    const { name, phone, email, direction, product, pago } = req.body;
+    const { name = "", phone = "", email = "", direction = "", product = "", pago = "" } = req.body;
 
     try {
         let transporter = nodemailer.createTransport({
