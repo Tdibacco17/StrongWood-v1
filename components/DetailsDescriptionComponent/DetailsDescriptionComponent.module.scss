@@ -30,6 +30,10 @@
         font-weight: var(--strong-weight-700);
 
         padding-bottom: 2rem;
+
+        @media (max-width: 768px) {
+            font-size: var(--strong-font-large);
+        }
     }
 
     .description-subtitle {
@@ -38,6 +42,10 @@
         font-weight: var(--strong-weight-400);
 
         padding-bottom: 1.5rem;
+
+        @media (max-width: 768px) {
+            font-size: var(--strong-font-xxxmedium);
+        }
     }
 
     .container-description {
@@ -49,6 +57,10 @@
             font-family: var(--strong-font-Roboto-Regular);
             font-size: var(--strong-font-medium);
             font-weight: var(--strong-weight-400);
+
+            @media (max-width: 768px) {
+                font-size: var(--strong-font-xxmedium);
+            }
         }
     }
 }

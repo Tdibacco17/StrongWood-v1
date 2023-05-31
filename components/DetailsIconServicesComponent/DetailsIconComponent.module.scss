@@ -16,18 +16,6 @@
         --icon-image: 2rem;
     }
 
-    @media (max-width: 768px) {
-        --icon-image: 1.8rem;
-    }
-
-    @media (max-width: 576px) {
-        --icon-image: 1.7rem;
-    }
-
-    @media (max-width: 480px) {
-        --icon-image: 1.6rem;
-    }
-
     .container-inner-image {
         position: relative;
         min-height: var(--icon-image);

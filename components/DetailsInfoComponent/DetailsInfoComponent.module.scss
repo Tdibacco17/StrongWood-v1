@@ -12,8 +12,12 @@
         height: 16rem;
     }
 
-    @media (max-width: 480px) {
-        height: 23rem;
+    @media (max-width: 768px) {
+        height: 25rem;
+    }
+
+    @media (max-width: 350px) {
+        height: 28rem;
     }
 
     .container-info {
@@ -28,6 +32,10 @@
             align-items: center;
         }
 
+        @media (max-width: 350px) {
+            align-items: flex-start;
+        }
+
         .product-title {
             font-family: var(--strong-font-Roboto-Bold);
             font-size: var(--strong-font-large);
@@ -36,12 +44,20 @@
             text-transform: uppercase;
 
             padding-bottom: 1rem;
+
+            @media (max-width: 768px) {
+                font-size: var(--strong-font-xxlarge);
+            }
         }
 
         .product-price {
             padding-bottom: 0.8rem;
             color: var(--strong-bluegray-1);
             font-size: var(--strong-font-xmedium);
+
+            @media (max-width: 768px) {
+                font-size: var(--strong-font-xxxmedium);
+            }
 
             .info-price {
                 font-family: var(--strong-font-Roboto-Bold);
@@ -52,6 +68,10 @@
                 font-family: var(--strong-font-Roboto-Bold);
                 font-size: var(--strong-font-xxxmedium);
                 font-weight: var(--strong-weight-700);
+
+                @media (max-width: 768px) {
+                    font-size: var(--strong-font-large);
+                }
             }
         }
     }
@@ -65,8 +85,12 @@
             flex-direction: row;
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 768px) {
             flex-direction: column;
+            width: calc(100vw - 5rem);
+        }
+
+        @media (max-width: 480px) {
             width: calc(100vw - 3rem);
         }
 
@@ -80,6 +104,10 @@
                 font-size: var(--strong-font-xxmedium);
                 font-weight: var(--strong-weight-700);
                 color: var(--strong-bluegray-1);
+
+                @media (max-width: 768px) {
+                    font-size: var(--strong-font-xxxmedium);
+                }
             }
 
             .button {
@@ -94,11 +122,6 @@
 
                 background: var(--strong-bluegray-11);
                 color: var(--strong-bluegray-1);
-
-                font-family: var(--strong-font-Roboto-Bold);
-                font-size: var(--strong-font-medium);
-                font-weight: var(--strong-weight-700);
-
                 cursor: pointer;
 
                 transition: 0.25s ease-in-out;
@@ -119,6 +142,10 @@
                     font-size: var(--strong-font-medium);
                     font-weight: var(--strong-weight-400);
                     color: var(--strong-bluegray-1);
+
+                    @media (max-width: 768px) {
+                        font-size: var(--strong-font-xxmedium);
+                    }
                 }
             }
         }

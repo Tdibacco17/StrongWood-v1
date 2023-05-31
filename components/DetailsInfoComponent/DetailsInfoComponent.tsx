@@ -89,7 +89,12 @@ export default function DetailsInfoComponent() {
                     ${productData?.offerPrice ?
                         `text-decoration: line-through;
                         color: var(--strong-bluegray-5);
-                        ` : "font-size: var(--strong-font-xxxmedium);"}    
+                        ` :
+                        `font-size: var(--strong-font-xxxmedium);
+                        
+                        @media (max-width: 768px) {
+                            font-size: var(--strong-font-large);
+                        }`}    
                     }
                 `}
             </style>

@@ -73,6 +73,17 @@
 
         padding-left: 1rem;
 
+        @media (max-width: 768px) {
+            --card-overlay-image-height: calc(100% - 5.5rem);
+            height: 5.5rem;
+
+        }
+
+        @media (max-width: 480px) {
+            --card-overlay-image-height: calc(100% - 4.5rem);
+            height: 4.5rem;
+        }
+
         .title-overlay {
             font-family: var(--strong-font-Roboto-Bold);
             font-size: var(--strong-font-xlarge);
@@ -80,6 +91,10 @@
 
             color: var(--strong-bluegray-1);
             padding-bottom: 0.4rem;
+
+            @media (max-width: 1070px) {
+                font-size: var(--strong-font-large);
+            }
 
             @media (max-width: 768px) {
                 padding-bottom: 0.35rem;
@@ -93,9 +108,19 @@
         .subtitle-overlay {
             font-family: var(--strong-font-Roboto-Regular);
             font-weight: var(--strong-weight-400);
-            font-size: var(--strong-font-xxsmall);
+            font-size: var(--strong-font-medium);
 
             color: var(--strong-bluegray-1);
+
+
+            @media (max-width: 1070px) {
+                font-size: var(--strong-font-xxsmall);
+            }
+
+            @media (max-width: 768px) {
+                font-size: var(--strong-font-medium);
+
+            }
         }
     }
 

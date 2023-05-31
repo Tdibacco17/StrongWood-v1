@@ -11,6 +11,14 @@
     padding-top: 12.5rem;
     padding-bottom: 5rem;
 
+    @media (max-width: 768px) {
+        padding-top: 11rem;
+    }
+
+    @media (max-width: 480px) {
+        padding-top: 10rem;
+    }
+
     .container-row-dividers {
         display: flex;
         --details-container-width: calc(100vw - 7rem);

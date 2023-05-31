@@ -51,6 +51,14 @@
             font-size: var(--strong-font-xxsmall);
             font-weight: var(--strong-weight-700);
             text-align: center;
+
+            @media (max-width: 768px) {
+                font-size: var(--strong-font-medium);
+            }
+
+            @media (max-width: 480px) {
+                font-size: var(--strong-font-xxmedium);
+            }
         }
 
         .icons-subtitle {
@@ -58,6 +66,14 @@
             font-size: var(--strong-font-xsmall);
             font-weight: var(--strong-weight-400);
             text-align: center;
+
+            @media (max-width: 768px) {
+                font-size: var(--strong-font-xxsmall);
+            }
+
+            @media (max-width: 480px) {
+                font-size: var(--strong-font-medium);
+            }
         }
     }
 }

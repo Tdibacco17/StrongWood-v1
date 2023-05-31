@@ -21,7 +21,7 @@ export default function ContactContainer({ slug, pago }: { slug: string | undefi
             emailRef.current?.value.trim() === "" ||
             directiongeRef.current?.value.trim() === ""
         ) {
-            setErrorMessage("Por favor, complete todos los campos");
+            setErrorMessage("Por favor, complete todos los campos.");
             return false;
         }
         return true;
