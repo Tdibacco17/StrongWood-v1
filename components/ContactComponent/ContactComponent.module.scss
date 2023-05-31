@@ -20,6 +20,14 @@
     padding-bottom: 5rem;
     margin: 0 auto;
 
+    @media (max-width: 768px) {
+        padding-top: 11rem;
+    }
+
+    @media (max-width: 480px) {
+        padding-top: 10rem;
+    }
+
     .container-form {
         display: flex;
         flex-direction: column;
