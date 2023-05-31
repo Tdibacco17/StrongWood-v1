@@ -26,7 +26,7 @@
 
     @media (max-width: 480px) {
         flex-direction: column;
-        gap: 3.5rem;
+        gap: 3rem;
     }
 
     .line-divider {
@@ -57,7 +57,7 @@
             }
 
             @media (max-width: 480px) {
-                font-size: var(--strong-font-xxxmedium);
+                font-size: var(--strong-font-xxmedium);
             }
         }
 
@@ -72,7 +72,7 @@
             }
 
             @media (max-width: 480px) {
-                font-size: var(--strong-font-xmedium);
+                font-size: var(--strong-font-medium);
             }
         }
     }

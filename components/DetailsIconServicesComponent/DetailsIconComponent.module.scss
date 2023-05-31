@@ -17,8 +17,9 @@
     }
 
     @media (max-width: 480px) {
-        --icon-image: 2.3rem;
+        --icon-image: 2.2rem;
     }
+    
     .container-inner-image {
         position: relative;
         min-height: var(--icon-image);
