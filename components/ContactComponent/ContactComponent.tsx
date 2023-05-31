@@ -44,6 +44,7 @@ export default function ContactComponent({
                         className={styles["form-input"]}
                         type="text" name="direction" ref={directiongeRef} />
                 </label>
+                <p className={styles["form-text"]}></p>
                 <button
                     className={styles["form-button"]}
                     type="submit">Enviar</button>

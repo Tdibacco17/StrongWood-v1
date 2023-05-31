@@ -59,6 +59,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
+            @media (max-width: 768px) {
+                height: 2.4rem;
+                width: 6rem;
+                font-size: var(--strong-font-xxmedium);
+            }
+
+            @media (max-width: 480px) {
+                height: 2.2rem;
+                width: 5.4rem;
+                font-size: var(--strong-font-xmedium);
+            }
         }
     }
 

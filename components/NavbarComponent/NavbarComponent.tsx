@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 export default function NavbarComponent({ isSlider, urlBack }: { isSlider: boolean, urlBack: string }) {
 
-    const { isScrolled, isAtTop } = useScrollPosition() // 64px === 5rem
+    const { isScrolled, isAtTop } = useScrollPosition() // 57.6px === 3.6rem
     const hiddenRef = useRef<boolean>(false);
 
     useEffect(() => {
