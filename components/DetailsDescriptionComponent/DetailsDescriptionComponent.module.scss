@@ -5,9 +5,11 @@
     justify-content: center;
 
     padding: 1rem;
+    border: 1px solid var(--strong-bluegray-10);
     border-radius: 0.2rem;
-    background: var(--strong-primary-color);
-    color: var(--strong-secondary-color);
+
+    background: var(--strong-bluegray-11);
+    color: var(--strong-bluegray-1);
 
     --description-container-width: calc(100vw - 7rem);
 
@@ -24,10 +26,10 @@
 
     .description-title {
         font-family: var(--strong-font-Roboto-Regular);
-        font-size: var(--strong-font-xxmedium);
-        font-weight: var(--strong-weight-400);
+        font-size: var(--strong-font-xxxmedium);
+        font-weight: var(--strong-weight-700);
 
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
     }
 
     .description-subtitle {
@@ -35,19 +37,18 @@
         font-size: var(--strong-font-medium);
         font-weight: var(--strong-weight-400);
 
-        padding-bottom: 1rem;
+        padding-bottom: 1.5rem;
     }
 
     .container-description {
         display: flex;
         flex-direction: column;
-        gap: 0.7rem;
+        gap: 1rem;
 
         .description-item {
             font-family: var(--strong-font-Roboto-Regular);
-            font-size: var(--strong-font-xxsmall);
+            font-size: var(--strong-font-medium);
             font-weight: var(--strong-weight-400);
-
         }
     }
 }

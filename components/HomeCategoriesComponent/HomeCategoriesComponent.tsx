@@ -23,7 +23,7 @@ export default function HomeCategoriesComponent() {
                         imgProportionsX={homeData.categoriesImages[0].imgProportionsX}
                         imgProportionsY={homeData.categoriesImages[0].imgProportionsY}
                         title="Línea Design"
-                        subtitle="Diseña tu cocina"
+                        subtitle="Diseños personalizados"
                     />
                 </div>
             }

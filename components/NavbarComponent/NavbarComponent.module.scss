@@ -34,33 +34,33 @@
             font-family: var(--strong-font-Knucklehead);
             font-size: var(--navbar-title-size);
             font-weight: var(--strong-weight-700);
-            letter-spacing: 0.35rem;
-            color: var(--strong-primary-color);
+            letter-spacing: 0.4rem;
+            color: var(--strong-bluegray-1);
             cursor: pointer;
         }
 
         &:hover {
-            background: var(--strong-secondary-color);
+            background: var(--strong-bluegray-16);
             transition: 0.3s ease-in-out;
         }
 
         &.isTransparency {
             &:hover {
-                background: var(--strong-secondary-color);
+                background: var(--strong-bluegray-16);
                 transition: 0.3s ease-in-out;
             }
         }
 
         &.isDark {
-            background: var(--strong-secondary-color);
+            background: var(--strong-bluegray-16);
         }
 
         &.isOtherSection {
-            background: var(--strong-primary-color);
-            border-bottom: 1px solid var(--strong-tertiary-color);
+            background: var(--strong-bluegray-11);
+            border-bottom: none;
 
             .title {
-                color: var(--strong-tertiary-color);
+                color: var(--strong-bluegray-1);
             }
         }
     }
@@ -77,15 +77,15 @@
         align-items: center;
         overflow: hidden;
 
-        background: var(--strong-primary-color);
-        border-bottom: 1px solid var(--strong-tertiary-color);
+        background: var(--strong-bluegray-11);
+        border-bottom: 1px solid var(--strong-bluegray-5);
 
         .title {
             font-family: var(--strong-font-Roboto-Regular);
             font-size: var(--strong-font-xxmedium);
             font-weight: var(--strong-weight-400);
 
-            color: var(--strong-tertiary-color);
+            color: var(--strong-bluegray-1);
         }
 
         .back-title {
@@ -93,8 +93,14 @@
             font-size: var(--strong-font-xxmedium);
             font-weight: var(--strong-weight-400);
 
-            color: var(--strong-tertiary-color);
+            color: var(--strong-bluegray-1);
             cursor: pointer;
+            transition: color 0.25s ease-in;
+
+            &:hover {
+                color: var(--strong-bluegray-5);
+                transition: color 0.25s ease-in;
+            }
         }
     }
 

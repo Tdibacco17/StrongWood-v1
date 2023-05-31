@@ -33,11 +33,6 @@ export default function DetailsCarouselImgComponent({
                     />
                 </div>
             )}
-
-            <style jsx>{`
-                .${styles["container-outer-image"]} {
-                }
-            `}</style>
         </div>
     )
 }

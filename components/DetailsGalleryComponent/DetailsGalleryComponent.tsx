@@ -50,7 +50,7 @@ export default function DetailsGalleryComponent({
                 </div>
                 <div className={styles['carousel-buttons']}>
                     <button
-                        className={`${styles['carousel-arrow']} ${width < 768 ? styles['top'] : styles['left']}`}
+                        className={styles['carousel-arrow']}
                         onClick={width < 768 ? handleScrollLeft : handleScrollUp}>
                         {
                             width < 768 ?
@@ -69,7 +69,7 @@ export default function DetailsGalleryComponent({
                         }
                     </button>
                     <button
-                        className={`${styles['carousel-arrow']}  ${width < 768 ? styles['bottom'] : styles['right']}`}
+                        className={styles['carousel-arrow']}
                         onClick={width < 768 ? handleScrollRight : handleScrollDown}>
                         {
                             width < 768 ?

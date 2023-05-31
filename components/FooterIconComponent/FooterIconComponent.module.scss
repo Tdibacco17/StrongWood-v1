@@ -1,5 +1,5 @@
 .container-outer-image {
-    --icon-image: 1.6rem;
+    --icon-image: 1.7rem;
 
     min-height: var(--icon-image);
     max-height: var(--icon-image);
@@ -11,29 +11,34 @@
     align-items: center;
 
     overflow: hidden;
-    // transition: 0.3s ease-in;
+    transition: 0.25s ease-in;
     cursor: pointer;
 
+    border-radius: 99rem;
+    padding: 1.4rem;
+
     @media (max-width: 992px) {
-        --icon-image: 1.5rem;
+        --icon-image: 1.6rem;
     }
 
     @media (max-width: 768px) {
-        --icon-image: 1.4rem;
+        --icon-image: 1.5rem;
+        padding: 1.3rem;
     }
 
     @media (max-width: 576px) {
-        --icon-image: 1.3rem;
+        --icon-image: 1.4rem;
     }
 
     @media (max-width: 480px) {
         --icon-image: 1.2rem;
+        padding: 1.2rem;
     }
 
-    // &:hover .container-inner-image {
-    //     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg) brightness(0.5) contrast(2);
-    //     transition: 0.3s ease-in;
-    // }
+    &:hover {
+        background: var(--strong-bluegray-11);
+        transition: 0.25s ease-in;
+    }
 
     .container-inner-image {
         position: relative;
@@ -41,7 +46,7 @@
         max-height: var(--icon-image);
         min-width: var(--icon-image);
         max-width: var(--icon-image);
-        height: var(--icon-image); // Agregar esta línea
+        height: var(--icon-image);
         user-select: none;
 
         filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg);

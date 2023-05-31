@@ -8,8 +8,8 @@
     gap: 1rem;
     padding: 1rem;
     border-radius: 0.2rem;
-
-    background: var(--strong-primary-color);
+    border: 1px solid var(--strong-bluegray-10);
+    background: var(--strong-bluegray-11);
 
     min-height: var(--gallery-section-height);
     max-height: var(--gallery-section-height);
@@ -34,7 +34,7 @@
 
         &:hover {
             .carousel-buttons .carousel-arrow {
-                background-color: #333;
+                background-color: var(--strong-bluegray-3);
                 opacity: 1;
                 transition: background-color 0.25s ease, opacity 0.25s ease;
             }
@@ -90,12 +90,16 @@
                 cursor: pointer;
                 opacity: 0;
 
-                transition: background-color 0.25s ease;
-                transition: opacity 0.25s ease;
+                transition: background-color 0.25s ease, opacity 0.25s ease;
+
+                &:hover {
+                    background: var(--strong-bluegray-4);
+                    transition: background-color 0.25s ease
+                }
 
                 @media (max-width: 992px) {
-                    width: 2rem;
-                    height: 2rem;
+                    width: 2.1rem;
+                    height: 2.1rem;
                 }
             }
 

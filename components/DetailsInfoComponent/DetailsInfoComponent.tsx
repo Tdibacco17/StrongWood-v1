@@ -47,6 +47,7 @@ export default function DetailsInfoComponent() {
                             }}
                             className={styles["button"]}>
                             <Image
+                                className={styles["image-btn"]}
                                 src="/assets/icons/wallet.svg"
                                 alt="Icono Billetera"
                                 width={20}
@@ -70,6 +71,7 @@ export default function DetailsInfoComponent() {
                             }}
                             className={styles["button"]}>
                             <Image
+                                className={styles["image-btn"]}
                                 src="/assets/icons/creditCard.svg"
                                 alt="Icono Tarjeta"
                                 width={20}
@@ -84,7 +86,10 @@ export default function DetailsInfoComponent() {
             <style jsx>
                 {`
                 .${styles["product-price"]} .${styles["info-price"]} {
-                    ${productData?.offerPrice ? "text-decoration: line-through;" : ""}    
+                    ${productData?.offerPrice ?
+                        `text-decoration: line-through;
+                        color: var(--strong-bluegray-5);
+                        ` : "font-size: var(--strong-font-xxxmedium);"}    
                     }
                 `}
             </style>

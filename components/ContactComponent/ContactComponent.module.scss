@@ -36,7 +36,6 @@
             --contact-container-width: calc(100vw - 3rem);
         }
 
-
         .form-group {
             display: flex;
             flex-direction: column;
@@ -46,40 +45,41 @@
                 font-family: var(--strong-font-Roboto-Bold);
                 font-size: var(--strong-font-xxmedium);
                 font-weight: var(--strong-weight-700);
-                color: var(--strong-primary-color);
+                color: var(--strong-bluegray-1);
             }
 
             .form-input {
                 font-family: var(--strong-font-Roboto-Regular);
                 font-size: var(--strong-font-xsmall);
                 font-weight: var(--strong-weight-400);
-                color: var(--strong-primary-color);
+                color: var(--strong-bluegray-1);
 
                 padding: 0.5rem 1rem;
                 min-height: 2rem;
                 max-height: 2rem;
                 border-radius: 0.2rem;
-                border: 0.1rem solid var(--strong-bs-gray-600);
+                border: 1px solid var(--strong-bluegray-10);
+
                 background: transparent;
                 outline: none;
                 transition: 0.25s ease-in-out;
 
                 &:focus {
-                    border: 0.1rem solid var(--strong-primary-color);
+                    border: 1px solid var(--strong-bluegray-1);
                     transition: 0.25s ease-in-out;
                 }
             }
         }
 
         .form-button {
-            background: var(--strong-primary-color);
+            background: var(--strong-bluegray-11);
 
             font-family: var(--strong-font-Roboto-Regular);
             font-size: var(--strong-font-xxsmall);
             font-weight: var(--strong-weight-400);
-            color: var(--strong-secondary-color);
+            color: var(--strong-bluegray-1);
 
-            border: none;
+            border: 1px solid var(--strong-bluegray-10);
             border-radius: 0.2rem;
             padding: 0.5rem 1rem;
 
@@ -87,8 +87,7 @@
             transition: 0.25s ease-in-out;
 
             &:hover {
-                background: var(--strong-bs-gray-600);
-                color: var(--strong-primary-color);
+                background: var(--strong-bluegray-10);
                 transition: 0.25s ease-in-out;
             }
         }

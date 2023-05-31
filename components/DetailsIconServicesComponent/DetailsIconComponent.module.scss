@@ -1,5 +1,5 @@
 .container-outer-image {
-    --icon-image: 2.2rem;
+    --icon-image: 2.5rem;
 
     min-height: var(--icon-image);
     max-height: var(--icon-image);
@@ -28,7 +28,6 @@
         --icon-image: 1.6rem;
     }
 
-
     .container-inner-image {
         position: relative;
         min-height: var(--icon-image);
@@ -37,6 +36,7 @@
         max-width: var(--icon-image);
         height: var(--icon-image); // Agregar esta línea
         user-select: none;
+        pointer-events: none;
 
         filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg);
     }

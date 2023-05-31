@@ -11,14 +11,14 @@
 
     .title-slogan {
         --slogan-title-width: calc(100vw - 7rem);
-        font-family: var(--strong-font-Knucklehead);
+        font-family: var(--strong-font-Roboto-Bold);
         font-weight: var(--strong-weight-700);
-        font-size: var(--strong-font-large);
-        letter-spacing: 0.35rem;
+        font-size: var(--strong-font-xxxmedium);
+        letter-spacing: 0.20rem;
         
         padding-top: 5rem;
 
-        color: var(--strong-primary-color);
+        color: var(--strong-bluegray-1);
         text-align: center;
         min-width: var(--slogan-title-width);
         max-width: var(--slogan-title-width);

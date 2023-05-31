@@ -13,7 +13,7 @@
     }
 
     @media (max-width: 480px) {
-        height: 22rem;
+        height: 23rem;
     }
 
     .container-info {
@@ -32,7 +32,7 @@
             font-family: var(--strong-font-Roboto-Bold);
             font-size: var(--strong-font-large);
             font-weight: var(--strong-weight-700);
-            color: var(--strong-primary-color);
+            color: var(--strong-bluegray-1);
             text-transform: uppercase;
 
             padding-bottom: 1rem;
@@ -40,12 +40,12 @@
 
         .product-price {
             padding-bottom: 0.8rem;
+            color: var(--strong-bluegray-1);
+            font-size: var(--strong-font-xmedium);
 
             .info-price {
                 font-family: var(--strong-font-Roboto-Bold);
-                font-size: var(--strong-font-xxmedium);
                 font-weight: var(--strong-weight-700);
-                color: var(--strong-primary-color-blurred);
             }
 
             .info-offerPrice {
@@ -67,6 +67,7 @@
 
         @media (max-width: 480px) {
             flex-direction: column;
+            width: calc(100vw - 3rem);
         }
 
         .button-method {
@@ -78,7 +79,7 @@
                 font-family: var(--strong-font-Roboto-Bold);
                 font-size: var(--strong-font-xxmedium);
                 font-weight: var(--strong-weight-700);
-                color: var(--strong-primary-color);
+                color: var(--strong-bluegray-1);
             }
 
             .button {
@@ -88,10 +89,11 @@
                 gap: 1.5rem;
 
                 padding: 1rem;
-                border: none;
+                border: 1px solid var(--strong-bluegray-10);
                 border-radius: 0.2rem;
-                background: var(--strong-primary-color);
-                color: var(--strong-secondary-color);
+
+                background: var(--strong-bluegray-11);
+                color: var(--strong-bluegray-1);
 
                 font-family: var(--strong-font-Roboto-Bold);
                 font-size: var(--strong-font-medium);
@@ -102,15 +104,21 @@
                 transition: 0.25s ease-in-out;
 
                 &:hover {
-                    background: var(--strong-primary-color-blurred);
+                    background: var(--strong-bluegray-10);
                     transition: 0.25s ease-in-out;
+                }
+
+                .image-btn {
+                    pointer-events: none;
+                    user-select: none;
+                    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg);
                 }
 
                 .btn-price {
                     font-family: var(--strong-font-Roboto-Bold);
                     font-size: var(--strong-font-medium);
                     font-weight: var(--strong-weight-400);
-                    color: var(--strong-secondary-color);
+                    color: var(--strong-bluegray-1);
                 }
             }
         }

@@ -12,6 +12,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 0.2rem;
+    border: 1px solid var(--strong-bluegray-10);
 
     overflow: hidden;
     position: relative;
@@ -42,30 +44,34 @@
         overflow: hidden;
 
         .percentage {
-            height: 1.7rem;
+            height: 1.8rem;
             width: 5rem;
-            background: var(--strong-bs-gray-800);
+            background: var(--strong-bluegray-11);
             border-bottom-left-radius: 0.2rem;
+            border-left: 1px solid var(--strong-bluegray-10);
+            border-bottom: 1px solid var(--strong-bluegray-10);
 
-            font-family: var(--strong-font-Roboto-Regular);
+            font-family: var(--strong-font-Roboto-Bold);
             font-size: var(--strong-font-xxsmall);
-            font-weight: var(--strong-weight-400);
-
-            color: var(--strong-primary-color);
+            font-weight: var(--strong-weight-700);
+            color: var(--strong-bluegray-1);
 
             display: flex;
-            justify-content: flex-end;
+            justify-content: center;
             align-items: center;
-            padding-right: 0.5rem;
         }
     }
-    
+
     .container-inner-placeholder {
         display: flex;
         justify-content: center;
         align-items: center;
 
-        color: var(--strong-secondary-color);
+        font-family: var(--strong-font-Roboto-Regular);
+        font-size: var(--strong-font-xxsmall);
+        font-weight: var(--strong-weight-400);
+        color: var(--strong-bluegray-1);
+        
         min-height: var(--card-details-image-height);
         max-height: var(--card-details-image-height);
         min-width: var(--card-details-image-width);

@@ -40,6 +40,5 @@ export default function HomeSliderContainer() {
         }
     };
 
-
     return <HomeSliderComponent currentIndex={currentIndex} handleSlideChange={handleSlideChange} />
 }
