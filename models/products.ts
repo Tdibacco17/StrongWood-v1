@@ -342,13 +342,6 @@ export const productsData: ProductDataInterface = {
                     imgProportionsY: 1
                 },
                 {
-                    imgSlug: 1,
-                    imgSrc: "/assets/img/strongWood/macetaAviñon/macetaAviñon1.webp",
-                    imgAlt: "Maceta Aviñon",
-                    imgProportionsX: 1,
-                    imgProportionsY: 1
-                },
-                {
                     imgSlug: 2,
                     imgSrc: "/assets/img/strongWood/macetaAviñon/macetaAviñon2.webp",
                     imgAlt: "Maceta Aviñon",
@@ -407,13 +400,6 @@ export const productsData: ProductDataInterface = {
                 measures: " 70cm x 108cm.",
             },
             images: [
-                {
-                    imgSlug: 1,
-                    imgSrc: "/assets/img/strongWood/estanteriaSiena/estanteriaSiena1.webp",
-                    imgAlt: "Estanteria Siena",
-                    imgProportionsX: 1,
-                    imgProportionsY: 1
-                },
                 {
                     imgSlug: 1,
                     imgSrc: "/assets/img/strongWood/estanteriaSiena/estanteriaSiena1.webp",
@@ -561,13 +547,6 @@ export const productsData: ProductDataInterface = {
                     imgProportionsY: 1
                 },
                 {
-                    imgSlug: 1,
-                    imgSrc: "/assets/img/strongWood/estanteriaBath/estanteriaBath1.webp",
-                    imgAlt: "Estanteria Bath",
-                    imgProportionsX: 1,
-                    imgProportionsY: 1
-                },
-                {
                     imgSlug: 2,
                     imgSrc: "/assets/img/strongWood/estanteriaBath/estanteriaBath2.webp",
                     imgAlt: "Estanteria Bath",
@@ -706,13 +685,6 @@ export const productsData: ProductDataInterface = {
                 measures: "45cm x 40cm.",
             },
             images: [
-                {
-                    imgSlug: 1,
-                    imgSrc: "/assets/img/strongWood/llaveroCorfu/llaveroCorfu1.webp",
-                    imgAlt: "Llavero Corfu",
-                    imgProportionsX: 1,
-                    imgProportionsY: 1
-                },
                 {
                     imgSlug: 1,
                     imgSrc: "/assets/img/strongWood/llaveroCorfu/llaveroCorfu1.webp",

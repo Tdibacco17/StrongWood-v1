@@ -94,6 +94,10 @@ export default function DetailsInfoComponent() {
                         
                         @media (max-width: 768px) {
                             font-size: var(--strong-font-large);
+                        }
+                        
+                        @media (max-width: 480px) {
+                            font-size: var(--strong-font-xxmedium);
                         }`}    
                     }
                 `}
