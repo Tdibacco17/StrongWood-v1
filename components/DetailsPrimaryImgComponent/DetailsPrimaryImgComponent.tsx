@@ -22,7 +22,6 @@ export default function DetailsPrimaryImgComponent({
                             src={activeImage?.imgSrc}
                             alt={activeImage?.imgAlt}
                             fill
-                            priority
                         />
                     </div>
                     {

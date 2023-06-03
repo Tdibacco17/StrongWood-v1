@@ -9,7 +9,6 @@ export default function DetailsIconServicesComponent({ imgSrc }: { imgSrc: strin
                     src={`${imgSrc}`}
                     alt="Icon"
                     fill
-                    // priority
                     loading="lazy"
                 />
             </div>

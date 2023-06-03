@@ -1,6 +1,6 @@
 import styles from "./DetailsCarouselImgComponent.module.scss"
 import Image from "next/image";
-import useImageLoader from "@/utils/img/useImageLoader";
+import { useEffect, useState } from "react";
 
 export default function DetailsCarouselImgComponent({
     imgSrc,
@@ -14,25 +14,31 @@ export default function DetailsCarouselImgComponent({
     handleImageClick: () => void;
 }) {
 
-    const loading = useImageLoader(imgSrc)
+    const [imageLoaded, setImageLoaded] = useState(false);
+
+    useEffect(() => {
+    }, [imageLoaded]);
 
     return (
         <div className={styles["container-outer-image"]} onClick={handleImageClick}>
-            {loading && (
-                <div className={styles["container-inner-placeholder"]}>
-                    Cargando...
-                </div>
-            )}
-            {!loading && (
-                <div className={styles["container-inner-image"]}>
-                    <Image
-                        src={imgSrc}
-                        alt={imgAlt}
-                        fill
-                        priority
-                    />
-                </div>
-            )}
+            {
+                !imageLoaded && (
+                    <div className={styles["container-inner-placeholder"]}>
+                        Cargando...
+                    </div>
+                )
+            }
+            <div className={imageLoaded ? styles["container-inner-image"] : ""}>
+                <Image
+                    src={imgSrc}
+                    alt={imgAlt}
+                    fill
+                    loading="lazy"
+                    onLoadingComplete={() => { setImageLoaded(true) }}
+                    style={{ opacity: imageLoaded ? "1" : "0" }}
+                    unoptimized
+                />
+            </div>
         </div>
     )
 }

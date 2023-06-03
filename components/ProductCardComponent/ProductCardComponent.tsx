@@ -29,7 +29,6 @@ export default function ProductCardComponent({
                             src={`${product.image.imgSrc}`}
                             alt={`${product.image.imgAlt}`}
                             fill
-                            priority
                         />
                     </div>
                 )}
