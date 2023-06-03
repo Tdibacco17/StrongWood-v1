@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./HomeSliderCardComponent.module.scss";
-import useImageLoader from "@/utils/img/useImageLoader";
+import { useEffect, useState } from "react";
 
 export default function HomeSliderCardComponent({
     imgSrc,
@@ -14,25 +14,31 @@ export default function HomeSliderCardComponent({
     imgProportionsY?: number;
 }) {
 
-    const loading = useImageLoader(imgSrc);
+    const [imageLoaded, setImageLoaded] = useState(false);
+
+    useEffect(() => {
+    }, [imageLoaded]);
 
     return (
         <div className={styles["container-outer-image"]} >
-            {loading && (
-                <div className={styles["container-inner-placeholder"]}>
-                    Cargando...
-                </div>
-            )}
-            {!loading && (
-                <div className={styles["container-inner-image"]}>
-                    <Image
-                        src={imgSrc}
-                        alt={imgAlt}
-                        fill
-                        priority
-                    />
-                </div>
-            )}
+            {
+                !imageLoaded && (
+                    <div className={styles["container-inner-placeholder"]}>
+                        Cargando...
+                    </div>
+                )
+            }
+            <div className={imageLoaded ? styles["container-inner-image"] : ""}>
+                <Image
+                    src={imgSrc}
+                    alt={imgAlt}
+                    fill
+                    priority
+                    onLoadingComplete={() => { setImageLoaded(true) }}
+                    style={{ opacity: imageLoaded ? "1" : "0" }}
+                    unoptimized
+                />
+            </div>
             {/* <div className={styles["container-overlay-image"]} /> */}
         </div>
     );

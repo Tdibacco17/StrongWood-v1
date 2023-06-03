@@ -22,6 +22,7 @@ export default function DetailsPrimaryImgComponent({
                             src={activeImage?.imgSrc}
                             alt={activeImage?.imgAlt}
                             fill
+                            priority
                         />
                     </div>
                     {
@@ -34,6 +35,7 @@ export default function DetailsPrimaryImgComponent({
                     }
                 </>
             ) : (
+
                 <div className={styles["container-inner-placeholder"]}>
                     Cargando...
                 </div>

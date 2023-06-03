@@ -2,14 +2,17 @@ import { ProductInterface } from "@/types/Interfaces";
 import styles from "./ProductCardComponent.module.scss"
 import Image from "next/image";
 import { useRouter } from "next/router";
-import useImageLoader from "@/utils/img/useImageLoader";
+import { useEffect, useState } from "react";
 
 export default function ProductCardComponent({
     product
 }: {
     product: ProductInterface
 }) {
-    const loading = useImageLoader(product.image.imgSrc);
+    const [imageLoaded, setImageLoaded] = useState(false);
+
+    useEffect(() => {
+    }, [imageLoaded]);
 
     const router = useRouter()
 
@@ -18,20 +21,24 @@ export default function ProductCardComponent({
             data-id={`${product.productSlug}`}
             onClick={() => { router.push(`/products/${product.productSlug}`) }}>
             <div className={styles["container-outer-image"]}>
-                {loading && (
-                    <div className={styles["container-inner-placeholder"]}>
-                        Cargando...
-                    </div>
-                )}
-                {!loading && (
-                    <div className={styles["container-inner-image"]}>
-                        <Image
-                            src={`${product.image.imgSrc}`}
-                            alt={`${product.image.imgAlt}`}
-                            fill
-                        />
-                    </div>
-                )}
+                {
+                    !imageLoaded && (
+                        <div className={styles["container-inner-placeholder"]}>
+                            Cargando...
+                        </div>
+                    )
+                }
+                <div className={imageLoaded ? styles["container-inner-image"] : ""}>
+                    <Image
+                        src={`${product.image.imgSrc}`}
+                        alt={`${product.image.imgAlt}`}
+                        fill
+                        loading="lazy"
+                        onLoadingComplete={() => { setImageLoaded(true) }}
+                        // style={{ opacity: imageLoaded ? "1" : "0" }}
+                        // unoptimized
+                    />
+                </div>
                 {
                     product.offerPrice &&
                     <div className={styles["container-offer-percentage"]}>
