@@ -35,8 +35,7 @@ export default function ProductCardComponent({
                         fill
                         loading="lazy"
                         onLoadingComplete={() => { setImageLoaded(true) }}
-                        // style={{ opacity: imageLoaded ? "1" : "0" }}
-                        // unoptimized
+                        style={{ opacity: imageLoaded ? "1" : "0" }}
                     />
                 </div>
                 {

@@ -40,7 +40,6 @@ export default function CardComponent({
                     loading="lazy"
                     onLoadingComplete={() => { setImageLoaded(true) }}
                     style={{ opacity: imageLoaded ? "1" : "0" }}
-                    unoptimized
                 />
             </div>
             <div className={styles["container-overlay-image"]}>
