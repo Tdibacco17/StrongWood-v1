@@ -1,4 +1,5 @@
 import ContactContainer from "@/containers/ContactContainer/ContactContainer";
+import { ProductDetailProvider } from "@/context/ProductDetailProvider";
 import LayoutComponent from "@/layout/LayoutComponent";
 import { useRouter } from "next/router";
 
@@ -8,7 +9,9 @@ export default function ContactProductPage() {
 
     return (
         <LayoutComponent isSlider={false} urlBack={`products/${slug}`}>
-            <ContactContainer slug={slug as string} pago={Pago as string} />
+            <ProductDetailProvider>
+                <ContactContainer slug={slug as string} pago={Pago as string} />
+            </ProductDetailProvider>
         </LayoutComponent>
     )
 }

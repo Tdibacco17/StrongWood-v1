@@ -1,11 +1,41 @@
 import ContactComponent from "@/components/ContactComponent/ContactComponent";
-import { ContactProductDataInterface } from "@/types/Interfaces";
+import { ProductDetailContext } from "@/context/ProductDetailProvider";
+import { ContactProductDataInterface, ProductsDataContextInterface } from "@/types/Interfaces";
 import { useRouter } from "next/router";
-import { useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 
-export default function ContactContainer({ slug, pago }: { slug: string | undefined, pago: string | undefined }) {
+export default function ContactContainer({
+    slug, pago
+}: {
+    slug: string | undefined,
+    pago: string | undefined
+}) {
 
     const router = useRouter()
+
+    const { handleProductDataChange } = useContext(
+        ProductDetailContext
+    ) as ProductsDataContextInterface;
+
+    useEffect(() => {
+        if (slug) {
+            (async () => {
+                if (handleProductDataChange) {
+                    const rawData = await fetch(
+                        `/api/products/getProductBySlug?slug=${slug}`
+                    );
+                    const parsedData = await rawData.json();
+                    if (parsedData.error) {
+                        return;
+                    }
+
+                    handleProductDataChange &&
+                        handleProductDataChange(parsedData.data);
+                }
+            })();
+        }
+        return () => { };
+    }, [slug]);
 
     const nameRef = useRef<HTMLInputElement>(null);
     const phoneRef = useRef<HTMLInputElement>(null);
@@ -74,5 +104,6 @@ export default function ContactContainer({ slug, pago }: { slug: string | undefi
         emailRef={emailRef}
         directiongeRef={directiongeRef}
         handleSubmitEmail={handleSubmitEmail}
-        errorMessage={errorMessage} />
+        errorMessage={errorMessage}
+        pago={pago} />
 }
