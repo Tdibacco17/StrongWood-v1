@@ -36,7 +36,6 @@ export default function HomeSliderCardComponent({
                     priority
                     onLoadingComplete={() => { setImageLoaded(true) }}
                     style={{ opacity: imageLoaded ? "1" : "0" }}
-                    unoptimized
                 />
             </div>
             {/* <div className={styles["container-overlay-image"]} /> */}
