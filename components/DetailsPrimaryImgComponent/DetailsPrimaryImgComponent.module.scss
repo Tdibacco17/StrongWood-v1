@@ -106,7 +106,7 @@
     }
 
     @media (max-width: 768px) {
-        --card-details-image-mobile: calc(100vw - 7rem);
+        --card-details-image-mobile: var(--strong-calc-7rem);
 
         min-height: var(--card-details-image-mobile);
         max-height: var(--card-details-image-mobile);
@@ -129,6 +129,6 @@
     }
 
     @media (max-width: 480px) {
-        --card-details-image-mobile: calc(100vw - 5rem);
+        --card-details-image-mobile: var(--strong-calc-5rem);
     }
 }

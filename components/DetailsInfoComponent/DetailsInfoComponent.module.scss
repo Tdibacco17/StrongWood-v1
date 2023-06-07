@@ -99,11 +99,11 @@
 
         @media (max-width: 768px) {
             flex-direction: column;
-            width: calc(100vw - 5rem);
+            width: var(--strong-calc-5rem);
         }
 
         @media (max-width: 480px) {
-            width: calc(100vw - 3rem);
+            width: var(--strong-calc-3rem);
         }
 
         .button-method {

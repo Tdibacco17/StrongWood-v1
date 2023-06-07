@@ -4,7 +4,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
-    --categories-container-width: calc(100vw - 7rem);
+    --categories-container-width: var(--strong-calc-7rem);
     min-width: var(--categories-container-width);
     max-width: var(--categories-container-width);
 

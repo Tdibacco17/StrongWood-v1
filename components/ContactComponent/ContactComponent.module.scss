@@ -1,12 +1,12 @@
 .container-section-contact {
-    --contact-container-width: calc(100vw - 7rem);
+    --contact-container-width: var(--strong-calc-7rem);
 
     @media (max-width: 768px) {
-        --contact-container-width: calc(100vw - 5rem);
+        --contact-container-width: var(--strong-calc-5rem);
     }
 
     @media (max-width: 480px) {
-        --contact-container-width: calc(100vw - 3rem);
+        --contact-container-width: var(--strong-calc-3rem);
     }
 
     display: flex;
@@ -59,7 +59,7 @@
             }
 
             @media (max-width: 768px) {
-                --card-details-image-mobile: calc(100vw - 7rem);
+                --card-details-image-mobile: var(--strong-calc-7rem);
 
                 min-height: var(--card-details-image-mobile);
                 max-height: var(--card-details-image-mobile);
@@ -68,7 +68,7 @@
             }
 
             @media (max-width: 480px) {
-                --card-details-image-mobile: calc(100vw - 5rem);
+                --card-details-image-mobile: var(--strong-calc-5rem);
             }
         }
 

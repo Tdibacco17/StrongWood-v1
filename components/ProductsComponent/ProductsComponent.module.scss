@@ -24,7 +24,7 @@
         justify-content: center;
 
         gap: 3rem;
-        --products-container-width: calc(100vw - 7rem);
+        --products-container-width: var(--strong-calc-7rem);
 
         min-width: var(--products-container-width);
         max-width: var(--products-container-width);
@@ -34,7 +34,7 @@
         }
 
         @media (max-width: 768px) {
-            --products-container-width: calc(100vw - 5rem);
+            --products-container-width: var(--strong-calc-5rem);
         }
 
         @media (max-width: 576px) {

@@ -148,8 +148,8 @@
     }
 
     @media (max-width: 768px) {
-        --gallery-section-height: calc((calc(100vw - 5rem)) + 9rem);
-        --gallery-section-width: calc(100vw - 5rem);
+        --gallery-section-height: calc((var(--strong-calc-5rem)) + 9rem);
+        --gallery-section-width: var(--strong-calc-5rem);
 
         min-height: var(--gallery-section-height);
         max-height: var(--gallery-section-height);
@@ -181,7 +181,7 @@
     }
 
     @media (max-width: 480px) {
-        --gallery-section-height: calc((calc(100vw - 3rem)) + 9rem);
-        --gallery-section-width: calc(100vw - 3rem);
+        --gallery-section-height: calc((var(--strong-calc-3rem)) + 9rem);
+        --gallery-section-width: var(--strong-calc-3rem);
     }
 }

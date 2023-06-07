@@ -21,7 +21,7 @@
 
     .container-row-dividers {
         display: flex;
-        --details-container-width: calc(100vw - 7rem);
+        --details-container-width: var(--strong-calc-7rem);
 
         min-width: var(--details-container-width);
         max-width: var(--details-container-width);
@@ -33,12 +33,12 @@
         }
 
         @media (max-width: 768px) {
-            --details-container-width: calc(100vw - 5rem);
+            --details-container-width: var(--strong-calc-5rem);
             align-items: revert;
         }
 
         @media (max-width: 480px) {
-            --details-container-width: calc(100vw - 3rem);
+            --details-container-width: var(--strong-calc-3rem);
         }
     }
 

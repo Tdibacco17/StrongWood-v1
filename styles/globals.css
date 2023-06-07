@@ -78,6 +78,10 @@
   --strong-bg-transparency: rgb(0 0 0 / 55%);
 
   --strong-error-color: #ff7300;
+
+  --strong-calc-7rem: calc(100vw - 7rem);
+  --strong-calc-5rem: calc(100vw - 5rem);
+  --strong-calc-3rem: calc(100vw - 3rem);
 }
 
 @media (prefers-color-scheme: dark) {

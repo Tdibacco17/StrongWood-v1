@@ -19,7 +19,7 @@
     overflow: hidden;
 
     @media (max-width: 768px) {
-        --card-proportion-calculate: calc(100vw - 5rem);
+        --card-proportion-calculate: var(--strong-calc-5rem);
 
         --card-image-outer-height: var(--card-proportion-calculate);
         --card-image-outer-width: var(--card-proportion-calculate);
@@ -27,7 +27,7 @@
     }
 
     @media (max-width: 480px) {
-        --card-proportion-calculate: calc(100vw - 3rem);
+        --card-proportion-calculate: var(--strong-calc-3rem);
 
         --card-image-outer-height: var(--card-proportion-calculate);
         --card-image-outer-width: var(--card-proportion-calculate);

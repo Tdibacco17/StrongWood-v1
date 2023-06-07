@@ -10,7 +10,7 @@
     align-items: center;
 
     .title-slogan {
-        --slogan-title-width: calc(100vw - 7rem);
+        --slogan-title-width: var(--strong-calc-7rem);
         font-family: var(--strong-font-Roboto-Bold);
         font-weight: var(--strong-weight-700);
         font-size: var(--strong-font-xxxmedium);
@@ -25,11 +25,11 @@
         max-width: var(--slogan-title-width);
 
         @media (max-width: 768px) {
-            --slogan-title-width: calc(100vw - 5rem);
+            --slogan-title-width: var(--strong-calc-5rem);
         }
 
         @media (max-width: 480px) {
-            --slogan-title-width: calc(100vw - 3rem);
+            --slogan-title-width: var(--strong-calc-3rem);
         }
     }
 }
