@@ -21,7 +21,7 @@
     }
 
     .container-primary-nav {
-        position: sticky;
+        position: relative;
         top: 0;
         min-height: 3.7rem;
         height: 3.7rem;
@@ -34,7 +34,7 @@
         align-items: center;
         overflow: hidden;
 
-        transition: transform 0.3s ease-in-out;
+        transition: top 0.3s ease-in-out;
 
         .title {
             font-family: var(--strong-font-Knucklehead);
@@ -46,23 +46,23 @@
         }
 
         &:hover {
-            background: var(--strong-bluegray-16);
-            transition: 0.3s ease-in-out;
+            background-color: var(--strong-bluegray-16);
+            transition: background-color 0.3s ease-in-out;
         }
 
         &.isTransparency {
             &:hover {
-                background: var(--strong-bluegray-16);
-                transition: 0.3s ease-in-out;
+                background-color: var(--strong-bluegray-16);
+                transition: background-color 0.3s ease-in-out;
             }
         }
 
         &.isDark {
-            background: var(--strong-bluegray-16);
+            background-color: var(--strong-bluegray-16);
         }
 
         &.isOtherSection {
-            background: var(--strong-bluegray-11);
+            background-color: var(--strong-bluegray-11);
             border-bottom: none;
 
             .title {
@@ -83,7 +83,7 @@
         align-items: center;
         overflow: hidden;
 
-        background: var(--strong-bluegray-11);
+        background-color: var(--strong-bluegray-11);
         border-bottom: 1px solid var(--strong-bluegray-5);
 
         @media (max-width: 768px) {
@@ -123,12 +123,12 @@
     }
 
     &.hidden {
-        transform: translateY(-3.7rem);
-        transition: transform 0.3s ease-in-out;
+        top: -3.7rem;
+        transition: top 0.3s ease-in-out;
     }
 
     &.show-on-top {
-        transform: translateY(0);
-        transition: transform 0.3s ease-in-out;
+        top: 0;
+        transition: top 0.3s ease-in-out;
     }
 }

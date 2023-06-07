@@ -2,7 +2,7 @@ import { ProductInterface } from "@/types/Interfaces";
 import styles from "./ProductCardComponent.module.scss"
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function ProductCardComponent({
     product
@@ -10,9 +10,6 @@ export default function ProductCardComponent({
     product: ProductInterface
 }) {
     const [imageLoaded, setImageLoaded] = useState(false);
-
-    useEffect(() => {
-    }, [imageLoaded]);
 
     const router = useRouter()
 

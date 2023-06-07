@@ -19,19 +19,15 @@
     overflow: hidden;
 
     @media (max-width: 768px) {
-        --card-proportion-calculate: var(--strong-calc-5rem);
-
-        --card-image-outer-height: var(--card-proportion-calculate);
-        --card-image-outer-width: var(--card-proportion-calculate);
-        --card-image-inner-height: var(--card-proportion-calculate);
+        --card-image-outer-height: var(--strong-calc-5rem);
+        --card-image-outer-width: var(--strong-calc-5rem);
+        --card-image-inner-height: var(--strong-calc-5rem);
     }
 
     @media (max-width: 480px) {
-        --card-proportion-calculate: var(--strong-calc-3rem);
-
-        --card-image-outer-height: var(--card-proportion-calculate);
-        --card-image-outer-width: var(--card-proportion-calculate);
-        --card-image-inner-height: var(--card-proportion-calculate);
+        --card-image-outer-height: var(--strong-calc-3rem);
+        --card-image-outer-width: var(--strong-calc-3rem);
+        --card-image-inner-height: var(--strong-calc-3rem);
     }
 
     .container-inner-image {
@@ -40,7 +36,7 @@
         max-height: var(--card-image-inner-height);
         min-width: var(--card-image-proportion);
         max-width: var(--card-image-proportion);
-        transition: 0.3s ease-in-out;
+        // transition: 0.3s ease-in-out;
         user-select: none;
     }
 
@@ -124,10 +120,10 @@
         }
     }
 
-    &:hover {
-        .container-inner-image {
-            transform: scale(1.05);
-            transition: 0.3s ease-in-out;
-        }
-    }
+    // &:hover {
+    //     .container-inner-image {
+    //         transform: scale(1.05);
+    //         transition: 0.3s ease-in-out;
+    //     }
+    // }
 }

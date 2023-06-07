@@ -13,7 +13,7 @@ const getProductBySlug = async (req: NextApiRequest, res: NextApiResponse) => {
         }
 
         const dataModule = await import("@/models/products");
-        const productData = dataModule.productsData[slug as any];
+        const productData = dataModule.productsData[slug as string];
 
         res.status(200).json({
             success: true,

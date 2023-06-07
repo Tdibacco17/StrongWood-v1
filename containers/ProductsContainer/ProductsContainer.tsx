@@ -9,7 +9,7 @@ export default function ProductsContainer() {
     ) as ProductsDataContextInterface
 
     useEffect(() => {
-        (async () => {
+        const fetchData = async () => {
             if (handleProductDataChange) {
                 const rawData = await fetch("/api/products/getAllProducts");
                 const parsedData = await rawData.json();
@@ -20,7 +20,9 @@ export default function ProductsContainer() {
                 handleProductDataChange &&
                     handleProductDataChange(parsedData.data);
             }
-        })();
+        };
+
+        fetchData();
     }, []);
 
     return <ProductsComponent />

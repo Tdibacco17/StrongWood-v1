@@ -1,23 +1,18 @@
 import styles from "./DetailsCarouselImgComponent.module.scss"
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function DetailsCarouselImgComponent({
     imgSrc,
     imgAlt,
-    imgProportionsX,
     handleImageClick
 }: {
     imgSrc: string,
     imgAlt: string,
-    imgProportionsX: number,
     handleImageClick: () => void;
 }) {
 
     const [imageLoaded, setImageLoaded] = useState(false);
-
-    useEffect(() => {
-    }, [imageLoaded]);
 
     return (
         <div className={styles["container-outer-image"]} onClick={handleImageClick}>

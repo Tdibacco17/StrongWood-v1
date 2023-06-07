@@ -19,7 +19,7 @@ export default function ContactContainer({
 
     useEffect(() => {
         if (slug) {
-            (async () => {
+            const fetchData = async () => {
                 if (handleProductDataChange) {
                     const rawData = await fetch(
                         `/api/products/getProductBySlug?slug=${slug}`
@@ -32,15 +32,16 @@ export default function ContactContainer({
                     handleProductDataChange &&
                         handleProductDataChange(parsedData.data);
                 }
-            })();
+            };
+
+            fetchData();
         }
-        return () => { };
     }, [slug]);
 
     const [selectedPayment, setSelectedPayment] = useState<string>("");
     const [isSelect, setIsSelect] = useState<boolean>(false)
 
-    const handlePaymentChange = (event: any) => {
+    const handlePaymentChange = (event: React.ChangeEvent<HTMLSelectElement>): void => {
         if (event.target.value === "Efectivo" || event.target.value === "Tarjeta") {
             setIsSelect(true);
         } else {
@@ -109,7 +110,7 @@ export default function ContactContainer({
             });
 
             if (response.status === 200) {
-                // console.log("Email enviado con éxito");
+                console.log("Email enviado con éxito");
                 setErrorMessage("")
                 router.push("/")
             } else {

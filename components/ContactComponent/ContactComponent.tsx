@@ -1,4 +1,4 @@
-import { useContext, useRef, useState } from "react";
+import { useContext } from "react";
 import styles from "./ContactComponent.module.scss"
 import { ProductDetailContext } from "@/context/ProductDetailProvider";
 import { ProductsDataContextInterface } from "@/types/Interfaces";
@@ -36,9 +36,11 @@ export default function ContactComponent({
     return (
         <div className={styles["container-section-contact"]}>
             <div className={styles["container-row-dividers"]}>
-                <div className={styles["container-section-product-image"]}>
+                <div>
                     {productData &&
-                        <ContactProductImgComponent imgSrc={productData?.image?.imgSrc} imgAlt={productData?.image?.imgAlt} />
+                        <ContactProductImgComponent
+                            imgSrc={productData?.image?.imgSrc}
+                            imgAlt={productData?.image?.imgAlt} />
                     }
                 </div>
                 <div className={styles["container-section-form"]}>

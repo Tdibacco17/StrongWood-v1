@@ -21,7 +21,6 @@ export default function HomeCategoriesComponent() {
                         imgSrc={`${homeData.categoriesImages[0].imgSrc}`}
                         imgAlt={`${homeData.categoriesImages[0].imgAlt}`}
                         imgProportionsX={homeData.categoriesImages[0].imgProportionsX}
-                        imgProportionsY={homeData.categoriesImages[0].imgProportionsY}
                         title="Línea Design"
                         subtitle="Diseños personalizados"
                     />
@@ -34,7 +33,6 @@ export default function HomeCategoriesComponent() {
                         imgSrc={`${homeData.categoriesImages[1].imgSrc}`}
                         imgAlt={`${homeData.categoriesImages[1].imgAlt}`}
                         imgProportionsX={homeData.categoriesImages[1].imgProportionsX}
-                        imgProportionsY={homeData.categoriesImages[1].imgProportionsY}
                         title="Línea Wood"
                         subtitle="Ver productos"
                     />

@@ -4,32 +4,30 @@
 
     min-width: var(--videobanner-width-image);
     max-width: var(--videobanner-width-image);
-
     display: flex;
     flex-direction: column;
     align-items: center;
 
     .title-slogan {
-        --slogan-title-width: var(--strong-calc-7rem);
         font-family: var(--strong-font-Roboto-Bold);
         font-weight: var(--strong-weight-700);
         font-size: var(--strong-font-xxxmedium);
         letter-spacing: 0.2rem;
         line-height: 2rem;
-        
         padding-top: 5rem;
-
         color: var(--strong-bluegray-1);
         text-align: center;
-        min-width: var(--slogan-title-width);
-        max-width: var(--slogan-title-width);
+        min-width: var(--strong-calc-7rem);
+        max-width: var(--strong-calc-7rem);
 
         @media (max-width: 768px) {
-            --slogan-title-width: var(--strong-calc-5rem);
+            min-width: var(--strong-calc-5rem);
+            max-width: var(--strong-calc-5rem);
         }
 
         @media (max-width: 480px) {
-            --slogan-title-width: var(--strong-calc-3rem);
+            min-width: var(--strong-calc-3rem);
+            max-width: var(--strong-calc-3rem);
         }
     }
 }

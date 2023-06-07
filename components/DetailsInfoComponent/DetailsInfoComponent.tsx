@@ -1,6 +1,6 @@
 import { ProductDetailContext } from "@/context/ProductDetailProvider";
 import { ProductsDataContextInterface } from "@/types/Interfaces";
-import { useContext, useRef } from "react";
+import { useContext } from "react";
 import styles from "./DetailsInfoComponent.module.scss"
 import Image from "next/image";
 import { useRouter } from "next/router";

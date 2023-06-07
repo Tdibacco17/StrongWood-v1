@@ -37,8 +37,8 @@ export default function NavbarComponent({ isSlider, urlBack }: { isSlider: boole
                 <div className={styles['container-secondary-nav']}>
                     {
                         urlBack ?
-                            <h3 onClick={() => { router.push(`/${urlBack}`); }} className={styles["back-title"]}>VOLVER</h3>
-                            : <h3 className={styles["title"]}>FUNCIONALIDADES</h3>
+                            <p onClick={() => { router.push(`/${urlBack}`); }} className={styles["back-title"]}>VOLVER</p>
+                            : <p className={styles["title"]}>FUNCIONALIDADES</p>
                     }
                 </div>
             }

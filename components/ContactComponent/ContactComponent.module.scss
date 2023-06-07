@@ -1,29 +1,23 @@
 .container-section-contact {
-    --contact-container-width: var(--strong-calc-7rem);
-
-    @media (max-width: 768px) {
-        --contact-container-width: var(--strong-calc-5rem);
-    }
-
-    @media (max-width: 480px) {
-        --contact-container-width: var(--strong-calc-3rem);
-    }
-
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: var(--contact-container-width);
-    max-width: var(--contact-container-width);
+    min-width: var(--strong-calc-7rem);
+    max-width: var(--strong-calc-7rem);
     padding-top: 12.5rem;
     padding-bottom: 5rem;
     margin: 0 auto;
 
     @media (max-width: 768px) {
         padding-top: 11rem;
+        min-width: var(--strong-calc-5rem);
+        max-width: var(--strong-calc-5rem);
     }
 
     @media (max-width: 480px) {
         padding-top: 10rem;
+        min-width: var(--strong-calc-3rem);
+        max-width: var(--strong-calc-3rem);
     }
 
     .container-row-dividers {
@@ -38,39 +32,6 @@
         padding: 1rem;
         border-radius: 0.2rem;
         border: 1px solid var(--strong-bluegray-10);
-
-        .container-section-product-image {
-            --card-details-image-height: 26rem;
-            --card-details-image-width: 26rem; //tamaño card
-
-            min-height: var(--card-details-image-height);
-            max-height: var(--card-details-image-height);
-            min-width: var(--card-details-image-width);
-            max-width: var(--card-details-image-width);
-
-            @media (max-width:1150px) {
-                --card-details-image-height: 24rem;
-                --card-details-image-width: 24rem;
-            }
-
-            @media (max-width: 992px) {
-                --card-details-image-height: 30em;
-                --card-details-image-width: 30em;
-            }
-
-            @media (max-width: 768px) {
-                --card-details-image-mobile: var(--strong-calc-7rem);
-
-                min-height: var(--card-details-image-mobile);
-                max-height: var(--card-details-image-mobile);
-                min-width: var(--card-details-image-mobile);
-                max-width: var(--card-details-image-mobile);
-            }
-
-            @media (max-width: 480px) {
-                --card-details-image-mobile: var(--strong-calc-5rem);
-            }
-        }
 
         @media (max-width: 992px) {
             flex-direction: column;
@@ -249,21 +210,21 @@
                 .form-button {
                     --button-form-widht: 49rem;
 
-                    background: var(--strong-bluegray-10);
+                    background-color: var(--strong-bluegray-10);
 
                     font-family: var(--strong-font-Roboto-Regular);
                     font-size: var(--strong-font-xxsmall);
                     font-weight: var(--strong-weight-400);
                     color: var(--strong-bluegray-1);
 
-                    border: 1px solid var(--strong-bluegray-10);
+                    border: 1px solid var(--strong-bluegray-11);
                     border-radius: 0.2rem;
                     padding: 0.5rem 1rem;
 
                     width: var(--button-form-widht);
 
                     cursor: pointer;
-                    transition: background 0.25s ease-in-out;
+                    transition: background-color 0.25s ease-in-out;
 
                     @media (max-width: 1365px) {
                         --button-form-widht: 45rem;
@@ -292,7 +253,7 @@
 
                     &:hover {
                         background: var(--strong-bluegray-12);
-                        transition: background 0.25s ease-in-out;
+                        transition: background-color 0.25s ease-in-out;
                     }
                 }
 

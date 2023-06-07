@@ -3,17 +3,18 @@
     justify-content: center;
     gap: 2rem;
 
-    --details-services-container-width: var(--strong-calc-7rem);
-    min-width: var(--details-services-container-width);
-    max-width: var(--details-services-container-width);
+    min-width: var(--strong-calc-7rem);
+    max-width: var(--strong-calc-7rem);
 
     @media (max-width: 768px) {
-        --details-services-container-width: var(--strong-calc-5rem);
         align-items: revert;
+        min-width: var(--strong-calc-5rem);
+        max-width: var(--strong-calc-5rem);
     }
 
     @media (max-width: 480px) {
-        --details-services-container-width: var(--strong-calc-3rem);
+        min-width: var(--strong-calc-3rem);
+        max-width: var(--strong-calc-3rem);
     }
 
     @media (max-width:1150px) {

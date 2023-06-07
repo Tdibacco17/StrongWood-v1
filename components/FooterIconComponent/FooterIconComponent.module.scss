@@ -11,7 +11,7 @@
     align-items: center;
 
     overflow: hidden;
-    transition: 0.25s ease-in;
+    transition: background-color 0.25s ease-in;
     cursor: pointer;
 
     border-radius: 99rem;
@@ -36,8 +36,8 @@
     }
 
     &:hover {
-        background: var(--strong-bluegray-11);
-        transition: 0.25s ease-in;
+        background-color: var(--strong-bluegray-11);
+        transition: background-color 0.25s ease-in;
     }
 
     .container-inner-image {

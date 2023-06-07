@@ -1,13 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "./ContactProductImgComponent.module.scss"
 import Image from "next/image";
 
 export default function ContactProductImgComponent({ imgSrc, imgAlt }: { imgSrc: string, imgAlt: string }) {
 
     const [imageLoaded, setImageLoaded] = useState(false);
-
-    useEffect(() => {
-    }, [imageLoaded]);
 
     return (
         <div className={styles["container-outer-image"]}>

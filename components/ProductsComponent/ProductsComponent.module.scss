@@ -2,10 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     min-width: 100vw;
     max-width: 100vw;
-
     padding-top: 12.5rem;
     padding-bottom: 5rem;
     margin: 0 auto;
@@ -22,19 +20,17 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-
         gap: 3rem;
-        --products-container-width: var(--strong-calc-7rem);
-
-        min-width: var(--products-container-width);
-        max-width: var(--products-container-width);
+        min-width: var(--strong-calc-7rem);
+        max-width: var(--strong-calc-7rem);
 
         @media (max-width: 992px) {
             justify-content: space-between;
         }
 
         @media (max-width: 768px) {
-            --products-container-width: var(--strong-calc-5rem);
+            min-width: var(--strong-calc-5rem);
+            max-width: var(--strong-calc-5rem);
         }
 
         @media (max-width: 576px) {

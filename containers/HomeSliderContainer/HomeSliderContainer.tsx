@@ -10,7 +10,7 @@ export default function HomeSliderContainer() {
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const numSlides = homeData && homeData.sliderImages.length;
-    const timeInterval = 5000;
+    const timeInterval = 4000;
     const timerRef = useRef<NodeJS.Timeout>();
 
     useEffect(() => {
@@ -40,5 +40,8 @@ export default function HomeSliderContainer() {
         }
     };
 
-    return <HomeSliderComponent currentIndex={currentIndex} handleSlideChange={handleSlideChange} />
+    return <HomeSliderComponent
+        currentIndex={currentIndex}
+        handleSlideChange={handleSlideChange}
+    />
 }

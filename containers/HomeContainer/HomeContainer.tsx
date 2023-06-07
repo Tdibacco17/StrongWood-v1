@@ -9,23 +9,18 @@ export default function HomeContainer() {
     ) as HomeDataContextInterface;
 
     useEffect(() => {
-        (async () => {
-
-            if (handleHomeDataChange) {
-                const rawData = await fetch(
-                    `/api/home/getInfoHome`
-                );
-                const parsedData = await rawData.json();
-                if (parsedData.error) {
-                    return;
-                }
-
-                handleHomeDataChange &&
-                    handleHomeDataChange(parsedData.data);
+        const fetchData = async () => {
+            const rawData = await fetch("/api/home/getInfoHome");
+            const parsedData = await rawData.json();
+            if (parsedData.error) {
+                return;
             }
-        })();
+            handleHomeDataChange &&
+                handleHomeDataChange(parsedData.data);
+        };
 
-        return () => { };
+        fetchData();
     }, []);
+
     return <HomeComponent />
 }

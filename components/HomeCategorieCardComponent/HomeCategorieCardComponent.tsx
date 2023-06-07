@@ -1,27 +1,22 @@
 import Image from "next/image";
 import styles from "./HomeCategorieCardComponent.module.scss"
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function CardComponent({
     imgSrc,
     imgAlt,
     imgProportionsX,
-    imgProportionsY,
     title,
     subtitle
 }: {
     imgSrc: string,
     imgAlt: string,
     imgProportionsX?: number,
-    imgProportionsY?: number,
     title?: string,
     subtitle?: string,
 }) {
 
     const [imageLoaded, setImageLoaded] = useState(false);
-
-    useEffect(() => {
-    }, [imageLoaded]);
 
     return (
         <div className={styles["container-outer-image"]}>

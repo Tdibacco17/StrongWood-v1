@@ -1,23 +1,16 @@
 import Image from "next/image";
 import styles from "./HomeSliderCardComponent.module.scss";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function HomeSliderCardComponent({
     imgSrc,
     imgAlt,
-    imgProportionsX,
-    imgProportionsY,
 }: {
     imgSrc: string;
     imgAlt: string;
-    imgProportionsX?: number;
-    imgProportionsY?: number;
 }) {
 
     const [imageLoaded, setImageLoaded] = useState(false);
-
-    useEffect(() => {
-    }, [imageLoaded]);
 
     return (
         <div className={styles["container-outer-image"]} >

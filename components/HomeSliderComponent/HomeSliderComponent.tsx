@@ -26,8 +26,6 @@ export default function HomeSliderComponent({
                             <HomeSliderCardComponent
                                 imgSrc={`${slide.imgSrc}`}
                                 imgAlt={`${slide.imgAlt}`}
-                                imgProportionsX={slide.imgProportionsX}
-                                imgProportionsY={slide.imgProportionsY}
                             />
                         </div>
                     ))

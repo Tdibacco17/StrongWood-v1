@@ -13,7 +13,7 @@ export default function DetailsProductContainer() {
 
     useEffect(() => {
         if (router.query.slug) {
-            (async () => {
+            const fetchData = async () => {
                 if (handleProductDataChange) {
                     const rawData = await fetch(
                         `/api/products/getProductBySlug?slug=${router.query.slug}`
@@ -26,9 +26,9 @@ export default function DetailsProductContainer() {
                     handleProductDataChange &&
                         handleProductDataChange(parsedData.data);
                 }
-            })();
+            };
+            fetchData();
         }
-        return () => { };
     }, [router.query]);
 
     return <DetailsProductComponent />

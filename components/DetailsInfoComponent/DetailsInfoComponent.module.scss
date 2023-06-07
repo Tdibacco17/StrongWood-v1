@@ -132,15 +132,15 @@
                 border: 1px solid var(--strong-bluegray-10);
                 border-radius: 0.2rem;
 
-                background: var(--strong-bluegray-11);
+                background-color: var(--strong-bluegray-11);
                 color: var(--strong-bluegray-1);
                 cursor: pointer;
 
-                transition: 0.25s ease-in-out;
+                transition: background-color 0.25s ease-in-out;
 
                 &:hover {
                     background: var(--strong-bluegray-10);
-                    transition: 0.25s ease-in-out;
+                    transition: background-color 0.25s ease-in-out;
                 }
 
                 .image-btn {

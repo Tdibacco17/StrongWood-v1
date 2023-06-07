@@ -42,7 +42,6 @@ export default function DetailsGalleryComponent({
                                     key={image.imgSlug}
                                     imgSrc={image.imgSrc}
                                     imgAlt={image.imgAlt}
-                                    imgProportionsX={image.imgProportionsX ? image.imgProportionsX : 1}
                                     handleImageClick={() => handleImageClick(index)}
                                 />
                             );
