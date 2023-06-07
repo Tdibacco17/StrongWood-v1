@@ -36,9 +36,11 @@ export default function ContactComponent({
     return (
         <div className={styles["container-section-contact"]}>
             <div className={styles["container-row-dividers"]}>
-                {productData &&
-                    <ContactProductImgComponent imgSrc={productData?.image?.imgSrc} imgAlt={productData?.image?.imgAlt} />
-                }
+                <div className={styles["container-section-product-image"]}>
+                    {productData &&
+                        <ContactProductImgComponent imgSrc={productData?.image?.imgSrc} imgAlt={productData?.image?.imgAlt} />
+                    }
+                </div>
                 <div className={styles["container-section-form"]}>
                     <h3 className={styles["form-title"]}>CONTACTO</h3>
 

@@ -39,6 +39,35 @@
         border-radius: 0.2rem;
         border: 1px solid var(--strong-bluegray-10);
 
+        .container-section-product-image {
+            --card-details-image-height: 26rem;
+            --card-details-image-width: 26rem; //tamaño card
+
+            min-height: var(--card-details-image-height);
+            max-height: var(--card-details-image-height);
+            min-width: var(--card-details-image-width);
+            max-width: var(--card-details-image-width);
+
+            @media (max-width:1150px) {
+                --card-details-image-height: 24rem;
+                --card-details-image-width: 24rem;
+            }
+
+            @media (max-width: 992px) {
+                --card-details-image-height: 30em;
+                --card-details-image-width: 30em;
+            }
+
+            @media (max-width: 768px) {
+                --card-details-image-mobile: calc(100vw - 7rem);
+
+                min-height: var(--card-details-image-mobile);
+                max-height: var(--card-details-image-mobile);
+                min-width: var(--card-details-image-mobile);
+                max-width: var(--card-details-image-mobile);
+            }
+        }
+
         @media (max-width: 992px) {
             flex-direction: column;
             align-items: center;
@@ -191,13 +220,18 @@
                         border: 1px solid var(--strong-bluegray-10);
                         border-radius: 0.2rem;
                         cursor: pointer;
-                        padding: 0.3rem 1rem;
+                        min-width: 6.5rem;
+                        max-width: 6.5rem;
+                        min-height: 1.8rem;
+                        max-height: 1.8rem;
+                        padding: 0px 0.5rem;
 
-                        @media (max-width: 768px) {
-                            padding: 0.3rem 0.8rem;
+                        @media (max-width: 480px) {
+                            min-width: 6rem;
+                            max-width: 6rem;
                         }
 
-                        option {
+                        .select-text {
                             font-family: var(--strong-font-Roboto-Regular);
                             font-size: var(--strong-font-xxsmall);
                             font-weight: var(--strong-weight-400);
