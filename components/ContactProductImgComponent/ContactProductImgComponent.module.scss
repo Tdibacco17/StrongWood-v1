@@ -83,7 +83,7 @@
         font-size: var(--strong-font-xxsmall);
         font-weight: var(--strong-weight-400);
         color: var(--strong-bluegray-1);
-        
+
         min-height: var(--card-details-image-height);
         max-height: var(--card-details-image-height);
         min-width: var(--card-details-image-width);
@@ -95,15 +95,20 @@
         --card-details-image-width: 24rem;
     }
 
-    @media (max-width:992px) {
-        --card-details-image-height: 20rem;
-        --card-details-image-width: 20rem;
+    @media (max-width: 992px) {
+        --card-details-image-height: 30em;
+        --card-details-image-width: 30em;
     }
 
-    @media (max-width: 855px) {
-        --card-details-image-height: 22rem;
-        --card-details-image-width: 22rem;
-    }
+    // @media (max-width:992px) {
+    //     --card-details-image-height: 20rem;
+    //     --card-details-image-width: 20rem;
+    // }
+
+    // @media (max-width: 855px) {
+    //     --card-details-image-height: 22rem;
+    //     --card-details-image-width: 22rem;
+    // }
 
     @media (max-width: 768px) {
         --card-details-image-mobile: calc(100vw - 7rem);

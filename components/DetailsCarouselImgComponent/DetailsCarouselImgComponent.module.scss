@@ -33,10 +33,6 @@
         --card-carrousel-image-width: 8rem;
     }
 
-    @media (max-width: 768px) {
-        cursor: revert;
-    }
-
     .container-inner-image {
         position: relative;
         min-height: var(--card-carrousel-image-height);

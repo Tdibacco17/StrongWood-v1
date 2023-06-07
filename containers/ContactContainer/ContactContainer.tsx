@@ -37,6 +37,21 @@ export default function ContactContainer({
         return () => { };
     }, [slug]);
 
+    const [selectedPayment, setSelectedPayment] = useState<string>("");
+    const [isSelect, setIsSelect] = useState<boolean>(false)
+
+    const handlePaymentChange = (event: any) => {
+        if (event.target.value === "Efectivo" || event.target.value === "Tarjeta") {
+            setIsSelect(true);
+        } else {
+            setIsSelect(false);
+        }
+
+        setSelectedPayment(event.target.value);
+    };
+
+    const selectRef = useRef<HTMLSelectElement | null>(null);
+
     const nameRef = useRef<HTMLInputElement>(null);
     const phoneRef = useRef<HTMLInputElement>(null);
     const emailRef = useRef<HTMLInputElement>(null);
@@ -54,6 +69,13 @@ export default function ContactContainer({
             setErrorMessage("Por favor, complete todos los campos.");
             return false;
         }
+
+        if ((selectedPayment === "" && pago === "") ||
+            selectedPayment === "" && (pago && pago !== "Efectivo" && pago !== "Tarjeta")) {
+            setErrorMessage("Por favor, seleccione un método de pago.");
+            return false;
+        }
+
         return true;
     };
 
@@ -73,7 +95,7 @@ export default function ContactContainer({
             email: emailRef.current?.value || "No se paso un email",
             direction: directiongeRef.current?.value || "No se paso una dirección",
             product: slug || "No se paso un producto",
-            pago: pago || "No se paso un metodo de pago",
+            pago: selectedPayment !== "" ? selectedPayment : (pago || "No se pasó un método de pago"),
         };
 
         try {
@@ -105,5 +127,10 @@ export default function ContactContainer({
         directiongeRef={directiongeRef}
         handleSubmitEmail={handleSubmitEmail}
         errorMessage={errorMessage}
-        pago={pago} />
+        pago={pago}
+        isSelect={isSelect}
+        selectedPayment={selectedPayment}
+        selectRef={selectRef}
+        handlePaymentChange={handlePaymentChange}
+    />
 }

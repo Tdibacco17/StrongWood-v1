@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import styles from "./ContactComponent.module.scss"
 import { ProductDetailContext } from "@/context/ProductDetailProvider";
 import { ProductsDataContextInterface } from "@/types/Interfaces";
@@ -11,7 +11,11 @@ export default function ContactComponent({
     emailRef,
     directiongeRef,
     errorMessage,
-    pago
+    pago,
+    isSelect,
+    selectedPayment,
+    selectRef,
+    handlePaymentChange
 }: {
     handleSubmitEmail: (e: React.FormEvent<HTMLFormElement>) => void,
     nameRef: React.RefObject<HTMLInputElement>,
@@ -19,17 +23,15 @@ export default function ContactComponent({
     emailRef: React.RefObject<HTMLInputElement>,
     directiongeRef: React.RefObject<HTMLInputElement>,
     errorMessage: string,
-    pago: string | undefined
+    pago: string | undefined,
+    isSelect: boolean,
+    selectedPayment: string,
+    selectRef: React.RefObject<HTMLSelectElement>;
+    handlePaymentChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 }) {
     const { productData } = useContext(
         ProductDetailContext
     ) as ProductsDataContextInterface;
-
-    const [selectedPayment, setSelectedPayment] = useState<string>(`${pago}`);
-
-    const handlePaymentChange = (event: any) => {
-        setSelectedPayment(event.target.value);
-    };
 
     return (
         <div className={styles["container-section-contact"]}>
@@ -42,48 +44,68 @@ export default function ContactComponent({
 
                     <form onSubmit={handleSubmitEmail} className={styles["container-form"]}>
                         <div className={styles["form-divider"]}>
-                            <label className={styles["form-group"]}>
-                                <p className={styles["form-text"]}>Nombre</p>
-                                <input
-                                    className={styles["form-input"]}
-                                    type="text" name="name" ref={nameRef} />
-                            </label>
-                            <label className={styles["form-group"]}>
-                                <p className={styles["form-text"]}>Telefono</p>
-                                <input
-                                    className={styles["form-input"]}
-                                    type="text" name="phone" ref={phoneRef} />
-                            </label>
-                            <label className={styles["form-group"]}>
-                                <p className={styles["form-text"]}>Email</p>
-                                <input
-                                    className={styles["form-input"]}
-                                    type="text" name="email" ref={emailRef} />
-                            </label>
-                            <label className={styles["form-group"]}>
-                                <p className={styles["form-text"]}>Dirección</p>
-                                <input
-                                    className={styles["form-input"]}
-                                    type="text" name="direction" ref={directiongeRef} />
-                            </label>
-
-                            <label className={styles["group-paymethod"]}>
-                                <p className={styles["form-text"]}>Abona en: {pago}</p>
-                                <select
-                                    value={selectedPayment}
-                                    onChange={handlePaymentChange}
-                                    className={styles["select-paymethod"]}
-                                >
-                                    <option value="cambiar">
-                                        cambiar
-                                    </option>
-                                    <option value={pago}>
-                                        {pago === "Efectivo" ? "Tarjeta" : "Efectivo"}
-                                    </option>
-                                </select>
-                            </label>
-                            
+                            <div className={styles["divider"]}>
+                                <label className={styles["form-group"]}>
+                                    <p className={styles["form-text"]}>Nombre</p>
+                                    <input
+                                        className={styles["form-input"]}
+                                        type="text" name="name" ref={nameRef} />
+                                </label>
+                                <label className={styles["form-group"]}>
+                                    <p className={styles["form-text"]}>Telefono</p>
+                                    <input
+                                        className={styles["form-input"]}
+                                        type="text" name="phone" ref={phoneRef} />
+                                </label>
+                            </div>
+                            <div className={styles["divider"]}>
+                                <label className={styles["form-group"]}>
+                                    <p className={styles["form-text"]}>Email</p>
+                                    <input
+                                        className={styles["form-input"]}
+                                        type="text" name="email" ref={emailRef} />
+                                </label>
+                                <label className={styles["form-group"]}>
+                                    <p className={styles["form-text"]}>Dirección</p>
+                                    <input
+                                        className={styles["form-input"]}
+                                        type="text" name="direction" ref={directiongeRef} />
+                                </label>
+                            </div>
                         </div>
+
+                        <label className={styles["group-paymethod"]}>
+                            {
+                                !isSelect ?
+                                    <p className={styles["form-text"]}>
+                                        Abona en {(pago && pago === "Efectivo" || pago === "Tarjeta") ? pago : ""}
+                                    </p>
+                                    : <p className={styles["form-text"]}>
+                                        Abona en {selectedPayment}
+                                    </p>
+                            }
+                            <select
+                                onFocus={() => {
+                                    if (selectRef.current) {
+                                        selectRef.current.selectedIndex = -1;
+                                    }
+                                }}
+                                ref={selectRef}
+                                value={selectedPayment}
+                                onChange={handlePaymentChange}
+                                className={styles["select-paymethod"]}>
+                                <option
+                                    value={"Tarjeta"}
+                                    className={styles["select-text"]}>
+                                    Tarjeta
+                                </option>
+                                <option
+                                    value={"Efectivo"}
+                                    className={styles["select-text"]}>
+                                    Efectivo
+                                </option>
+                            </select>
+                        </label>
 
                         <button className={styles["form-button"]} type="submit">Enviar</button>
 
@@ -91,6 +113,6 @@ export default function ContactComponent({
                     </form>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
