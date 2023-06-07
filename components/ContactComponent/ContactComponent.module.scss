@@ -66,6 +66,10 @@
                 min-width: var(--card-details-image-mobile);
                 max-width: var(--card-details-image-mobile);
             }
+
+            @media (max-width: 480px) {
+                --card-details-image-mobile: calc(100vw - 5rem);
+            }
         }
 
         @media (max-width: 992px) {
