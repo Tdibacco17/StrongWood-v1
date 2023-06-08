@@ -40,6 +40,7 @@ export default function ContactContainer({
 
     const [selectedPayment, setSelectedPayment] = useState<string>("");
     const [isSelect, setIsSelect] = useState<boolean>(false)
+    const [isModal, setIsModal] = useState<boolean>(false)
 
     const handlePaymentChange = (event: React.ChangeEvent<HTMLSelectElement>): void => {
         if (event.target.value === "Efectivo" || event.target.value === "Tarjeta") {
@@ -112,7 +113,11 @@ export default function ContactContainer({
             if (response.status === 200) {
                 console.log("Email enviado con éxito");
                 setErrorMessage("")
-                router.push("/")
+                setIsModal(true)
+                setTimeout(() => {
+                    setIsModal(false)
+                    router.push("/")
+                }, 1500)
             } else {
                 console.log("Error al enviar el correo electrónico");
             }
@@ -133,5 +138,6 @@ export default function ContactContainer({
         selectedPayment={selectedPayment}
         selectRef={selectRef}
         handlePaymentChange={handlePaymentChange}
+        isModal={isModal}
     />
 }

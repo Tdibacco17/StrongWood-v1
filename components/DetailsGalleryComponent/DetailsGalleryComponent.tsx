@@ -58,12 +58,14 @@ export default function DetailsGalleryComponent({
                                     alt="Icono Izquierda"
                                     width={15}
                                     height={15}
+                                    loading="lazy"
                                 /> :
                                 <Image
                                     src="/assets/icons/arrowTop.svg"
                                     alt="Icono Arriba"
                                     width={15}
                                     height={15}
+                                    loading="lazy"
                                 />
                         }
                     </button>
@@ -77,12 +79,14 @@ export default function DetailsGalleryComponent({
                                     alt="Icono Derecha"
                                     width={15}
                                     height={15}
+                                    loading="lazy"
                                 /> :
                                 <Image
                                     src="/assets/icons/arrowBottom.svg"
                                     alt="Icono Abajo"
                                     width={15}
                                     height={15}
+                                    loading="lazy"
                                 />
                         }
                     </button>

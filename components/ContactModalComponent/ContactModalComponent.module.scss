@@ -1,0 +1,40 @@
+.container-section-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3.5rem 0px;
+    backdrop-filter: blur(6px);
+    background-color: rgba(0, 0, 0, 0.5);
+
+    .card-modal {
+        min-width: 18rem;
+        max-width: 18rem;
+        min-height: 4rem;
+        max-height: 4rem;
+        background: var(--strong-bluegray-10);
+        border-radius: 0.2rem;
+        border: 1px solid var(--strong-bluegray-10);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        .text-modal {
+            font-family: var(--strong-font-Roboto-Bold);
+            font-size: var(--strong-font-xxmedium);
+            font-weight: var(--strong-weight-700);
+            color: var(--strong-bluegray-1);
+        }
+
+        .check-icon {
+            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg);
+        }
+    }
+}

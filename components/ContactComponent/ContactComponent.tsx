@@ -3,6 +3,7 @@ import styles from "./ContactComponent.module.scss"
 import { ProductDetailContext } from "@/context/ProductDetailProvider";
 import { ProductsDataContextInterface } from "@/types/Interfaces";
 import ContactProductImgComponent from "../ContactProductImgComponent/ContactProductImgComponent";
+import ContactModalComponent from "../ContactModalComponent/ContactModalComponent";
 
 export default function ContactComponent({
     handleSubmitEmail,
@@ -15,7 +16,8 @@ export default function ContactComponent({
     isSelect,
     selectedPayment,
     selectRef,
-    handlePaymentChange
+    handlePaymentChange,
+    isModal
 }: {
     handleSubmitEmail: (e: React.FormEvent<HTMLFormElement>) => void,
     nameRef: React.RefObject<HTMLInputElement>,
@@ -28,6 +30,7 @@ export default function ContactComponent({
     selectedPayment: string,
     selectRef: React.RefObject<HTMLSelectElement>;
     handlePaymentChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+    isModal: boolean
 }) {
     const { productData } = useContext(
         ProductDetailContext
@@ -35,8 +38,9 @@ export default function ContactComponent({
 
     return (
         <div className={styles["container-section-contact"]}>
+            {isModal && <ContactModalComponent />}
             <div className={styles["container-row-dividers"]}>
-                <div>
+                <div className={styles["container-section-image"]}>
                     {productData &&
                         <ContactProductImgComponent
                             imgSrc={productData?.image?.imgSrc}
@@ -117,6 +121,6 @@ export default function ContactComponent({
                     </form>
                 </div>
             </div>
-        </div >
+        </div>
     )
 }

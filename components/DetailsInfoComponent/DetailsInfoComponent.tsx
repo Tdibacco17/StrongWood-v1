@@ -52,6 +52,7 @@ export default function DetailsInfoComponent() {
                                 alt="Icono Billetera"
                                 width={20}
                                 height={20}
+                                loading="lazy"
                             />
                             {/* <p className={styles["btn-price"]}>{`$ ${productData.detail.payment.cash.price}`}</p> */}
                             <p className={styles["btn-price"]}>{`$ ${productData.detail.payment.cash.offerPrice}`}</p>
@@ -76,6 +77,7 @@ export default function DetailsInfoComponent() {
                                 alt="Icono Tarjeta"
                                 width={20}
                                 height={20}
+                                loading="lazy"
                             />
                             {/* <p className={styles["btn-price"]}>{`$ ${productData.detail.payment.card.price}`}</p> */}
                             <p className={styles["btn-price"]}>{`$ ${productData.detail.payment.card.offerPrice}`}</p>
