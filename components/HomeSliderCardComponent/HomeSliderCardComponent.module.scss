@@ -1,5 +1,5 @@
 .container-outer-image {
-    --banner-image-outer-height: 75vh;
+    --banner-image-outer-height: 80vh;
     --banner-image-outer-width: 100vw;
     // 0.6651 1.5024
     --banner-proportion-height: calc((var(--banner-image-outer-width)) * 0.6651);
@@ -16,7 +16,7 @@
     align-items: flex-start;
     overflow: hidden;
 
-    @media (max-width: 1100px) {
+    @media (max-width: 1300px) {
         min-height: var(--banner-proportion-height);
         max-height: var(--banner-proportion-height);
     }
