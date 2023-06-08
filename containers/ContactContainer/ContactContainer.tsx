@@ -99,7 +99,8 @@ export default function ContactContainer({
             product: slug || "No se paso un producto",
             pago: selectedPayment !== "" ? selectedPayment : (pago || "No se pasó un método de pago"),
         };
-
+        console.log(data)
+        setErrorMessage("")
         setIsModal(true)
         setTimeout(() => {
             setIsModal(false)
