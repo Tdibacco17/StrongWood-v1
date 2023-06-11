@@ -1,0 +1,24 @@
+.container-section-design {
+    display: flex;
+    justify-content: center;
+
+    padding-top: 12.5rem;
+    padding-bottom: 5rem;
+    width: 100vw;
+
+    .container-cards-categories {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+        width: var(--strong-calc-7rem);
+
+        @media (max-width: 768px) {
+            width: var(--strong-calc-5rem);
+        }
+
+        @media (max-width: 480px) {
+            width: var(--strong-calc-3rem);
+        }
+    }
+}

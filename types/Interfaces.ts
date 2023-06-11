@@ -5,10 +5,23 @@ export interface HomeDataContextInterface {
 }
 
 //** interface de homepage */
-
 export interface HomeDataInterface {
     sliderImages: ImgDataInterface[];
     categoriesImages: ImgDataInterface[];
+}
+
+//design
+export interface DesignDataContextInterface {
+    designCategorieData?: DesignDataInterface;
+    handleDesignDataChange?: Function;
+    designData?: DesignInterface;
+}
+
+export interface DesignDataInterface {
+    [id: string]: DesignInterface;
+}
+
+export interface DesignInterface {
 }
 
 //products
@@ -71,7 +84,7 @@ export interface PaymentDataInterface {
 
 //contact
 
-export interface ContactProductDataInterface{
+export interface ContactProductDataInterface {
     name: string,
     phone: string,
     email: string,

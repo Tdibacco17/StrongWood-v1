@@ -105,7 +105,7 @@ export default function ContactContainer({
         setTimeout(() => {
             setIsModal(false)
             router.push("/")
-        }, 1500)
+        }, 2000)
         return
         // try {
         //     const response = await fetch("/api/contact", {
