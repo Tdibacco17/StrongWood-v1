@@ -1,4 +1,4 @@
-import DesignComponent from "@/components/DesignComponent/DesignComponent";
+import DesignContainer from "@/containers/DesignContainer/DesignContainer";
 import LayoutComponent from "@/layout/LayoutComponent";
 
 export default function DesignPage() {

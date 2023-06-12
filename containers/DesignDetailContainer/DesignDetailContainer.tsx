@@ -1,22 +1,22 @@
-import DetailsProductComponent from "@/components/DetailsProductComponent/DetailsProductComponent";
+import DesignDetailComponent from "@/components/DesignDetailComponent/DesignDetailComponent";
 import { DesignDetailContext } from "@/context/DesignDetailProvider";
 import { DesignDataContextInterface } from "@/types/Interfaces";
 import { useRouter } from "next/router";
 import { useContext, useEffect } from "react";
 
-export default function DetailsProductContainer() {
+export default function DesignDetailContainer() {
     const router = useRouter();
 
     const { handleDesignDataChange } = useContext(
         DesignDetailContext
-    ) as DesignDataContextInterface;
+    ) as DesignDataContextInterface
 
     useEffect(() => {
         if (router.query.slug) {
             const fetchData = async () => {
                 if (handleDesignDataChange) {
                     const rawData = await fetch(
-                        `/api/products/getProductBySlug?slug=${router.query.slug}`
+                        `/api/design/getDesignBySlug?slug=${router.query.slug}`
                     );
                     const parsedData = await rawData.json();
                     if (parsedData.error) {
@@ -31,5 +31,5 @@ export default function DetailsProductContainer() {
         }
     }, [router.query]);
 
-    return <DetailsProductComponent />
+    return <DesignDetailComponent />
 }

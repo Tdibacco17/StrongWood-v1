@@ -16,7 +16,9 @@ export default function ProductComponent() {
                     (
                         Object.keys(productsData).map((productKey: string) => {
                             return (
-                                <ProductCardComponent key={productKey} product={productsData[productKey]} />
+                                <ProductCardComponent
+                                    key={productKey}
+                                    product={productsData[productKey]} />
                             );
                         })
                     )

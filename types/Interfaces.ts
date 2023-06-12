@@ -22,6 +22,10 @@ export interface DesignDataInterface {
 }
 
 export interface DesignInterface {
+    designSlug: string,
+    title: string,
+    image: ImgDataInterface,
+    subcategories?: []
 }
 
 //products
