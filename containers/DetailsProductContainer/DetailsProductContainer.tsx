@@ -1,20 +1,20 @@
 import DetailsProductComponent from "@/components/DetailsProductComponent/DetailsProductComponent";
-import { DesignDetailContext } from "@/context/DesignDetailProvider";
-import { DesignDataContextInterface } from "@/types/Interfaces";
+import { ProductDetailContext } from "@/context/ProductDetailProvider";
+import { ProductsDataContextInterface } from "@/types/Interfaces";
 import { useRouter } from "next/router";
 import { useContext, useEffect } from "react";
 
 export default function DetailsProductContainer() {
     const router = useRouter();
 
-    const { handleDesignDataChange } = useContext(
-        DesignDetailContext
-    ) as DesignDataContextInterface;
+    const { handleProductDataChange } = useContext(
+        ProductDetailContext
+    ) as ProductsDataContextInterface;
 
     useEffect(() => {
         if (router.query.slug) {
             const fetchData = async () => {
-                if (handleDesignDataChange) {
+                if (handleProductDataChange) {
                     const rawData = await fetch(
                         `/api/products/getProductBySlug?slug=${router.query.slug}`
                     );
@@ -23,8 +23,8 @@ export default function DetailsProductContainer() {
                         return;
                     }
 
-                    handleDesignDataChange &&
-                        handleDesignDataChange(parsedData.data);
+                    handleProductDataChange &&
+                        handleProductDataChange(parsedData.data);
                 }
             };
             fetchData();
