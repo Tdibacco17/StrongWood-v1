@@ -8,6 +8,7 @@ export default function DesignDetailComponent() {
         DesignDetailContext
     ) as DesignDataContextInterface
 
+    console.log(designData)
     return (
         <div className={styles["container-section-subcategories"]}>
             {designData && designData.title}
