@@ -1,11 +1,11 @@
-import DesignComponent from "@/components/DesignComponent/DesignComponent";
-import { DesignCategoriesContext } from "@/context/DesignCategoriesContextProvider";
+import DesignsComponent from "@/components/DesignsComponent/DesignsComponent";
+import { DesignsContext } from "@/context/DesignsContextProvider";
 import { DesignDataContextInterface } from "@/types/Interfaces";
 import { useContext, useEffect } from "react";
 
-export default function DesignContainer() {
+export default function DesignsContainer() {
     const { handleDesignDataChange } = useContext(
-        DesignCategoriesContext
+        DesignsContext
     ) as DesignDataContextInterface
 
     useEffect(() => {
@@ -18,12 +18,12 @@ export default function DesignContainer() {
                 }
 
                 handleDesignDataChange &&
-                handleDesignDataChange(parsedData.data);
+                    handleDesignDataChange(parsedData.data);
             }
         };
 
         fetchData();
     }, []);
 
-    return <DesignComponent />
+    return <DesignsComponent />
 }

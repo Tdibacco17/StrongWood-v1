@@ -1,10 +1,10 @@
 import Image from "next/image"
-import styles from "./DetailsPrimaryImgComponent.module.scss"
+import styles from "./ProductDetailPrimaryImgComponent.module.scss"
 import { ImgDataInterface, ProductsDataContextInterface } from "@/types/Interfaces";
 import { ProductDetailContext } from "@/context/ProductDetailProvider";
 import { useContext } from "react";
 
-export default function DetailsPrimaryImgComponent({
+export default function ProductDetailPrimaryImgComponent({
     activeImage,
 }: {
     activeImage: ImgDataInterface | undefined;

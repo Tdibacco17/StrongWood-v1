@@ -1,10 +1,10 @@
-import DetailsGalleryComponent from "@/components/DetailsGalleryComponent/DetailsGalleryComponent";
+import ProductDetailGalleryComponent from "@/components/ProductDetailGalleryComponent/ProductDetailGalleryComponent";
 import { ProductDetailContext } from "@/context/ProductDetailProvider";
 import { ImgDataInterface, ProductsDataContextInterface } from "@/types/Interfaces";
 import { useWindowSize } from "@/utils/size/useWindowSIze";
 import { useContext, useRef, useState } from "react";
 
-export default function DetailsGalleryContainer() {
+export default function ProductDetailGalleryContainer() {
     const { productData } = useContext(
         ProductDetailContext
     ) as ProductsDataContextInterface;
@@ -60,7 +60,7 @@ export default function DetailsGalleryContainer() {
     };
 
 
-    return <DetailsGalleryComponent
+    return <ProductDetailGalleryComponent
         width={width}
         handleScrollUp={handleScrollUp}
         handleScrollDown={handleScrollDown}

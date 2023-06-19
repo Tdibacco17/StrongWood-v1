@@ -1,10 +1,10 @@
 import { ProductInterface } from "@/types/Interfaces";
-import styles from "./ProductCardComponent.module.scss"
+import styles from "./ProductsCardComponent.module.scss"
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-export default function ProductCardComponent({
+export default function ProductsCardComponent({
     product
 }: {
     product: ProductInterface

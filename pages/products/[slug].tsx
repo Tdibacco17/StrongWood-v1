@@ -1,13 +1,13 @@
 import LayoutComponent from "@/layout/LayoutComponent";
 import { ProductDetailProvider } from "@/context/ProductDetailProvider";
-import DetailsProductContainer from "@/containers/DetailsProductContainer/DetailsProductContainer";
+import ProductDetailContainer from "@/containers/ProductDetailContainer/DetailsProductContainer";
 
 export default function ProductDetail() {
 
     return (
         <LayoutComponent isSlider={false} urlBack={"products"}>
             <ProductDetailProvider>
-                <DetailsProductContainer />
+                <ProductDetailContainer />
             </ProductDetailProvider>
         </LayoutComponent>
     );

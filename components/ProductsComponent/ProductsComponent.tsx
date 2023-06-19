@@ -1,10 +1,10 @@
 import styles from "./ProductsComponent.module.scss"
-import ProductCardComponent from "../ProductCardComponent/ProductCardComponent"
+import ProductsCardComponent from "../ProductsCardComponent/ProductsCardComponent"
 import { useContext } from "react"
 import { ProductsDataContextInterface } from "@/types/Interfaces"
 import { ProductsContext } from "@/context/ProductsContextProvider"
 
-export default function ProductComponent() {
+export default function ProductsComponent() {
     const { productsData } = useContext(
         ProductsContext
     ) as ProductsDataContextInterface
@@ -16,7 +16,7 @@ export default function ProductComponent() {
                     (
                         Object.keys(productsData).map((productKey: string) => {
                             return (
-                                <ProductCardComponent
+                                <ProductsCardComponent
                                     key={productKey}
                                     product={productsData[productKey]} />
                             );

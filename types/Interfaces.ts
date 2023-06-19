@@ -12,7 +12,7 @@ export interface HomeDataInterface {
 
 //design
 export interface DesignDataContextInterface {
-    designCategorieData?: DesignDataInterface;
+    designsData?: DesignDataInterface;
     handleDesignDataChange?: Function;
     designData?: DesignInterface;
 }

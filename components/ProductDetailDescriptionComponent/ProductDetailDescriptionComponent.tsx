@@ -1,9 +1,9 @@
 import { ProductDetailContext } from "@/context/ProductDetailProvider";
 import { ProductsDataContextInterface } from "@/types/Interfaces";
 import { useContext } from "react";
-import styles from "./DetailsDescriptionComponent.module.scss"
+import styles from "./ProductDetailDescriptionComponent.module.scss"
 
-export default function DetailsDescriptionComponent() {
+export default function ProductDetailDescriptionComponent() {
     const { productData } = useContext(
         ProductDetailContext
     ) as ProductsDataContextInterface;

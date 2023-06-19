@@ -1,10 +1,10 @@
 import Image from "next/image"
-import styles from "./DesignCardCategorieComponent.module.scss"
+import styles from "./DesignsCardCategorieComponent.module.scss"
 import { useState } from "react";
 import { DesignInterface } from "@/types/Interfaces";
 import { useRouter } from "next/router";
 
-export default function DesignCardCategorieComponent({
+export default function DesignsCardCategorieComponent({
     designCategorie
 }: {
     designCategorie: DesignInterface

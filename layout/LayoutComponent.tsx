@@ -1,6 +1,6 @@
 import FooterComponent from "@/components/FooterComponent/FooterComponent";
 import NavbarComponent from "@/components/NavbarComponent/NavbarComponent";
-import { DesignCategoriesProvider } from "@/context/DesignCategoriesContextProvider";
+import { DesignsProvider } from "@/context/DesignsContextProvider";
 import { ProductsProvider } from "@/context/ProductsContextProvider";
 
 import Head from "next/head";
@@ -28,9 +28,9 @@ export default function LayoutComponent({
                 <NavbarComponent isSlider={isSlider} urlBack={urlBack} />
                 <main>
                     <ProductsProvider>
-                        <DesignCategoriesProvider>
+                        <DesignsProvider>
                             {children}
-                        </DesignCategoriesProvider>
+                        </DesignsProvider>
                     </ProductsProvider>
                 </main>
                 <FooterComponent />

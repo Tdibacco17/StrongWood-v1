@@ -1,7 +1,7 @@
 import Image from "next/image";
-import styles from "./DetailsIconComponent.module.scss"
+import styles from "./ProductDetailIconServicesComponent.module.scss"
 
-export default function DetailsIconServicesComponent({ imgSrc }: { imgSrc: string }) {
+export default function ProductDetailIconServicesComponent({ imgSrc }: { imgSrc: string }) {
     return (
         <div className={styles["container-outer-image"]}>
             <div className={styles["container-inner-image"]}>

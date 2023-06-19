@@ -1,11 +1,11 @@
 import { ProductDetailContext } from "@/context/ProductDetailProvider";
 import { ProductsDataContextInterface } from "@/types/Interfaces";
 import { useContext } from "react";
-import styles from "./DetailsInfoComponent.module.scss"
+import styles from "./ProductDetailInfoComponent.module.scss"
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-export default function DetailsInfoComponent() {
+export default function ProductDetailInfoComponent() {
     const { productData } = useContext(
         ProductDetailContext
     ) as ProductsDataContextInterface;

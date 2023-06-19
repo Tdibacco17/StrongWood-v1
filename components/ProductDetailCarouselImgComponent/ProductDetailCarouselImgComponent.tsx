@@ -1,8 +1,8 @@
-import styles from "./DetailsCarouselImgComponent.module.scss"
+import styles from "./ProductDetailCarouselImgComponent.module.scss"
 import Image from "next/image";
 import { useState } from "react";
 
-export default function DetailsCarouselImgComponent({
+export default function ProductDetailCarouselImgComponent({
     imgSrc,
     imgAlt,
     handleImageClick

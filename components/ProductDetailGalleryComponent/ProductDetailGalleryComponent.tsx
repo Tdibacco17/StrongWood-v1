@@ -1,12 +1,12 @@
 import { useContext } from "react";
-import DetailsPrimaryImgComponent from "../DetailsPrimaryImgComponent/DetailsPrimaryImgComponent"
+import ProductDetailPrimaryImgComponent from "../ProductDetailPrimaryImgComponent/ProductDetailPrimaryImgComponent"
 import { ProductDetailContext } from "@/context/ProductDetailProvider";
 import { ImgDataInterface, ProductsDataContextInterface } from "@/types/Interfaces";
-import styles from "./DetailsGalleryComponent.module.scss"
-import DetailsCarouselImgComponent from "../DetailsCarouselImgComponent/DetailsCarouselImgComponent";
+import styles from "./ProductDetailGalleryComponent.module.scss"
+import ProductDetailCarouselImgComponent from "../ProductDetailCarouselImgComponent/ProductDetailCarouselImgComponent";
 import Image from "next/image";
 
-export default function DetailsGalleryComponent({
+export default function ProductDetailGalleryComponent({
     width,
     handleScrollLeft,
     handleScrollUp,
@@ -31,14 +31,14 @@ export default function DetailsGalleryComponent({
 
     return (
         <div className={styles['container-section-gallery']}>
-            <DetailsPrimaryImgComponent activeImage={activeImage} />
+            <ProductDetailPrimaryImgComponent activeImage={activeImage} />
             <div className={styles['container-section-carousel']}>
                 <div className={styles['carousel']} ref={carouselRef}>
                     {productData &&
                         Object.keys(productData).length > 0 &&
                         productData?.detail?.images?.map((image, index) => {
                             return (
-                                <DetailsCarouselImgComponent
+                                <ProductDetailCarouselImgComponent
                                     key={image.imgSlug}
                                     imgSrc={image.imgSrc}
                                     imgAlt={image.imgAlt}
