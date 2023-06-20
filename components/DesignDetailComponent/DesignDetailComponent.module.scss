@@ -6,4 +6,28 @@
 
     padding-top: 12.5rem;
     padding-bottom: 5rem;
+
+    .container-subcategories {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+
+        width: var(--strong-calc-7rem);
+        background: blue;
+
+        .subcategorie {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+
+            .subcategorie-images {
+                display: flex;
+                justify-content: space-around;
+                gap: 2rem;
+                background: violet;
+            }
+        }
+    }
 }
