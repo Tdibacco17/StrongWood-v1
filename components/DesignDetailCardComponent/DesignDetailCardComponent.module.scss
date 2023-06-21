@@ -1,0 +1,64 @@
+.container-outer-image {
+    --design-card-width: 22.5rem;
+    --design-card-height: 17.5rem;
+    --design-card-inner-height: 32.5rem;
+
+    border-radius: 0.2rem;
+    position: relative;
+    min-height: var(--design-card-height);
+    max-height: var(--design-card-height);
+    min-width: var(--design-card-width);
+    max-width: var(--design-card-width);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+
+    .container-inner-image {
+        position: relative;
+        min-height: var(--design-card-inner-height);
+        max-height: var(--design-card-inner-height);
+        min-width: var(--design-card-image-proportion);
+        max-width: var(--design-card-image-proportion);
+
+        user-select: none;
+    }
+
+    .container-inner-placeholder {
+        position: relative;
+        min-height: var(--design-card-height);
+        max-height: var(--design-card-height);
+        min-width: var(--design-card-width);
+        max-width: var(--design-card-width);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-overlay-image {
+        --card-overlay-image-height: calc(100% - 3.8rem);
+
+        position: absolute;
+        top: var(--card-overlay-image-height);
+        left: 0;
+        width: 100%;
+        height: 3.8rem;
+        background: var(--strong-bg-transparency);
+
+        .title-overlay {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 100%;
+
+            font-family: var(--strong-font-Roboto-Bold);
+            font-size: var(--strong-font-xxxmedium);
+            font-weight: var(--strong-weight-700);
+            color: var(--strong-bluegray-1);
+            text-transform: uppercase;
+        }
+    }
+}

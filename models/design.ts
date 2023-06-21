@@ -65,7 +65,7 @@ export const designData: DesignDataInterface = {
                         imgProportionsX: 1,
                         imgProportionsY: 1
                     }, {
-                        imgSlug: 2,
+                        imgSlug: 3,
                         imgSrc: "/assets/img/home/twoCategories/strong1.webp",
                         imgAlt: "Cama",
                         imgProportionsX: 1,

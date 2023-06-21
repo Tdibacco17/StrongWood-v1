@@ -42,7 +42,6 @@ export default function ProductDetailGalleryContainer() {
     const handleScrollLeft = () => {
         if (width < 768 && carouselRef.current) {
             carouselRef.current.scrollBy({
-                top: -165, // Ajusta la cantidad de desplazamiento hacia arriba para formato desktop
                 left: -165, // Ajusta la cantidad de desplazamiento hacia la izquierda para formato mobile
                 behavior: 'smooth',
             });
@@ -52,7 +51,6 @@ export default function ProductDetailGalleryContainer() {
     const handleScrollRight = () => {
         if (width < 768 && carouselRef.current) {
             carouselRef.current.scrollBy({
-                top: 165, // Ajusta la cantidad de desplazamiento hacia abajo para formato desktop
                 left: 165, // Ajusta la cantidad de desplazamiento hacia la derecha para formato mobile
                 behavior: 'smooth',
             });

@@ -1,6 +1,6 @@
 import { DesignDetailContext } from "@/context/DesignDetailProvider"
 import { DesignDataContextInterface, ImgDataInterface, SubCategorieDataInterface } from "@/types/Interfaces"
-import React, { useContext } from "react"
+import React, { useContext, useRef } from "react"
 import styles from "./DesignDetailComponent.module.scss"
 import DesignDetailCardComponent from "../DesignDetailCardComponent/DesignDetailCardComponent"
 
@@ -9,7 +9,26 @@ export default function DesignDetailComponent() {
         DesignDetailContext
     ) as DesignDataContextInterface
 
-    console.log(designData)
+    const carouselRef = useRef<HTMLDivElement>(null);
+
+    const handleScrollLeft = () => {
+        if (carouselRef.current) {
+            carouselRef.current.scrollBy({
+                left: -165, // Ajusta la cantidad de desplazamiento hacia la izquierda para formato mobile
+                behavior: 'smooth',
+            });
+        }
+    };
+
+    const handleScrollRight = () => {
+        if (carouselRef.current) {
+            carouselRef.current.scrollBy({
+                left: 165, // Ajusta la cantidad de desplazamiento hacia la derecha para formato mobile
+                behavior: 'smooth',
+            });
+        }
+    };
+
     return (
         <div className={styles["container-section-subcategories"]}>
             <div className={styles["container-subcategories"]}>
@@ -18,7 +37,7 @@ export default function DesignDetailComponent() {
                         return (
                             <div key={e.title} className={styles["subcategorie"]}>
                                 <p>{e.title}</p>
-                                <div className={styles["subcategorie-images"]}>
+                                <div className={styles["subcategorie-images"]} ref={carouselRef}>
                                     {e.images.map((imgData: ImgDataInterface) => {
                                         return (
                                             <React.Fragment key={imgData.imgSlug}>
@@ -26,6 +45,10 @@ export default function DesignDetailComponent() {
                                             </React.Fragment>
                                         )
                                     })}
+                                </div>
+                                <div>
+                                    <button onClick={handleScrollLeft}>izq</button>
+                                    <button onClick={handleScrollRight}>der</button>
                                 </div>
                             </div>
                         )
