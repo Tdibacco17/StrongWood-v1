@@ -1,0 +1,22 @@
+.container-section-carousel-subcategories{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    
+    width: 60rem;
+
+    scroll-behavior: smooth;
+    overflow: hidden;
+    user-select: none;
+    overflow-x: scroll;
+
+    background: violet;
+
+    position: relative;
+
+    // &::-webkit-scrollbar {
+    //     height: 0px;
+    //     background-color: transparent;
+    // }
+}

@@ -1,9 +1,7 @@
 .container-section-subcategories {
     display: flex;
     justify-content: center;
-
     width: 100vw;
-
     padding-top: 12.5rem;
     padding-bottom: 5rem;
 
@@ -12,7 +10,6 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 2rem;
-
         width: var(--strong-calc-7rem);
 
         .subcategorie {
@@ -20,26 +17,6 @@
             flex-direction: column;
             align-items: flex-start;
             gap: 0.5rem;
-            width: 100%;
-
-            .subcategorie-images {
-                display: flex;
-                align-items: center;
-                gap: 2rem;
-                width: 50rem;
-
-                scroll-behavior: smooth;
-                overflow: hidden;
-                user-select: none;
-                overflow-x: scroll;
-                
-                background: blue;
-
-                &::-webkit-scrollbar {
-                    height: 0px;
-                    background-color: transparent;
-                }
-            }
         }
     }
 }
