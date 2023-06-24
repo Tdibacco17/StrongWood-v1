@@ -10,15 +10,24 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        gap: 1rem;
+        column-gap: 1.5rem;
+        row-gap: 3.5rem;
         width: var(--strong-calc-7rem);
+
+        @media (max-width:992px) {
+            column-gap: revert;
+            row-gap: revert;
+            gap: 6rem;
+        }
 
         @media (max-width: 768px) {
             width: var(--strong-calc-5rem);
+            gap: 5rem;
         }
 
         @media (max-width: 480px) {
             width: var(--strong-calc-3rem);
+            gap: 4rem;
         }
     }
 }

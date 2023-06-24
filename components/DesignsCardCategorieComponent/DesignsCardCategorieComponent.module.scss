@@ -1,7 +1,7 @@
 .container-outer-image {
-    --design-card-width: 22.5rem;
-    --design-card-height: 17.5rem;
-    --design-card-inner-height: 32.5rem;
+    --design-card-width: 38rem;
+    --design-card-height: 18rem;
+    --design-card-inner-height: 38rem;
 
     border-radius: 0.2rem;
     position: relative;
@@ -13,8 +13,48 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     overflow: hidden;
     cursor: pointer;
+
+    @media (min-width: 1500px) {
+        --design-card-width: 41.5vw;
+        --design-card-height: 18vw;
+        --design-card-inner-height: 41.5vw;
+    }
+
+    @media (max-width:1355px) {
+        --design-card-width: 34rem;
+        --design-card-inner-height: 34rem;
+    }
+
+    @media (max-width:1226px) {
+        --design-card-width: 30rem;
+        --design-card-inner-height: 34rem;
+    }
+
+    @media (max-width:1098px) {
+        --design-card-width: 26rem;
+        --design-card-inner-height: 34rem;
+    }
+
+    @media (max-width:992px) {
+        --design-card-width: var(--strong-calc-7rem);
+        --design-card-height: 20rem;
+        --design-card-inner-height: 53.5rem;
+    }
+
+    @media (max-width: 768px) {
+        --design-card-width: var(--strong-calc-5rem);
+        --design-card-height: 18rem;
+        --design-card-inner-height: 43rem;
+    }
+
+    @media (max-width: 480px) {
+        --design-card-width: var(--strong-calc-3rem);
+        --design-card-height: 16rem;
+        --design-card-inner-height: 35rem;
+    }
 
     .container-inner-image {
         position: relative;
