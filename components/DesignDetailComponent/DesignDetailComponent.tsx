@@ -16,7 +16,7 @@ export default function DesignDetailComponent() {
                     designData.subcategories.map((e: SubCategorieDataInterface) => {
                         return (
                             <div className={styles["subcategorie"]} key={e.title}>
-                                <p>{e.title}</p>
+                                <p className={styles["title"]}>{e.title}</p>
                                 <DesignDetailCarouselContainer imagesData={e.images} />
                             </div>
                         );

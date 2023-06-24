@@ -9,7 +9,7 @@ export default function DesignDetailCarouselContainer({ imagesData }: { imagesDa
         if (carouselRef.current) {
             console.log("izquierda")
             carouselRef.current.scrollBy({
-                left: -165, // Ajusta la cantidad de desplazamiento hacia la izquierda para formato mobile
+                left: -300, // Ajusta la cantidad de desplazamiento hacia la izquierda para formato mobile
                 behavior: 'smooth',
             });
         }
@@ -19,7 +19,7 @@ export default function DesignDetailCarouselContainer({ imagesData }: { imagesDa
         if (carouselRef.current) {
             console.log("derecha")
             carouselRef.current.scrollBy({
-                left: 165, // Ajusta la cantidad de desplazamiento hacia la derecha para formato mobile
+                left: 300, // Ajusta la cantidad de desplazamiento hacia la derecha para formato mobile
                 behavior: 'smooth',
             });
         }

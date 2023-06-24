@@ -1,22 +1,104 @@
-.container-section-carousel-subcategories{
+.container-section-carousel-subcategories {
+    min-width: var(--strong-calc-7rem);
+    max-width: var(--strong-calc-7rem);
+
     display: flex;
-    flex-direction: row;
     align-items: center;
-    gap: 1rem;
-    
-    width: 60rem;
+    justify-content: flex-start;
 
-    scroll-behavior: smooth;
-    overflow: hidden;
-    user-select: none;
-    overflow-x: scroll;
-
-    background: violet;
+    border-radius: 0.2rem;
+    background: var(--strong-bluegray-11);
+    border: 1px solid var(--strong-bluegray-10);
 
     position: relative;
 
-    // &::-webkit-scrollbar {
-    //     height: 0px;
-    //     background-color: transparent;
-    // }
+    &:hover {
+        .buttons-subcategories .buttons {
+            background-color: var(--strong-bluegray-3);
+            opacity: 1;
+            transition: background-color 0.25s ease, opacity 0.25s ease;
+        }
+    }
+
+    @media (max-width:768px) {
+        min-width: var(--strong-calc-5rem);
+        max-width: var(--strong-calc-5rem);
+    }
+
+    @media (max-width:480px) {
+        min-width: var(--strong-calc-3rem);
+        max-width: var(--strong-calc-3rem);
+    }
+
+    .carousel-subcategories {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        scroll-behavior: smooth;
+        overflow: hidden;
+        user-select: none;
+
+        gap: 1.5rem;
+        padding: 1.5rem;
+
+        min-width: 100%;
+        max-width: 100%;
+
+        &::-webkit-scrollbar {
+            height: 0px;
+            background-color: transparent;
+        }
+
+        @media (max-width:768px) {
+            overflow-x: scroll;
+            gap: revert;
+            padding: revert;
+        }
+
+        // @media (max-width:480px) {
+
+        // }
+    }
+
+    .buttons-subcategories {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        pointer-events: none;
+
+        min-height: 100%;
+        max-height: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        background: transparent;
+        background-color: transparent;
+
+        .buttons {
+            pointer-events: auto;
+
+            width: 2.5rem;
+            height: 2.5rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            opacity: 0;
+
+            transition: background-color 0.25s ease, opacity 0.25s ease;
+
+            &:hover {
+                background: var(--strong-bluegray-4);
+                transition: background-color 0.25s ease;
+            }
+        }
+    }
 }

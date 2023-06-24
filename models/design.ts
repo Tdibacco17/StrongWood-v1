@@ -73,19 +73,19 @@ export const designData: DesignDataInterface = {
                     },
                 ]
             }, {
-                title: "Meas de Luz",
+                title: "Mesa de Luz",
                 images: [
                     {
                         imgSlug: 1,
                         imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-                        imgAlt: "Meas de Luz",
+                        imgAlt: "Mesa de Luz",
                         imgProportionsX: 1,
                         imgProportionsY: 1
                     },
                     {
                         imgSlug: 2,
                         imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-                        imgAlt: "Meas de Luz",
+                        imgAlt: "Mesa de Luz",
                         imgProportionsX: 1,
                         imgProportionsY: 1
                     },

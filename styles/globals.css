@@ -23,6 +23,19 @@
   --strong-weight-400: 400;
   /*****************/
 
+  /* paleta colores */
+  --strong-primary-color: #101d36;
+  --strong-secondary-color: #2b4468;
+  --strong-tertiary-color: #666666;
+  --strong-primary-white: #999999;
+  --strong-secondary-white: #efefef;
+
+  --strong-primary-black: #212529;
+
+  --strong-success-color: #198754;
+  --strong-danger-color: #DC3545;
+  --strong-warning-color: #FFC107;
+
   /* escala de grises azul marino */
   --strong-bluegray-1: #ffffff;
   --strong-bluegray-2: #e7eaed;
