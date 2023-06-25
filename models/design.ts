@@ -17,22 +17,22 @@ export const designData: DesignDataInterface = {
                 images: [
                     {
                         imgSlug: 1,
-                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
+                        imgSrc: "/assets/img/design/baño/vanitoryNewYork.webp",
                         imgAlt: "Vanitory New York",
-                        imgProportionsX: 1,
-                        imgProportionsY: 1
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651
                     }, {
                         imgSlug: 2,
-                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
+                        imgSrc: "/assets/img/design/baño/vanitoryEscandinavo.webp",
                         imgAlt: "Vanitory Escandinavo",
-                        imgProportionsX: 1,
-                        imgProportionsY: 1
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
                     }, {
                         imgSlug: 3,
-                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
+                        imgSrc: "/assets/img/design/baño/vanitoryNordico.webp",
                         imgAlt: "Vanitory Nordico",
-                        imgProportionsX: 1,
-                        imgProportionsY: 1
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
                     },
                 ]
             }
