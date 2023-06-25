@@ -146,22 +146,22 @@ export const designData: DesignDataInterface = {
                 images: [
                     {
                         imgSlug: 1,
-                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-                        imgAlt: "Serie New Nordica",
-                        imgProportionsX: 1,
-                        imgProportionsY: 1
+                        imgSrc: "/assets/img/design/cocina/serieNordica.webp",
+                        imgAlt: "Serie Nordica",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
                     }, {
                         imgSlug: 2,
-                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
+                        imgSrc: "/assets/img/design/cocina/serieNewYork.webp",
                         imgAlt: "Serie New York",
-                        imgProportionsX: 1,
-                        imgProportionsY: 1
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
                     }, {
                         imgSlug: 3,
-                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
+                        imgSrc: "/assets/img/design/cocina/seriePremium.webp",
                         imgAlt: "Serie Premiun",
-                        imgProportionsX: 1,
-                        imgProportionsY: 1
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
                     },
                 ]
             }
