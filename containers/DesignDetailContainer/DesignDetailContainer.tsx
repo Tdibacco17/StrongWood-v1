@@ -6,7 +6,6 @@ import { useContext, useEffect } from "react";
 
 export default function DesignDetailContainer() {
     const router = useRouter();
-
     const { handleDesignDataChange } = useContext(
         DesignDetailContext
     ) as DesignDataContextInterface

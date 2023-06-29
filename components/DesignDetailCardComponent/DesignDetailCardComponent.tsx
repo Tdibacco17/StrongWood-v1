@@ -2,14 +2,18 @@ import { ImgDataInterface } from "@/types/Interfaces"
 import styles from "./DesignDetailCardComponent.module.scss"
 import { useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 export default function DesignDetailCardComponent({ imgData }: { imgData: ImgDataInterface }) {
 
     const [imageLoaded, setImageLoaded] = useState(false);
 
+    const router = useRouter()
+
     return (
         <div className={styles["container-outer-image"]}
-            data-id={`${imgData.imgSlug}`}>
+            data-id={`${imgData.imgSlug}`}
+            onClick={() => { router.push(`/furniture/${imgData.imgSlug}`) }}>
             {
                 !imageLoaded && (
                     <div className={styles["container-inner-placeholder"]}>

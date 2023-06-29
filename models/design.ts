@@ -16,19 +16,19 @@ export const designData: DesignDataInterface = {
                 title: "Vanitory",
                 images: [
                     {
-                        imgSlug: 1,
+                        imgSlug: "vanitory-new-york",
                         imgSrc: "/assets/img/design/baño/vanitoryNewYork.webp",
                         imgAlt: "Vanitory New York",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651
                     }, {
-                        imgSlug: 2,
+                        imgSlug: "vanitory-escandinavo",
                         imgSrc: "/assets/img/design/baño/vanitoryEscandinavo.webp",
                         imgAlt: "Vanitory Escandinavo",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
                     }, {
-                        imgSlug: 3,
+                        imgSlug: "vanitory-nordico",
                         imgSrc: "/assets/img/design/baño/vanitoryNordico.webp",
                         imgAlt: "Vanitory Nordico",
                         imgProportionsX: 1.5024,
@@ -145,19 +145,19 @@ export const designData: DesignDataInterface = {
                 title: "Cocinas",
                 images: [
                     {
-                        imgSlug: 1,
+                        imgSlug: "serie-nordica",
                         imgSrc: "/assets/img/design/cocina/serieNordica.webp",
                         imgAlt: "Serie Nordica",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
                     }, {
-                        imgSlug: 2,
+                        imgSlug: "serie-new-york",
                         imgSrc: "/assets/img/design/cocina/serieNewYork.webp",
                         imgAlt: "Serie New York",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
                     }, {
-                        imgSlug: 3,
+                        imgSlug: "serie-premium",
                         imgSrc: "/assets/img/design/cocina/seriePremium.webp",
                         imgAlt: "Serie Premiun",
                         imgProportionsX: 1.5024,

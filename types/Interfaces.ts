@@ -62,7 +62,7 @@ export interface ProductInterface {
 
 //image
 export interface ImgDataInterface {
-    imgSlug: number,
+    imgSlug: string | number,
     imgSrc: string,
     imgAlt: string,
     originalWidth?: number,
