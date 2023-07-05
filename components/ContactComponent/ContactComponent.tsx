@@ -12,7 +12,7 @@ export default function ContactComponent({
     emailRef,
     directiongeRef,
     errorMessage,
-    pago,
+    pay,
     isSelect,
     selectedPayment,
     selectRef,
@@ -25,7 +25,7 @@ export default function ContactComponent({
     emailRef: React.RefObject<HTMLInputElement>,
     directiongeRef: React.RefObject<HTMLInputElement>,
     errorMessage: string,
-    pago: string | undefined,
+    pay: string | undefined,
     isSelect: boolean,
     selectedPayment: string,
     selectRef: React.RefObject<HTMLSelectElement>;
@@ -86,7 +86,7 @@ export default function ContactComponent({
                             {
                                 !isSelect ?
                                     <p className={styles["form-text"]}>
-                                        Abona en {(pago && pago === "Efectivo" || pago === "Tarjeta") ? pago : ""}
+                                        Abona en {(pay && pay === "Efectivo" || pay === "Tarjeta") ? pay : ""}
                                     </p>
                                     : <p className={styles["form-text"]}>
                                         Abona en {selectedPayment}

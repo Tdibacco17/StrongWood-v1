@@ -1,7 +1,6 @@
-.container-section-carousel-subcategories {
+.container-all-table-design {
     min-width: var(--strong-calc-7rem);
     max-width: var(--strong-calc-7rem);
-
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -13,12 +12,13 @@
     position: relative;
 
     &:hover {
-        .buttons-subcategories .buttons {
+        .buttons-table .buttons {
             background-color: var(--strong-bluegray-3);
             opacity: 1;
             transition: background-color 0.25s ease, opacity 0.25s ease;
         }
     }
+
 
     @media (max-width:768px) {
         min-width: var(--strong-calc-5rem);
@@ -30,7 +30,7 @@
         max-width: var(--strong-calc-3rem);
     }
 
-    .carousel-subcategories {
+    .carousel-table {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -56,7 +56,7 @@
         }
     }
 
-    .buttons-subcategories {
+    .buttons-table {
         position: absolute;
         top: 0;
         bottom: 0;

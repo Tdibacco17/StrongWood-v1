@@ -5,13 +5,13 @@ import { useRouter } from "next/router";
 import { useContext, useEffect, useRef, useState } from "react";
 
 export default function ContactContainer({
-    slug, pago
+    slug, pay
 }: {
     slug: string | undefined,
-    pago: string | undefined
+    pay: string | undefined
 }) {
 
-    const router = useRouter()
+    const router = useRouter();
 
     const { handleProductDataChange } = useContext(
         ProductDetailContext
@@ -72,8 +72,8 @@ export default function ContactContainer({
             return false;
         }
 
-        if ((selectedPayment === "" && pago === "") ||
-            selectedPayment === "" && (pago && pago !== "Efectivo" && pago !== "Tarjeta")) {
+        if ((selectedPayment === "" && pay === "") ||
+            selectedPayment === "" && (pay && pay !== "Efectivo" && pay !== "Tarjeta")) {
             setErrorMessage("Por favor, seleccione un método de pago.");
             return false;
         }
@@ -97,7 +97,7 @@ export default function ContactContainer({
             email: emailRef.current?.value || "No se paso un email",
             direction: directiongeRef.current?.value || "No se paso una dirección",
             product: slug || "No se paso un producto",
-            pago: selectedPayment !== "" ? selectedPayment : (pago || "No se pasó un método de pago"),
+            pay: selectedPayment !== "" ? selectedPayment : (pay || "No se pasó un método de pago"),
         };
         console.log(data)
         setErrorMessage("")
@@ -140,7 +140,7 @@ export default function ContactContainer({
         directiongeRef={directiongeRef}
         handleSubmitEmail={handleSubmitEmail}
         errorMessage={errorMessage}
-        pago={pago}
+        pay={pay}
         isSelect={isSelect}
         selectedPayment={selectedPayment}
         selectRef={selectRef}

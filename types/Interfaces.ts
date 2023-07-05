@@ -99,5 +99,5 @@ export interface ContactProductDataInterface {
     email: string,
     direction: string,
     product: string
-    pago: string
+    pay: string
 }

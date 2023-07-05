@@ -42,7 +42,7 @@ export default function ProductDetailInfoComponent() {
                             onClick={() => {
                                 router.push({
                                     pathname: `/contact/${productData?.productSlug}`,
-                                    query: { Pago: "Efectivo" }
+                                    query: { pay: "Efectivo" }
                                 })
                             }}
                             className={styles["button"]}>
@@ -67,7 +67,7 @@ export default function ProductDetailInfoComponent() {
                             onClick={() => {
                                 router.push({
                                     pathname: `/contact/${productData?.productSlug}`,
-                                    query: { Pago: "Tarjeta" }
+                                    query: { pay: "Tarjeta" }
                                 })
                             }}
                             className={styles["button"]}>

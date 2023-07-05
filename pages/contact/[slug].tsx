@@ -5,12 +5,12 @@ import { useRouter } from "next/router";
 
 export default function ContactProductPage() {
     const router = useRouter();
-    const { slug, Pago } = router.query
+    const { slug, pay } = router.query
 
     return (
         <LayoutComponent isSlider={false} urlBack={`products/${slug}`}>
             <ProductDetailProvider>
-                <ContactContainer slug={slug as string} pago={Pago as string} />
+                <ContactContainer slug={slug as string} pay={pay as string} />
             </ProductDetailProvider>
         </LayoutComponent>
     )

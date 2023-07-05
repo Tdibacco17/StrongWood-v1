@@ -13,7 +13,12 @@ export default function DesignDetailCardComponent({ imgData }: { imgData: ImgDat
     return (
         <div className={styles["container-outer-image"]}
             data-id={`${imgData.imgSlug}`}
-            onClick={() => { router.push(`/furniture/${imgData.imgSlug}`) }}>
+            onClick={() => {
+                router.push({
+                    pathname:`/furniture/${router.query.slug}`,
+                    query: { item: `${imgData.imgSlug}` }
+                })
+            }}>
             {
                 !imageLoaded && (
                     <div className={styles["container-inner-placeholder"]}>

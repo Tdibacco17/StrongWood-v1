@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export default async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
-    const { name = "", phone = "", email = "", direction = "", product = "", pago = "" } = req.body;
+    const { name = "", phone = "", email = "", direction = "", product = "", pay = "" } = req.body;
 
     const contentHtml = `
         <h2>STRONG WOOD</h2>
@@ -22,7 +22,7 @@ export default async function sendEmail(req: NextApiRequest, res: NextApiRespons
         <br></br>
         <ul>
             <li>Quiere comprar el producto: <strong>${product}</strong></li>
-            <li>Abona en <strong>${pago}</strong></li>
+            <li>Abona en <strong>${pay}</strong></li>
         </ul>
     `
 

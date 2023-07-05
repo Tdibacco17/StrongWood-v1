@@ -7,7 +7,6 @@ export default function DesignDetailCarouselContainer({ imagesData }: { imagesDa
 
     const handleScrollLeft = () => {
         if (carouselRef.current) {
-            console.log("izquierda")
             carouselRef.current.scrollBy({
                 left: -300, // Ajusta la cantidad de desplazamiento hacia la izquierda para formato mobile
                 behavior: 'smooth',
@@ -17,7 +16,6 @@ export default function DesignDetailCarouselContainer({ imagesData }: { imagesDa
 
     const handleScrollRight = () => {
         if (carouselRef.current) {
-            console.log("derecha")
             carouselRef.current.scrollBy({
                 left: 300, // Ajusta la cantidad de desplazamiento hacia la derecha para formato mobile
                 behavior: 'smooth',
