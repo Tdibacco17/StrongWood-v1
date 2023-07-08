@@ -13,4 +13,30 @@
         flex-direction: column;
         gap: 2rem;
     }
+
+    .button-consultation-price {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 1rem;
+        border: 1px solid var(--strong-bluegray-10);
+
+        border-radius: 0.2rem;
+        background-color: var(--strong-bluegray-11);
+        color: var(--strong-bluegray-1);
+        cursor: pointer;
+
+        transition: background-color 0.25s ease-in-out;
+
+        font-family: var(--strong-font-Roboto-Bold);
+        font-size: var(--strong-font-medium);
+        font-weight: var(--strong-weight-400);
+        color: var(--strong-bluegray-1);
+
+        &:hover {
+            background-color: var(--strong-bluegray-10);
+            transition: background-color 0.25s ease-in-out;
+        }
+    }
 }

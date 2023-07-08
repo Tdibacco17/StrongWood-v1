@@ -1,6 +1,6 @@
 .container-outer-image {
-    --design-card-width: 20rem;
-    --design-card-height: 12rem;
+    --design-card-width: 14rem;
+    --design-card-height: 8rem;
     --design-card-inner-height: 22rem;
 
     border-radius: 0.2rem;
@@ -9,6 +9,9 @@
     max-height: var(--design-card-height);
     min-width: var(--design-card-width);
     max-width: var(--design-card-width);
+
+    background-color: var(--strong-bluegray-11);;
+    border: 1px solid var(--strong-bluegray-11);
 
     display: flex;
     justify-content: center;
@@ -69,10 +72,36 @@
         justify-content: center;
         align-items: center;
     }
+
+    .container-overlay-image {
+        --card-overlay-image-height: calc(100% - 3.2rem);
+
+        position: absolute;
+        top: var(--card-overlay-image-height);
+        left: 0;
+        width: 100%;
+        height: 3.2rem;
+        background: var(--strong-bg-transparency);
+
+        .title-overlay {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            height: 100%;
+
+            font-family: var(--strong-font-Roboto-Bold);
+            font-size: var(--strong-font-xxsmall);
+            font-weight: var(--strong-weight-700);
+            color: var(--strong-bluegray-1);
+            text-transform: uppercase;
+        }
+    }
 }
 
-.card-content.selected {
-    background-color: yellow;
+.selected {
+    border: 1px solid var(--strong-success-color);
     color: black;
     font-weight: bold;
 }

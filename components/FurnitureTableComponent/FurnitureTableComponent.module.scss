@@ -30,31 +30,68 @@
         max-width: var(--strong-calc-3rem);
     }
 
-    .carousel-table {
+    .container-table {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        scroll-behavior: smooth;
-        overflow: hidden;
-        user-select: none;
-
-        gap: 1.5rem;
-        padding: 1.5rem;
-
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
         min-width: 100%;
         max-width: 100%;
+        gap: 0.5rem;
 
-        &::-webkit-scrollbar {
-            height: 0px;
-            background-color: transparent;
+        .container-header-table {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding-left: 1.5rem;
+            padding-top: 0.5rem;
+
+            .container-title-table {
+                font-family: var(--strong-font-Roboto-Bold);
+                font-size: var(--strong-font-xxxmedium);
+                font-weight: var(--strong-weight-700);
+                color: var(--strong-bluegray-1);
+                text-transform: uppercase;
+            }
+
+            .container-subtitle-table {
+                font-family: var(--strong-font-Roboto-Regular);
+                font-size: var(--strong-font-xxsmall);
+                font-weight: var(--strong-weight-400);
+                color: var(--strong-bluegray-1);
+
+
+            }
         }
 
-        @media (max-width:768px) {
-            overflow-x: scroll;
-            gap: revert;
-            padding: revert;
+        .carousel-table {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            scroll-behavior: smooth;
+            overflow: hidden;
+            user-select: none;
+            border-top: 1px solid var(--strong-bluegray-10);
+
+            gap: 1.5rem;
+            padding: 1.5rem;
+
+            min-width: 100%;
+            max-width: 100%;
+
+            &::-webkit-scrollbar {
+                height: 0px;
+                background-color: transparent;
+            }
+
+            @media (max-width:768px) {
+                overflow-x: scroll;
+                gap: revert;
+                padding: revert;
+            }
         }
     }
+
 
     .buttons-table {
         position: absolute;
@@ -103,7 +140,11 @@
     display: none;
 }
 
-
 .redTable {
-    background-color: red;
+    border: 1px solid var(--strong-error-color);
+    background-color: var(--strong-error-color);
+}
+
+.redTableColor{
+    color: var(--strong-error-color) !important;
 }

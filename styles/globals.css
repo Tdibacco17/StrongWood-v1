@@ -35,6 +35,7 @@
   --strong-success-color: #198754;
   --strong-danger-color: #DC3545;
   --strong-warning-color: #FFC107;
+  --strong-error-color: #ff7300;
 
   /* escala de grises azul marino */
   --strong-bluegray-1: #ffffff;
@@ -55,8 +56,6 @@
   --strong-bluegray-16: #000000;
 
   --strong-bg-transparency: rgb(0 0 0 / 55%);
-
-  --strong-error-color: #ff7300;
 
   --strong-calc-7rem: calc(100vw - 7rem);
   --strong-calc-5rem: calc(100vw - 5rem);

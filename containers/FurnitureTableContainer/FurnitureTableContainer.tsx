@@ -8,7 +8,8 @@ export default function FurnitureTableContainer({
     clickedImages,
     showMissingFields,
     validated,
-    handleCardClick
+    handleCardClick,
+    furnitureData
 }: {
     TABLEelement: FurnitureTableInterface,
     visibleTables: number[];
@@ -16,7 +17,7 @@ export default function FurnitureTableContainer({
     showMissingFields: boolean;
     validated: boolean,
     handleCardClick: (tableId: number, cardId: number, cardTitle: string) => void;
-
+    furnitureData: FurnitureTableInterface[];
 }) {
     const isTableVisible = visibleTables.includes(TABLEelement.tableId);
     const isTableMissingFields = !clickedImages[TABLEelement.tableId] || clickedImages[TABLEelement.tableId].length === 0;
@@ -51,5 +52,8 @@ export default function FurnitureTableContainer({
         shouldApplyStyle={shouldApplyStyle}
         handleCardClick={handleCardClick}
         clickedImages={clickedImages}
+        visibleTables={visibleTables}
+        furnitureData={furnitureData}
+        validated={validated}
     />
 }

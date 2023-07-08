@@ -33,11 +33,11 @@ export default function FurnitureComponent({
                             showMissingFields={showMissingFields}
                             validated={validated}
                             handleCardClick={handleCardClick}
+                            furnitureData={furnitureData}
                         />
                     )
                 })}
-                {visibleTables.length > furnitureData.length && <button onClick={handleValidation}>COTIZAR</button>}
-                {visibleTables.length > furnitureData.length ? (validated ? "TODO ok" : "falta completar campos") : null}
+                {visibleTables.length > furnitureData.length && <button className={styles["button-consultation-price"]} onClick={handleValidation}>COTIZAR</button>}
             </div>
         </div>
     )

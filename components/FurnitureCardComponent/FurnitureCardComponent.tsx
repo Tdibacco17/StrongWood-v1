@@ -14,11 +14,9 @@ export default function FurnitureCardComponent({
 }) {
 
     return (
-        <div className={`${styles["container-outer-image"]} ${styles["card-content"]} ${isCardSelected ? styles.selected : ""}`}
+        <div className={`${styles["container-outer-image"]} ${isCardSelected ? styles["selected"] : ""}`}
             onClick={() => handleCardClick(TABLEelement.tableId, CARDelement.cardId, CARDelement.cardTitle)}
             data-id={`${CARDelement.cardId}`}>
-            {CARDelement.cardTitle}
-
             {/* {
                 !imageLoaded && (
                     <div className={styles["container-inner-placeholder"]}>
@@ -36,6 +34,9 @@ export default function FurnitureCardComponent({
                     style={{ opacity: imageLoaded ? "1" : "0" }}
                 />
             </div> */}
+            <div className={styles["container-overlay-image"]}>
+                <h2 className={styles["title-overlay"]}> {CARDelement.cardTitle}</h2>
+            </div>
             {/* <style jsx>{`
             .${styles["container-outer-image"]} {
                 --design-card-image-proportion: calc((var(--design-card-inner-height)) * ${imgData.imgProportionsX});

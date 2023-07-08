@@ -27,7 +27,7 @@ export const CocinaNordica: FurnitureTableInterface[] = [
     }, {
         tableId: 3,
         tableTitle: "Combinación",
-        maxSelections: 8,
+        maxSelections: 9,
         cards: [
             { cardId: 1, cardTitle: "Cajonera" },
             { cardId: 2, cardTitle: "Tacho" },
@@ -37,6 +37,7 @@ export const CocinaNordica: FurnitureTableInterface[] = [
             { cardId: 6, cardTitle: "Torre de heladera" },
             { cardId: 7, cardTitle: "Torre de horno + microondas" },
             { cardId: 8, cardTitle: "Mesada de madera maciza" },
+            { cardId: 9, cardTitle: "Luces led" },
         ],
     }, {
         tableId: 4,
