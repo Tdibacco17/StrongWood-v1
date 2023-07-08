@@ -101,3 +101,17 @@ export interface ContactProductDataInterface {
     product: string
     pay: string
 }
+
+
+export interface FurnitureTableInterface {
+    tableId: number,
+    tableTitle: string,
+    maxSelections: number,
+    cards: FurnitureDataCardsInterface[]
+}
+
+export interface FurnitureDataCardsInterface {
+    cardId: number,
+    cardTitle: string,
+    image?: ImgDataInterface[]
+}

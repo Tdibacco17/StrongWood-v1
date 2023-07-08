@@ -1,15 +1,26 @@
 import FurnitureTableComponent from "@/components/FurnitureTableComponent/FurnitureTableComponent";
+import { FurnitureDataCardsInterface, FurnitureTableInterface } from "@/types/Interfaces";
 import { useRef } from "react";
 
 export default function FurnitureTableContainer({
-    tableId,
-    handleSelectTable,
-    data
+    TABLEelement,
+    visibleTables,
+    clickedImages,
+    showMissingFields,
+    validated,
+    handleCardClick
 }: {
-    tableId: number,
-    handleSelectTable: (id: string, imgData: any) => void,
-    data: any
+    TABLEelement: FurnitureTableInterface,
+    visibleTables: number[];
+    clickedImages: { [key: number]: FurnitureDataCardsInterface[] };
+    showMissingFields: boolean;
+    validated: boolean,
+    handleCardClick: (tableId: number, cardId: number, cardTitle: string) => void;
+
 }) {
+    const isTableVisible = visibleTables.includes(TABLEelement.tableId);
+    const isTableMissingFields = !clickedImages[TABLEelement.tableId] || clickedImages[TABLEelement.tableId].length === 0;
+    const shouldApplyStyle = showMissingFields && isTableVisible && isTableMissingFields && !validated;
 
     const carouselTableRef = useRef<HTMLDivElement>(null);
 
@@ -35,8 +46,10 @@ export default function FurnitureTableContainer({
         carouselTableRef={carouselTableRef}
         handleScrollLeft={handleScrollLeft}
         handleScrollRight={handleScrollRight}
-        tableId={tableId}
-        handleSelectTable={handleSelectTable}
-        data={data}
+        TABLEelement={TABLEelement}
+        isTableVisible={isTableVisible}
+        shouldApplyStyle={shouldApplyStyle}
+        handleCardClick={handleCardClick}
+        clickedImages={clickedImages}
     />
 }

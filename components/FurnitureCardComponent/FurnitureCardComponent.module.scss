@@ -16,8 +16,6 @@
     overflow: hidden;
     cursor: pointer;
 
-    background-color: rgba(240, 128, 128, 0.477);
-
     @media (max-width:1355px) {
         --design-card-width: 30rem;
         --design-card-inner-height: 21rem;
@@ -71,4 +69,10 @@
         justify-content: center;
         align-items: center;
     }
+}
+
+.card-content.selected {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
 }

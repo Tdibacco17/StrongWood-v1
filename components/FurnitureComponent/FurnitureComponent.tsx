@@ -1,31 +1,43 @@
 import FurnitureTableContainer from "@/containers/FurnitureTableContainer/FurnitureTableContainer"
 import styles from "./FurnitureComponent.module.scss"
-import { bañoFurnitureData } from "@/models/furniture"
+import { FurnitureDataCardsInterface, FurnitureTableInterface } from "@/types/Interfaces";
 
 export default function FurnitureComponent({
-    visibleTableIds,
-    handleSelectTable,
+    furnitureData,
+    visibleTables,
+    clickedImages,
+    showMissingFields,
+    validated,
+    handleCardClick,
+    handleValidation
 }: {
-    visibleTableIds: string[],
-    handleSelectTable: (id: string, imgData: any) => void,
+    furnitureData: FurnitureTableInterface[];
+    visibleTables: number[];
+    clickedImages: { [key: number]: FurnitureDataCardsInterface[] };
+    showMissingFields: boolean;
+    validated: boolean;
+    handleCardClick: (tableId: number, cardId: number, cardTitle: string) => void;
+    handleValidation: () => void;
 }) {
 
     return (
         <div className={styles["container-section-furniture"]}>
             <div className={styles["container-tables"]}>
-                {bañoFurnitureData && Object.values(bañoFurnitureData).map((item: any) => {
-                    if (visibleTableIds.includes(item.id.toString())) {
-                        return (
-                            <FurnitureTableContainer
-                                key={item.id}
-                                tableId={item.id as number}
-                                data={item}
-                                handleSelectTable={handleSelectTable}
-                            />
-                        );
-                    }
-                    return null;
+                {furnitureData.map((TABLEelement: FurnitureTableInterface) => {
+                    return (
+                        <FurnitureTableContainer
+                            key={TABLEelement.tableId}
+                            TABLEelement={TABLEelement}
+                            clickedImages={clickedImages}
+                            visibleTables={visibleTables}
+                            showMissingFields={showMissingFields}
+                            validated={validated}
+                            handleCardClick={handleCardClick}
+                        />
+                    )
                 })}
+                {visibleTables.length > furnitureData.length && <button onClick={handleValidation}>COTIZAR</button>}
+                {visibleTables.length > furnitureData.length ? (validated ? "TODO ok" : "falta completar campos") : null}
             </div>
         </div>
     )

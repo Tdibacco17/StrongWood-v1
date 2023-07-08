@@ -1,26 +1,26 @@
+import { FurnitureDataCardsInterface, FurnitureTableInterface } from "@/types/Interfaces";
 import styles from "./FurnitureCardComponent.module.scss"
-import { useState } from "react";
 
 export default function FurnitureCardComponent({
-    tableId,
-    nextTableId,
-    handleSelectTable,
-    imgData
+    CARDelement,
+    handleCardClick,
+    TABLEelement,
+    clickedImages,
+    isCardSelected
 }: {
-    tableId: number,
-    nextTableId: number;
-    handleSelectTable: (id: string, imgData: any) => void,
-    imgData: string
+    CARDelement: FurnitureDataCardsInterface,
+    handleCardClick: (tableId: number, cardId: number, cardTitle: string) => void;
+    TABLEelement: FurnitureTableInterface,
+    clickedImages: { [key: number]: FurnitureDataCardsInterface[] };
+    isCardSelected: boolean
 }) {
-    /*{ imgData }: { imgData: ImgDataInterface }*/
-
-    const [imageLoaded, setImageLoaded] = useState(false);
 
     return (
-        <div className={styles["container-outer-image"]}
-            onClick={() => handleSelectTable(nextTableId.toString(), imgData)}
-            /* data-id={`${imgData.imgSlug}`}*/>
-            {imgData}
+        <div className={`${styles["container-outer-image"]} ${styles["card-content"]} ${isCardSelected ? styles.selected : ""}`}
+            onClick={() => handleCardClick(TABLEelement.tableId, CARDelement.cardId, CARDelement.cardTitle)}
+            data-id={`${CARDelement.cardId}`}>
+            {CARDelement.cardTitle}
+
             {/* {
                 !imageLoaded && (
                     <div className={styles["container-inner-placeholder"]}>
