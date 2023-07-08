@@ -19,7 +19,6 @@ export default function FurnitureCardContainer({
         handleCardClick={handleCardClick}
         CARDelement={CARDelement}
         TABLEelement={TABLEelement}
-        clickedImages={clickedImages}
         isCardSelected={isCardSelected}
     />
 }

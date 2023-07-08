@@ -5,13 +5,11 @@ export default function FurnitureCardComponent({
     CARDelement,
     handleCardClick,
     TABLEelement,
-    clickedImages,
     isCardSelected
 }: {
     CARDelement: FurnitureDataCardsInterface,
     handleCardClick: (tableId: number, cardId: number, cardTitle: string) => void;
     TABLEelement: FurnitureTableInterface,
-    clickedImages: { [key: number]: FurnitureDataCardsInterface[] };
     isCardSelected: boolean
 }) {
 
