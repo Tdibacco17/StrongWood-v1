@@ -8,7 +8,7 @@ export default function FurnitureCardContainer({
     clickedImages
 }: {
     CARDelement: FurnitureDataCardsInterface,
-    handleCardClick: (tableId: number, cardId: number, cardTitle: string) => void;
+    handleCardClick: (tableId: number, cardId: number, cardTitle: string, tableTitle: string) => void;
     TABLEelement: FurnitureTableInterface,
     clickedImages: { [key: number]: FurnitureDataCardsInterface[] };
 }) {

@@ -7,7 +7,7 @@ export default function ProductDetailPage() {
     return (
         <LayoutComponent isSlider={false} urlBack={"products"}>
             <ProductDetailProvider>
-                <ProductDetailContainer />
+                    <ProductDetailContainer />
             </ProductDetailProvider>
         </LayoutComponent>
     );

@@ -12,7 +12,7 @@ export default function FurnitureDetailPage() {
     const router = useRouter()
     const { slug, item } = router.query;
 
-    let furnitureData:  FurnitureTableInterface[];
+    let furnitureData: FurnitureTableInterface[];
 
     if (slug === "cocina") {
         furnitureData = CocinaNordica;

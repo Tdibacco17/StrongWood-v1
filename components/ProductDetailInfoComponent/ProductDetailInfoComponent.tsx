@@ -1,16 +1,29 @@
 import { ProductDetailContext } from "@/context/ProductDetailProvider";
-import { ProductsDataContextInterface } from "@/types/Interfaces";
+import { ContactDataContextInterface, ProductsDataContextInterface } from "@/types/Interfaces";
 import { useContext } from "react";
 import styles from "./ProductDetailInfoComponent.module.scss"
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { ContactContext } from "@/context/ContactContextProvider";
 
 export default function ProductDetailInfoComponent() {
     const { productData } = useContext(
         ProductDetailContext
     ) as ProductsDataContextInterface;
 
+    const { setInfoProduct } = useContext(
+        ContactContext
+    ) as ContactDataContextInterface;
+
     const router = useRouter();
+
+    const handleContactInfo = (productTitle: string, paymethod: string) => {
+        setInfoProduct({
+            productTitle: productTitle,
+            paymenMethod: paymethod
+        })
+        router.push("/contact/product");
+    }
 
     return (
         <div className={styles["container-section-info"]}>
@@ -39,12 +52,13 @@ export default function ProductDetailInfoComponent() {
                     <div className={styles["button-method"]}>
                         <p className={styles["title"]}>Abonando en Efectivo</p>
                         <button
-                            onClick={() => {
-                                router.push({
-                                    pathname: `/contact/${productData?.productSlug}`,
-                                    query: { pay: "Efectivo" }
-                                })
-                            }}
+                            // onClick={() => {
+                            //     router.push({
+                            //         pathname: `/contact/product/${productData?.productSlug}`,
+                            //         query: { pay: "Efectivo" }
+                            //     })
+                            // }}
+                            onClick={() => handleContactInfo(productData?.productSlug, "Efectivo")}
                             className={styles["button"]}>
                             <Image
                                 className={styles["image-btn"]}
@@ -64,12 +78,13 @@ export default function ProductDetailInfoComponent() {
                     <div className={styles["button-method"]}>
                         <p className={styles["title"]}>Abonando en Tarjeta</p>
                         <button
-                            onClick={() => {
-                                router.push({
-                                    pathname: `/contact/${productData?.productSlug}`,
-                                    query: { pay: "Tarjeta" }
-                                })
-                            }}
+                            // onClick={() => {
+                            //     router.push({
+                            //         pathname: `/contact/product/${productData?.productSlug}`,
+                            //         query: { pay: "Tarjeta" }
+                            //     })
+                            // }}
+                            onClick={() => handleContactInfo(productData?.productSlug, "Tarjeta")}
                             className={styles["button"]}>
                             <Image
                                 className={styles["image-btn"]}

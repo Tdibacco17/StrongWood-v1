@@ -8,14 +8,14 @@ export default function FurnitureCardComponent({
     isCardSelected
 }: {
     CARDelement: FurnitureDataCardsInterface,
-    handleCardClick: (tableId: number, cardId: number, cardTitle: string) => void;
+    handleCardClick: (tableId: number, cardId: number, cardTitle: string, tableTitle: string) => void;
     TABLEelement: FurnitureTableInterface,
     isCardSelected: boolean
 }) {
 
     return (
         <div className={`${styles["container-outer-image"]} ${isCardSelected ? styles["selected"] : ""}`}
-            onClick={() => handleCardClick(TABLEelement.tableId, CARDelement.cardId, CARDelement.cardTitle)}
+            onClick={() => handleCardClick(TABLEelement.tableId, CARDelement.cardId, CARDelement.cardTitle, TABLEelement.tableTitle)}
             data-id={`${CARDelement.cardId}`}>
             {/* {
                 !imageLoaded && (

@@ -24,13 +24,12 @@ export default function FurnitureTableComponent({
     TABLEelement: FurnitureTableInterface,
     isTableVisible: boolean,
     shouldApplyStyle: boolean,
-    handleCardClick: (tableId: number, cardId: number, cardTitle: string) => void;
+    handleCardClick: (tableId: number, cardId: number, cardTitle: string, tableTitle: string) => void;
     clickedImages: { [key: number]: FurnitureDataCardsInterface[] };
     visibleTables: number[],
     furnitureData: FurnitureTableInterface[];
     validated: boolean
 }) {
-    console.log(validated, "VALIDATE")
     return (
         <div id={`${TABLEelement.tableId}`} className={` ${styles["container-all-table-design"]} ${isTableVisible ? "" : styles["hidden"]}`}>
             <div className={styles["container-table"]}>

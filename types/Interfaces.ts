@@ -1,3 +1,36 @@
+// contact
+export interface ContactDataContextInterface {
+    contacData: ContactProductInterface | ContactDesignInterface,
+    handleContactDataChange: Function,
+    infoProduct: any,
+    setInfoProduct: Function,
+    infoFurniture: any,
+    setInfoFurniture: Function
+}
+
+// contact product
+export interface ContactProductInterface {
+    name: string,
+    email: string,
+    phone: string,
+    address: string,
+    product: string,
+    payment: string
+}
+
+// contact desing
+export interface ContactDesignInterface {
+    name: string,
+    email: string,
+    phone: string,
+    address: string,
+    selections: {
+        tableTitle: string,
+        cardTitle: string
+    },
+    payment: string
+}
+
 //home
 export interface HomeDataContextInterface {
     handleHomeDataChange?: Function;

@@ -99,38 +99,30 @@ export default function ContactContainer({
             product: slug || "No se paso un producto",
             pay: selectedPayment !== "" ? selectedPayment : (pay || "No se pasó un método de pago"),
         };
-        console.log(data)
-        setErrorMessage("")
-        setIsModal(true)
-        setTimeout(() => {
-            setIsModal(false)
-            router.push("/")
-        }, 2000)
-        return
-        // try {
-        //     const response = await fetch("/api/contact", {
-        //         method: "POST",
-        //         headers: {
-        //             "Accept": "application/json, text/plain",
-        //             "Content-Type": "application/json",
-        //         },
-        //         body: JSON.stringify(data),
-        //     });
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Accept": "application/json, text/plain",
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
 
-        //     if (response.status === 200) {
-        //         console.log("Email enviado con éxito");
-        //         setErrorMessage("")
-        //         setIsModal(true)
-        //         setTimeout(() => {
-        //             setIsModal(false)
-        //             router.push("/")
-        //         }, 1500)
-        //     } else {
-        //         console.log("Error al enviar el correo electrónico");
-        //     }
-        // } catch (error) {
-        //     console.log("Error al enviar el correo electrónico:", error);
-        // }
+            if (response.status === 200) {
+                console.log("Email enviado con éxito");
+                setErrorMessage("")
+                setIsModal(true)
+                setTimeout(() => {
+                    setIsModal(false)
+                    router.push("/")
+                }, 1500)
+            } else {
+                console.log("Error al enviar el correo electrónico");
+            }
+        } catch (error) {
+            console.log("Error al enviar el correo electrónico:", error);
+        }
     }
 
     return <ContactComponent

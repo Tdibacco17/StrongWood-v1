@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import styles from "./ContactComponent.module.scss"
 import { ProductDetailContext } from "@/context/ProductDetailProvider";
-import { ProductsDataContextInterface } from "@/types/Interfaces";
+import {  ProductsDataContextInterface } from "@/types/Interfaces";
 import ContactProductImgComponent from "../ContactProductImgComponent/ContactProductImgComponent";
 import ContactModalComponent from "../ContactModalComponent/ContactModalComponent";
 

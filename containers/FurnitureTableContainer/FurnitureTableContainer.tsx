@@ -16,7 +16,7 @@ export default function FurnitureTableContainer({
     clickedImages: { [key: number]: FurnitureDataCardsInterface[] };
     showMissingFields: boolean;
     validated: boolean,
-    handleCardClick: (tableId: number, cardId: number, cardTitle: string) => void;
+    handleCardClick: (tableId: number, cardId: number, cardTitle: string, tableTitle:string) => void;
     furnitureData: FurnitureTableInterface[];
 }) {
     const isTableVisible = visibleTables.includes(TABLEelement.tableId);

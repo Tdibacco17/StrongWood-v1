@@ -1,7 +1,8 @@
 import FurnitureComponent from "@/components/FurnitureComponent/FurnitureComponent";
-import { FurnitureDataCardsInterface, FurnitureTableInterface } from "@/types/Interfaces";
+import { ContactContext } from "@/context/ContactContextProvider";
+import { ContactDataContextInterface, FurnitureDataCardsInterface, FurnitureTableInterface } from "@/types/Interfaces";
 import { useRouter } from "next/router";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
 
 export default function FurnitureContainer({
     slug,
@@ -12,6 +13,12 @@ export default function FurnitureContainer({
     item: string | undefined,
     furnitureData: FurnitureTableInterface[]
 }) {
+
+    const { setInfoFurniture } = useContext(
+        ContactContext
+    ) as ContactDataContextInterface;
+
+
     const [visibleTables, setVisibleTables] = useState([1]);
     const [clickedImages, setClickedImages] = useState<{ [key: number]: FurnitureDataCardsInterface[] }>({});
     const [validated, setValidated] = useState(false);
@@ -26,7 +33,7 @@ export default function FurnitureContainer({
         setValidated(allTablesHaveSelections);
     }, [clickedImages]);
 
-    const handleCardClick = useCallback((tableId: number, cardId: number, cardTitle: string) => {
+    const handleCardClick = useCallback((tableId: number, cardId: number, cardTitle: string, tableTitle: string) => {
         const nextTableId = tableId + 1;
         if (!visibleTables.includes(nextTableId)) {
             setVisibleTables(prevTables => [...prevTables, nextTableId]);
@@ -42,11 +49,11 @@ export default function FurnitureContainer({
                 prevTableImages.length >= furnitureData[tableId - 1].maxSelections &&
                 !isCardSelected
             ) {
-                updatedImages = [...prevTableImages.slice(1), { cardId, cardTitle }];
+                updatedImages = [...prevTableImages.slice(1), { cardId, cardTitle, tableTitle }];
             } else {
                 updatedImages = isCardSelected
                     ? prevTableImages.filter(image => image.cardId !== cardId)
-                    : [...prevTableImages, { cardId, cardTitle }];
+                    : [...prevTableImages, { cardId, cardTitle, tableTitle }];
             }
 
             return { ...prevImages, [tableId]: updatedImages };
@@ -64,7 +71,12 @@ export default function FurnitureContainer({
 
             //logica para mandar email
             //clickedImages tiene los datos a de los selectores
-            router.push("/");
+            setInfoFurniture({
+                designTitle: slug,
+                designItem: item,
+                data: clickedImages
+            })
+            router.push("/contact/design");
         } else {
             console.log("Falta seleccionar un campo en una tabla");
             setValidated(false);

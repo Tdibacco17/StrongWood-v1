@@ -1,6 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
-import { google } from "googleapis";
 
 import dotenv from 'dotenv';
 dotenv.config();
@@ -26,32 +25,23 @@ export default async function sendEmail(req: NextApiRequest, res: NextApiRespons
         </ul>
     `
 
-    const CLIENT_ID = process.env.CLIENT_ID;
-    const CLIENT_SECRET = process.env.CLIENT_SECRET;
-    const REDIRECT_URI = process.env.REDIRECT_URI;
-    const REFRESH_TOKEN = process.env.REFRESH_TOKEN;
-
-    const oAuth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI)
-    oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
-
     try {
-        const accessToken = await oAuth2Client.getAccessToken()
 
         let transporter = nodemailer.createTransport({
-            // @ts-ignore
-            service: process.env.EMAIL_SERVICE,
+            host: process.env.EMAIL_SERVICE,
+            port: 587,
+            secure: false, // true for 465, false for other ports
+            tls: {
+                ciphers: 'SSLv3'
+            },
             auth: {
-                type: "OAuth2",
-                user: process.env.EMAIL_USERNAME,
-                clientId: CLIENT_ID,
-                clientSecret: CLIENT_SECRET,
-                refreshToken: REFRESH_TOKEN,
-                accessToken: accessToken
+                user: process.env.EMAIL_USERNAME, // variables de entorno
+                pass: process.env.EMAIL_PASSWORD, // variables de entorno
             },
         });
 
         const mailOptions = {
-            from: `STRONG WOOD <${process.env.EMAIL_USERNAME}>`,
+            from: `STRONG WOOD <${process.env.EMAIL_SENDER}>`,
             to: process.env.EMAIL_SENDER,
             subject: "Nueva venta",
             // text: "prueba",
