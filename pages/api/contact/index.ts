@@ -28,21 +28,21 @@ export default async function sendEmail(req: NextApiRequest, res: NextApiRespons
 
     try {
         let transporter = nodemailer.createTransport({
-            host: process.env.EMAIL_SERVICE,
+            host: "smtp-mail.outlook.com",
             port: 587,
             secure: false, // true for 465, false for other ports
             tls: {
                 ciphers: 'SSLv3'
             },
             auth: {
-                user: process.env.EMAIL_USERNAME, // variables de entorno
-                pass: process.env.EMAIL_PASSWORD, // variables de entorno
+                user: "tdibacco-prueba25watts@outlook.com", // variables de entorno
+                pass: "Tomasdibacco25watts", // variables de entorno
             },
         });
 
         const mailOptions = {
-            from: `STRONG WOOD <${process.env.EMAIL_SENDER}>`,
-            to: process.env.EMAIL_SENDER,
+            from: `STRONG WOOD <${"tdibacco-prueba25watts@outlook.com"}>`,
+            to: "tdibacco-prueba25watts@outlook.com",
             subject: "Nueva venta",
             // text: "prueba",
             html: contentHtml,
