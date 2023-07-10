@@ -7,6 +7,7 @@ dotenv.config();
 export default async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
     const { name = "", phone = "", email = "", direction = "", product = "", pay = "" } = req.body;
 
+    console.log(process.env, ".env")
     const contentHtml = `
         <h2>STRONG WOOD</h2>
         <h4>Datos personales</h4>
@@ -26,7 +27,6 @@ export default async function sendEmail(req: NextApiRequest, res: NextApiRespons
     `
 
     try {
-
         let transporter = nodemailer.createTransport({
             host: process.env.EMAIL_SERVICE,
             port: 587,
