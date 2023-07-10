@@ -115,7 +115,7 @@ export default function ContactProductContainer({
                 setTimeout(() => {
                     setIsModal(false)
                     router.push("/")
-                }, 1500)
+                }, 1750)
             } else {
                 console.log("Error al enviar el correo electrónico");
             }
