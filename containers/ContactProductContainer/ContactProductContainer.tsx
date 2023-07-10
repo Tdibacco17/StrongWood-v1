@@ -41,7 +41,8 @@ export default function ContactProductContainer({
     const [selectedPayment, setSelectedPayment] = useState<string>("");
     const [isSelect, setIsSelect] = useState<boolean>(false)
     const [isModal, setIsModal] = useState<boolean>(false);
-    const [textModal, setTextModal] = useState<string>("")
+    const [textModal, setTextModal] = useState<string>("");
+    const [loadingText, setLoadingText] = useState<boolean>(false);
 
     const handlePaymentChange = (event: React.ChangeEvent<HTMLSelectElement>): void => {
         if (event.target.value === "Efectivo" || event.target.value === "Tarjeta") {
@@ -87,9 +88,10 @@ export default function ContactProductContainer({
         if (!handleValidation()) {
             setTimeout(() => {
                 setErrorMessage("")
-            }, 4000)
+            }, 2000)
             return;
         }
+        setLoadingText(true);
 
         let data: ContactProductDataInterface = {
             name: nameRef.current?.value || "No se paso un nombre",
@@ -115,6 +117,8 @@ export default function ContactProductContainer({
                 setTextModal("Email enviado con éxito")
                 setIsModal(true);
                 setTimeout(() => {
+                    setLoadingText(false);
+                    setLoadingText(false);
                     setTextModal("");
                     setIsModal(false);
                     router.push("/");
@@ -125,6 +129,7 @@ export default function ContactProductContainer({
                 setTextModal("Error al enviar el email")
                 setIsModal(true);
                 setTimeout(() => {
+                    setLoadingText(false);
                     setTextModal("");
                     setIsModal(false);
                     router.push("/");
@@ -149,5 +154,6 @@ export default function ContactProductContainer({
         handlePaymentChange={handlePaymentChange}
         isModal={isModal}
         textModal={textModal}
+        loadingText={loadingText}
     />
 }

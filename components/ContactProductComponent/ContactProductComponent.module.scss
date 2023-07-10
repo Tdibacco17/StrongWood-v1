@@ -300,6 +300,17 @@
                         font-size: var(--strong-font-xmedium);
                     }
                 }
+
+                .form-loading {
+                    font-family: var(--strong-font-Roboto-Regular);
+                    font-size: var(--strong-font-xxxsmall);
+                    font-weight: var(--strong-weight-400);
+                    color: var(--strong-bluegray-1);
+
+                    @media (max-width: 768px) {
+                        font-size: var(--strong-font-xmedium);
+                    }
+                }
             }
         }
     }

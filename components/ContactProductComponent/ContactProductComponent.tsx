@@ -18,7 +18,8 @@ export default function ContactProductComponent({
     selectRef,
     handlePaymentChange,
     isModal,
-    textModal
+    textModal,
+    loadingText
 }: {
     handleSubmitEmail: (e: React.FormEvent<HTMLFormElement>) => void,
     nameRef: React.RefObject<HTMLInputElement>,
@@ -32,7 +33,8 @@ export default function ContactProductComponent({
     selectRef: React.RefObject<HTMLSelectElement>;
     handlePaymentChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
     isModal: boolean,
-    textModal: string
+    textModal: string,
+    loadingText: boolean
 }) {
     const { productData } = useContext(
         ProductDetailContext
@@ -118,7 +120,7 @@ export default function ContactProductComponent({
                         </label>
 
                         <button className={styles["form-button"]} type="submit">Enviar</button>
-
+                        {loadingText && <p className={styles["form-loading"]}>Cargando..</p>}
                         {errorMessage && <p className={styles["form-error"]}>{errorMessage}</p>}
                     </form>
                 </div>
