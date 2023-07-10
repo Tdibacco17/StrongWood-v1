@@ -40,7 +40,8 @@ export default function ContactProductContainer({
 
     const [selectedPayment, setSelectedPayment] = useState<string>("");
     const [isSelect, setIsSelect] = useState<boolean>(false)
-    const [isModal, setIsModal] = useState<boolean>(false)
+    const [isModal, setIsModal] = useState<boolean>(false);
+    const [textModal, setTextModal] = useState<string>("")
 
     const handlePaymentChange = (event: React.ChangeEvent<HTMLSelectElement>): void => {
         if (event.target.value === "Efectivo" || event.target.value === "Tarjeta") {
@@ -111,13 +112,23 @@ export default function ContactProductContainer({
             if (response.status === 200) {
                 console.log("Email enviado con éxito");
                 setErrorMessage("")
-                setIsModal(true)
+                setTextModal("Email enviado con éxito")
+                setIsModal(true);
                 setTimeout(() => {
-                    setIsModal(false)
-                    router.push("/")
+                    setTextModal("");
+                    setIsModal(false);
+                    router.push("/");
                 }, 1750)
             } else {
                 console.log("Error al enviar el correo electrónico");
+                setErrorMessage("")
+                setTextModal("Error al enviar el email")
+                setIsModal(true);
+                setTimeout(() => {
+                    setTextModal("");
+                    setIsModal(false);
+                    router.push("/");
+                }, 1750)
             }
         } catch (error) {
             console.log("Error al enviar el correo electrónico:", error);
@@ -137,5 +148,6 @@ export default function ContactProductContainer({
         selectRef={selectRef}
         handlePaymentChange={handlePaymentChange}
         isModal={isModal}
+        textModal={textModal}
     />
 }
