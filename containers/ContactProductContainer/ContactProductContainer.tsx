@@ -1,10 +1,10 @@
-import ContactComponent from "@/components/ContactComponent/ContactComponent";
+import ContactProductComponent from "@/components/ContactProductComponent/ContactProductComponent";
 import { ProductDetailContext } from "@/context/ProductDetailProvider";
 import { ContactProductDataInterface, ProductsDataContextInterface } from "@/types/Interfaces";
 import { useRouter } from "next/router";
 import { useContext, useEffect, useRef, useState } from "react";
 
-export default function ContactContainer({
+export default function ContactProductContainer({
     slug, pay
 }: {
     slug: string | undefined,
@@ -71,7 +71,6 @@ export default function ContactContainer({
             setErrorMessage("Por favor, complete todos los campos.");
             return false;
         }
-
         if ((selectedPayment === "" && pay === "") ||
             selectedPayment === "" && (pay && pay !== "Efectivo" && pay !== "Tarjeta")) {
             setErrorMessage("Por favor, seleccione un método de pago.");
@@ -125,7 +124,7 @@ export default function ContactContainer({
         }
     }
 
-    return <ContactComponent
+    return <ContactProductComponent
         nameRef={nameRef}
         phoneRef={phoneRef}
         emailRef={emailRef}

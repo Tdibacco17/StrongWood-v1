@@ -1,10 +1,9 @@
-import ContactContainer from "@/containers/ContactContainer/ContactContainer";
+import ContactProductContainer from "@/containers/ContactProductContainer/ContactProductContainer";
 import { ContactContext } from "@/context/ContactContextProvider";
 import { ProductDetailProvider } from "@/context/ProductDetailProvider";
 import LayoutComponent from "@/layout/LayoutComponent";
 import { ContactDataContextInterface } from "@/types/Interfaces";
 import { useContext } from "react";
-
 
 export default function ContactProductPage() {
 
@@ -20,29 +19,8 @@ export default function ContactProductPage() {
     return (
         <LayoutComponent isSlider={false} urlBack={`products/${infoProduct.productTitle}`}>
             <ProductDetailProvider>
-                <ContactContainer slug={infoProduct.productTitle} pay={infoProduct.paymenMethod} />
+                <ContactProductContainer slug={infoProduct.productTitle} pay={infoProduct.paymenMethod} />
             </ProductDetailProvider>
         </LayoutComponent>
     )
 }
-
-/*
-import { ContactContext, ContactProvider } from "@/context/ContactContextProvider";
-import { ContactDataContextInterface } from "@/types/Interfaces";
-import { useContext } from "react";
-
-export default function FurnitureContactPage() {
-    const { setInfoProduct, infoProduct } = useContext(
-        ContactContext
-    ) as ContactDataContextInterface;
-
-    console.log("FURNITURE/CONTACT/", infoProduct)
-    return (
-        <div>
-            {JSON.stringify(infoProduct)}
-        </div>
-    )
-}
-
-
-*/

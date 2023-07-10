@@ -1,11 +1,11 @@
 import { useContext } from "react";
-import styles from "./ContactComponent.module.scss"
+import styles from "./ContactProductComponent.module.scss"
 import { ProductDetailContext } from "@/context/ProductDetailProvider";
 import {  ProductsDataContextInterface } from "@/types/Interfaces";
 import ContactProductImgComponent from "../ContactProductImgComponent/ContactProductImgComponent";
 import ContactModalComponent from "../ContactModalComponent/ContactModalComponent";
 
-export default function ContactComponent({
+export default function ContactProductComponent({
     handleSubmitEmail,
     nameRef,
     phoneRef,
