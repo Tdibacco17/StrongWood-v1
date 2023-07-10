@@ -24,7 +24,7 @@ export default async function sendEmail(req: NextApiRequest, res: NextApiRespons
 
     try {
         let transporter = nodemailer.createTransport({
-            host: "smtp-mail.outlook.com",
+            host: "smtp.office365.com",//"smtp-mail.outlook.com",
             port: 587,
             secure: false, // true for 465, false for other ports
             tls: {
