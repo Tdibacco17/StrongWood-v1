@@ -122,7 +122,7 @@ export default function ContactProductContainer({
                     setTextModal("");
                     setIsModal(false);
                     router.push("/");
-                }, 1750)
+                }, 2000)
             } else {
                 console.log("Error al enviar el correo electrónico");
                 setErrorMessage("")
@@ -133,7 +133,7 @@ export default function ContactProductContainer({
                     setTextModal("");
                     setIsModal(false);
                     router.push("/");
-                }, 1750)
+                }, 2000)
             }
         } catch (error) {
             console.log("Error al enviar el correo electrónico:", error);

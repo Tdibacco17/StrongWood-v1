@@ -2,6 +2,7 @@ import { useScrollPosition, NAVBAR_HEIGHT } from "@/utils/scroll/useScrollPositi
 import styles from "./NavbarComponent.module.scss";
 import { useEffect, useRef } from "react";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 export default function NavbarComponent({ isSlider, urlBack }: { isSlider: boolean, urlBack: string }) {
 
@@ -30,9 +31,22 @@ export default function NavbarComponent({ isSlider, urlBack }: { isSlider: boole
                     (isAtTop ? styles['isOtherSection'] : styles['isOtherSection'])
                 }
                 `}>
+                {!isSlider &&
+                    <div className={styles["back-link"]}
+                        onClick={() => { router.push(`/${urlBack}`) }} >
+                        <Image
+                            className={styles["img-back"]}
+                            src="/assets/icons/arrowLeft.svg"
+                            alt="Icono Izquierda"
+                            width={25}
+                            height={25}
+                            priority
+                        />
+                    </div>
+                }
                 <h1 onClick={() => { router.push(`/`); }} className={styles["title"]}>STRONG WOOD</h1>
             </div>
-            {
+            {/* {
                 !isSlider &&
                 <div className={styles['container-secondary-nav']}>
                     {
@@ -41,7 +55,7 @@ export default function NavbarComponent({ isSlider, urlBack }: { isSlider: boole
                             : <p className={styles["title"]}>FUNCIONALIDADES</p>
                     }
                 </div>
-            }
+            } */}
         </div>
     );
 }

@@ -37,8 +37,11 @@ export default async function sendEmail(req: NextApiRequest, res: NextApiRespons
         // });
         const transporter = nodemailer.createTransport({
             host: "smtp.gmail.com",
-            port: 587,
-            secure: false,
+            port: 587, //465
+            secure: false,//true
+            //     tls: {
+            //         ciphers: 'SSLv3'
+            //     },
             auth: {
                 user: 'tomasdibacco@gmail.com',
                 pass: `${process.env.PASS_TEST}`
@@ -46,7 +49,7 @@ export default async function sendEmail(req: NextApiRequest, res: NextApiRespons
         })
 
         const mailOptions = {
-            from: `STRONG WOOD <${"tdibacco-prueba25watts@outlook.com"}>`,
+            from: `STRONG WOOD`, //<${"tdibacco-prueba25watts@outlook.com"}>
             to: "tdibacco-prueba25watts@outlook.com", //strongwoodventas@gmail.com
             subject: "Nueva venta",
             // text: "prueba",

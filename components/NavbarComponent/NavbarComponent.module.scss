@@ -36,6 +36,8 @@
 
         transition: top 0.3s ease-in-out;
 
+
+
         .title {
             font-family: var(--strong-font-Knucklehead);
             font-size: var(--navbar-title-size);
@@ -64,6 +66,7 @@
         &.isOtherSection {
             background-color: var(--strong-bluegray-11);
             border-bottom: none;
+            border-bottom: 1px solid var(--strong-bluegray-5);
 
             .title {
                 color: var(--strong-bluegray-1);
@@ -130,5 +133,39 @@
     &.show-on-top {
         top: 0;
         transition: top 0.3s ease-in-out;
+    }
+}
+
+.back-link {
+    --icon-image: 1.7rem;
+
+    min-height: var(--icon-image);
+    max-height: var(--icon-image);
+    min-width: var(--icon-image);
+    max-width: var(--icon-image);
+
+    position: absolute;
+    top: 0.45rem;
+    left: 0.45rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    cursor: pointer;
+
+    background-color: transparent;
+    transition: background-color 0.25s ease, opacity 0.25s ease;
+    border-radius: 99rem;
+    padding: 1.4rem;
+
+    &:hover {
+        background-color: var(--strong-bluegray-10);
+        transition: background-color 0.25s ease-in;
+    }
+
+    .img-back {
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg);
     }
 }
