@@ -1,42 +1,22 @@
-import ContactProductComponent from "@/components/ContactProductComponent/ContactProductComponent";
-import { ProductDetailContext } from "@/context/ProductDetailProvider";
-import { ContactProductDataInterface, ProductsDataContextInterface } from "@/types/Interfaces";
+import ContactDesignComponent from "@/components/ContactDesignComponent/ContactDesignComponent";
+import { ContactContext } from "@/context/ContactContextProvider";
+import { ContactDataContextInterface, ContactDesignDataInterface } from "@/types/Interfaces";
 import { useRouter } from "next/router";
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 
-export default function ContactProductContainer({
-    slug, pay
+export default function ContactDesignContainer({
+    slug,
+    item
 }: {
     slug: string | undefined,
-    pay: string | undefined
+    item: string | undefined,
 }) {
 
     const router = useRouter();
 
-    const { handleProductDataChange } = useContext(
-        ProductDetailContext
-    ) as ProductsDataContextInterface;
-
-    useEffect(() => {
-        if (slug) {
-            const fetchData = async () => {
-                if (handleProductDataChange) {
-                    const rawData = await fetch(
-                        `/api/products/getProductBySlug?slug=${slug}`
-                    );
-                    const parsedData = await rawData.json();
-                    if (parsedData.error) {
-                        return;
-                    }
-
-                    handleProductDataChange &&
-                        handleProductDataChange(parsedData.data);
-                }
-            };
-
-            fetchData();
-        }
-    }, [slug]);
+    const { infoFurniture } = useContext(
+        ContactContext
+    ) as ContactDataContextInterface;
 
     const [selectedPayment, setSelectedPayment] = useState<string>("");
     const [isSelect, setIsSelect] = useState<boolean>(false)
@@ -44,6 +24,14 @@ export default function ContactProductContainer({
     const [textModal, setTextModal] = useState<string>("");
     const [loadingText, setLoadingText] = useState<boolean>(false);
 
+    const selectRef = useRef<HTMLSelectElement | null>(null);
+
+    const nameRef = useRef<HTMLInputElement>(null);
+    const phoneRef = useRef<HTMLInputElement>(null);
+    const emailRef = useRef<HTMLInputElement>(null);
+    const directiongeRef = useRef<HTMLInputElement>(null);
+    const [errorMessage, setErrorMessage] = useState<string>("");
+    console.log(infoFurniture.data, "DADASASDASD")
     const handlePaymentChange = (event: React.ChangeEvent<HTMLSelectElement>): void => {
         if (event.target.value === "Efectivo" || event.target.value === "Tarjeta") {
             setIsSelect(true);
@@ -53,15 +41,6 @@ export default function ContactProductContainer({
 
         setSelectedPayment(event.target.value);
     };
-
-    const selectRef = useRef<HTMLSelectElement | null>(null);
-
-    const nameRef = useRef<HTMLInputElement>(null);
-    const phoneRef = useRef<HTMLInputElement>(null);
-    const emailRef = useRef<HTMLInputElement>(null);
-    const directiongeRef = useRef<HTMLInputElement>(null);
-
-    const [errorMessage, setErrorMessage] = useState<string>("");
 
     const handleValidation = () => {
         if (
@@ -73,8 +52,7 @@ export default function ContactProductContainer({
             setErrorMessage("Por favor, complete todos los campos.");
             return false;
         }
-        if ((selectedPayment === "" && pay === "") ||
-            selectedPayment === "" && (pay && pay !== "Efectivo" && pay !== "Tarjeta")) {
+        if (selectedPayment === "") {
             setErrorMessage("Por favor, seleccione un método de pago.");
             return false;
         }
@@ -93,22 +71,26 @@ export default function ContactProductContainer({
         }
         setLoadingText(true);
 
-        let data: ContactProductDataInterface = {
+        let dataDesign: ContactDesignDataInterface = {
             name: nameRef.current?.value || "No se paso un nombre",
             phone: phoneRef.current?.value || "No se paso un telefono",
             email: emailRef.current?.value || "No se paso un email",
             direction: directiongeRef.current?.value || "No se paso una dirección",
-            product: slug || "No se paso un producto",
-            payment: selectedPayment !== "" ? selectedPayment : (pay || "No se pasó un método de pago"),
+            selections: {
+                designTitle: infoFurniture.designTitle,
+                designItem: infoFurniture.designItem,
+                cardData: Object.values(infoFurniture.data)
+            },
+            payment: selectedPayment !== "" ? selectedPayment : "No se pasó un método de pago",
         };
         try {
-            const response = await fetch("/api/contact/product", {
+            const response = await fetch("/api/contact/design", {
                 method: "POST",
                 headers: {
                     // "Accept": "application/json, text/plain",
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(data),
+                body: JSON.stringify(dataDesign),
             });
 
             if (response.status === 200) {
@@ -140,14 +122,13 @@ export default function ContactProductContainer({
         }
     }
 
-    return <ContactProductComponent
+    return <ContactDesignComponent
         nameRef={nameRef}
         phoneRef={phoneRef}
         emailRef={emailRef}
         directiongeRef={directiongeRef}
         handleSubmitEmail={handleSubmitEmail}
         errorMessage={errorMessage}
-        pay={pay}
         isSelect={isSelect}
         selectedPayment={selectedPayment}
         selectRef={selectRef}

@@ -1,0 +1,21 @@
+.container-link {
+    height: 100%;
+    width: 100%;
+    padding-top: 8.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    font-family: var(--strong-font-Roboto-Regular);
+    font-size: var(--strong-font-xxmedium);
+    font-weight: var(--strong-weight-400);
+    color: var(--strong-bluegray-1);
+
+    .link {
+        font-family: var(--strong-font-Roboto-Bold);
+        font-weight: var(--strong-weight-700);
+        color: var(--strong-link-color);
+    }
+}

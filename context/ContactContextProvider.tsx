@@ -1,9 +1,9 @@
-import { ContactDataContextInterface, ContactDesignInterface, ContactProductInterface } from "@/types/Interfaces";
-import { ReactNode, createContext, useState } from "react";
+import { ContactDataContextInterface } from "@/types/Interfaces";
+import { ReactNode, createContext, useEffect, useState } from "react";
 
 interface ProductProps {
     productTitle: string,
-    paymenMethod: string,
+    paymentMethod: string,
     data?: any
 }
 
@@ -13,33 +13,34 @@ interface DesignProps {
     data?: any
 }
 
+
 export const ContactContext = createContext<ContactDataContextInterface | {}>({});
 
 export const ContactProvider = ({ children, }: { children: ReactNode; }) => {
-    // const [contactData, setContactData] = useState<ContactDesignInterface | ContactProductInterface | undefined>(undefined);
-
-    // const handleContactDataChange = (contactData: ContactDesignInterface | ContactProductInterface) => {
-    //     setInfoProduct(infoProduct);
-    // };
 
     const [infoProduct, setInfoProduct] = useState<ProductProps>({
         productTitle: "",
-        paymenMethod: ""
+        paymentMethod: ""
     });
+
     const [infoFurniture, setInfoFurniture] = useState<DesignProps>({
         designTitle: "",
         designItem: "",
     })
 
-    console.log("[infoProduct-CONTEXT]: ", infoProduct);
+
+    // console.log("[infoProduct-CONTEXT]: ", infoProduct);
     console.log("[infoFurniture-CONTEXT]: ", infoFurniture);
 
+    useEffect(() => {
+
+    }, [infoProduct])
     return (
         <ContactContext.Provider
             value={{
                 // contactData, handleContactDataChange,
-                setInfoProduct, infoProduct,
-                setInfoFurniture, infoFurniture
+                infoProduct, setInfoProduct,
+                infoFurniture, setInfoFurniture
             }}
         >
             {children}

@@ -2,7 +2,8 @@ import { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 
 export default async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
-    const { name = "", phone = "", email = "", direction = "", product = "", payment = "" } = req.body;
+    const { name = "", phone = "", email = "", direction = "", selections = "", payment = "" } = req.body;
+
 
     const contentHtml = `
         <h2>STRONG WOOD</h2>
@@ -17,7 +18,12 @@ export default async function sendEmail(req: NextApiRequest, res: NextApiRespons
         </div>
         <br></br>
         <ul>
-            <li>Quiere comprar el producto: <strong>${product}</strong></li>
+            <li>Quiere comprar el producto: <strong>${selections.designTitle} ${selections.designItem}</strong></li>
+           ${selections.cardData.map((item: any) => {
+        return item.map((subItem: any) => {
+            return `<li>${subItem.tableTitle}: ${subItem.cardTitle}</li>`;
+        }).join('');
+    }).join('')}
             <li>Abona en <strong>${payment}</strong></li>
         </ul>
     `

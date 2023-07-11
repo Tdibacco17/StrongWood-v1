@@ -2,7 +2,9 @@ import { ContactContext } from "@/context/ContactContextProvider";
 import LayoutComponent from "@/layout/LayoutComponent";
 import { ContactDataContextInterface } from "@/types/Interfaces";
 import { useContext } from "react";
-
+import styles from "./index.module.scss"
+import Link from "next/link";
+import ContactDesignContainer from "@/containers/ContactDesignContainer/ContactDesignContainer";
 
 export default function ContactFurnituretPage() {
 
@@ -11,22 +13,20 @@ export default function ContactFurnituretPage() {
     ) as ContactDataContextInterface;
 
     if (!infoFurniture.designTitle) {
-        // GUARDAR EN CACHE? O VALIDAR SI ALGUIEN TOCA F5
-        return <>SE RECARGO LA PAGINA CON F5</>
+        return (
+            <LayoutComponent isSlider={false} urlBack={`design/`}>
+                <div className={styles["container-link"]}>
+                    <p>Ocurrió algo inesperado</p>
+                    <Link className={styles["link"]} href={"/design"}>VOLVER</Link>
+                </div>
+            </LayoutComponent>
+        )
     }
 
     return (
-        <LayoutComponent isSlider={false} urlBack={`furniture/${infoFurniture.designTitle}?item=${infoFurniture.designItem}`}>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            {JSON.stringify(infoFurniture)}
+        <LayoutComponent isSlider={false}
+            urlBack={`furniture/${infoFurniture.designTitle}?item=${infoFurniture.designItem}`}>
+            <ContactDesignContainer slug={infoFurniture.designTitle} item={infoFurniture.designItem} />
         </LayoutComponent>
     )
 }
