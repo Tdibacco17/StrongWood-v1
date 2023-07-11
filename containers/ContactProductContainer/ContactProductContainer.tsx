@@ -102,10 +102,10 @@ export default function ContactProductContainer({
             pay: selectedPayment !== "" ? selectedPayment : (pay || "No se pasó un método de pago"),
         };
         try {
-            const response = await fetch("/api/contact", {
+            const response = await fetch("/api/contact/product", {
                 method: "POST",
                 headers: {
-                    "Accept": "application/json, text/plain",
+                    // "Accept": "application/json, text/plain",
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify(data),

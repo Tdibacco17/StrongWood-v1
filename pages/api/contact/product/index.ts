@@ -10,7 +10,7 @@ export default async function sendEmail(req: NextApiRequest, res: NextApiRespons
         <div>
             <ul>   
                 <li>Nombre: ${name}</li>
-                <li>Email: ${email}</li>
+                <li>Email: ${email}</li> 
                 <li>Telefono: ${phone}</li>
                 <li>Dirección: ${direction}</li>  
             </ul>
@@ -23,18 +23,27 @@ export default async function sendEmail(req: NextApiRequest, res: NextApiRespons
     `
 
     try {
-        let transporter = nodemailer.createTransport({
-            host: "smtp.office365.com",//"smtp-mail.outlook.com",
+        // let transporter = nodemailer.createTransport({
+        //     host: "smtp.office365.com",//"smtp-mail.outlook.com",
+        //     port: 587,
+        //     secure: false, // true for 465, false for other ports
+        //     tls: {
+        //         ciphers: 'SSLv3'
+        //     },
+        //     auth: {
+        //         user: "tdibacco-prueba25watts@outlook.com", // variables de entorno
+        //         pass: "Tomasdibacco25watts", // variables de entorno
+        //     },
+        // });
+        const transporter = nodemailer.createTransport({
+            host: "smtp.gmail.com",
             port: 587,
-            secure: false, // true for 465, false for other ports
-            tls: {
-                ciphers: 'SSLv3'
-            },
+            secure: false,
             auth: {
-                user: "tdibacco-prueba25watts@outlook.com", // variables de entorno
-                pass: "Tomasdibacco25watts", // variables de entorno
-            },
-        });
+                user: 'tomasdibacco@gmail.com',
+                pass: `${process.env.PASS_TEST}`
+            }
+        })
 
         const mailOptions = {
             from: `STRONG WOOD <${"tdibacco-prueba25watts@outlook.com"}>`,
