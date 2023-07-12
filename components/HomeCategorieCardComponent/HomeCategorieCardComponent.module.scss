@@ -3,6 +3,7 @@
     --card-image-outer-width: 41.5vw;
 
     --card-image-inner-height: 41.5vw;
+    --card-image-proportion: calc((var(--card-image-inner-height)) * 1.5024);
 
     position: relative;
     min-height: var(--card-image-outer-height);

@@ -20,7 +20,6 @@ export default function HomeCategoriesComponent() {
                     <HomeCategorieCardComponent
                         imgSrc={`${homeData.categoriesImages[0].imgSrc}`}
                         imgAlt={`${homeData.categoriesImages[0].imgAlt}`}
-                        imgProportionsX={homeData.categoriesImages[0].imgProportionsX}
                         title="Línea Design"
                         subtitle="Diseños personalizados"
                     />
@@ -32,7 +31,6 @@ export default function HomeCategoriesComponent() {
                     <HomeCategorieCardComponent
                         imgSrc={`${homeData.categoriesImages[1].imgSrc}`}
                         imgAlt={`${homeData.categoriesImages[1].imgAlt}`}
-                        imgProportionsX={homeData.categoriesImages[1].imgProportionsX}
                         title="Línea Wood"
                         subtitle="Ver productos"
                     />

@@ -5,13 +5,11 @@ import { useState } from "react";
 export default function CardComponent({
     imgSrc,
     imgAlt,
-    imgProportionsX,
     title,
     subtitle
 }: {
     imgSrc: string,
     imgAlt: string,
-    imgProportionsX?: number,
     title?: string,
     subtitle?: string,
 }) {
@@ -41,11 +39,6 @@ export default function CardComponent({
                 <h2 className={styles["title-overlay"]}>{`${title ? title : ""}`}</h2>
                 <h3 className={styles["subtitle-overlay"]}>{`${subtitle ? subtitle : ""}`}</h3>
             </div>
-            <style jsx>{`
-                .${styles["container-outer-image"]} {
-                    --card-image-proportion: calc((var(--card-image-inner-height)) * ${imgProportionsX});
-                }
-            `}</style>
         </div>
     )
 }

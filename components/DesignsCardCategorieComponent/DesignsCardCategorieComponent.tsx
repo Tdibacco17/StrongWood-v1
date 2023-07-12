@@ -37,11 +37,6 @@ export default function DesignsCardCategorieComponent({
             <div className={styles["container-overlay-image"]}>
                 <h2 className={styles["title-overlay"]}>{designCategorie.title}</h2>
             </div>
-            <style jsx>{`
-                .${styles["container-outer-image"]} {
-                    --design-card-image-proportion: calc((var(--design-card-inner-height)) * ${designCategorie.image.imgProportionsX});
-                }
-            `}</style>
         </div>
     )
 }

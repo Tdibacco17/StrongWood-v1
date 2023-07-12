@@ -3,6 +3,8 @@
     --design-card-height: 16rem;
     --design-card-inner-height: 18rem;
 
+    --design-card-image-proportion: calc((var(--design-card-inner-height)) *  1.5024);
+
     border-radius: 0.2rem;
     position: relative;
     min-height: var(--design-card-height);

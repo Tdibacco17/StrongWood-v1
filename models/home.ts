@@ -44,8 +44,8 @@ export const homeData: HomeDataInterface = {
             imgSlug: 2,
             imgSrc: "/assets/img/home/twoCategories/strong2HD.webp",
             imgAlt: "Image Categorie",
-            imgProportionsX: 1.502,
-            imgProportionsY: 0.665
+            imgProportionsX: 1.5024,
+            imgProportionsY: 0.6651
         },
     ]
 }

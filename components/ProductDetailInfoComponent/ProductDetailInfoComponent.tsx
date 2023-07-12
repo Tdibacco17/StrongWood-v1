@@ -52,12 +52,6 @@ export default function ProductDetailInfoComponent() {
                     <div className={styles["button-method"]}>
                         <p className={styles["title"]}>Abonando en Efectivo</p>
                         <button
-                            // onClick={() => {
-                            //     router.push({
-                            //         pathname: `/contact/product/${productData?.productSlug}`,
-                            //         query: { pay: "Efectivo" }
-                            //     })
-                            // }}
                             onClick={() => handleContactInfo(productData?.productSlug, "Efectivo")}
                             className={styles["button"]}>
                             <Image
@@ -78,12 +72,6 @@ export default function ProductDetailInfoComponent() {
                     <div className={styles["button-method"]}>
                         <p className={styles["title"]}>Abonando en Tarjeta</p>
                         <button
-                            // onClick={() => {
-                            //     router.push({
-                            //         pathname: `/contact/product/${productData?.productSlug}`,
-                            //         query: { pay: "Tarjeta" }
-                            //     })
-                            // }}
                             onClick={() => handleContactInfo(productData?.productSlug, "Tarjeta")}
                             className={styles["button"]}>
                             <Image

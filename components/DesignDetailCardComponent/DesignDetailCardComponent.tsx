@@ -39,11 +39,6 @@ export default function DesignDetailCardComponent({ imgData }: { imgData: ImgDat
             <div className={styles["container-overlay-image"]}>
                 <h2 className={styles["title-overlay"]}>{imgData.imgAlt}</h2>
             </div>
-            <style jsx>{`
-            .${styles["container-outer-image"]} {
-                --design-card-image-proportion: calc((var(--design-card-inner-height)) * ${imgData.imgProportionsX});
-            }
-        `}</style>
         </div>
     )
 }
