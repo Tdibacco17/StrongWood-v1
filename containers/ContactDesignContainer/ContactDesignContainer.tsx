@@ -32,7 +32,7 @@ export default function ContactDesignContainer({
     const emailRef = useRef<HTMLInputElement>(null);
     const directiongeRef = useRef<HTMLInputElement>(null);
     const [errorMessage, setErrorMessage] = useState<string>("");
-    console.log(infoFurniture.data, "DADASASDASD")
+    
     const handlePaymentChange = (event: React.ChangeEvent<HTMLSelectElement>): void => {
         if (event.target.value === "Efectivo" || event.target.value === "Tarjeta") {
             setIsSelect(true);
@@ -95,7 +95,6 @@ export default function ContactDesignContainer({
             });
 
             if (response.status === 200) {
-                console.log("Email enviado con éxito");
                 setErrorMessage("")
                 setTextModal("Email enviado con éxito")
                 setIsModal(true);
@@ -108,7 +107,6 @@ export default function ContactDesignContainer({
                     router.push("/");
                 }, 2000)
             } else {
-                console.log("Error al enviar el correo electrónico");
                 setErrorMessage("")
                 setTextModal("Error al enviar el email")
                 setIsModal(true);

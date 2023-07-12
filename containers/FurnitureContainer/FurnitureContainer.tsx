@@ -66,11 +66,7 @@ export default function FurnitureContainer({
         );
 
         if (tablesWithMissingFields.length === 0) {
-            console.log("Todos los campos han sido seleccionados");
             setValidated(true);
-
-            //logica para mandar email
-            //clickedImages tiene los datos a de los selectores
             setInfoFurniture({
                 designTitle: slug,
                 designItem: item,
@@ -78,7 +74,6 @@ export default function FurnitureContainer({
             })
             router.push("/contact/design");
         } else {
-            console.log("Falta seleccionar un campo en una tabla");
             setValidated(false);
         }
 

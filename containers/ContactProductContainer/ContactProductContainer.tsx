@@ -11,7 +11,7 @@ export default function ContactProductContainer({
     slug: string | undefined,
     pay: string | undefined
 }) {
-    console.log(pay, "paymentMethod")
+
     const router = useRouter();
 
     const { handleProductDataChange } = useContext(
@@ -114,7 +114,6 @@ export default function ContactProductContainer({
             });
 
             if (response.status === 200) {
-                console.log("Email enviado con éxito");
                 setErrorMessage("")
                 setTextModal("Email enviado con éxito")
                 setIsModal(true);
@@ -126,7 +125,6 @@ export default function ContactProductContainer({
                     router.push("/");
                 }, 2000)
             } else {
-                console.log("Error al enviar el correo electrónico");
                 setErrorMessage("")
                 setTextModal("Error al enviar el email")
                 setIsModal(true);
