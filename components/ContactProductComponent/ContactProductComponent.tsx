@@ -61,12 +61,14 @@ export default function ContactProductComponent({
                                     <p className={styles["form-text"]}>Nombre</p>
                                     <input
                                         className={styles["form-input"]}
+                                        required
                                         type="text" name="name" ref={nameRef} />
                                 </label>
                                 <label className={styles["form-group"]}>
                                     <p className={styles["form-text"]}>Telefono</p>
                                     <input
                                         className={styles["form-input"]}
+                                        required
                                         type="text" name="phone" ref={phoneRef} />
                                 </label>
                             </div>
@@ -75,12 +77,14 @@ export default function ContactProductComponent({
                                     <p className={styles["form-text"]}>Email</p>
                                     <input
                                         className={styles["form-input"]}
-                                        type="text" name="email" ref={emailRef} />
+                                        required
+                                        type="email" name="email" ref={emailRef} />
                                 </label>
                                 <label className={styles["form-group"]}>
                                     <p className={styles["form-text"]}>Dirección</p>
                                     <input
                                         className={styles["form-input"]}
+                                        required
                                         type="text" name="direction" ref={directiongeRef} />
                                 </label>
                             </div>

@@ -5,12 +5,13 @@ import { useRouter } from "next/router";
 import { useContext, useEffect, useRef, useState } from "react";
 
 export default function ContactProductContainer({
-    slug, pay
+    slug,
+    pay
 }: {
     slug: string | undefined,
     pay: string | undefined
 }) {
-
+    console.log(pay, "paymentMethod")
     const router = useRouter();
 
     const { handleProductDataChange } = useContext(
@@ -38,7 +39,7 @@ export default function ContactProductContainer({
         }
     }, [slug]);
 
-    const [selectedPayment, setSelectedPayment] = useState<string>("");
+    const [selectedPayment, setSelectedPayment] = useState<string>(pay ? pay : "");
     const [isSelect, setIsSelect] = useState<boolean>(false)
     const [isModal, setIsModal] = useState<boolean>(false);
     const [textModal, setTextModal] = useState<string>("");

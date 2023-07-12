@@ -28,8 +28,7 @@ export const ContactProvider = ({ children, }: { children: ReactNode; }) => {
         designItem: "",
     })
 
-
-    // console.log("[infoProduct-CONTEXT]: ", infoProduct);
+    console.log("[infoProduct-CONTEXT]: ", infoProduct);
     console.log("[infoFurniture-CONTEXT]: ", infoFurniture);
 
     useEffect(() => {

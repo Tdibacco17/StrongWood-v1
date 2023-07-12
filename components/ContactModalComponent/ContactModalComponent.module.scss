@@ -26,6 +26,11 @@
         align-items: center;
         gap: 1rem;
 
+        @media (max-width:442px) {
+            min-width: 15rem;
+            max-width: 15rem;
+        }
+
         .text-modal {
             font-family: var(--strong-font-Roboto-Bold);
             font-size: var(--strong-font-xxmedium);

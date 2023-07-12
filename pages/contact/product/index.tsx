@@ -26,7 +26,7 @@ export default function ContactProductPage() {
     return (
         <LayoutComponent isSlider={false} urlBack={`products/${infoProduct.productTitle}`}>
             <ProductDetailProvider>
-                <ContactProductContainer slug={infoProduct.productTitle} pay={infoProduct.paymentMethod} />
+                <ContactProductContainer slug={infoProduct.productTitle} pay={infoProduct.paymenMethod} />
             </ProductDetailProvider>
         </LayoutComponent>
     )

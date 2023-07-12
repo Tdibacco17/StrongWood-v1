@@ -2,6 +2,7 @@ import { ContactDataContextInterface } from "@/types/Interfaces";
 import styles from "./ContactDesignComponent.module.scss";
 import { ContactContext } from "@/context/ContactContextProvider";
 import { useContext } from "react";
+import ContactModalComponent from "../ContactModalComponent/ContactModalComponent";
 
 export default function ContactDesignComponent({
     handleSubmitEmail,
@@ -37,18 +38,17 @@ export default function ContactDesignComponent({
     ) as ContactDataContextInterface;
     return (
         <div className={styles["container-section-contact"]}>
-            {/* {isModal && <ContactModalComponent textData={textModal} />} */}
+            {isModal && <ContactModalComponent textData={textModal} />}
             <div className={styles["container-row-dividers"]}>
-                <div className={styles["container-section-image"]}>
+                {/* <div className={styles["container-section-image"]}>
                     {
                         Object.values(infoFurniture.data).map((item: any) => {
                             return item.map((subItem: any) => {
                                 return JSON.stringify(subItem);
                             });
                         })
-                        // JSON.stringify(Object.values(infoFurniture.data))
                     }
-                </div>
+                </div> */}
                 <div className={styles["container-section-form"]}>
                     <h3 className={styles["form-title"]}>CONTACTO</h3>
 
@@ -59,12 +59,14 @@ export default function ContactDesignComponent({
                                     <p className={styles["form-text"]}>Nombre</p>
                                     <input
                                         className={styles["form-input"]}
+                                        required
                                         type="text" name="name" ref={nameRef} />
                                 </label>
                                 <label className={styles["form-group"]}>
                                     <p className={styles["form-text"]}>Telefono</p>
                                     <input
                                         className={styles["form-input"]}
+                                        required
                                         type="text" name="phone" ref={phoneRef} />
                                 </label>
                             </div>
@@ -73,12 +75,14 @@ export default function ContactDesignComponent({
                                     <p className={styles["form-text"]}>Email</p>
                                     <input
                                         className={styles["form-input"]}
-                                        type="text" name="email" ref={emailRef} />
+                                        required
+                                        type="email" name="email" ref={emailRef} />
                                 </label>
                                 <label className={styles["form-group"]}>
                                     <p className={styles["form-text"]}>Dirección</p>
                                     <input
                                         className={styles["form-input"]}
+                                        required
                                         type="text" name="direction" ref={directiongeRef} />
                                 </label>
                             </div>
