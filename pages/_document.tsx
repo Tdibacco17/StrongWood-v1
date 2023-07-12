@@ -8,19 +8,22 @@ export default function Document() {
           href="/assets/fonts/Knucklehead.otf"
           rel="preload"
           as="font"
-          crossOrigin=""
+          crossOrigin="anonymous"
+          type="font/otf"
         />
         <link
           href="/assets/fonts/Roboto-Bold.ttf"
           rel="preload"
           as="font"
-          crossOrigin=""
+          crossOrigin="anonymous"
+          type="font/ttf"
         />
         <link
           href="/assets/fonts/Roboto-Regular.ttf"
           rel="preload"
           as="font"
-          crossOrigin=""
+          crossOrigin="anonymous"
+          type="font/ttf"
         />
       </Head>
       <body>
