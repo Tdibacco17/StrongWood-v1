@@ -1,9 +1,10 @@
 import LayoutComponent from "@/layout/LayoutComponent";
+import BackLinkUrlComponent from "@/components/BackLinkUrlComponent/BackLinkUrlComponent";
 
 export default function FurniturePage() {
     return (
         <LayoutComponent isSlider={false} urlBack={"/"} >
-            no se paso un slug
+            <BackLinkUrlComponent backUrl={"/"} />
         </LayoutComponent>
     )
 }

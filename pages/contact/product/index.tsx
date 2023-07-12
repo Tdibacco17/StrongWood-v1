@@ -3,9 +3,8 @@ import { ContactContext } from "@/context/ContactContextProvider";
 import { ProductDetailProvider } from "@/context/ProductDetailProvider";
 import LayoutComponent from "@/layout/LayoutComponent";
 import { ContactDataContextInterface } from "@/types/Interfaces";
-import Link from "next/link";
 import { useContext } from "react";
-import styles from "./index.module.scss"
+import BackLinkUrlComponent from "@/components/BackLinkUrlComponent/BackLinkUrlComponent";
 
 export default function ContactProductPage() {
 
@@ -16,10 +15,7 @@ export default function ContactProductPage() {
     if (!infoProduct.productTitle) {
         return (
             <LayoutComponent isSlider={false} urlBack={`products/`}>
-                <div className={styles["container-link"]}>
-                    <p>Ocurrió algo inesperado</p>
-                    <Link className={styles["link"]} href={"/products"}>VOLVER</Link>
-                </div>
+                <BackLinkUrlComponent backUrl={"/products"} />
             </LayoutComponent>
         )
     }
