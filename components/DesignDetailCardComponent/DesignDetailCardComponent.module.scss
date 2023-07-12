@@ -63,6 +63,12 @@
 
     .container-inner-placeholder {
         position: relative;
+
+        font-family: var(--strong-font-Roboto-Regular);
+        font-size: var(--strong-font-xxxsmall);
+        font-weight: var(--strong-weight-400);
+        color: var(--strong-bluegray-1);
+        
         min-height: var(--design-card-height);
         max-height: var(--design-card-height);
         min-width: var(--design-card-width);

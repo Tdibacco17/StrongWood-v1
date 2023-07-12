@@ -50,6 +50,10 @@
         max-height: var(--card-image-outer-height);
         min-width: var(--card-image-outer-width);
         max-width: var(--card-image-outer-width);
+        
+        font-family: var(--strong-font-Roboto-Regular);
+        font-size: var(--strong-font-xxxsmall);
+        font-weight: var(--strong-weight-400);
         color: var(--strong-bluegray-1);
     }
 
