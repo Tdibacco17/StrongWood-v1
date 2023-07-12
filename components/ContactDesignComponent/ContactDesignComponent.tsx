@@ -17,7 +17,8 @@ export default function ContactDesignComponent({
     handlePaymentChange,
     isModal,
     textModal,
-    loadingText
+    loadingText,
+    isCheck
 }: {
     handleSubmitEmail: (e: React.FormEvent<HTMLFormElement>) => void,
     nameRef: React.RefObject<HTMLInputElement>,
@@ -31,14 +32,15 @@ export default function ContactDesignComponent({
     handlePaymentChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
     isModal: boolean,
     textModal: string,
-    loadingText: boolean
+    loadingText: boolean,
+    isCheck: boolean
 }) {
     const { infoFurniture } = useContext(
         ContactContext
     ) as ContactDataContextInterface;
     return (
         <div className={styles["container-section-contact"]}>
-            {isModal && <ContactModalComponent textData={textModal} />}
+            {isModal && <ContactModalComponent textData={textModal} check={isCheck} />}
             <div className={styles["container-row-dividers"]}>
                 {/* <div className={styles["container-section-image"]}>
                     {

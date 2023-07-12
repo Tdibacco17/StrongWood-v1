@@ -21,6 +21,7 @@ export default function ContactDesignContainer({
     const [selectedPayment, setSelectedPayment] = useState<string>("");
     const [isSelect, setIsSelect] = useState<boolean>(false)
     const [isModal, setIsModal] = useState<boolean>(false);
+    const [isCheck, setIsCheck] = useState<boolean>(true);
     const [textModal, setTextModal] = useState<string>("");
     const [loadingText, setLoadingText] = useState<boolean>(false);
 
@@ -98,6 +99,7 @@ export default function ContactDesignContainer({
                 setErrorMessage("")
                 setTextModal("Email enviado con éxito")
                 setIsModal(true);
+                setIsCheck(true)
                 setTimeout(() => {
                     setLoadingText(false);
                     setLoadingText(false);
@@ -110,6 +112,7 @@ export default function ContactDesignContainer({
                 setErrorMessage("")
                 setTextModal("Error al enviar el email")
                 setIsModal(true);
+                setIsCheck(false)
                 setTimeout(() => {
                     setLoadingText(false);
                     setTextModal("");
@@ -136,5 +139,6 @@ export default function ContactDesignContainer({
         isModal={isModal}
         textModal={textModal}
         loadingText={loadingText}
+        isCheck={isCheck}
     />
 }
