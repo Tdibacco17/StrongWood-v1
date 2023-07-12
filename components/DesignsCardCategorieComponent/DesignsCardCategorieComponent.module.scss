@@ -1,7 +1,7 @@
 .container-outer-image {
-    --design-card-width: 38rem;
-    --design-card-height: 18rem;
-    --design-card-inner-height: 38rem;
+    --design-card-width: 26.5rem;
+    --design-card-height: 16rem;
+    --design-card-inner-height: 18rem;
 
     border-radius: 0.2rem;
     position: relative;
@@ -20,40 +20,46 @@
     @media (min-width: 1500px) {
         --design-card-width: 41.5vw;
         --design-card-height: 18vw;
-        --design-card-inner-height: 41.5vw;
+        --design-card-inner-height: 29vw;
+    }
+
+    @media (max-width:1432px) {
+        --design-card-width: 24.8rem;
+        --design-card-height: 16rem;
     }
 
     @media (max-width:1355px) {
         --design-card-width: 34rem;
-        --design-card-inner-height: 34rem;
+        --design-card-inner-height: 23rem;
+
     }
 
     @media (max-width:1226px) {
         --design-card-width: 30rem;
-        --design-card-inner-height: 34rem;
+        --design-card-inner-height: 21rem;
     }
 
     @media (max-width:1098px) {
         --design-card-width: 26rem;
-        --design-card-inner-height: 34rem;
+        --design-card-inner-height: 19rem;
     }
 
     @media (max-width:992px) {
         --design-card-width: var(--strong-calc-7rem);
         --design-card-height: 20rem;
-        --design-card-inner-height: 53.5rem;
+        --design-card-inner-height: 37rem;
     }
 
     @media (max-width: 768px) {
         --design-card-width: var(--strong-calc-5rem);
         --design-card-height: 18rem;
-        --design-card-inner-height: 43rem;
+        --design-card-inner-height: 30rem;
     }
 
     @media (max-width: 480px) {
         --design-card-width: var(--strong-calc-3rem);
         --design-card-height: 16rem;
-        --design-card-inner-height: 35rem;
+        --design-card-inner-height: 20rem;
     }
 
     .container-inner-image {
@@ -78,13 +84,13 @@
     }
 
     .container-overlay-image {
-        --card-overlay-image-height: calc(100% - 3.8rem);
+        --card-overlay-image-height: calc(100% - 3rem);
 
         position: absolute;
         top: var(--card-overlay-image-height);
         left: 0;
         width: 100%;
-        height: 3.8rem;
+        height: 3rem;
         background: var(--strong-bg-transparency);
 
         .title-overlay {

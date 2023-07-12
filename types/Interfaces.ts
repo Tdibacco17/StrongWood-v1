@@ -33,7 +33,7 @@ export interface DesignInterface {
     designSlug: string,
     title: string,
     image: ImgDataInterface,
-    subcategories: SubCategorieDataInterface[]
+    subcategories?: SubCategorieDataInterface[]
 }
 
 export interface SubCategorieDataInterface {

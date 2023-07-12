@@ -74,13 +74,13 @@
     }
 
     .container-overlay-image {
-        --card-overlay-image-height: calc(100% - 3.2rem);
+        --card-overlay-image-height: calc(100% - 3rem);
 
         position: absolute;
         top: var(--card-overlay-image-height);
         left: 0;
         width: 100%;
-        height: 3.2rem;
+        height: 3rem;
         background: var(--strong-bg-transparency);
 
         .title-overlay {

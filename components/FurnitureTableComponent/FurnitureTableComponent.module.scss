@@ -43,8 +43,8 @@
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
-            padding-left: 1.5rem;
-            padding-top: 0.5rem;
+            padding-left: 1rem;
+            padding-top: 1rem;
 
             .container-title-table {
                 font-family: var(--strong-font-Roboto-Bold);
@@ -73,8 +73,8 @@
             user-select: none;
             border-top: 1px solid var(--strong-bluegray-10);
 
-            gap: 1.5rem;
-            padding: 1.5rem;
+            gap: 1rem;
+            padding: 1rem;
 
             min-width: 100%;
             max-width: 100%;

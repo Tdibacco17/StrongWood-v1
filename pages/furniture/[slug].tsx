@@ -4,7 +4,7 @@ import LayoutComponent from "@/layout/LayoutComponent";
 import { useRouter } from "next/router";
 
 import { CocinaNordica } from "@/models/furniture/cocina";
-import { VanitoryNewYork } from "@/models/furniture";
+import { VanitoryNewYork } from "@/models/furniture/baño";
 import { FurnitureTableInterface } from "@/types/Interfaces";
 
 export default function FurnitureDetailPage() {

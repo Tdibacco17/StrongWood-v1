@@ -13,7 +13,7 @@ export default function DesignDetailComponent() {
         <div className={styles["container-section-subcategories"]}>
             <div className={styles["container-subcategories"]}>
                 {designData &&
-                    designData.subcategories.map((e: SubCategorieDataInterface) => {
+                    designData.subcategories?.map((e: SubCategorieDataInterface) => {
                         return (
                             <div className={styles["subcategorie"]} key={e.title}>
                                 <p className={styles["title"]}>{e.title}</p>
