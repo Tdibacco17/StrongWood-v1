@@ -55,7 +55,7 @@ export default function ContactProductComponent({
                     }
                 </div>
                 <div className={styles["container-section-form"]}>
-                    <h3 className={styles["form-title"]}>CONTACTO</h3>
+                    <p className={styles["form-title"]}>CONTACTO</p>
 
                     <form onSubmit={handleSubmitEmail} className={styles["container-form"]}>
                         <div className={styles["form-divider"]}>

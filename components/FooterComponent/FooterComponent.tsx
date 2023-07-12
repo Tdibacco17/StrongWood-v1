@@ -6,9 +6,9 @@ export default function FooterComponent() {
         <div className={styles["container-section-footer"]}>
             <div className={styles["line-divider"]} />
             <div className={styles["footer-secondary"]}>
-                <h4 className={styles["container-polices"]}>
+                <p className={styles["container-polices"]}>
                     © 2023 StrongWood - Todos los derechos reservados.
-                </h4>
+                </p>
                 <div className={styles["container-icons"]}>
                     <a
                         href="mailto:strongwoodventas@gmail.com"

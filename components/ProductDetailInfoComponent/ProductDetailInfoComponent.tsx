@@ -28,7 +28,7 @@ export default function ProductDetailInfoComponent() {
     return (
         <div className={styles["container-section-info"]}>
             <div className={styles["container-info"]}>
-                <h1 className={styles["product-title"]}>{productData?.title}</h1>
+                <p className={styles["product-title"]}>{productData?.title}</p>
                 {
                     productData?.price &&
                     <p className={styles["product-price"]}>

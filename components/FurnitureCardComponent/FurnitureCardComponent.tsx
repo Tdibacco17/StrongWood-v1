@@ -35,7 +35,7 @@ export default function FurnitureCardComponent({
                 />
             </div> */}
             <div className={styles["container-overlay-image"]}>
-                <h2 className={styles["title-overlay"]}> {CARDelement.cardTitle}</h2>
+                <p className={styles["title-overlay"]}> {CARDelement.cardTitle}</p>
             </div>
             {/* <style jsx>{`
             .${styles["container-outer-image"]} {

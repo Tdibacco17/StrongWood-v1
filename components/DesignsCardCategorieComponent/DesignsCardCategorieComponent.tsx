@@ -35,7 +35,7 @@ export default function DesignsCardCategorieComponent({
                 />
             </div>
             <div className={styles["container-overlay-image"]}>
-                <h2 className={styles["title-overlay"]}>{designCategorie.title}</h2>
+                <p className={styles["title-overlay"]}>{designCategorie.title}</p>
             </div>
         </div>
     )

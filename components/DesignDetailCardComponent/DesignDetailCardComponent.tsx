@@ -37,7 +37,7 @@ export default function DesignDetailCardComponent({ imgData }: { imgData: ImgDat
                 />
             </div>
             <div className={styles["container-overlay-image"]}>
-                <h2 className={styles["title-overlay"]}>{imgData.imgAlt}</h2>
+                <p className={styles["title-overlay"]}>{imgData.imgAlt}</p>
             </div>
         </div>
     )

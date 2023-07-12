@@ -45,7 +45,7 @@ export default function ProductsCardComponent({
                 }
             </div>
             <div className={styles["container-info-product"]}>
-                <h4 className={styles["title-product"]}>{`${product.title}`}</h4>
+                <p className={styles["title-product"]}>{`${product.title}`}</p>
                 <div className={styles["price-product"]}>
                     <p className={styles["price"]}>
                         {`$ ${product.price}`}
