@@ -11,22 +11,15 @@ export default function DesignDetailComponent() {
         DesignDetailContext
     ) as DesignDataContextInterface
 
-    if (designData === undefined) {
-        return (
-            <LayoutComponent isSlider={false} urlBack={`/design`}>
-                <BackLinkUrlComponent textData={"Esta categoria no existe"} backUrl={"/design"} />
-            </LayoutComponent>
-        )
-    }
-
-    if (!designData.subcategories) {
+    //ELIMINAR CUANDO ESTE
+    if (!designData?.subcategories) {
         return (
             <LayoutComponent isSlider={false} urlBack={`/design`}>
                 <BackLinkUrlComponent textData={"Categoria en construcción"} backUrl={"/design"} />
             </LayoutComponent>
         )
-
     }
+
     return (
         <div className={styles["container-section-subcategories"]}>
             <div className={styles["container-subcategories"]}>

@@ -39,7 +39,7 @@ export const designData: DesignDataInterface = {
         ]
     },
     "baño": {
-        designSlug: "baño",
+        designSlug: encodeURIComponent("baño"),
         title: "baño",
         image: {
             imgSlug: 1,

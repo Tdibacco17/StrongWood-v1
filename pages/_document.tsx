@@ -4,6 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <meta charSet="UTF-8" />
         <link
           href="/assets/fonts/Knucklehead.otf"
           rel="preload"
