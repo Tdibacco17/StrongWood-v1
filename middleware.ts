@@ -1,13 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export function middleware(request: NextRequest) {
-    const { pathname } = request.nextUrl;
+    const { pathname, searchParams } = new URL(request.url);
 
     if (pathname.endsWith("/furniture")) {
         return NextResponse.redirect(new URL("/design", request.url));
     }
 
-    // FALTA VALIDACION DE FURNNITURE
+    if (pathname === "/furniture/cocina" && searchParams) {
+        const itemValue = searchParams.get("item");
+
+        if (itemValue && itemValue.includes("/")) {
+            return NextResponse.redirect(new URL("/design", request.url));
+        }
+    }
 
     if (pathname.endsWith("/contact")) {
         return NextResponse.redirect(new URL("/", request.url));
@@ -45,7 +51,7 @@ export function middleware(request: NextRequest) {
             if (remainingParts.length > 0) {
                 return NextResponse.redirect(new URL("/design", request.url));
             }
-        } 
+        }
         else if (parts[0] !== "product") {
             return NextResponse.redirect(new URL("/", request.url));
         }
