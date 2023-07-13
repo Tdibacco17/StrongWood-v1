@@ -11,18 +11,18 @@ export default function ContactFurnituretPage() {
         ContactContext
     ) as ContactDataContextInterface;
 
-    if (!infoFurniture.designTitle) {
+    if (infoFurniture?.designTitle === "") {
         return (
             <LayoutComponent isSlider={false} urlBack={`design/`}>
-                <BackLinkUrlComponent backUrl={"/design"} />
+                <BackLinkUrlComponent textData={"Ocurrió algo inesperado"} backUrl={"/design"} />
             </LayoutComponent>
         )
     }
 
     return (
         <LayoutComponent isSlider={false}
-            urlBack={`furniture/${infoFurniture.designTitle}?item=${infoFurniture.designItem}`}>
-            <ContactDesignContainer slug={infoFurniture.designTitle} item={infoFurniture.designItem} />
+            urlBack={`furniture/${infoFurniture?.designTitle}?item=${infoFurniture?.designItem}`}>
+            <ContactDesignContainer slug={infoFurniture?.designTitle} item={infoFurniture?.designItem} />
         </LayoutComponent>
     )
 }

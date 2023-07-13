@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 const getProductBySlug = async (req: NextApiRequest, res: NextApiResponse) => {
     try {
         const { slug } = req.query;
-        
+
         if (!slug) {
             res.status(500).json({
                 message: "Something went wrong when querying the API",

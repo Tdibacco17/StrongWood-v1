@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import { CocinaNordica } from "@/models/furniture/cocina";
 import { VanitoryNewYork } from "@/models/furniture/baño";
 import { FurnitureTableInterface } from "@/types/Interfaces";
+import BackLinkUrlComponent from "@/components/BackLinkUrlComponent/BackLinkUrlComponent";
 
 export default function FurnitureDetailPage() {
 
@@ -13,6 +14,14 @@ export default function FurnitureDetailPage() {
     const { slug, item } = router.query;
 
     let furnitureData: FurnitureTableInterface[];
+    
+    if (!item || item === undefined) {
+        return (
+            <LayoutComponent isSlider={false} urlBack={`/design/${slug}`}>
+                <BackLinkUrlComponent textData={"Ocurrio algo inesperado"} backUrl={`/design/${slug}`} />
+            </LayoutComponent>
+        )
+    }
 
     if (slug === "cocina") {
         furnitureData = CocinaNordica;
@@ -20,7 +29,9 @@ export default function FurnitureDetailPage() {
         furnitureData = VanitoryNewYork;
     } else {
         return (
-            <></>
+            <LayoutComponent isSlider={false} urlBack={`/design`}>
+                <BackLinkUrlComponent textData={"Esta categoria no existe"} backUrl={"/design"} />
+            </LayoutComponent>
         )
     }
 

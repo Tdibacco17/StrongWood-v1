@@ -1,14 +1,32 @@
 import { DesignDetailContext } from "@/context/DesignDetailProvider"
-import { DesignDataContextInterface, ImgDataInterface, SubCategorieDataInterface } from "@/types/Interfaces"
+import { DesignDataContextInterface, SubCategorieDataInterface } from "@/types/Interfaces"
 import React, { useContext } from "react"
 import styles from "./DesignDetailComponent.module.scss"
 import DesignDetailCarouselContainer from "@/containers/DesignDetailCarouselContainer/DesignDetailCarouselContainer"
+import LayoutComponent from "@/layout/LayoutComponent"
+import BackLinkUrlComponent from "../BackLinkUrlComponent/BackLinkUrlComponent"
 
 export default function DesignDetailComponent() {
     const { designData } = useContext(
         DesignDetailContext
     ) as DesignDataContextInterface
 
+    if (designData === undefined) {
+        return (
+            <LayoutComponent isSlider={false} urlBack={`/design`}>
+                <BackLinkUrlComponent textData={"Esta categoria no existe"} backUrl={"/design"} />
+            </LayoutComponent>
+        )
+    }
+
+    if (!designData.subcategories) {
+        return (
+            <LayoutComponent isSlider={false} urlBack={`/design`}>
+                <BackLinkUrlComponent textData={"Categoria en construcción"} backUrl={"/design"} />
+            </LayoutComponent>
+        )
+
+    }
     return (
         <div className={styles["container-section-subcategories"]}>
             <div className={styles["container-subcategories"]}>
