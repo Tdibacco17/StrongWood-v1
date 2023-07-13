@@ -15,14 +15,7 @@ export default function FurnitureDetailPage() {
 
     let furnitureData: FurnitureTableInterface[];
     
-    if (!item || item === undefined) {
-        return (
-            <LayoutComponent isSlider={false} urlBack={`/design/${slug}`}>
-                <BackLinkUrlComponent textData={"Ocurrio algo inesperado"} backUrl={`/design/${slug}`} />
-            </LayoutComponent>
-        )
-    }
-
+    //VALIDAR MEJOR ESTO EN EL RUTEO
     if (slug === "cocina") {
         furnitureData = CocinaNordica;
     } else if (slug === "baño") {

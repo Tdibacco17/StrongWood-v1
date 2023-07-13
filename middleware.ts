@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { productsData } from "./models/products";
 import { designData } from "./models/design";
 
-const routes = [
+const routesFurniture = [
     "/furniture/cocina",
     "/furniture/ba%C3%B1o",
     "/furniture/obras",
@@ -11,28 +11,35 @@ const routes = [
     "/furniture/placares"
 ];
 
-//REFACTORIZAR LO MAS POSIBLE
-
-//if por un mismo lado y todo en bucles?
+const fornitureItem = [
+    "serie-nordica", "serie-new-york", "serie-premium",
+    "vanitory-new-york", "vanitory-escandinavo", "vanitory-nordico"
+];
 
 export function middleware(request: NextRequest) {
     const { pathname, searchParams } = new URL(request.url);
+    // Verificar si la ruta tiene algo después de "/"
 
+    //furniture
     if (pathname.endsWith("/furniture")) {
         return NextResponse.redirect(new URL("/design", request.url));
     }
-    //furniture
-    for (const route of routes) {
+
+    for (const route of routesFurniture) {
         if (pathname === route && searchParams) {
             const itemValue = searchParams.get("item");
 
             if (itemValue && itemValue.includes("/")) {
                 return NextResponse.redirect(new URL("/design", request.url));
             }
+            // Validar si el item existe en la lista fornitureItem
+            if (itemValue && !fornitureItem.includes(itemValue)) {
+                return NextResponse.redirect(new URL("/design", request.url));
+            }
         }
     }
-    //furniture
-    for (const route of routes) {
+
+    for (const route of routesFurniture) {
         if (pathname.startsWith(route + "/")) {
             const remainingPath = pathname.replace("/furniture/", "");
             const slug = remainingPath.split("/")[0];
@@ -55,6 +62,7 @@ export function middleware(request: NextRequest) {
         }
     }
 
+    //products
     if (pathname.startsWith("/products/")) {
         const remainingPath = pathname.replace("/products/", "");
         const slug = remainingPath.split("/")[0];
@@ -73,6 +81,7 @@ export function middleware(request: NextRequest) {
         }
     }
 
+    //design
     if (pathname.startsWith("/design/")) {
         const remainingPath = pathname.replace("/design/", "");
         const slug = decodeURIComponent(remainingPath);
@@ -82,6 +91,7 @@ export function middleware(request: NextRequest) {
         }
     }
 
+    //contact
     if (pathname.endsWith("/contact")) {
         return NextResponse.redirect(new URL("/", request.url));
     }
@@ -115,5 +125,5 @@ export function middleware(request: NextRequest) {
         }
     }
 
-    return;
+    return NextResponse.next();
 }
