@@ -35,10 +35,10 @@ export default function CardComponent({
                     style={{ opacity: imageLoaded ? "1" : "0" }}
                 />
             </div>
-            <div className={styles["container-overlay-image"]}>
+            {imageLoaded && <div className={styles["container-overlay-image"]}>
                 <p className={styles["title-overlay"]}>{`${title ? title : ""}`}</p>
                 <p className={styles["subtitle-overlay"]}>{`${subtitle ? subtitle : ""}`}</p>
-            </div>
+            </div>}
         </div>
     )
 }

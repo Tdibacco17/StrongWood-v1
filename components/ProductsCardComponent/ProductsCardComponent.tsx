@@ -30,13 +30,13 @@ export default function ProductsCardComponent({
                         src={`${product.image.imgSrc}`}
                         alt={`${product.image.imgAlt}`}
                         fill
-                        loading="lazy"
+                        loading="eager"
                         onLoadingComplete={() => { setImageLoaded(true) }}
                         style={{ opacity: imageLoaded ? "1" : "0" }}
                     />
                 </div>
                 {
-                    product.offerPrice &&
+                    product.offerPrice && imageLoaded &&
                     <div className={styles["container-offer-percentage"]}>
                         <p className={styles["percentage"]}>
                             {`${product.offerPercentage} %`}
@@ -45,21 +45,21 @@ export default function ProductsCardComponent({
                 }
             </div>
             <div className={styles["container-info-product"]}>
-                <p className={styles["title-product"]}>{`${product.title}`}</p>
-                <div className={styles["price-product"]}>
+                {imageLoaded && <p className={styles["title-product"]}>{`${product.title}`}</p>}
+                {imageLoaded && <div className={styles["price-product"]}>
                     <p className={styles["price"]}>
                         {`$ ${product.price}`}
                     </p>
                     <p className={styles["offer"]}>
                         {`${product.offerPrice ? "$ " + product.offerPrice : ""}`}
                     </p>
-                </div>
+                </div>}
             </div>
-            <style jsx>{`
+            {/* <style jsx>{`
                 .${styles["container-section-product-card"]} {
                     --price-line-through: ${product.offerPrice ? "line-through" : "none"};
                 }
-            `}</style>
+            `}</style> */}
         </div>
     )
 }

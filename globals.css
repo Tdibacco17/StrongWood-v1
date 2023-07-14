@@ -15,7 +15,7 @@
   --strong-font-xxmedium: 1.2rem;
   --strong-font-xxxmedium: 1.4rem;
 
-  --strong-font-small: 0.7rem;
+  --strong-font-small: 0.75rem;
   --strong-font-xsmall: 0.8rem;
   --strong-font-xxsmall: 0.9rem;
 
@@ -107,7 +107,7 @@ body {
 
 body {
   margin: 0;
-  margin-bottom: 6rem;
+  margin-bottom: 6.5rem;
   /* footer height 6rem (padding + gap) - 2.5padding top para igualar el gap de lahome*/
 
   font-family: var(--strong-font-Roboto-Regular);
@@ -170,7 +170,7 @@ a {
     --strong-font-xxmedium: 1.1rem;
     --strong-font-xxxmedium: 1.3rem;
 
-    --strong-font-small: 0.65rem;
+    --strong-font-small: 0.75rem;
     --strong-font-xsmall: 0.75rem;
     --strong-font-xxsmall: 0.85rem;
   }
@@ -189,8 +189,8 @@ a {
     --strong-font-xxmedium: 1rem;
     --strong-font-xxxmedium: 1.2rem;
 
-    --strong-font-small: 0.6rem;
-    --strong-font-xsmall: 0.7rem;
+    --strong-font-small: 0.75rem;
+    --strong-font-xsmall: 0.75rem;
     --strong-font-xxsmall: 0.8rem;
   }
 }

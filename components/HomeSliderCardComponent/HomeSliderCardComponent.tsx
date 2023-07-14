@@ -5,12 +5,14 @@ import { useState } from "react";
 export default function HomeSliderCardComponent({
     imgSrc,
     imgAlt,
+    imageLoaded,
+    setImageLoaded
 }: {
     imgSrc: string;
     imgAlt: string;
+    imageLoaded: boolean;
+    setImageLoaded: (value: boolean) => void
 }) {
-
-    const [imageLoaded, setImageLoaded] = useState(false);
 
     return (
         <div className={styles["container-outer-image"]} >

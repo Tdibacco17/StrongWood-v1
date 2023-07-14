@@ -18,7 +18,6 @@
 
     overflow: hidden;
     cursor: pointer;
-
     @media (min-width: 1500px) {
         --design-card-width: 41.5vw;
         --design-card-height: 18vw;
@@ -51,6 +50,7 @@
         --design-card-height: 20rem;
         --design-card-inner-height: 37rem;
     }
+
 
     @media (max-width: 768px) {
         --design-card-width: var(--strong-calc-5rem);

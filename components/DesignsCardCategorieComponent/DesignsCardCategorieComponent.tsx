@@ -29,14 +29,14 @@ export default function DesignsCardCategorieComponent({
                     src={`${designCategorie.image.imgSrc}`}
                     alt={`${designCategorie.image.imgAlt}`}
                     fill
-                    loading="lazy"
+                    loading="eager"
                     onLoadingComplete={() => { setImageLoaded(true) }}
                     style={{ opacity: imageLoaded ? "1" : "0" }}
                 />
             </div>
-            <div className={styles["container-overlay-image"]}>
+            {imageLoaded && <div className={styles["container-overlay-image"]}>
                 <p className={styles["title-overlay"]}>{designCategorie.title}</p>
-            </div>
+            </div>}
         </div>
     )
 }

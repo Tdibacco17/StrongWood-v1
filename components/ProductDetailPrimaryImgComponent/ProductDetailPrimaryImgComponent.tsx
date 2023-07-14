@@ -35,7 +35,6 @@ export default function ProductDetailPrimaryImgComponent({
                     }
                 </>
             ) : (
-
                 <div className={styles["container-inner-placeholder"]}>
                     Cargando...
                 </div>

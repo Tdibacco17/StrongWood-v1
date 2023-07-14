@@ -173,7 +173,7 @@
             color: var(--strong-bluegray-1);
 
             .price {
-                text-decoration: var(--price-line-through);
+                text-decoration: line-through; //var(--price-line-through);
                 font-family: var(--strong-font-Roboto-Regular);
                 font-size: var(--strong-font-xxsmall);
                 font-weight: var(--strong-weight-400);

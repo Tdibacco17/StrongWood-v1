@@ -16,6 +16,12 @@ const fornitureItem = [
     "vanitory-new-york", "vanitory-escandinavo", "vanitory-nordico"
 ];
 
+const routesProducts = [
+    "mesa-de-luz-roma", "mesa-cracovia", "mesa-ratona-edimburgo", "maceta-sintra", "maceta-avi%C3%B1on", "estanteria-siena", "estanteria-avila", 
+    "estanteria-bath", "estanteria-bergen", "llavero-corfu", "llavero-viena", "le%C3%B1ero", "rack-tv-cordoba", "toallero-matera", "toallero-cuenca",
+    "bodega-segovia", "porta-copas", "porta-vinos", "escritorio-brujas", "perchero-oporto", "recibidor-salamanca", "tabla-asado", "soporte-auricular",
+];
+
 export function middleware(request: NextRequest) {
     const { pathname, searchParams } = new URL(request.url);
     // Verificar si la ruta tiene algo después de "/"
@@ -74,7 +80,7 @@ export function middleware(request: NextRequest) {
 
     if (pathname.startsWith("/products/")) {
         const productSlug = pathname.replace("/products/", "");
-        const productExists = productsData.hasOwnProperty(productSlug);
+        const productExists = routesProducts.includes(productSlug);
 
         if (!productExists) {
             return NextResponse.redirect(new URL("/products", request.url));
