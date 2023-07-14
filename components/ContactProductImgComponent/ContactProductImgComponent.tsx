@@ -23,6 +23,7 @@ export default function ContactProductImgComponent({ imgSrc, imgAlt }: { imgSrc:
                     priority
                     onLoadingComplete={() => { setImageLoaded(true) }}
                     style={{ opacity: imageLoaded ? "1" : "0" }}
+                    sizes="(max-width: 480px) 5rem, (max-width: 768px) 7rem, (max-width: 992px) 30em, (max-width: 1150px) 24rem, 26rem"
                 />
             </div>
         </div>

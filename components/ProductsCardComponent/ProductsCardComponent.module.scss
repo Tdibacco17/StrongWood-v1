@@ -1,5 +1,5 @@
 .container-section-product-card {
-    --card-product-image: 19vw; //tamaño card
+    --card-product-image: 19.5vw; //tamaño card
 
     --card-product-section-info: 5rem;
 
@@ -136,7 +136,7 @@
         align-items: center;
         gap: 0.8rem;
 
-        padding: 0.5rem;
+        padding: 0.4rem;
 
         @media (max-width: 768px) {
             gap: 1.5rem;
@@ -157,12 +157,16 @@
 
             color: var(--strong-bluegray-1);
 
+            @media (max-width: 1070px) {
+                font-size: 0.9rem;
+            }
+
             @media (max-width: 768px) {
                 font-size: var(--strong-font-large);
             }
 
             @media (max-width: 480px) {
-                font-size: var(--strong-font-xxxmedium);
+                font-size: var(--strong-font-xxmedium);
             }
         }
 

@@ -33,6 +33,7 @@ export default function ProductsCardComponent({
                         loading="eager"
                         onLoadingComplete={() => { setImageLoaded(true) }}
                         style={{ opacity: imageLoaded ? "1" : "0" }}
+                        sizes="(max-width: 768px) 100vw, var(--card-product-image)"
                     />
                 </div>
                 {

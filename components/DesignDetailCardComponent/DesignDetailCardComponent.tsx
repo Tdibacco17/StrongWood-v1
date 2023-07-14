@@ -34,6 +34,7 @@ export default function DesignDetailCardComponent({ imgData }: { imgData: ImgDat
                     loading="lazy"
                     onLoadingComplete={() => { setImageLoaded(true) }}
                     style={{ opacity: imageLoaded ? "1" : "0" }}
+                    sizes="(max-width: 768px) 100vw, var(--design-card-image-proportion)"
                 />
             </div>
             <div className={styles["container-overlay-image"]}>

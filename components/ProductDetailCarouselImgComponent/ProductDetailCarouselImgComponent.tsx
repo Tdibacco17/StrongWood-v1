@@ -31,6 +31,7 @@ export default function ProductDetailCarouselImgComponent({
                     loading="lazy"
                     onLoadingComplete={() => { setImageLoaded(true) }}
                     style={{ opacity: imageLoaded ? "1" : "0" }}
+                    sizes="var(--card-carrousel-image-width)"
                 />
             </div>
         </div>

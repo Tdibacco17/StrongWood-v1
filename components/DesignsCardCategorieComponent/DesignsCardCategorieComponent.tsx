@@ -32,6 +32,7 @@ export default function DesignsCardCategorieComponent({
                     loading="eager"
                     onLoadingComplete={() => { setImageLoaded(true) }}
                     style={{ opacity: imageLoaded ? "1" : "0" }}
+                    sizes="(max-width: 768px) 100vw, var(--design-card-image-proportion)"
                 />
             </div>
             {imageLoaded && <div className={styles["container-overlay-image"]}>

@@ -23,6 +23,7 @@ export default function ProductDetailPrimaryImgComponent({
                             alt={activeImage?.imgAlt}
                             fill
                             priority
+                            sizes="(max-width: 768px) var(--card-details-image-mobile), var(--card-details-image-width)"
                         />
                     </div>
                     {
