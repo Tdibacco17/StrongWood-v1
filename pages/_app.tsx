@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta httpEquiv="Cache-Control" content="public" />
         <link rel="icon" href="/favicon.ico" />
         <meta charSet="UTF-8" />
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#000000" />
         <meta name="keywords" content="StroongWood, Strong, Wood" />
 
         <link

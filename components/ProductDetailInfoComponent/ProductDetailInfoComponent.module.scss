@@ -70,6 +70,16 @@
             .info-price {
                 font-family: var(--strong-font-Roboto-Bold);
                 font-weight: var(--strong-weight-700);
+                text-decoration: line-through;
+                color: var(--strong-bluegray-5);
+                
+                @media (max-width: 768px) {
+                    font-size: var(--strong-font-large);
+                }
+                
+                @media (max-width: 480px) {
+                    font-size: var(--strong-font-xxmedium);
+                }
             }
 
             .info-offerPrice {
@@ -110,7 +120,7 @@
         @media (max-width: 350px) {
             align-items: flex-start;
         }
-    
+
 
         .button-method {
             display: flex;
@@ -142,6 +152,7 @@
                 color: var(--strong-bluegray-1);
                 cursor: pointer;
                 max-width: 12rem;
+                min-width: 12rem;
                 transition: background-color 0.25s ease-in-out;
 
                 &:hover {

@@ -88,7 +88,7 @@ export default function ProductDetailInfoComponent() {
                     </div>
                 }
             </div>
-            <style jsx>
+            {/* <style jsx>
                 {`
                 .${styles["product-price"]} .${styles["info-price"]} {
                     ${productData?.offerPrice ?
@@ -106,7 +106,7 @@ export default function ProductDetailInfoComponent() {
                         }`}    
                     }
                 `}
-            </style>
+            </style> */}
         </div >
     )
 }
