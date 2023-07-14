@@ -31,7 +31,7 @@ export default function HomeSliderCardComponent({
                     priority
                     onLoadingComplete={() => { setImageLoaded(true) }}
                     style={{ opacity: imageLoaded ? "1" : "0" }}
-                    // sizes="(max-width: 1300px) 100vw, var(--banner-image-outer-width)"
+                    sizes="(max-width: 1300px) 100vw, var(--banner-image-outer-width)"
                 />
             </div>
             {/* <div className={styles["container-overlay-image"]} /> */}
