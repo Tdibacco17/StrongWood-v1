@@ -3,6 +3,7 @@ import { ImgDataInterface } from "@/types/Interfaces";
 
 import DesignDetailCardComponent from "../DesignDetailCardComponent/DesignDetailCardComponent";
 import Image from "next/image";
+import useHorizontalScroll from "@/utils/scroll/useHorizontalScroll";
 
 export default function DesignDetailCarouselComponent({
     imagesData,
@@ -16,9 +17,11 @@ export default function DesignDetailCarouselComponent({
     handleScrollRight: () => void;
 }) {
 
+    const scrollRef = useHorizontalScroll();
+
     return (
         <div className={styles["container-section-carousel-subcategories"]} >
-            <div className={styles["carousel-subcategories"]} ref={carouselRef}>
+            <div className={styles["carousel-subcategories"]} ref={scrollRef}>
                 {
                     imagesData && imagesData.map((imgData: ImgDataInterface) => {
                         return (

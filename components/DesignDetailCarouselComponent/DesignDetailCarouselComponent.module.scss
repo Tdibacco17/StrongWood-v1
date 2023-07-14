@@ -50,11 +50,16 @@
         }
 
         @media (max-width:768px) {
+            display: inline-flex; 
+            overflow-y: hidden;
             overflow-x: scroll;
-            gap: revert;
-            padding: revert;
+            min-width: 100vw;
+            max-width: 100vw;
+            scroll-snap-type: x mandatory;
+            scroll-padding: 0 1rem;
         }
     }
+
 
     .buttons-subcategories {
         position: absolute;
@@ -94,6 +99,10 @@
             &:hover {
                 background: var(--strong-bluegray-4);
                 transition: background-color 0.25s ease;
+            }
+
+            @media (max-width:768px) {
+                display: none;
             }
         }
     }

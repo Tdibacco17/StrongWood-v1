@@ -34,8 +34,8 @@
     }
 
     @media (max-width:768px) {
-        --design-card-width: var(--strong-calc-5rem);
-        --design-card-inner-height: 29rem;
+        --design-card-width: 26rem;
+        --design-card-inner-height: 18rem;
     }
 
     @media (max-width: 626px) {
@@ -68,7 +68,7 @@
         font-size: var(--strong-font-xxxsmall);
         font-weight: var(--strong-weight-400);
         color: var(--strong-bluegray-1);
-        
+
         min-height: var(--design-card-height);
         max-height: var(--design-card-height);
         min-width: var(--design-card-width);
