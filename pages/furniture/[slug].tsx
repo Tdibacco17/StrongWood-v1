@@ -3,8 +3,10 @@ import FurnitureContainer from "@/containers/FurnitureContainer/FurnitureContain
 import LayoutComponent from "@/layout/LayoutComponent";
 import { useRouter } from "next/router";
 
-import { CocinaNordica } from "@/models/furniture/cocina";
-import { VanitoryNewYork } from "@/models/furniture/baño";
+import { furnitureCocina } from "@/models/furniture/cocina";
+import { furnitureBaño } from "@/models/furniture/baño";
+import { furniturePlacares } from "@/models/furniture/placar"
+import { dormitorioCama, dormitorioComoda, dormitorioMezaDeLuz } from "@/models/furniture/dormitorio"
 import { FurnitureTableInterface } from "@/types/Interfaces";
 import BackLinkUrlComponent from "@/components/BackLinkUrlComponent/BackLinkUrlComponent";
 
@@ -14,12 +16,22 @@ export default function FurnitureDetailPage() {
     const { slug, item } = router.query;
 
     let furnitureData: FurnitureTableInterface[];
-    
+
     //VALIDAR MEJOR ESTO EN EL RUTEO
     if (slug === "cocina") {
-        furnitureData = CocinaNordica;
+        furnitureData = furnitureCocina;
     } else if (slug === "baño") {
-        furnitureData = VanitoryNewYork;
+        furnitureData = furnitureBaño;
+    } else if (slug === "placares") {
+        furnitureData = furniturePlacares
+    } else if (slug === "dormitorio") {
+        if (item === ("cama-1" || "cama-2" || "cama-3")) {
+            furnitureData = dormitorioCama
+        } else if (item === ("mesa-de-luz-1" || "mesa-de-luz-2")) {
+            furnitureData = dormitorioMezaDeLuz
+        } else {
+            furnitureData = dormitorioComoda
+        }
     } else {
         return (
             <LayoutComponent isSlider={false} urlBack={`/design`}>

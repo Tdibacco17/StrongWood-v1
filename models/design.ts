@@ -135,87 +135,68 @@ export const designData: DesignDataInterface = {
             imgProportionsX: 1.5024,
             imgProportionsY: 0.6651,
         },
-        // subcategories: [
-        //     {
-        //         title: "Cama",
-        //         images: [
-        //             {
-        //                 imgSlug: 1,
-        //                 imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-        //                 imgAlt: "Cama",
-        //                 imgProportionsX: 1,
-        //                 imgProportionsY: 1
-        //             }, {
-        //                 imgSlug: 2,
-        //                 imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-        //                 imgAlt: "Cama",
-        //                 imgProportionsX: 1,
-        //                 imgProportionsY: 1
-        //             }, {
-        //                 imgSlug: 3,
-        //                 imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-        //                 imgAlt: "Cama",
-        //                 imgProportionsX: 1,
-        //                 imgProportionsY: 1
-        //             },
-        //         ]
-        //     }, {
-        //         title: "Mesa de Luz",
-        //         images: [
-        //             {
-        //                 imgSlug: 1,
-        //                 imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-        //                 imgAlt: "Mesa de Luz",
-        //                 imgProportionsX: 1,
-        //                 imgProportionsY: 1
-        //             },
-        //             {
-        //                 imgSlug: 2,
-        //                 imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-        //                 imgAlt: "Mesa de Luz",
-        //                 imgProportionsX: 1,
-        //                 imgProportionsY: 1
-        //             },
-        //         ]
-        //     }, {
-        //         title: "Escritorio",
-        //         images: [
-        //             {
-        //                 imgSlug: 1,
-        //                 imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-        //                 imgAlt: "Escritorio",
-        //                 imgProportionsX: 1,
-        //                 imgProportionsY: 1
-        //             },
-        //             {
-        //                 imgSlug: 2,
-        //                 imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-        //                 imgAlt: "Escritorio",
-        //                 imgProportionsX: 1,
-        //                 imgProportionsY: 1
-        //             },
-        //         ]
-        //     },
-        //     {
-        //         title: "Estanteria",
-        //         images: [
-        //             {
-        //                 imgSlug: 1,
-        //                 imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-        //                 imgAlt: "Estanteria",
-        //                 imgProportionsX: 1,
-        //                 imgProportionsY: 1
-        //             },
-        //             {
-        //                 imgSlug: 2,
-        //                 imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-        //                 imgAlt: "Estanteria",
-        //                 imgProportionsX: 1,
-        //                 imgProportionsY: 1
-        //             },
-        //         ]
-        //     }
-        // ]
+        subcategories: [
+            {
+                title: "Cama",
+                images: [
+                    {
+                        imgSlug: "cama-1",
+                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
+                        imgAlt: "Cama1",
+                        imgProportionsX: 1,
+                        imgProportionsY: 1
+                    }, {
+                        imgSlug: "cama-2",
+                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
+                        imgAlt: "Cama2",
+                        imgProportionsX: 1,
+                        imgProportionsY: 1
+                    }, {
+                        imgSlug: "cama-3",
+                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
+                        imgAlt: "Cama3",
+                        imgProportionsX: 1,
+                        imgProportionsY: 1
+                    },
+                ]
+            }, {
+                title: "Mesa de Luz",
+                images: [
+                    {
+                        imgSlug: "mesa-de-luz-1",
+                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
+                        imgAlt: "Mesa de Luz",
+                        imgProportionsX: 1,
+                        imgProportionsY: 1
+                    },
+                    {
+                        imgSlug: "mesa-de-luz-2",
+                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
+                        imgAlt: "Mesa de Luz",
+                        imgProportionsX: 1,
+                        imgProportionsY: 1
+                    },
+                ]
+            }, {
+                title: "Comoda",
+                images: [
+                    {
+                        imgSlug: "comoda-1",
+                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
+                        imgAlt: "Escritorio",
+                        imgProportionsX: 1,
+                        imgProportionsY: 1
+                    },
+                    {
+                        imgSlug: "comoda-2",
+                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
+                        imgAlt: "Escritorio",
+                        imgProportionsX: 1,
+                        imgProportionsY: 1
+                    },
+                ]
+            }
+        ]
     },
     "oficina-e-industria": {
         designSlug: "oficina-e-industria",
@@ -259,44 +240,44 @@ export const designData: DesignDataInterface = {
             imgProportionsX: 1.5024,
             imgProportionsY: 0.6651,
         },
-        // subcategories: [
-        //     {
-        //         title: "Vestidores",
-        //         images: [
-        //             {
-        //                 imgSlug: 1,
-        //                 imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-        //                 imgAlt: "Vestidores",
-        //                 imgProportionsX: 1,
-        //                 imgProportionsY: 1
-        //             },
-        //             {
-        //                 imgSlug: 2,
-        //                 imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-        //                 imgAlt: "Vestidores",
-        //                 imgProportionsX: 1,
-        //                 imgProportionsY: 1
-        //             },
-        //         ]
-        //     }, {
-        //         title: "Placard",
-        //         images: [
-        //             {
-        //                 imgSlug: 1,
-        //                 imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-        //                 imgAlt: "Placard",
-        //                 imgProportionsX: 1,
-        //                 imgProportionsY: 1
-        //             },
-        //             {
-        //                 imgSlug: 2,
-        //                 imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-        //                 imgAlt: "Placard",
-        //                 imgProportionsX: 1,
-        //                 imgProportionsY: 1
-        //             },
-        //         ]
-        //     }
-        // ]
+        subcategories: [
+            {
+                title: "Vestidores",
+                images: [
+                    {
+                        imgSlug: "vestidor-1",
+                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
+                        imgAlt: "Vestidores1",
+                        imgProportionsX: 1,
+                        imgProportionsY: 1
+                    },
+                    {
+                        imgSlug: "vestidor-2",
+                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
+                        imgAlt: "Vestidores2",
+                        imgProportionsX: 1,
+                        imgProportionsY: 1
+                    },
+                ]
+            }, {
+                title: "Placar",
+                images: [
+                    {
+                        imgSlug: "placar-1",
+                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
+                        imgAlt: "Placar1",
+                        imgProportionsX: 1,
+                        imgProportionsY: 1
+                    },
+                    {
+                        imgSlug: "placar-2",
+                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
+                        imgAlt: "Placar2",
+                        imgProportionsX: 1,
+                        imgProportionsY: 1
+                    },
+                ]
+            }
+        ]
     },
 }

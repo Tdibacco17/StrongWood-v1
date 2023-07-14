@@ -1,6 +1,6 @@
 import { FurnitureTableInterface } from "@/types/Interfaces";
 
-export const VanitoryNewYork: FurnitureTableInterface[] = [
+export const furnitureBaño: FurnitureTableInterface[] = [
     {
         tableId: 1,
         tableTitle: "Color",

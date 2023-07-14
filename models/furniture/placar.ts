@@ -1,6 +1,6 @@
 import { FurnitureTableInterface } from "@/types/Interfaces";
 
-export const furnitureCocina: FurnitureTableInterface[] = [
+export const furniturePlacares: FurnitureTableInterface[] = [
     {
         tableId: 1,
         tableTitle: "Combinación de colores",
@@ -21,35 +21,40 @@ export const furnitureCocina: FurnitureTableInterface[] = [
         maxSelections: 1,
         cards: [
             { cardId: 1, cardTitle: "Estandar" },
-            { cardId: 2, cardTitle: "Medium" },
             { cardId: 3, cardTitle: "Premium" },
         ],
     }, {
         tableId: 3,
-        tableTitle: "Combinación",
-        maxSelections: 9,
+        tableTitle: "Incluirr",
+        maxSelections: 7,
         cards: [
-            { cardId: 1, cardTitle: "Cajonera" },
-            { cardId: 2, cardTitle: "Tacho" },
-            { cardId: 3, cardTitle: "Puerta" },
-            { cardId: 4, cardTitle: "Carro especiero" },
-            { cardId: 5, cardTitle: "Carro esquinero" },
-            { cardId: 6, cardTitle: "Torre de heladera" },
-            { cardId: 7, cardTitle: "Torre de horno + microondas" },
-            { cardId: 8, cardTitle: "Mesada de madera maciza" },
-            { cardId: 9, cardTitle: "Luces led" },
+            { cardId: 1, cardTitle: "Pantalonero" },
+            { cardId: 2, cardTitle: "Zapatero" },
+            { cardId: 3, cardTitle: "Luces led" },
+            { cardId: 4, cardTitle: "Barral para perchas" },
+            { cardId: 5, cardTitle: "Puertas aluminio" },
+            { cardId: 6, cardTitle: "Puertas corredizas" },
+            { cardId: 7, cardTitle: "Sin puerta" },
         ],
-    }, {
+    },{
         tableId: 4,
         tableTitle: "Distribución",
-        maxSelections: 2,
+        maxSelections: 7,
         cards: [
             { cardId: 1, cardTitle: "En L" },
             { cardId: 2, cardTitle: "En U" },
-            { cardId: 3, cardTitle: "En G" },
-            { cardId: 4, cardTitle: "Lineal" },
-            { cardId: 5, cardTitle: "En paralelo" },
-            { cardId: 6, cardTitle: "Con isla" },
+            { cardId: 3, cardTitle: "Lineal" },
+            { cardId: 4, cardTitle: "En paralelo" },
+        ],
+    }, {
+        tableId: 5,
+        tableTitle: "Medidas (ancho x largo x profundidad)",
+        maxSelections: 1,
+        cards: [
+            { cardId: 1, cardTitle: "45cm x 60cm x 40cm" },
+            { cardId: 2, cardTitle: "45cm x 60cm x 40cm" },
+            { cardId: 3, cardTitle: "45cm x 60cm x 40cm" },
+            { cardId: 4, cardTitle: "45cm x 60cm x 40cm" },
         ],
     }
 ]
