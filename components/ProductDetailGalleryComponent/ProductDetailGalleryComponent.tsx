@@ -1,11 +1,10 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import ProductDetailPrimaryImgComponent from "../ProductDetailPrimaryImgComponent/ProductDetailPrimaryImgComponent"
 import { ProductDetailContext } from "@/context/ProductDetailProvider";
 import { ImgDataInterface, ProductsDataContextInterface } from "@/types/Interfaces";
 import styles from "./ProductDetailGalleryComponent.module.scss"
 import ProductDetailCarouselImgComponent from "../ProductDetailCarouselImgComponent/ProductDetailCarouselImgComponent";
 import Image from "next/image";
-import useHorizontalScroll from "@/utils/scroll/useHorizontalScroll";
 
 export default function ProductDetailGalleryComponent({
     width,
@@ -30,14 +29,12 @@ export default function ProductDetailGalleryComponent({
         ProductDetailContext
     ) as ProductsDataContextInterface;
 
-    const scrollRef = useHorizontalScroll();
 
-    console.log(width)
     return (
         <div className={styles['container-section-gallery']}>
             <ProductDetailPrimaryImgComponent activeImage={activeImage} />
             <div className={styles['container-section-carousel']}>
-                <div className={styles['carousel']} ref={width <= 442 ? scrollRef : carouselRef}>
+                <div className={styles['carousel']} ref={carouselRef}>
                     {productData &&
                         Object.keys(productData).length > 0 &&
                         productData?.detail?.images?.map((image, index) => {
