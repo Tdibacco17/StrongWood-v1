@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { designData } from "./models/design";
 
 const routesFurniture = [
     "/furniture/cocina",
@@ -9,6 +8,11 @@ const routesFurniture = [
     "/furniture/oficina-e-industria",
     "/furniture/placares"
 ];
+
+const routesDesign = [
+    "cocina", "ba%C3%B1o", "obras",
+    "dormitorio", "oficina-e-industria", "placares"
+]
 
 const fornitureItem = [
     "serie-nordica", "serie-new-york", "serie-premium",
@@ -65,9 +69,9 @@ export function middleware(request: NextRequest) {
         const remainingPath = pathname.replace("/furniture/", "");
         const slug = remainingPath.split("/")[0];
         const encodedSlug = encodeURIComponent(slug);
-
+    
         if (encodedSlug.length > 0 && slug !== "ba%C3%B1o") {
-            if (!designData.hasOwnProperty(encodedSlug)) {
+            if (!routesDesign.includes(encodedSlug)) {
                 return NextResponse.redirect(new URL("/design", request.url));
             }
         }
@@ -96,8 +100,8 @@ export function middleware(request: NextRequest) {
     if (pathname.startsWith("/design/")) {
         const remainingPath = pathname.replace("/design/", "");
         const slug = decodeURIComponent(remainingPath);
-
-        if (!(slug in designData)) {
+    
+        if (!routesDesign.includes(slug)) {
             return NextResponse.redirect(new URL("/design", request.url));
         }
     }
