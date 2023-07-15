@@ -107,7 +107,8 @@ export interface ContactProductDataInterface {
     email: string,
     direction: string,
     product: string
-    payment: string
+    paymentMethod: string,
+    price: string
 }
 
 // contact desing

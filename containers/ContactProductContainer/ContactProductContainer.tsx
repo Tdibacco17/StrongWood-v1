@@ -6,15 +6,17 @@ import { useContext, useEffect, useRef, useState } from "react";
 
 export default function ContactProductContainer({
     slug,
-    pay
+    pay,
+    productPrice
 }: {
     slug: string | undefined,
-    pay: string | undefined
+    pay: string | undefined,
+    productPrice: string
 }) {
 
     const router = useRouter();
 
-    const { handleProductDataChange } = useContext(
+    const { handleProductDataChange, productData } = useContext(
         ProductDetailContext
     ) as ProductsDataContextInterface;
 
@@ -100,9 +102,14 @@ export default function ContactProductContainer({
             phone: phoneRef.current?.value || "No se paso un telefono",
             email: emailRef.current?.value || "No se paso un email",
             direction: directiongeRef.current?.value || "No se paso una dirección",
-            product: slug || "No se paso un producto",
-            payment: selectedPayment !== "" ? selectedPayment : (pay || "No se pasó un método de pago"),
+            product: productData?.title || "No se paso un producto",
+            paymentMethod: selectedPayment !== "" ? selectedPayment : (pay || "No se pasó un método de pago"),
+            price: selectedPayment !== "" ?
+                (selectedPayment === "Efectivo" ? productData?.detail?.payment?.cash.offerPrice ?? ""
+                    : productData?.detail?.payment?.card.offerPrice ?? ""
+                ) : productPrice
         };
+        
         try {
             const response = await fetch("/api/contact/product", {
                 method: "POST",

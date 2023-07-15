@@ -2,9 +2,9 @@ import { ContactDataContextInterface } from "@/types/Interfaces";
 import { ReactNode, createContext, useEffect, useState } from "react";
 
 interface ProductProps {
-    productTitle: string,
+    productSlug: string,
     paymentMethod: string,
-    data?: any
+    productPrice: string,
 }
 
 interface DesignProps {
@@ -13,14 +13,14 @@ interface DesignProps {
     data?: any
 }
 
-
 export const ContactContext = createContext<ContactDataContextInterface | {}>({});
 
 export const ContactProvider = ({ children, }: { children: ReactNode; }) => {
 
     const [infoProduct, setInfoProduct] = useState<ProductProps>({
-        productTitle: "",
-        paymentMethod: ""
+        productSlug: "",
+        paymentMethod: "",
+        productPrice: ""
     });
 
     const [infoFurniture, setInfoFurniture] = useState<DesignProps>({

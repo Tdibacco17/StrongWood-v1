@@ -12,7 +12,7 @@ export default function ContactProductPage() {
         ContactContext
     ) as ContactDataContextInterface;
 
-    if (infoProduct?.productTitle === "") {
+    if (infoProduct?.productSlug === "") {
         return (
             <LayoutComponent isSlider={false} urlBack={`products/`}>
                 <BackLinkUrlComponent textData={"Ocurrió algo inesperado"} backUrl={"/products"} />
@@ -22,7 +22,11 @@ export default function ContactProductPage() {
     return (
         <LayoutComponent isSlider={false} urlBack={`products/${infoProduct?.productTitle}`}>
             <ProductDetailProvider>
-                <ContactProductContainer slug={infoProduct?.productTitle} pay={infoProduct?.paymenMethod} />
+                <ContactProductContainer
+                    slug={infoProduct?.productSlug}
+                    pay={infoProduct?.paymenMethod}
+                    productPrice={infoProduct?.productPrice}
+                />
             </ProductDetailProvider>
         </LayoutComponent>
     )

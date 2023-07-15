@@ -17,10 +17,11 @@ export default function ProductDetailInfoComponent() {
 
     const router = useRouter();
 
-    const handleContactInfo = (productTitle: string, paymethod: string) => {
+    const handleContactInfo = ({ productSlug, paymethod, productPrice }: { productSlug: string, paymethod: string, productPrice: string }) => {
         setInfoProduct({
-            productTitle: productTitle,
-            paymenMethod: paymethod
+            productSlug: productSlug,
+            paymenMethod: paymethod,
+            productPrice: productPrice
         })
         router.push("/contact/product");
     }
@@ -52,7 +53,11 @@ export default function ProductDetailInfoComponent() {
                     <div className={styles["button-method"]}>
                         <p className={styles["title"]}>Abonando en Efectivo</p>
                         <button
-                            onClick={() => handleContactInfo(productData?.productSlug, "Efectivo")}
+                            onClick={() => handleContactInfo({
+                                productSlug: productData?.productSlug,
+                                paymethod: "Efectivo",
+                                productPrice: `$ ${productData?.detail?.payment?.cash.offerPrice}`
+                            })}
                             className={styles["button"]}>
                             <Image
                                 className={styles["image-btn"]}
@@ -72,7 +77,11 @@ export default function ProductDetailInfoComponent() {
                     <div className={styles["button-method"]}>
                         <p className={styles["title"]}>Abonando en Tarjeta</p>
                         <button
-                            onClick={() => handleContactInfo(productData?.productSlug, "Tarjeta")}
+                            onClick={() => handleContactInfo({
+                                productSlug: productData?.productSlug,
+                                paymethod: "Tarjeta",
+                                productPrice: `$ ${productData?.detail?.payment?.card.offerPrice}`
+                            })}
                             className={styles["button"]}>
                             <Image
                                 className={styles["image-btn"]}
