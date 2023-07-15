@@ -117,14 +117,18 @@ export interface ContactDesignDataInterface {
     phone: string,
     email: string,
     direction: string,
-    payment: string,
+    paymentMethod: string,
     selections: {
-        designTitle: string,
+        designSlug: string,
         designItem: string,
         cardData: any[]
     }
 }
 
+export interface FurnitureTableDataInterface {
+    designTitle: string,
+    data: FurnitureTableInterface[]
+}
 export interface FurnitureTableInterface {
     tableId: number,
     tableTitle: string,

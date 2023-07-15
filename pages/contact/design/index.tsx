@@ -18,7 +18,7 @@ export default function ContactFurnituretPage() {
             </LayoutComponent>
         )
     }
-
+    
     return (
         <LayoutComponent isSlider={false}
             urlBack={`furniture/${infoFurniture?.designTitle}?item=${infoFurniture?.designItem}`}>

@@ -8,9 +8,9 @@ interface ProductProps {
 }
 
 interface DesignProps {
-    designTitle: string,
+    designSlug:string,
     designItem: string,
-    data?: any
+    data?: any,
 }
 
 export const ContactContext = createContext<ContactDataContextInterface | {}>({});
@@ -24,13 +24,14 @@ export const ContactProvider = ({ children, }: { children: ReactNode; }) => {
     });
 
     const [infoFurniture, setInfoFurniture] = useState<DesignProps>({
-        designTitle: "",
+        designSlug: "",
         designItem: "",
     })
 
     useEffect(() => {
 
     }, [infoProduct])
+    
     return (
         <ContactContext.Provider
             value={{

@@ -22,7 +22,6 @@ export default function ContactDesignContainer({
     const [isSelect, setIsSelect] = useState<boolean>(false)
     const [isModal, setIsModal] = useState<boolean>(false);
     const [isCheck, setIsCheck] = useState<boolean>(true);
-    const [textModal, setTextModal] = useState<string>("");
     const [loadingText, setLoadingText] = useState<boolean>(false);
 
     const selectRef = useRef<HTMLSelectElement | null>(null);
@@ -78,11 +77,11 @@ export default function ContactDesignContainer({
             email: emailRef.current?.value || "No se paso un email",
             direction: directiongeRef.current?.value || "No se paso una dirección",
             selections: {
-                designTitle: infoFurniture.designTitle,
+                designSlug: infoFurniture.designSlug,
                 designItem: infoFurniture.designItem,
                 cardData: Object.values(infoFurniture.data)
             },
-            payment: selectedPayment !== "" ? selectedPayment : "No se pasó un método de pago",
+            paymentMethod: selectedPayment !== "" ? selectedPayment : "No se pasó un método de pago",
         };
         try {
             const response = await fetch("/api/contact/design", {
@@ -96,24 +95,20 @@ export default function ContactDesignContainer({
 
             if (response.status === 200) {
                 setErrorMessage("")
-                setTextModal("Email enviado con éxito")
                 setIsModal(true);
                 setIsCheck(true)
                 setTimeout(() => {
                     setLoadingText(false);
                     setLoadingText(false);
-                    setTextModal("");
                     setIsModal(false);
                     router.push("/");
                 }, 2000)
             } else {
                 setErrorMessage("")
-                setTextModal("Error al enviar el email")
                 setIsModal(true);
                 setIsCheck(false)
                 setTimeout(() => {
                     setLoadingText(false);
-                    setTextModal("");
                     setIsModal(false);
                     router.push("/");
                 }, 2000)
@@ -135,7 +130,6 @@ export default function ContactDesignContainer({
         selectRef={selectRef}
         handlePaymentChange={handlePaymentChange}
         isModal={isModal}
-        textModal={textModal}
         loadingText={loadingText}
         isCheck={isCheck}
     />

@@ -18,7 +18,6 @@ export default function ContactProductComponent({
     selectRef,
     handlePaymentChange,
     isModal,
-    textModal,
     loadingText,
     isCheck
 }: {
@@ -34,7 +33,6 @@ export default function ContactProductComponent({
     selectRef: React.RefObject<HTMLSelectElement>;
     handlePaymentChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
     isModal: boolean,
-    textModal: string,
     loadingText: boolean,
     isCheck: boolean
 
@@ -45,7 +43,7 @@ export default function ContactProductComponent({
 
     return (
         <div className={styles["container-section-contact"]}>
-            {isModal && <ContactModalComponent textData={textModal} check={isCheck} />}
+            {isModal && <ContactModalComponent check={isCheck} />}
             <div className={styles["container-row-dividers"]}>
                 <div className={styles["container-section-image"]}>
                     {productData &&

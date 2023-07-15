@@ -1,7 +1,7 @@
 import Image from "next/image"
 import styles from "./ContactModalComponent.module.scss"
 
-export default function ContactModalComponent({ textData, check }: { textData?: string, check: boolean }) {
+export default function ContactModalComponent({ check }: { check: boolean }) {
     return (
         <div className={styles["container-section-modal"]}>
             <div className={styles["card-modal"]}>

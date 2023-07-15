@@ -4,21 +4,23 @@ import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-export default function DesignDetailCardComponent({ imgData }: { imgData: ImgDataInterface }) {
+export default function DesignDetailCardComponent({ imgData, }: { imgData: ImgDataInterface, }) {
 
     const [imageLoaded, setImageLoaded] = useState(false);
 
-    const router = useRouter()
+    const router = useRouter();
+
+    const handleClickFurniture = () => {
+        router.push({
+            pathname: `/furniture/${router.query.slug}`,
+            query: { item: `${imgData.imgSlug}` }
+        })
+    }
 
     return (
         <div className={styles["container-outer-image"]}
             data-id={`${imgData.imgSlug}`}
-            onClick={() => {
-                router.push({
-                    pathname:`/furniture/${router.query.slug}`,
-                    query: { item: `${imgData.imgSlug}` }
-                })
-            }}>
+            onClick={handleClickFurniture}>
             {
                 !imageLoaded && (
                     <div className={styles["container-inner-placeholder"]}>

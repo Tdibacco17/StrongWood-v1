@@ -1,7 +1,4 @@
-import { ContactDataContextInterface } from "@/types/Interfaces";
 import styles from "./ContactDesignComponent.module.scss";
-import { ContactContext } from "@/context/ContactContextProvider";
-import { useContext } from "react";
 import ContactModalComponent from "../ContactModalComponent/ContactModalComponent";
 
 export default function ContactDesignComponent({
@@ -16,7 +13,6 @@ export default function ContactDesignComponent({
     selectRef,
     handlePaymentChange,
     isModal,
-    textModal,
     loadingText,
     isCheck
 }: {
@@ -31,16 +27,12 @@ export default function ContactDesignComponent({
     selectRef: React.RefObject<HTMLSelectElement>;
     handlePaymentChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
     isModal: boolean,
-    textModal: string,
     loadingText: boolean,
     isCheck: boolean
 }) {
-    const { infoFurniture } = useContext(
-        ContactContext
-    ) as ContactDataContextInterface;
     return (
         <div className={styles["container-section-contact"]}>
-            {isModal && <ContactModalComponent textData={textModal} check={isCheck} />}
+            {isModal && <ContactModalComponent check={isCheck} />}
             <div className={styles["container-row-dividers"]}>
                 {/* <div className={styles["container-section-image"]}>
                     {
@@ -52,7 +44,7 @@ export default function ContactDesignComponent({
                     }
                 </div> */}
                 <div className={styles["container-section-form"]}>
-                    <p className={styles["form-title"]}>CONTACTO</p>
+                    <p className={styles["form-title"]}>CONSULTAR</p>
 
                     <form onSubmit={handleSubmitEmail} className={styles["container-form"]}>
                         <div className={styles["form-divider"]}>
@@ -92,7 +84,7 @@ export default function ContactDesignComponent({
 
                         <label className={styles["group-paymethod"]}>
                             <p className={styles["form-text"]}>
-                                Abona en {selectedPayment}
+                                Abonar en {selectedPayment}
                             </p>
                             <select
                                 onFocus={() => {
@@ -118,6 +110,7 @@ export default function ContactDesignComponent({
                         </label>
 
                         <button className={styles["form-button"]} type="submit">Enviar</button>
+                        <p className={styles["form-note"]}>Nota: te contactaremos a la brevedad.</p>
                         {loadingText && <p className={styles["form-loading"]}>Cargando..</p>}
                         {errorMessage && <p className={styles["form-error"]}>{errorMessage}</p>}
                     </form>

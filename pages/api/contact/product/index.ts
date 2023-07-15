@@ -96,7 +96,7 @@ export default async function sendEmail(req: NextApiRequest, res: NextApiRespons
                     <h3>Resumen del pedido:</h3>
                     <ul>
                         <li><strong>Producto: </strong>${product}</li>
-                        <li><strong>Abona: </strong>${paymentMethod}</li>
+                        <li><strong>Abona en: </strong>${paymentMethod}</li>
                         <li><strong>Precio: </strong>$${price}</li>
                     </ul>
                 </div>

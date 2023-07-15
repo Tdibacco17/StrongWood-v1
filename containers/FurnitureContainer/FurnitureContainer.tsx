@@ -5,11 +5,11 @@ import { useRouter } from "next/router";
 import { useCallback, useContext, useEffect, useState } from "react";
 
 export default function FurnitureContainer({
-    slug,
+    designTitle,
     item,
     furnitureData
 }: {
-    slug: string,
+    designTitle: string,
     item: string | undefined,
     furnitureData: FurnitureTableInterface[]
 }) {
@@ -68,7 +68,7 @@ export default function FurnitureContainer({
         if (tablesWithMissingFields.length === 0) {
             setValidated(true);
             setInfoFurniture({
-                designTitle: slug,
+                designSlug: designTitle,
                 designItem: item,
                 data: clickedImages
             })

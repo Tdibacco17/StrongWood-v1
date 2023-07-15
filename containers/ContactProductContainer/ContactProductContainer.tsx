@@ -45,7 +45,6 @@ export default function ContactProductContainer({
     const [isSelect, setIsSelect] = useState<boolean>(false)
     const [isModal, setIsModal] = useState<boolean>(false);
     const [isCheck, setIsCheck] = useState<boolean>(true);
-    const [textModal, setTextModal] = useState<string>("");
     const [loadingText, setLoadingText] = useState<boolean>(false);
 
     const handlePaymentChange = (event: React.ChangeEvent<HTMLSelectElement>): void => {
@@ -122,23 +121,19 @@ export default function ContactProductContainer({
 
             if (response.status === 200) {
                 setErrorMessage("")
-                setTextModal("Email enviado con éxito")
                 setIsModal(true);
                 setIsCheck(true)
                 setTimeout(() => {
                     setLoadingText(false);
-                    setTextModal("");
                     setIsModal(false);
                     router.push("/");
                 }, 2000)
             } else {
                 setErrorMessage("")
-                setTextModal("Error al enviar el email")
                 setIsModal(true);
                 setIsCheck(false)
                 setTimeout(() => {
                     setLoadingText(false);
-                    setTextModal("");
                     setIsModal(false);
                     router.push("/");
                 }, 2000)
@@ -161,7 +156,6 @@ export default function ContactProductContainer({
         selectRef={selectRef}
         handlePaymentChange={handlePaymentChange}
         isModal={isModal}
-        textModal={textModal}
         loadingText={loadingText}
         isCheck={isCheck}
     />

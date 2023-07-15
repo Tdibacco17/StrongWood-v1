@@ -3,7 +3,7 @@ import { DesignDataInterface } from "@/types/Interfaces";
 export const designData: DesignDataInterface = {
     "cocina": {
         designSlug: "cocina",
-        title: "cocina",
+        title: "Cocina",
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/design/cocina/serieNewYork.webp",
@@ -40,7 +40,7 @@ export const designData: DesignDataInterface = {
     },
     "baño": {
         designSlug: encodeURIComponent("baño"),
-        title: "baño",
+        title: "Baño",
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/design/baño/vanitoryNordico.webp",
@@ -77,7 +77,7 @@ export const designData: DesignDataInterface = {
     },
     "obras": {
         designSlug: "obras",
-        title: "obras",
+        title: "Obras",
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/design/obras/Farina1.webp",
@@ -127,7 +127,7 @@ export const designData: DesignDataInterface = {
     },
     "dormitorio": {
         designSlug: "dormitorio",
-        title: "dormitorio",
+        title: "Dormitorio",
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/design/dormitorio/Dormitorio1.webp",
@@ -200,7 +200,7 @@ export const designData: DesignDataInterface = {
     },
     "oficina-e-industria": {
         designSlug: "oficina-e-industria",
-        title: "oficina e industria",
+        title: "Oficina e Industria",
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/design/oficinaIndustria/oficina1.webp",
@@ -232,7 +232,7 @@ export const designData: DesignDataInterface = {
     },
     "placares": {
         designSlug: "placares",
-        title: "placares",
+        title: "Placares",
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/design/placares/placarEstiloModerno1.webp",
