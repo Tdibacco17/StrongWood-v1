@@ -37,6 +37,10 @@
                 background-color: var(--strong-bluegray-3);
                 opacity: 1;
                 transition: background-color 0.25s ease, opacity 0.25s ease;
+
+                @media (max-width: 442px) {
+                    display: none;
+                }
             }
         }
 
@@ -47,7 +51,8 @@
             justify-content: flex-start;
             gap: 1rem;
             scroll-behavior: smooth;
-            overflow: hidden;
+            overflow-y: scroll;
+            overflow-x: hidden;
             user-select: none;
 
             &::-webkit-scrollbar {
@@ -74,6 +79,10 @@
             max-width: 100%;
             background: transparent;
             background-color: transparent;
+
+            @media (max-width: 442px) {
+                display: none;
+            }
 
             .carousel-arrow {
                 pointer-events: auto;
@@ -171,11 +180,19 @@
             justify-content: flex-start;
 
             .carousel {
-                display: flex;
+                display: inline-flex;
                 flex-direction: row;
                 align-items: flex-start;
                 justify-content: revert;
+                overflow-y: hidden;
                 overflow-x: scroll;
+                scroll-behavior: smooth;
+                user-select: none;
+
+                    // &::-webkit-scrollbar {
+                    //     height: 0px;
+                    //     background-color: transparent;
+                    // }
             }
         }
     }

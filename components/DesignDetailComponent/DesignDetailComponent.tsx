@@ -2,9 +2,9 @@ import { DesignDetailContext } from "@/context/DesignDetailProvider"
 import { DesignDataContextInterface, SubCategorieDataInterface } from "@/types/Interfaces"
 import React, { useContext } from "react"
 import styles from "./DesignDetailComponent.module.scss"
-import DesignDetailCarouselContainer from "@/containers/DesignDetailCarouselContainer/DesignDetailCarouselContainer"
 import LayoutComponent from "@/layout/LayoutComponent"
 import BackLinkUrlComponent from "../BackLinkUrlComponent/BackLinkUrlComponent"
+import DesignDetailCarouselComponent from "../DesignDetailCarouselComponent/DesignDetailCarouselComponent"
 
 export default function DesignDetailComponent() {
     const { designData } = useContext(
@@ -28,7 +28,7 @@ export default function DesignDetailComponent() {
                         return (
                             <div className={styles["subcategorie"]} key={e.title}>
                                 <p className={styles["title"]}>{e.title}</p>
-                                <DesignDetailCarouselContainer imagesData={e.images} />
+                                <DesignDetailCarouselComponent imagesData={e.images} />
                             </div>
                         );
                     })}
