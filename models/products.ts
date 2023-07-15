@@ -4,9 +4,9 @@ export const productsData: ProductDataInterface = {
     "mesa-de-luz-roma": {
         productSlug: "mesa-de-luz-roma",
         title: "Mesa De Luz Roma",
-        price: "78,610.00",
-        offerPrice: "54,827.00",
-        offerPercentage: 30,
+        price: "86.471,00",
+        offerPrice: "54.827,00",
+        offerPercentage: 37,
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/strongWood/mesaDeLuzRoma/mesaDeLuzRoma1.webp",
@@ -17,14 +17,14 @@ export const productsData: ProductDataInterface = {
         detail: {
             payment: {
                 cash: {
-                    price: "54,827.00",
+                    price: "54.827,00",
                     offerPrice: "38.378,90",
                     offerPercentage: 30,
                 },
                 card: {
-                    price: "78,610.00",
-                    offerPrice: "54,827.00",
-                    offerPercentage: 30,
+                    price: "78.610,00",
+                    offerPrice: "54.827,00",
+                    offerPercentage: 0,
                 }
             },
             description: {
@@ -92,9 +92,9 @@ export const productsData: ProductDataInterface = {
     "mesa-cracovia": {
         productSlug: "mesa-cracovia",
         title: "Mesa Cracovia",
-        price: "245,662.00",
-        offerPrice: "174,000.00",
-        offerPercentage: 29,
+        price: "270.228,00",
+        offerPrice: "174.000,00",
+        offerPercentage: 36,
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/strongWood/mesaCracovia/mesaCracovia1.webp",
@@ -105,14 +105,14 @@ export const productsData: ProductDataInterface = {
         detail: {
             payment: {
                 cash: {
-                    price: "54,827.00",
-                    offerPrice: "38.378,90",
+                    price: "174.000,00",
+                    offerPrice: "121.800,00",
                     offerPercentage: 30,
                 },
                 card: {
                     price: "245,662.00",
-                    offerPrice: "174,000.00",
-                    offerPercentage: 29,
+                    offerPrice: "174.000,00",
+                    offerPercentage: 0,
                 }
             },
             description: {
@@ -165,9 +165,9 @@ export const productsData: ProductDataInterface = {
     "mesa-ratona-edimburgo": {
         productSlug: "mesa-ratona-edimburgo",
         title: "Mesa Ratona Edimburgo",
-        price: "143,782.00",
-        offerPrice: "123,311.00",
-        offerPercentage: 14,
+        price: "158.160,00",
+        offerPrice: "123.311,00",
+        offerPercentage: 22,
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/strongWood/mesaRatonaEdimburgo/mesaRatonaEdimburgo1.webp",
@@ -178,14 +178,14 @@ export const productsData: ProductDataInterface = {
         detail: {
             payment: {
                 cash: {
-                    price: "54,827.00",
-                    offerPrice: "38.378,90",
+                    price: "123.311,00",
+                    offerPrice: "86.317,70",
                     offerPercentage: 30,
                 },
                 card: {
                     price: "143,782.00",
-                    offerPrice: "123,311.00",
-                    offerPercentage: 14,
+                    offerPrice: "123.311,00",
+                    offerPercentage: 0,
                 }
             },
             description: {
@@ -231,9 +231,9 @@ export const productsData: ProductDataInterface = {
     "maceta-sintra": {
         productSlug: "maceta-sintra",
         title: "Maceta Sintra",
-        price: "78,610.00",
-        offerPrice: "54,827.00",
-        offerPercentage: 30,
+        price: "55.618,00",
+        offerPrice: "39.775,00",
+        offerPercentage: 28,
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/strongWood/macetaSintra/macetaSintra1.webp",
@@ -244,14 +244,14 @@ export const productsData: ProductDataInterface = {
         detail: {
             payment: {
                 cash: {
-                    price: "54,827.00",
-                    offerPrice: "38.378,90",
+                    price: "55.618,00",
+                    offerPrice: "27.842,50",
                     offerPercentage: 30,
                 },
                 card: {
-                    price: "78,610.00",
+                    price: "55.618,00",
                     offerPrice: "54,827.00",
-                    offerPercentage: 30,
+                    offerPercentage: 0,
                 }
             },
             description: {
@@ -303,9 +303,9 @@ export const productsData: ProductDataInterface = {
     "maceta-aviñon": {
         productSlug: "maceta-aviñon",
         title: "Maceta Aviñon",
-        price: "78,610.00",
-        offerPrice: "54,827.00",
-        offerPercentage: 30,
+        price: "39.101,00",
+        offerPrice: "39.101,00",
+        offerPercentage: 0,
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/strongWood/macetaAviñon/macetaAviñon1.webp",
@@ -316,14 +316,14 @@ export const productsData: ProductDataInterface = {
         detail: {
             payment: {
                 cash: {
-                    price: "54,827.00",
-                    offerPrice: "38.378,90",
+                    price: "39.101,00",
+                    offerPrice: "27.370,70",
                     offerPercentage: 30,
                 },
                 card: {
-                    price: "78,610.00",
-                    offerPrice: "54,827.00",
-                    offerPercentage: 30,
+                    price: "39.101,00",
+                    offerPrice: "39.101,00",
+                    offerPercentage: 0,
                 }
             },
             description: {
@@ -368,9 +368,9 @@ export const productsData: ProductDataInterface = {
     "estanteria-siena": {
         productSlug: "estanteria-siena",
         title: "Estanteria Siena",
-        price: "78,610.00",
-        offerPrice: "54,827.00",
-        offerPercentage: 24,
+        price: "73.935,00",
+        offerPrice: "51.236,00",
+        offerPercentage: 31,
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/strongWood/estanteriaSiena/estanteriaSiena1.webp",
@@ -381,14 +381,14 @@ export const productsData: ProductDataInterface = {
         detail: {
             payment: {
                 cash: {
-                    price: "54,827.00",
-                    offerPrice: "38.378,90",
+                    price: "51.236,00",
+                    offerPrice: "35.865,20",
                     offerPercentage: 30,
                 },
                 card: {
-                    price: "78,610.00",
-                    offerPrice: "54,827.00",
-                    offerPercentage: 24,
+                    price: "73.935,00",
+                    offerPrice: "51.236,00",
+                    offerPercentage: 0,
                 }
             },
             description: {
@@ -455,9 +455,9 @@ export const productsData: ProductDataInterface = {
     "estanteria-avila": {
         productSlug: "estanteria-avila",
         title: "Estanteria Avila",
-        price: "78,610.00",
-        offerPrice: "54,827.00",
-        offerPercentage: 24,
+        price: "83.015,00",
+        offerPrice: "48.745,00",
+        offerPercentage: 41,
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/strongWood/estanteriaAvila/estanteriaAvila1.webp",
@@ -468,14 +468,14 @@ export const productsData: ProductDataInterface = {
         detail: {
             payment: {
                 cash: {
-                    price: "54,827.00",
-                    offerPrice: "38.378,90",
+                    price: "48.745,00",
+                    offerPrice: "34.121,50",
                     offerPercentage: 30,
                 },
                 card: {
-                    price: "78,610.00",
-                    offerPrice: "54,827.00",
-                    offerPercentage: 24,
+                    price: "83.015,00",
+                    offerPrice: "48.745,00",
+                    offerPercentage: 0,
                 }
             },
             description: {
@@ -507,9 +507,9 @@ export const productsData: ProductDataInterface = {
     "estanteria-bath": {
         productSlug: "estanteria-bath",
         title: "Estanteria Bath",
-        price: "78,610.00",
-        offerPrice: "54,827.00",
-        offerPercentage: 24,
+        price: "40.169,00",
+        offerPrice: "34.157,00",
+        offerPercentage: 15,
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/strongWood/estanteriaBath/estanteriaBath1.webp",
@@ -520,14 +520,14 @@ export const productsData: ProductDataInterface = {
         detail: {
             payment: {
                 cash: {
-                    price: "54,827.00",
-                    offerPrice: "38.378,90",
+                    price: "34.157,00",
+                    offerPrice: "23.909,90",
                     offerPercentage: 30,
                 },
                 card: {
-                    price: "78,610.00",
-                    offerPrice: "54,827.00",
-                    offerPercentage: 24,
+                    price: "40.169,00",
+                    offerPrice: "34.157,00",
+                    offerPercentage: 0,
                 }
             },
             description: {
@@ -559,9 +559,9 @@ export const productsData: ProductDataInterface = {
     "estanteria-bergen": {
         productSlug: "estanteria-bergen",
         title: "Estanteria Bergen",
-        price: "78,610.00",
-        offerPrice: "54,827.00",
-        offerPercentage: 24,
+        price: "291.848,00",
+        offerPrice: "207.860,00",
+        offerPercentage: 29,
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/strongWood/estanteriaBergen/estanteriaBergen1.webp",
@@ -572,14 +572,14 @@ export const productsData: ProductDataInterface = {
         detail: {
             payment: {
                 cash: {
-                    price: "54,827.00",
-                    offerPrice: "38.378,90",
+                    price: "207.860,00",
+                    offerPrice: "145.502,00",
                     offerPercentage: 30,
                 },
                 card: {
-                    price: "78,610.00",
-                    offerPrice: "54,827.00",
-                    offerPercentage: 24,
+                    price: "291.848,00",
+                    offerPrice: "207.860,00",
+                    offerPercentage: 0,
                 }
             },
             description: {
@@ -653,9 +653,9 @@ export const productsData: ProductDataInterface = {
     "llavero-corfu": {
         productSlug: "llavero-corfu",
         title: "Llavero Corfu",
-        price: "78,610.00",
-        offerPrice: "54,827.00",
-        offerPercentage: 24,
+        price: "52.528,00",
+        offerPrice: "37.191,00",
+        offerPercentage: 29,
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/strongWood/llaveroCorfu/llaveroCorfu1.webp",
@@ -666,14 +666,14 @@ export const productsData: ProductDataInterface = {
         detail: {
             payment: {
                 cash: {
-                    price: "54,827.00",
-                    offerPrice: "38.378,90",
+                    price: "37.191,00",
+                    offerPrice: "26.033,70",
                     offerPercentage: 30,
                 },
                 card: {
-                    price: "78,610.00",
-                    offerPrice: "54,827.00",
-                    offerPercentage: 24,
+                    price: "52.528,00",
+                    offerPrice: "37.191,00",
+                    offerPercentage: 0,
                 }
             },
             description: {
@@ -719,9 +719,9 @@ export const productsData: ProductDataInterface = {
     "llavero-viena": {
         productSlug: "llavero-viena",
         title: "Llavero Viena",
-        price: "78,610.00",
-        offerPrice: "54,827.00",
-        offerPercentage: 24,
+        price: "40.169,00",
+        offerPrice: "29.663,00",
+        offerPercentage: 26,
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/strongWood/llaveroViena/llaveroViena1.webp",
@@ -732,14 +732,14 @@ export const productsData: ProductDataInterface = {
         detail: {
             payment: {
                 cash: {
-                    price: "54,827.00",
-                    offerPrice: "38.378,90",
+                    price: "29.663,00",
+                    offerPrice: "20.764,10",
                     offerPercentage: 30,
                 },
                 card: {
-                    price: "78,610.00",
-                    offerPrice: "54,827.00",
-                    offerPercentage: 24,
+                    price: "40.169,00",
+                    offerPrice: "29.663,00",
+                    offerPercentage: 0,
                 }
             },
             description: {
@@ -792,9 +792,9 @@ export const productsData: ProductDataInterface = {
     "leñero": {
         productSlug: "leñero",
         title: "Leñero",
-        price: "78,610.00",
-        offerPrice: "54,827.00",
-        offerPercentage: 24,
+        price: "33.292,00",
+        offerPrice: "38.427,00",
+        offerPercentage: 0,
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/strongWood/leñero/leñero1.webp",
@@ -805,14 +805,14 @@ export const productsData: ProductDataInterface = {
         detail: {
             payment: {
                 cash: {
-                    price: "54,827.00",
-                    offerPrice: "38.378,90",
+                    price: "38.427,00",
+                    offerPrice: "26.898,90",
                     offerPercentage: 30,
                 },
                 card: {
-                    price: "78,610.00",
-                    offerPrice: "54,827.00",
-                    offerPercentage: 24,
+                    price: "33.292,00",
+                    offerPrice: "38.427,00",
+                    offerPercentage: 0,
                 }
             },
             description: {
@@ -858,9 +858,9 @@ export const productsData: ProductDataInterface = {
     "rack-tv-cordoba": {
         productSlug: "rack-tv-cordoba",
         title: "Rack TV Cordoba",
-        price: "78,610.00",
-        offerPrice: "54,827.00",
-        offerPercentage: 24,
+        price: "141.272,00",
+        offerPrice: "101.378,00",
+        offerPercentage: 28,
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/strongWood/rackTvCordoba/rackTvCordoba1.webp",
@@ -871,14 +871,14 @@ export const productsData: ProductDataInterface = {
         detail: {
             payment: {
                 cash: {
-                    price: "54,827.00",
-                    offerPrice: "38.378,90",
+                    price: "101.378,00",
+                    offerPrice: "70.964,60",
                     offerPercentage: 30,
                 },
                 card: {
-                    price: "78,610.00",
-                    offerPrice: "54,827.00",
-                    offerPercentage: 24,
+                    price: "141.272,00",
+                    offerPrice: "101.378,00",
+                    offerPercentage: 0,
                 }
             },
             description: {
@@ -945,9 +945,9 @@ export const productsData: ProductDataInterface = {
     "toallero-matera": {
         productSlug: "toallero-matera",
         title: "Toallero Matera",
-        price: "78,610.00",
-        offerPrice: "54,827.00",
-        offerPercentage: 24,
+        price: "44.989,00",
+        offerPrice: "33.034,00",
+        offerPercentage: 27,
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/strongWood/toalleroMatera/toalleroMatera1.webp",
@@ -958,14 +958,14 @@ export const productsData: ProductDataInterface = {
         detail: {
             payment: {
                 cash: {
-                    price: "54,827.00",
-                    offerPrice: "38.378,90",
+                    price: "33.034,00",
+                    offerPrice: "23.123,80",
                     offerPercentage: 30,
                 },
                 card: {
-                    price: "78,610.00",
-                    offerPrice: "54,827.00",
-                    offerPercentage: 24,
+                    price: "44.989,00",
+                    offerPrice: "33.034,00",
+                    offerPercentage: 0,
                 }
             },
             description: {
@@ -1011,9 +1011,9 @@ export const productsData: ProductDataInterface = {
     "toallero-cuenca": {
         productSlug: "toallero-cuenca",
         title: "Toallero Cuenca",
-        price: "78,610.00",
-        offerPrice: "54,827.00",
-        offerPercentage: 24,
+        price: "59.945,00",
+        offerPrice: "40.562,00",
+        offerPercentage: 32,
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/strongWood/toalleroCuenca/toalleroCuenca1.webp",
@@ -1024,14 +1024,14 @@ export const productsData: ProductDataInterface = {
         detail: {
             payment: {
                 cash: {
-                    price: "54,827.00",
-                    offerPrice: "38.378,90",
+                    price: "40.562,00",
+                    offerPrice: "28.393,40",
                     offerPercentage: 30,
                 },
                 card: {
-                    price: "78,610.00",
-                    offerPrice: "54,827.00",
-                    offerPercentage: 24,
+                    price: "59.945,00",
+                    offerPrice: "40.562,00",
+                    offerPercentage: 0,
                 }
             },
             description: {
@@ -1091,9 +1091,9 @@ export const productsData: ProductDataInterface = {
     "bodega-segovia": {
         productSlug: "bodega-segovia",
         title: "Bodega Segovia",
-        price: "78,610.00",
-        offerPrice: "54,827.00",
-        offerPercentage: 24,
+        price: "140.520,00",
+        offerPrice: "82.898,00",
+        offerPercentage: 41,
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/strongWood/bodegaSegovia/bodegaSegovia1.webp",
@@ -1104,14 +1104,14 @@ export const productsData: ProductDataInterface = {
         detail: {
             payment: {
                 cash: {
-                    price: "54,827.00",
-                    offerPrice: "38.378,90",
+                    price: "82.898,00",
+                    offerPrice: "58.028,60",
                     offerPercentage: 30,
                 },
                 card: {
-                    price: "78,610.00",
-                    offerPrice: "54,827.00",
-                    offerPercentage: 24,
+                    price: "140.520,00",
+                    offerPrice: "82.898,00",
+                    offerPercentage: 0,
                 }
             },
             description: {
@@ -1169,75 +1169,75 @@ export const productsData: ProductDataInterface = {
             ],
         }
     },
-    "porta-copas": {
-        productSlug: "porta-copas",
-        title: "Porta Copas",
-        price: "78,610.00",
-        offerPrice: "54,827.00",
-        offerPercentage: 24,
-        image: {
-            imgSlug: 1,
-            imgSrc: "/assets/img/strongWood/portaCopas/portaCopas1.webp",
-            imgAlt: "Porta Copas",
-            imgProportionsX: 1,
-            imgProportionsY: 1
-        },
-        detail: {
-            payment: {
-                cash: {
-                    price: "54,827.00",
-                    offerPrice: "38.378,90",
-                    offerPercentage: 30,
-                },
-                card: {
-                    price: "78,610.00",
-                    offerPrice: "54,827.00",
-                    offerPercentage: 24,
-                }
-            },
-            // description: {
-            //     title: "",
-            //     itemsDescription: [],
-            //     measures: "",
-            // },
-            images: [
-                {
-                    imgSlug: 1,
-                    imgSrc: "/assets/img/strongWood/portaCopas/portaCopas1.webp",
-                    imgAlt: "Porta Copas",
-                    imgProportionsX: 1,
-                    imgProportionsY: 1
-                },
-                {
-                    imgSlug: 2,
-                    imgSrc: "/assets/img/strongWood/portaCopas/portaCopas2.webp",
-                    imgAlt: "Porta Copas",
-                    imgProportionsX: 1,
-                    imgProportionsY: 1
-                },
-                {
-                    imgSlug: 3,
-                    imgSrc: "/assets/img/strongWood/portaCopas/portaCopas3.webp",
-                    imgAlt: "Porta Copas",
-                    imgProportionsX: 1,
-                    imgProportionsY: 1
-                },
-                {
-                    imgSlug: 4,
-                    imgSrc: "/assets/img/strongWood/portaCopas/portaCopas4.webp",
-                    imgAlt: "Porta Copas",
-                    imgProportionsX: 1,
-                    imgProportionsY: 1
-                },
-            ],
-        }
-    },
+    // "porta-copas": {
+    //     productSlug: "porta-copas",
+    //     title: "Porta Copas",
+    //     price: "78,610.00",
+    //     offerPrice: "54,827.00",
+    //     offerPercentage: 24,
+    //     image: {
+    //         imgSlug: 1,
+    //         imgSrc: "/assets/img/strongWood/portaCopas/portaCopas1.webp",
+    //         imgAlt: "Porta Copas",
+    //         imgProportionsX: 1,
+    //         imgProportionsY: 1
+    //     },
+    //     detail: {
+    //         payment: {
+    //             cash: {
+    //                 price: "54,827.00",
+    //                 offerPrice: "38.378,90",
+    //                 offerPercentage: 30,
+    //             },
+    //             card: {
+    //                 price: "78,610.00",
+    //                 offerPrice: "54,827.00",
+    //                 offerPercentage: 24,
+    //             }
+    //         },
+    //         // description: {
+    //         //     title: "",
+    //         //     itemsDescription: [],
+    //         //     measures: "",
+    //         // },
+    //         images: [
+    //             {
+    //                 imgSlug: 1,
+    //                 imgSrc: "/assets/img/strongWood/portaCopas/portaCopas1.webp",
+    //                 imgAlt: "Porta Copas",
+    //                 imgProportionsX: 1,
+    //                 imgProportionsY: 1
+    //             },
+    //             {
+    //                 imgSlug: 2,
+    //                 imgSrc: "/assets/img/strongWood/portaCopas/portaCopas2.webp",
+    //                 imgAlt: "Porta Copas",
+    //                 imgProportionsX: 1,
+    //                 imgProportionsY: 1
+    //             },
+    //             {
+    //                 imgSlug: 3,
+    //                 imgSrc: "/assets/img/strongWood/portaCopas/portaCopas3.webp",
+    //                 imgAlt: "Porta Copas",
+    //                 imgProportionsX: 1,
+    //                 imgProportionsY: 1
+    //             },
+    //             {
+    //                 imgSlug: 4,
+    //                 imgSrc: "/assets/img/strongWood/portaCopas/portaCopas4.webp",
+    //                 imgAlt: "Porta Copas",
+    //                 imgProportionsX: 1,
+    //                 imgProportionsY: 1
+    //             },
+    //         ],
+    //     }
+    // },
     "porta-vinos": {
         productSlug: "porta-vinos",
         title: "Porta Vinos",
-        price: "78,610.00",
-        offerPrice: "54,827.00",
-        offerPercentage: 24,
+        price: "44.270,00",
+        offerPrice: "44.270,00",
+        offerPercentage: 0,
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/strongWood/portaVinos/portaVinos1.webp",
@@ -1248,14 +1248,14 @@ export const productsData: ProductDataInterface = {
         detail: {
             payment: {
                 cash: {
-                    price: "54,827.00",
-                    offerPrice: "38.378,90",
+                    price: "44.270,00",
+                    offerPrice: "30.989,00",
                     offerPercentage: 30,
                 },
                 card: {
-                    price: "78,610.00",
-                    offerPrice: "54,827.00",
-                    offerPercentage: 24,
+                    price: "44.270,00",
+                    offerPrice: "44.270,00",
+                    offerPercentage: 0,
                 }
             },
             description: {
@@ -1300,8 +1300,8 @@ export const productsData: ProductDataInterface = {
     "escritorio-brujas": {
         productSlug: "escritorio-brujas",
         title: "Escritorio Brujas",
-        price: "78,610.00",
-        offerPrice: "54,827.00",
+        price: "127.063,00",
+        offerPrice: "96.505,00",
         offerPercentage: 24,
         image: {
             imgSlug: 1,
@@ -1313,14 +1313,14 @@ export const productsData: ProductDataInterface = {
         detail: {
             payment: {
                 cash: {
-                    price: "54,827.00",
-                    offerPrice: "38.378,90",
+                    price: "96.505,00",
+                    offerPrice: "67.553,50",
                     offerPercentage: 30,
                 },
                 card: {
-                    price: "78,610.00",
-                    offerPrice: "54,827.00",
-                    offerPercentage: 24,
+                    price: "127.063,00",
+                    offerPrice: "96.505,00",
+                    offerPercentage: 0,
                 }
             },
             description: {
@@ -1374,9 +1374,9 @@ export const productsData: ProductDataInterface = {
     "perchero-oporto": {
         productSlug: "perchero-oporto",
         title: "Perchero Oporto",
-        price: "78,610.00",
-        offerPrice: "54,827.00",
-        offerPercentage: 24,
+        price: "46.264,00",
+        offerPrice: "37.865,00",
+        offerPercentage: 18,
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/strongWood/percheroOporto/percheroOporto1.webp",
@@ -1387,14 +1387,14 @@ export const productsData: ProductDataInterface = {
         detail: {
             payment: {
                 cash: {
-                    price: "54,827.00",
-                    offerPrice: "38.378,90",
+                    price: "37.865,00",
+                    offerPrice: "26.505,50",
                     offerPercentage: 30,
                 },
                 card: {
-                    price: "78,610.00",
-                    offerPrice: "54,827.00",
-                    offerPercentage: 24,
+                    price: "46.264,00",
+                    offerPrice: "37.865,00",
+                    offerPercentage: 0,
                 }
             },
             description: {
@@ -1461,9 +1461,9 @@ export const productsData: ProductDataInterface = {
     "recibidor-salamanca": {
         productSlug: "recibidor-salamanca",
         title: "Recibidor Salamanca",
-        price: "78,610.00",
-        offerPrice: "54,827.00",
-        offerPercentage: 24,
+        price: "141.383,00",
+        offerPrice: "81.088,00",
+        offerPercentage: 43,
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/strongWood/recibidorSalamanca/recibidorSalamanca1.webp",
@@ -1474,14 +1474,14 @@ export const productsData: ProductDataInterface = {
         detail: {
             payment: {
                 cash: {
-                    price: "54,827.00",
-                    offerPrice: "38.378,90",
+                    price: "81.088,00",
+                    offerPrice: "56.761,60",
                     offerPercentage: 30,
                 },
                 card: {
-                    price: "78,610.00",
-                    offerPrice: "54,827.00",
-                    offerPercentage: 24,
+                    price: "141.383,00",
+                    offerPrice: "81.088,00",
+                    offerPercentage: 0,
                 }
             },
             description: {
@@ -1555,9 +1555,9 @@ export const productsData: ProductDataInterface = {
     "tabla-asado": {
         productSlug: "tabla-asado",
         title: "Tabla Asado",
-        price: "78,610.00",
-        offerPrice: "54,827.00",
-        offerPercentage: 24,
+        price: "16.940,00",
+        offerPrice: "9.400,00",
+        offerPercentage: 45,
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/strongWood/tablaAsado/tablaAsado1.webp",
@@ -1568,14 +1568,14 @@ export const productsData: ProductDataInterface = {
         detail: {
             payment: {
                 cash: {
-                    price: "54,827.00",
-                    offerPrice: "38.378,90",
+                    price: "9.400,00",
+                    offerPrice: "6.580,00",
                     offerPercentage: 30,
                 },
                 card: {
-                    price: "78,610.00",
-                    offerPrice: "54,827.00",
-                    offerPercentage: 24,
+                    price: "16.940,00",
+                    offerPrice: "9.400,00",
+                    offerPercentage: 0,
                 }
             },
             description: {
@@ -1651,9 +1651,9 @@ export const productsData: ProductDataInterface = {
     "soporte-auricular": {
         productSlug: "soporte-auricular",
         title: "Soporte Auricular",
-        price: "78,610.00",
-        offerPrice: "54,827.00",
-        offerPercentage: 24,
+        price: "11.248,00",
+        offerPrice: "8.090,00",
+        offerPercentage: 28,
         image: {
             imgSlug: 1,
             imgSrc: "/assets/img/strongWood/soporteAuricular/soporteAuricular1.webp",
@@ -1664,14 +1664,14 @@ export const productsData: ProductDataInterface = {
         detail: {
             payment: {
                 cash: {
-                    price: "54,827.00",
-                    offerPrice: "38.378,90",
+                    price: "8.090,00",
+                    offerPrice: "5.663,00",
                     offerPercentage: 30,
                 },
                 card: {
-                    price: "78,610.00",
-                    offerPrice: "54,827.00",
-                    offerPercentage: 24,
+                    price: "11.248,00",
+                    offerPrice: "8.090,00",
+                    offerPercentage: 0,
                 }
             },
             description: {
