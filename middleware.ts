@@ -10,7 +10,7 @@ const routesFurniture = [
 ];
 
 const routesDesign = [
-    "cocina", "ba%C3%B1o", "obras",
+    "cocina", "baño", "obras",
     "dormitorio", "oficina-e-industria", "placares"
 ]
 
