@@ -55,7 +55,7 @@ export default function ContactProductComponent({
                     }
                 </div>
                 <div className={styles["container-section-form"]}>
-                    <p className={styles["form-title"]}>CONTACTO</p>
+                    <p className={styles["form-title"]}>CONSULTAR</p>
 
                     <form onSubmit={handleSubmitEmail} className={styles["container-form"]}>
                         <div className={styles["form-divider"]}>
@@ -97,10 +97,10 @@ export default function ContactProductComponent({
                             {
                                 !isSelect ?
                                     <p className={styles["form-text"]}>
-                                        Abona en {(pay && pay === "Efectivo" || pay === "Tarjeta") ? pay : ""}
+                                        Abonar en {(pay && pay === "Efectivo" || pay === "Tarjeta") ? pay : ""}
                                     </p>
                                     : <p className={styles["form-text"]}>
-                                        Abona en {selectedPayment}
+                                        Abonar en {selectedPayment}
                                     </p>
                             }
                             <select
@@ -127,6 +127,7 @@ export default function ContactProductComponent({
                         </label>
 
                         <button className={styles["form-button"]} type="submit">Enviar</button>
+                        <p className={styles["form-note"]}>Nota: te contactaremos a la brevedad.</p>
                         {loadingText && <p className={styles["form-loading"]}>Cargando..</p>}
                         {errorMessage && <p className={styles["form-error"]}>{errorMessage}</p>}
                     </form>
