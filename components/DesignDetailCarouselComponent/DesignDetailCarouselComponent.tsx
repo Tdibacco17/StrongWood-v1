@@ -33,7 +33,7 @@ export default function DesignDetailCarouselComponent({
                     })
                 }
             </div>
-            <div className={styles["buttons-subcategories"]}>
+            {/* <div className={styles["buttons-subcategories"]}>
                 <button className={styles["buttons"]} onClick={handleScrollLeft}>
                     <Image
                         src="/assets/icons/arrowLeft.svg"
@@ -52,7 +52,7 @@ export default function DesignDetailCarouselComponent({
                         loading="lazy"
                     />
                 </button>
-            </div>
+            </div> */}
         </div>
     )
 }

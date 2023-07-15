@@ -13,12 +13,12 @@ const routesFurniture = [
 const fornitureItem = [
     "serie-nordica", "serie-new-york", "serie-premium",
     "vanitory-new-york", "vanitory-escandinavo", "vanitory-nordico",
-    "vestidor-1",  "vestidor-2", "placar-1", "placar-2",
+    "vestidor-1", "vestidor-2", "placar-1", "placar-2",
     "cama-1", "cama-2", "cama-3", "mesa-de-luz-1", "mesa-de-luz-2", "comoda-1", "comoda-2"
 ];
 
 const routesProducts = [
-    "mesa-de-luz-roma", "mesa-cracovia", "mesa-ratona-edimburgo", "maceta-sintra", "maceta-avi%C3%B1on", "estanteria-siena", "estanteria-avila", 
+    "mesa-de-luz-roma", "mesa-cracovia", "mesa-ratona-edimburgo", "maceta-sintra", "maceta-avi%C3%B1on", "estanteria-siena", "estanteria-avila",
     "estanteria-bath", "estanteria-bergen", "llavero-corfu", "llavero-viena", "le%C3%B1ero", "rack-tv-cordoba", "toallero-matera", "toallero-cuenca",
     "bodega-segovia", "porta-copas", "porta-vinos", "escritorio-brujas", "perchero-oporto", "recibidor-salamanca", "tabla-asado", "soporte-auricular",
 ];
@@ -36,10 +36,14 @@ export function middleware(request: NextRequest) {
         if (pathname === route && searchParams) {
             const itemValue = searchParams.get("item");
 
+            if (!itemValue || itemValue.trim().length === 0) {
+                return NextResponse.redirect(new URL("/design", request.url));
+            }
+
             if (itemValue && itemValue.includes("/")) {
                 return NextResponse.redirect(new URL("/design", request.url));
             }
-            // Validar si el item existe en la lista fornitureItem
+
             if (itemValue && !fornitureItem.includes(itemValue)) {
                 return NextResponse.redirect(new URL("/design", request.url));
             }

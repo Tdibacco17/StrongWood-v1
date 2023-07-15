@@ -17,7 +17,7 @@ export default function FurnitureDetailPage() {
 
     let furnitureData: FurnitureTableInterface[];
 
-    //VALIDAR MEJOR ESTO EN EL RUTEO
+    //VALIDAR MEJOR ESTO EN EL RUTEO 
     if (slug === "cocina") {
         furnitureData = furnitureCocina;
     } else if (slug === "baño") {
@@ -25,12 +25,18 @@ export default function FurnitureDetailPage() {
     } else if (slug === "placares") {
         furnitureData = furniturePlacares
     } else if (slug === "dormitorio") {
-        if (item === ("cama-1" || "cama-2" || "cama-3")) {
+        if (item === "cama-1" || item === "cama-2" || item === "cama-3") {
             furnitureData = dormitorioCama
-        } else if (item === ("mesa-de-luz-1" || "mesa-de-luz-2")) {
+        } else if (item === "mesa-de-luz-1" || item === "mesa-de-luz-2") {
             furnitureData = dormitorioMezaDeLuz
-        } else {
+        } else if (item === "comoda-1" || item === "comoda-2") {
             furnitureData = dormitorioComoda
+        } else {
+            return (
+                <LayoutComponent isSlider={false} urlBack={`/design`}>
+                    <BackLinkUrlComponent textData={"Esta categoria no existe"} backUrl={"/design"} />
+                </LayoutComponent>
+            )
         }
     } else {
         return (

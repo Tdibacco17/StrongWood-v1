@@ -1,16 +1,7 @@
 .container-section-carousel-subcategories {
-    min-width: var(--strong-calc-7rem);
-    max-width: var(--strong-calc-7rem);
-
     display: flex;
     align-items: center;
     justify-content: flex-start;
-
-    border-radius: 0.2rem;
-    background: var(--strong-bluegray-11);
-    border: 1px solid var(--strong-bluegray-10);
-
-    position: relative;
 
     &:hover {
         .buttons-subcategories .buttons {
@@ -20,18 +11,8 @@
         }
     }
 
-    @media (max-width:768px) {
-        min-width: var(--strong-calc-5rem);
-        max-width: var(--strong-calc-5rem);
-    }
-
-    @media (max-width:480px) {
-        min-width: var(--strong-calc-3rem);
-        max-width: var(--strong-calc-3rem);
-    }
-
     .carousel-subcategories {
-        display: flex;
+        display: inline-flex;
         flex-direction: row;
         align-items: center;
         scroll-behavior: smooth;
@@ -39,71 +20,78 @@
         user-select: none;
 
         gap: 1.5rem;
-        padding: 1rem;
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
 
-        min-width: 100%;
-        max-width: 100%;
+        min-width: 100vw;
+        max-width: 100vw;
+        overflow-x: scroll;
 
         &::-webkit-scrollbar {
             height: 0px;
             background-color: transparent;
         }
 
+        @media (max-width:992px) {
+            gap: 1.25rem;
+        }
+
         @media (max-width:768px) {
-            display: inline-flex; 
-            overflow-y: hidden;
-            overflow-x: scroll;
-            min-width: 100vw;
-            max-width: 100vw;
-            scroll-snap-type: x mandatory;
-            scroll-padding: 0 1rem;
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+            gap: 1rem;
+        }
+
+        @media (max-width:480px) {
+            padding-left: 1.5rem;
+            gap: 0.75rem;
         }
     }
 
 
-    .buttons-subcategories {
-        position: absolute;
-        top: 0;
-        bottom: 0;
+    // .buttons-subcategories {
+    //     position: absolute;
+    //     top: 0;
+    //     bottom: 0;
 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: transparent;
-        pointer-events: none;
+    //     display: flex;
+    //     justify-content: space-between;
+    //     align-items: center;
+    //     background-color: transparent;
+    //     pointer-events: none;
 
-        min-height: 100%;
-        max-height: 100%;
-        min-width: 100%;
-        max-width: 100%;
-        background: transparent;
-        background-color: transparent;
+    //     min-height: 100%;
+    //     max-height: 100%;
+    //     min-width: 100%;
+    //     max-width: 100%;
+    //     background: transparent;
+    //     background-color: transparent;
 
-        .buttons {
-            pointer-events: auto;
+    //     .buttons {
+    //         pointer-events: auto;
 
-            width: 2.5rem;
-            height: 2.5rem;
+    //         width: 2.5rem;
+    //         height: 2.5rem;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: center;
 
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            opacity: 0;
+    //         background-color: transparent;
+    //         border: none;
+    //         cursor: pointer;
+    //         opacity: 0;
 
-            transition: background-color 0.25s ease, opacity 0.25s ease;
+    //         transition: background-color 0.25s ease, opacity 0.25s ease;
 
-            &:hover {
-                background: var(--strong-bluegray-4);
-                transition: background-color 0.25s ease;
-            }
+    //         &:hover {
+    //             background: var(--strong-bluegray-4);
+    //             transition: background-color 0.25s ease;
+    //         }
 
-            @media (max-width:768px) {
-                display: none;
-            }
-        }
-    }
+    //         @media (max-width:768px) {
+    //             display: none;
+    //         }
+    //     }
+    // }
 }
