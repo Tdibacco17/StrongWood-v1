@@ -16,7 +16,7 @@
     align-items: flex-start;
     overflow: hidden;
 
-    @media (max-width: 1450px) {
+    @media (max-width: 1300px) {
         min-height: var(--banner-proportion-height);
         max-height: var(--banner-proportion-height);
     }
@@ -59,12 +59,12 @@
         font-weight: var(--strong-weight-400);
         color: var(--strong-bluegray-1);
 
-        @media (max-width: 1100px) {
-            min-height: var(--banner-proportion-height);
-            max-height: var(--banner-proportion-height);
-        }
+        // @media (max-width: 1100px) {
+        //     min-height: var(--banner-proportion-height);
+        //     max-height: var(--banner-proportion-height);
+        // }
 
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
             min-height: 100vh;
             max-height: 100vh;
             min-width: var(--banner-image-outer-width);

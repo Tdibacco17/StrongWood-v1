@@ -11,7 +11,7 @@
 
     --banner-proportion-height: calc(100vw * 0.6651);
 
-    @media (max-width:1450px) {
+    @media (max-width:1300px) {
         min-height: var(--banner-proportion-height);
         max-height: var(--banner-proportion-height);
     }
@@ -49,6 +49,7 @@
         justify-content: center;
         align-items: flex-end;
         gap: 1.5rem;
+        background-color: rgba(145, 45, 45, 0.268);
 
         .control-item {
             padding: 0.5rem;
