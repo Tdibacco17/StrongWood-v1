@@ -11,7 +11,7 @@
 
     --banner-proportion-height: calc(100vw * 0.6651);
 
-    @media (max-width:1300px) {
+    @media (max-width:1450px) {
         min-height: var(--banner-proportion-height);
         max-height: var(--banner-proportion-height);
     }
