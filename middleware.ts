@@ -15,7 +15,7 @@ const routesDesign = [
 ]
 
 const fornitureItem = [
-    "serie-nordica", "serie-new-york", "serie-premium",
+    "serie-nordica", "serie-new-york", "serie-premium", "serie-nova",
     "vanitory-new-york", "vanitory-escandinavo", "vanitory-nordico",
     "vestidor-1", "vestidor-2", "placar-1", "placar-2",
     "cama-1", "cama-2", "cama-3", "mesa-de-luz-1", "mesa-de-luz-2", "comoda-1", "comoda-2"

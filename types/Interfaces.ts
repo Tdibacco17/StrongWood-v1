@@ -139,5 +139,5 @@ export interface FurnitureTableInterface {
 export interface FurnitureDataCardsInterface {
     cardId: number,
     cardTitle: string,
-    image?: ImgDataInterface[]
+    image?: ImgDataInterface
 }

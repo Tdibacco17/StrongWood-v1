@@ -1,5 +1,7 @@
 import { FurnitureDataCardsInterface, FurnitureTableInterface } from "@/types/Interfaces";
 import styles from "./FurnitureCardComponent.module.scss"
+import { useState } from "react";
+import Image from "next/image";
 
 export default function FurnitureCardComponent({
     CARDelement,
@@ -13,35 +15,32 @@ export default function FurnitureCardComponent({
     isCardSelected: boolean
 }) {
 
+    const [imageLoaded, setImageLoaded] = useState(false);
+
     return (
         <div className={`${styles["container-outer-image"]} ${isCardSelected ? styles["selected"] : ""}`}
             onClick={() => handleCardClick(TABLEelement.tableId, CARDelement.cardId, CARDelement.cardTitle, TABLEelement.tableTitle)}
             data-id={`${CARDelement.cardId}`}>
-            {/* {
+            {
                 !imageLoaded && (
                     <div className={styles["container-inner-placeholder"]}>
                         Cargando...
                     </div>
                 )
-            } */}
-            {/* <div className={imageLoaded ? styles["container-inner-image"] : ""}>
+            }
+            <div className={imageLoaded ? styles["container-inner-image"] : ""}>
                 <Image
-                    src={`${imgData.imgSrc}`}
-                    alt={`${imgData.imgAlt}`}
+                    src={`${CARDelement.image?.imgSrc ? CARDelement.image?.imgSrc : "/assets/logo/strongWoodLogo.webp"}`}
+                    alt={`${CARDelement.image?.imgAlt ? CARDelement.image?.imgAlt : "altImage"}`}
                     fill
                     loading="lazy"
                     onLoadingComplete={() => { setImageLoaded(true) }}
                     style={{ opacity: imageLoaded ? "1" : "0" }}
                 />
-            </div> */}
+            </div>
             <div className={styles["container-overlay-image"]}>
                 <p className={styles["title-overlay"]}> {CARDelement.cardTitle}</p>
             </div>
-            {/* <style jsx>{`
-            .${styles["container-outer-image"]} {
-                --design-card-image-proportion: calc((var(--design-card-inner-height)) * ${imgData.imgProportionsX});
-            }
-        `}</style> */}
         </div>
     )
 }

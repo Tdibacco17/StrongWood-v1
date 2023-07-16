@@ -1,7 +1,9 @@
 .container-outer-image {
     --design-card-width: 14rem;
     --design-card-height: 8rem;
-    --design-card-inner-height: 22rem;
+    --design-card-inner-height: 10rem;
+
+    --design-card-image-proportion: calc((var(--design-card-inner-height)) * 1.5024);
 
     border-radius: 0.2rem;
     position: relative;
@@ -16,36 +18,21 @@
     align-items: center;
     overflow: hidden;
     cursor: pointer;
+    background-color: red;
 
     @media (max-width:992px) {
-        --design-card-width: 22rem;
+        --design-card-width: 12rem;
+        --design-card-inner-height: 8rem;
     }
 
     @media (max-width:768px) {
-        --design-card-width: 21rem;
-    }
-
-    @media (max-width: 626px) {
-        --design-card-width: 20rem;
+        --design-card-width: 11rem;
     }
 
     @media (max-width: 576px) {
-        --design-card-width: 19rem;
-        --design-card-inner-height: 14rem;
+        --design-card-width: 10rem;
     }
-
-    @media (max-width:480px) {
-        --design-card-width: 18rem;
-    }
-
-    @media (max-width:400px) {
-        --design-card-width: 16rem;
-    }
-
-    @media (max-width:350px) {
-        --design-card-width: 14rem;
-    }
-
+    
     .container-inner-image {
         position: relative;
         min-height: var(--design-card-inner-height);

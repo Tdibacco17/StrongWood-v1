@@ -33,6 +33,12 @@ export const designData: DesignDataInterface = {
                         imgAlt: "Serie Premiun",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
+                    }, {
+                        imgSlug: "serie-nova",
+                        imgSrc: "/assets/img/design/cocina/serieNova.webp",
+                        imgAlt: "Serie Nova",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
                     },
                 ]
             }
@@ -264,14 +270,14 @@ export const designData: DesignDataInterface = {
                 images: [
                     {
                         imgSlug: "placar-1",
-                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
+                        imgSrc: "/assets/img/furniture/placares/categoriePlacar1.webp",
                         imgAlt: "Placar1",
                         imgProportionsX: 1,
                         imgProportionsY: 1
                     },
                     {
                         imgSlug: "placar-2",
-                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
+                        imgSrc: "/assets/img/furniture/placares/categoriePlacar1.webp",
                         imgAlt: "Placar2",
                         imgProportionsX: 1,
                         imgProportionsY: 1

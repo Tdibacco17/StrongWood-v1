@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 import { furnitureCocina } from "@/models/furniture/cocina";
 import { furnitureBaño } from "@/models/furniture/baño";
-import { furniturePlacares } from "@/models/furniture/placar"
+import { furniturePlacares } from "@/models/furniture/placares"
 import { dormitorioCama, dormitorioComoda, dormitorioMezaDeLuz } from "@/models/furniture/dormitorio"
 import { FurnitureTableInterface } from "@/types/Interfaces";
 import BackLinkUrlComponent from "@/components/BackLinkUrlComponent/BackLinkUrlComponent";
