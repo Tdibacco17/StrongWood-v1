@@ -115,7 +115,7 @@ export default function ContactDesignContainer({
                     setLoadingText(false);
                     setIsModal(false);
                     router.push("/");
-                }, 2000)
+                }, 2500)
             } else {
                 setErrorMessage("")
                 setIsModal(true);
@@ -124,7 +124,7 @@ export default function ContactDesignContainer({
                     setLoadingText(false);
                     setIsModal(false);
                     router.push("/");
-                }, 2000)
+                }, 2500)
             }
         } catch (error) {
             console.log("Error al enviar el correo electrónico:", error);

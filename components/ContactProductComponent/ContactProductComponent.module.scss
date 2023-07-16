@@ -292,7 +292,7 @@
 
                 .form-error {
                     font-family: var(--strong-font-Roboto-Regular);
-                    font-size: var(--strong-font-xxxsmall);
+                    font-size: var(--strong-font-xxsmall);
                     font-weight: var(--strong-weight-400);
                     color: var(--strong-error-color);
 
@@ -308,7 +308,7 @@
                     color: var(--strong-bluegray-5);
 
                     @media (max-width: 768px) {
-                        font-size: var(--strong-font-xmedium);
+                        font-size: var(--strong-font-xsmall);
                     }
                 }
             }
