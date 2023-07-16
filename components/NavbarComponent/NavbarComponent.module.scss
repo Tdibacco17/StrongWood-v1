@@ -20,6 +20,10 @@
         --navbar-title-size: 2.1rem;
     }
 
+    @media (max-width: 325px) {
+        --navbar-title-size: 1.9rem;
+    }
+
     .container-primary-nav {
         position: relative;
         top: 0;
@@ -167,5 +171,9 @@
 
     .img-back {
         filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg);
+    }    
+    @media (max-width:325px) {
+        top: 0.45rem;
+        left: 0.20rem;          
     }
 }

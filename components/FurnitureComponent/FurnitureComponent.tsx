@@ -10,6 +10,7 @@ export default function FurnitureComponent({
     validated,
     handleCardClick,
     handleValidation,
+    buttonClicked
 }: {
     furnitureData: FurnitureTableInterface[];
     visibleTables: number[];
@@ -18,6 +19,7 @@ export default function FurnitureComponent({
     validated: boolean;
     handleCardClick: (tableId: number, cardId: number, cardTitle: string, tableTitle: string) => void;
     handleValidation: () => void;
+    buttonClicked: boolean
 }) {
 
     return (
@@ -38,10 +40,16 @@ export default function FurnitureComponent({
                     )
                 })}
             </div>
-            {visibleTables.length > furnitureData.length &&
-                <button className={`${styles["button-consultation-price"]}`}
-                    onClick={handleValidation}>COTIZAR</button>}
-            {/* {visibleTables.length > furnitureData.length && textAlert ? <p>Seleccionar todas las opciones</p> : <></>} */}
+            <div className={styles["container-button-finish"]}>
+                {
+                    (visibleTables.length > furnitureData.length && buttonClicked && (validated === false)) &&
+                    <p className={styles["error-text-msg"]}>Seleccione todas las opciones.</p>
+                }
+                {visibleTables.length > furnitureData.length &&
+                    <button className={`${styles["button-consultation-price"]}`}
+                        onClick={handleValidation}>COTIZAR</button>
+                }
+            </div>
         </div>
     )
 }

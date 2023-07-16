@@ -23,6 +23,7 @@ export default function FurnitureContainer({
     const [validated, setValidated] = useState(false);
     const [showMissingFields, setShowMissingFields] = useState(false);
 
+    const [buttonClicked, setButtonClicked] = useState(false);
 
     const router = useRouter();
 
@@ -79,6 +80,7 @@ export default function FurnitureContainer({
             router.push("/contact/design");
         } else {
             setValidated(false);
+            setButtonClicked(true);
         }
 
         setShowMissingFields(true);
@@ -92,5 +94,6 @@ export default function FurnitureContainer({
         validated={validated}
         handleCardClick={handleCardClick}
         handleValidation={handleValidation}
+        buttonClicked={buttonClicked}
     />
 }

@@ -32,7 +32,7 @@ export default function FurnitureTableComponent({
                     <p className={styles["container-title-table"]}>{TABLEelement.tableTitle}</p>
                     <p className={`${styles["container-subtitle-table"]} 
                     ${(visibleTables.length > furnitureData.length && shouldApplyStyle) ?
-                            (validated ? "" : styles["redTableColor"]) : null}`}>
+                            (validated ? "" : styles["error-text-msg"]) : null}`}>
                         Mínimo elegir 1 opción{TABLEelement.maxSelections !== 1 ? `, máximo ${TABLEelement.maxSelections}` : ""}
                     </p>
                 </div>

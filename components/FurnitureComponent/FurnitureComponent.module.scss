@@ -20,42 +20,53 @@
         width: 100%;
     }
 
-    .button-consultation-price {
+    .container-button-finish {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
+        gap: 1.5rem;
 
-        padding: 1rem;
-        border: 1px solid var(--strong-bluegray-10);
+        .button-consultation-price {
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-        border-radius: 0.2rem;
-        background-color: var(--strong-bluegray-11);
-        color: var(--strong-bluegray-1);
-        cursor: pointer;
+            padding: 1rem;
+            border: 1px solid var(--strong-bluegray-10);
 
-        transition: background-color 0.25s ease-in-out;
+            border-radius: 0.2rem;
+            background-color: var(--strong-bluegray-11);
+            color: var(--strong-bluegray-1);
+            cursor: pointer;
 
-        font-family: var(--strong-font-Roboto-Bold);
-        font-size: var(--strong-font-medium);
-        font-weight: var(--strong-weight-400);
-        color: var(--strong-bluegray-1);
-
-        &:hover {
-            background-color: var(--strong-bluegray-10);
             transition: background-color 0.25s ease-in-out;
-        }
 
-        min-width: var(--strong-calc-7rem);
-        max-width: var(--strong-calc-7rem);
+            font-family: var(--strong-font-Roboto-Bold);
+            font-size: var(--strong-font-medium);
+            font-weight: var(--strong-weight-400);
+            color: var(--strong-bluegray-1);
 
-        @media (max-width:768px) {
-            min-width: var(--strong-calc-5rem);
-            max-width: var(--strong-calc-5rem);
-        }
+            &:hover {
+                background-color: var(--strong-bluegray-10);
+                transition: background-color 0.25s ease-in-out;
+            }
 
-        @media (max-width:480px) {
-            min-width: var(--strong-calc-3rem);
-            max-width: var(--strong-calc-3rem);
+            min-width: var(--strong-calc-7rem);
+            max-width: var(--strong-calc-7rem);
+
+            @media (max-width:768px) {
+                min-width: var(--strong-calc-5rem);
+                max-width: var(--strong-calc-5rem);
+            }
+
+            @media (max-width:480px) {
+                min-width: var(--strong-calc-3rem);
+                max-width: var(--strong-calc-3rem);
+            }
         }
     }
+}
+
+.error-text-msg {
+    color: var(--strong-error-color) !important;
 }

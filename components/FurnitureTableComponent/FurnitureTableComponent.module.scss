@@ -109,7 +109,6 @@
         }
     }
 
-
     .buttons-table {
         position: absolute;
         top: 0;
@@ -157,11 +156,6 @@
     display: none;
 }
 
-// .redTable {
-//     border: 1px solid var(--strong-error-color);
-//     background-color: var(--strong-error-color);
-// }
-
-.redTableColor {
+.error-text-msg {
     color: var(--strong-error-color) !important;
 }
