@@ -1,14 +1,10 @@
-import Image from "next/image";
 import styles from "./FurnitureTableComponent.module.scss";
-import FurnitureCardComponent from "../FurnitureCardComponent/FurnitureCardComponent";
 import React from "react";
 import { FurnitureDataCardsInterface, FurnitureTableInterface } from "@/types/Interfaces";
 import FurnitureCardContainer from "@/containers/FurnitureCardContainer/FurnitureCardContainer";
+import useHorizontalScroll from "@/utils/scroll/useHorizontalScroll";
 
 export default function FurnitureTableComponent({
-    carouselTableRef,
-    handleScrollLeft,
-    handleScrollRight,
     TABLEelement,
     isTableVisible,
     shouldApplyStyle,
@@ -18,9 +14,6 @@ export default function FurnitureTableComponent({
     furnitureData,
     validated
 }: {
-    carouselTableRef: React.RefObject<HTMLDivElement>,
-    handleScrollLeft: () => void;
-    handleScrollRight: () => void;
     TABLEelement: FurnitureTableInterface,
     isTableVisible: boolean,
     shouldApplyStyle: boolean,
@@ -30,6 +23,8 @@ export default function FurnitureTableComponent({
     furnitureData: FurnitureTableInterface[];
     validated: boolean
 }) {
+
+    const scrollRef = useHorizontalScroll();
     return (
         <div id={`${TABLEelement.tableId}`} className={` ${styles["container-all-table-design"]} ${isTableVisible ? "" : styles["hidden"]}`}>
             <div className={styles["container-table"]}>
@@ -41,7 +36,7 @@ export default function FurnitureTableComponent({
                         Mínimo elegir 1 opción{TABLEelement.maxSelections !== 1 ? `, máximo ${TABLEelement.maxSelections}` : ""}
                     </p>
                 </div>
-                <div className={`${styles["carousel-table"]} ${shouldApplyStyle ? styles["redTable"] : ""}`} ref={carouselTableRef}>
+                <div className={`${styles["carousel-table"]}`} ref={scrollRef}>
                     {
                         TABLEelement.cards.map((CARDelement: FurnitureDataCardsInterface) => {
                             return (
@@ -56,26 +51,6 @@ export default function FurnitureTableComponent({
                         })
                     }
                 </div>
-            </div>
-            <div className={styles["buttons-table"]}>
-                <button className={styles["buttons"]} onClick={handleScrollLeft}>
-                    <Image
-                        src="/assets/icons/arrowLeft.svg"
-                        alt="Icono Izquierda"
-                        width={15}
-                        height={15}
-                        loading="lazy"
-                    />
-                </button>
-                <button className={styles["buttons"]} onClick={handleScrollRight}>
-                    <Image
-                        src="/assets/icons/arrowRight.svg"
-                        alt="Icono Derecha"
-                        width={15}
-                        height={15}
-                        loading="lazy"
-                    />
-                </button>
             </div>
         </div>
     )

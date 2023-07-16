@@ -10,46 +10,40 @@
     min-width: var(--design-card-width);
     max-width: var(--design-card-width);
 
-    background-color: var(--strong-bluegray-11);;
     border: 1px solid var(--strong-bluegray-11);
-
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     cursor: pointer;
 
-    @media (max-width:1355px) {
-        --design-card-width: 30rem;
-        --design-card-inner-height: 21rem;
-    }
-
-    @media (max-width:1100px) {
-        --design-card-width: 30rem;
-        --design-card-inner-height: 20rem;
-    }
-
     @media (max-width:992px) {
-        --design-card-width: 28rem;
-        --design-card-inner-height: 19rem;
+        --design-card-width: 22rem;
     }
 
     @media (max-width:768px) {
-        --design-card-width: var(--strong-calc-5rem);
-        --design-card-inner-height: 29rem;
+        --design-card-width: 21rem;
     }
 
     @media (max-width: 626px) {
-        --design-card-inner-height: 24rem;
+        --design-card-width: 20rem;
     }
 
     @media (max-width: 576px) {
-        --design-card-inner-height: 21rem;
+        --design-card-width: 19rem;
+        --design-card-inner-height: 14rem;
     }
 
     @media (max-width:480px) {
-        --design-card-width: var(--strong-calc-3rem);
-        --design-card-inner-height: 20rem;
+        --design-card-width: 18rem;
+    }
+
+    @media (max-width:400px) {
+        --design-card-width: 16rem;
+    }
+
+    @media (max-width:350px) {
+        --design-card-width: 14rem;
     }
 
     .container-inner-image {

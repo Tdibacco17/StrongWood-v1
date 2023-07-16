@@ -18,13 +18,17 @@ export default function FurnitureContainer({
         ContactContext
     ) as ContactDataContextInterface;
 
-
     const [visibleTables, setVisibleTables] = useState([1]);
     const [clickedImages, setClickedImages] = useState<{ [key: number]: FurnitureDataCardsInterface[] }>({});
     const [validated, setValidated] = useState(false);
     const [showMissingFields, setShowMissingFields] = useState(false);
 
+
     const router = useRouter();
+
+    useEffect(() => {
+
+    }, [])
 
     useEffect(() => {
         const allTablesHaveSelections = Array.from({ length: furnitureData.length }, (_, i) => i + 1).every(

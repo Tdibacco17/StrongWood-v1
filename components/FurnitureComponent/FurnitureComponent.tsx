@@ -9,7 +9,7 @@ export default function FurnitureComponent({
     showMissingFields,
     validated,
     handleCardClick,
-    handleValidation
+    handleValidation,
 }: {
     furnitureData: FurnitureTableInterface[];
     visibleTables: number[];
@@ -37,8 +37,11 @@ export default function FurnitureComponent({
                         />
                     )
                 })}
-                {visibleTables.length > furnitureData.length && <button className={styles["button-consultation-price"]} onClick={handleValidation}>COTIZAR</button>}
             </div>
+            {visibleTables.length > furnitureData.length &&
+                <button className={`${styles["button-consultation-price"]}`}
+                    onClick={handleValidation}>COTIZAR</button>}
+            {/* {visibleTables.length > furnitureData.length && textAlert ? <p>Seleccionar todas las opciones</p> : <></>} */}
         </div>
     )
 }
