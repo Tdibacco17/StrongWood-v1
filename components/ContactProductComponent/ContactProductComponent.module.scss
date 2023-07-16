@@ -301,18 +301,6 @@
                     }
                 }
 
-                .form-loading {
-                    font-family: var(--strong-font-Roboto-Regular);
-                    font-size: var(--strong-font-xxxsmall);
-                    font-weight: var(--strong-weight-400);
-                    color: var(--strong-bluegray-1);
-                    text-align: center;
-
-                    @media (max-width: 768px) {
-                        font-size: var(--strong-font-xmedium);
-                    }
-                }
-
                 .form-note {
                     font-family: var(--strong-font-Roboto-Regular);
                     font-size: var(--strong-font-xxsmall);

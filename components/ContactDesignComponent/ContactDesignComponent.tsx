@@ -109,9 +109,10 @@ export default function ContactDesignComponent({
                             </select>
                         </label>
 
-                        <button className={styles["form-button"]} type="submit">Enviar</button>
+                        <button className={styles["form-button"]} type="submit">
+                            {loadingText ? "Cargando.." : "Enviar"}
+                            </button>
                         <p className={styles["form-note"]}>Nos pondremos en contacto dentro de las proximias 72hs.</p>
-                        {loadingText && <p className={styles["form-loading"]}>Cargando..</p>}
                         {errorMessage && <p className={styles["form-error"]}>{errorMessage}</p>}
                     </form>
                 </div>
