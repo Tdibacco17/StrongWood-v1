@@ -18,7 +18,6 @@
     align-items: center;
     overflow: hidden;
     cursor: pointer;
-    background-color: red;
 
     @media (max-width:992px) {
         --design-card-width: 12rem;
@@ -32,7 +31,7 @@
     @media (max-width: 576px) {
         --design-card-width: 10rem;
     }
-    
+
     .container-inner-image {
         position: relative;
         min-height: var(--design-card-inner-height);
