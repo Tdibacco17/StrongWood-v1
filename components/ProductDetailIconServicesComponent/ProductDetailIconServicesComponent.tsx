@@ -10,6 +10,7 @@ export default function ProductDetailIconServicesComponent({ imgSrc }: { imgSrc:
                     alt="Icon"
                     fill
                     loading="lazy"
+                    sizes="(max-width: 480px) 2.2rem, (max-width: 992px) 2rem, 2.5rem"
                 />
             </div>
         </div>

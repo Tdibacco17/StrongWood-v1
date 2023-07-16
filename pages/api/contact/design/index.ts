@@ -69,7 +69,7 @@ export default async function sendEmail(req: NextApiRequest, res: NextApiRespons
                 color: #777;
             }
     
-            .email-link {
+            .link {
                 color: #007bff;
                 text-decoration: none;
             }
@@ -86,8 +86,8 @@ export default async function sendEmail(req: NextApiRequest, res: NextApiRespons
                     <h3>Datos personales:</h3>
                     <ul>
                         <li><strong>Nombre: </strong>${name}</li>
-                        <li><strong>Email: </strong><a href="mailto:${email}" class="email-link">${email}</a></li>
-                        <li><strong>Teléfono: </strong>${phone}</li>
+                        <li><strong>Email: </strong><a href="mailto:${email}" class="link">${email}</a></li>
+                        <li><strong>Teléfono: </strong><a href="https://wa.me/${phone}" class="link">${phone}</a></li>
                         <li><strong>Dirección: </strong>${direction}</li>
                     </ul>
                 </div>

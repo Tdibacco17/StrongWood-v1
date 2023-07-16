@@ -20,7 +20,6 @@
     background: var(--strong-bluegray-11);
 
     cursor: pointer;
-    position: relative;
 
     @media (max-width: 1071px) {
         --card-product-image: calc(37vw - 7rem);
@@ -55,7 +54,6 @@
         overflow: hidden;
 
         .container-inner-image {
-            position: relative;
             min-height: var(--card-product-image);
             max-height: var(--card-product-image);
             min-width: var(--card-product-image);

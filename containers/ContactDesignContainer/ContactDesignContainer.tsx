@@ -43,6 +43,8 @@ export default function ContactDesignContainer({
     };
 
     const handleValidation = () => {
+        const regex = /^[0-9]+$/;
+
         if (
             nameRef.current?.value.trim() === "" ||
             phoneRef.current?.value.trim() === "" ||
@@ -52,6 +54,17 @@ export default function ContactDesignContainer({
             setErrorMessage("Por favor, complete todos los campos.");
             return false;
         }
+
+        if(phoneRef.current?.value && !(regex.test(phoneRef.current?.value.trim()))){
+            setErrorMessage("Numero de telefono tiene que ser solo caracteres numericos.");
+            return false;
+        }
+
+        if(phoneRef.current?.value && !(phoneRef.current?.value.length >= 8)){
+            setErrorMessage("El número de teléfono no cumple con la longitud mínima.");
+            return false;
+        }
+
         if (selectedPayment === "") {
             setErrorMessage("Por favor, seleccione un método de pago.");
             return false;
@@ -66,15 +79,15 @@ export default function ContactDesignContainer({
         if (!handleValidation()) {
             setTimeout(() => {
                 setErrorMessage("")
-            }, 2000)
+            }, 4000)
             return;
         }
         setLoadingText(true);
 
         let dataDesign: ContactDesignDataInterface = {
             name: nameRef.current?.value || "No se paso un nombre",
-            phone: phoneRef.current?.value || "No se paso un telefono",
-            email: emailRef.current?.value || "No se paso un email",
+            phone: phoneRef.current?.value.trim() || "No se paso un telefono",
+            email: emailRef.current?.value.trim() || "No se paso un email",
             direction: directiongeRef.current?.value || "No se paso una dirección",
             selections: {
                 designSlug: infoFurniture.designSlug,

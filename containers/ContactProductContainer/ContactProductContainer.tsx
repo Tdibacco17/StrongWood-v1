@@ -67,6 +67,8 @@ export default function ContactProductContainer({
     const [errorMessage, setErrorMessage] = useState<string>("");
 
     const handleValidation = () => {
+        const regex = /^[0-9]+$/;
+
         if (
             nameRef.current?.value.trim() === "" ||
             phoneRef.current?.value.trim() === "" ||
@@ -76,6 +78,17 @@ export default function ContactProductContainer({
             setErrorMessage("Por favor, complete todos los campos.");
             return false;
         }
+
+        if(phoneRef.current?.value && !(regex.test(phoneRef.current?.value.trim()))){
+            setErrorMessage("Numero de telefono tiene que ser solo caracteres numericos.");
+            return false;
+        }
+
+        if(phoneRef.current?.value && !(phoneRef.current?.value.length >= 8)){
+            setErrorMessage("El número de teléfono no cumple con la longitud mínima.");
+            return false;
+        }
+
         if ((selectedPayment === "" && pay === "") ||
             selectedPayment === "" && (pay && pay !== "Efectivo" && pay !== "Tarjeta")) {
             setErrorMessage("Por favor, seleccione un método de pago.");
@@ -91,15 +104,15 @@ export default function ContactProductContainer({
         if (!handleValidation()) {
             setTimeout(() => {
                 setErrorMessage("")
-            }, 2000)
+            }, 4000)
             return;
         }
         setLoadingText(true);
 
         let data: ContactProductDataInterface = {
             name: nameRef.current?.value || "No se paso un nombre",
-            phone: phoneRef.current?.value || "No se paso un telefono",
-            email: emailRef.current?.value || "No se paso un email",
+            phone: phoneRef.current?.value.trim() || "No se paso un telefono",
+            email: emailRef.current?.value.trim() || "No se paso un email",
             direction: directiongeRef.current?.value || "No se paso una dirección",
             product: productData?.title || "No se paso un producto",
             paymentMethod: selectedPayment !== "" ? selectedPayment : (pay || "No se pasó un método de pago"),

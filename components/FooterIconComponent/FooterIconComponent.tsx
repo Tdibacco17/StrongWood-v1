@@ -10,6 +10,7 @@ export default function FooterIconComponent({ imgSrc }: { imgSrc: string }) {
                     alt="Icon"
                     fill
                     loading="lazy"
+                    sizes="(max-width: 480px) 1.2rem, (max-width: 768px) 1.5rem, (max-width: 992px) 1.6rem, 1.7rem"
                 />
             </div>
         </div>
