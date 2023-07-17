@@ -40,6 +40,10 @@
         max-width: var(--design-card-image-proportion);
 
         user-select: none;
+
+        * {
+            pointer-events: none;
+        }
     }
 
     .container-inner-placeholder {

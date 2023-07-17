@@ -96,6 +96,11 @@ export default function ContactDesignComponent({
                                 value={selectedPayment}
                                 onChange={handlePaymentChange}
                                 className={styles["select-paymethod"]}>
+                                {selectedPayment ? null : (
+                                    <option value="" className={styles["select-text"]} disabled hidden>
+                                        Seleccionar
+                                    </option>
+                                )}
                                 <option
                                     value={"Tarjeta"}
                                     className={styles["select-text"]}>
@@ -111,7 +116,7 @@ export default function ContactDesignComponent({
 
                         <button className={styles["form-button"]} type="submit">
                             {loadingText ? "Cargando.." : "Enviar"}
-                            </button>
+                        </button>
                         <p className={styles["form-note"]}>Nos pondremos en contacto dentro de las proximias 72hs.</p>
                         {errorMessage && <p className={styles["form-error"]}>{errorMessage}</p>}
                     </form>
