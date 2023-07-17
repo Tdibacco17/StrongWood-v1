@@ -1,7 +1,7 @@
 import { FurnitureTableDataInterface } from "@/types/Interfaces";
 
 export const furnitureCocina: FurnitureTableDataInterface = {
-    designTitle: "Cocina",
+    designSlug: "cocina",
     data: [
         {
             tableId: 1,

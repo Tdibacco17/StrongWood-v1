@@ -11,7 +11,7 @@ export default function ContactFurnituretPage() {
         ContactContext
     ) as ContactDataContextInterface;
 
-    if (infoFurniture?.designTitle === "") {
+    if (infoFurniture?.designSlug === "") {
         return (
             <LayoutComponent isSlider={false} urlBack={`design/`}>
                 <BackLinkUrlComponent textData={"Ocurrió algo inesperado"} backUrl={"/design"} />
@@ -21,8 +21,8 @@ export default function ContactFurnituretPage() {
     
     return (
         <LayoutComponent isSlider={false}
-            urlBack={`furniture/${infoFurniture?.designTitle}?item=${infoFurniture?.designItem}`}>
-            <ContactDesignContainer slug={infoFurniture?.designTitle} item={infoFurniture?.designItem} />
+            urlBack={`furniture/${infoFurniture?.designSlug}?item=${infoFurniture?.designItem}`}>
+            <ContactDesignContainer slug={infoFurniture?.designSlug} item={infoFurniture?.designItem} />
         </LayoutComponent>
     )
 }

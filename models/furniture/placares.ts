@@ -1,29 +1,69 @@
 import { FurnitureTableDataInterface } from "@/types/Interfaces";
 
 export const furniturePlacares: FurnitureTableDataInterface = {
-    designTitle: "Placar",
+    designSlug: "placar",
     data: [
         {
             tableId: 1,
             tableTitle: "Combinación de colores",
-            maxSelections: 2,
+            maxSelections: 1,
             cards: [
-                { cardId: 1, cardTitle: "Blanco laca" },
-                { cardId: 2, cardTitle: "Gris grafito" },
-                { cardId: 3, cardTitle: "Tribal" },
-                { cardId: 4, cardTitle: "Enchapado en madera" },
-                { cardId: 5, cardTitle: "Simil madera" },
-                { cardId: 6, cardTitle: "Simil madera" },
-                { cardId: 7, cardTitle: "Simil madera" },
-                { cardId: 8, cardTitle: "Simil madera" },
+                {
+                    cardId: 1, cardTitle: "Melamina",
+                    image: {
+                        imgSlug: "melamina",
+                        imgSrc: "/assets/img/furniture/cocina/colorMelamina.webp",
+                        imgAlt: "Melamina",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 2, cardTitle: "Laqueado",
+                    image: {
+                        imgSlug: "laqueado",
+                        imgSrc: "/assets/img/furniture/cocina/coloresLaqueado.webp",
+                        imgAlt: "Laqueado",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 3, cardTitle: "Enchapado en madera",
+                    image: {
+                        imgSlug: "enchapado-madera",
+                        imgSrc: "/assets/img/furniture/cocina/colorEnchapadoEnMadera.webp",
+                        imgAlt: "Enchapado en madera",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
             ],
         }, {
             tableId: 2,
             tableTitle: "Calidad de herrajes",
             maxSelections: 1,
             cards: [
-                { cardId: 1, cardTitle: "Estandar" },
-                { cardId: 3, cardTitle: "Premium" },
+                {
+                    cardId: 1, cardTitle: "Estandar",
+                    image: {
+                        imgSlug: "herraje-estandar",
+                        imgSrc: "/assets/img/furniture/cocina/herrajesEstandar.webp",
+                        imgAlt: "Herraje estandar",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 2, cardTitle: "Premium",
+                    image: {
+                        imgSlug: "herraje-premium",
+                        imgSrc: "/assets/img/furniture/cocina/herrajesPremium.webp",
+                        imgAlt: "Herraje premium",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
             ],
         }, {
             tableId: 3,
@@ -32,12 +72,20 @@ export const furniturePlacares: FurnitureTableDataInterface = {
             cards: [
                 { cardId: 1, cardTitle: "Pantalonero" },
                 { cardId: 2, cardTitle: "Zapatero" },
-                { cardId: 3, cardTitle: "Luces led" },
-                { cardId: 4, cardTitle: "Barral para perchas" },
-                { cardId: 5, cardTitle: "Puertas aluminio" },
-                { cardId: 6, cardTitle: "Puertas corredizas" },
                 {
-                    cardId: 7, cardTitle: "Puertas de vidrio",
+                    cardId: 3, cardTitle: "Luces LED",
+                    image: {
+                        imgSlug: "Luces-led",
+                        imgSrc: "/assets/img/furniture/cocina/combinacionesLuzLed.webp",
+                        imgAlt: "Luces LED",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                { cardId: 4, cardTitle: "Barral para perchas" },
+                { cardId: 5, cardTitle: "Puertas corredizas" },
+                {
+                    cardId: 6, cardTitle: "Puertas de vidrio",
                     image: {
                         imgSlug: "puertas-de-vidrio",
                         imgSrc: "/assets/img/furniture/placares/combinacionesPuertaDeVidrio.webp",
@@ -46,7 +94,16 @@ export const furniturePlacares: FurnitureTableDataInterface = {
                         imgProportionsY: 0.6651,
                     }
                 },
-                { cardId: 8, cardTitle: "Sin puerta" },
+                {
+                    cardId: 7, cardTitle: "Sin puerta",
+                    image: {
+                        imgSlug: "sin-puertas",
+                        imgSrc: "/assets/img/furniture/placares/combinacionesSinPuerta.webp",
+                        imgAlt: "Sin puerta",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
             ],
         }, {
             tableId: 4,

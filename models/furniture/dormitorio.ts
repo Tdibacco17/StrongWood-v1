@@ -1,29 +1,69 @@
 import { FurnitureTableDataInterface } from "@/types/Interfaces";
 
 export const dormitorioCama: FurnitureTableDataInterface = {
-    designTitle: "Dormitorio",
+    designSlug: "dormitorio",
     data: [
         {
             tableId: 1,
             tableTitle: "Combinación de colores",
             maxSelections: 2,
             cards: [
-                { cardId: 1, cardTitle: "Blanco laca" },
-                { cardId: 2, cardTitle: "Gris grafito" },
-                { cardId: 3, cardTitle: "Tribal" },
-                { cardId: 4, cardTitle: "Enchapado en madera" },
-                { cardId: 5, cardTitle: "Simil madera" },
-                { cardId: 6, cardTitle: "Simil madera" },
-                { cardId: 7, cardTitle: "Simil madera" },
-                { cardId: 8, cardTitle: "Simil madera" },
+                {
+                    cardId: 1, cardTitle: "Melamina",
+                    image: {
+                        imgSlug: "melamina",
+                        imgSrc: "/assets/img/furniture/cocina/colorMelamina.webp",
+                        imgAlt: "Melamina",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 2, cardTitle: "Laqueado",
+                    image: {
+                        imgSlug: "laqueado",
+                        imgSrc: "/assets/img/furniture/cocina/coloresLaqueado.webp",
+                        imgAlt: "Laqueado",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 3, cardTitle: "Enchapado en madera",
+                    image: {
+                        imgSlug: "enchapado-madera",
+                        imgSrc: "/assets/img/furniture/cocina/colorEnchapadoEnMadera.webp",
+                        imgAlt: "Enchapado en madera",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
             ],
         }, {
             tableId: 2,
             tableTitle: "Calidad de herrajes",
             maxSelections: 1,
             cards: [
-                { cardId: 1, cardTitle: "Estandar" },
-                { cardId: 3, cardTitle: "Premium" },
+                {
+                    cardId: 1, cardTitle: "Estandar",
+                    image: {
+                        imgSlug: "herraje-estandar",
+                        imgSrc: "/assets/img/furniture/cocina/herrajesEstandar.webp",
+                        imgAlt: "Herraje estandar",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 2, cardTitle: "Premium",
+                    image: {
+                        imgSlug: "herraje-premium",
+                        imgSrc: "/assets/img/furniture/cocina/herrajesPremium.webp",
+                        imgAlt: "Herraje premium",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
             ],
         }, {
             tableId: 3,
@@ -48,29 +88,69 @@ export const dormitorioCama: FurnitureTableDataInterface = {
 }
 
 export const dormitorioMezaDeLuz: FurnitureTableDataInterface = {
-    designTitle: "Dormitorio",
+    designSlug: "dormitorio",
     data: [
         {
             tableId: 1,
             tableTitle: "Combinación de colores",
             maxSelections: 2,
             cards: [
-                { cardId: 1, cardTitle: "Blanco laca" },
-                { cardId: 2, cardTitle: "Gris grafito" },
-                { cardId: 3, cardTitle: "Tribal" },
-                { cardId: 4, cardTitle: "Enchapado en madera" },
-                { cardId: 5, cardTitle: "Simil madera" },
-                { cardId: 6, cardTitle: "Simil madera" },
-                { cardId: 7, cardTitle: "Simil madera" },
-                { cardId: 8, cardTitle: "Simil madera" },
+                {
+                    cardId: 1, cardTitle: "Melamina",
+                    image: {
+                        imgSlug: "melamina",
+                        imgSrc: "/assets/img/furniture/cocina/colorMelamina.webp",
+                        imgAlt: "Melamina",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 2, cardTitle: "Laqueado",
+                    image: {
+                        imgSlug: "laqueado",
+                        imgSrc: "/assets/img/furniture/cocina/coloresLaqueado.webp",
+                        imgAlt: "Laqueado",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 3, cardTitle: "Enchapado en madera",
+                    image: {
+                        imgSlug: "enchapado-madera",
+                        imgSrc: "/assets/img/furniture/cocina/colorEnchapadoEnMadera.webp",
+                        imgAlt: "Enchapado en madera",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
             ],
         }, {
             tableId: 2,
             tableTitle: "Calidad de herrajes",
             maxSelections: 1,
             cards: [
-                { cardId: 1, cardTitle: "Estandar" },
-                { cardId: 3, cardTitle: "Premium" },
+                {
+                    cardId: 1, cardTitle: "Estandar",
+                    image: {
+                        imgSlug: "herraje-estandar",
+                        imgSrc: "/assets/img/furniture/cocina/herrajesEstandar.webp",
+                        imgAlt: "Herraje estandar",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 2, cardTitle: "Premium",
+                    image: {
+                        imgSlug: "herraje-premium",
+                        imgSrc: "/assets/img/furniture/cocina/herrajesPremium.webp",
+                        imgAlt: "Herraje premium",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
             ],
         }, {
             tableId: 3,
@@ -95,29 +175,69 @@ export const dormitorioMezaDeLuz: FurnitureTableDataInterface = {
 }
 
 export const dormitorioComoda: FurnitureTableDataInterface = {
-    designTitle: "Dormitorio",
+    designSlug: "dormitorio",
     data: [
         {
             tableId: 1,
             tableTitle: "Combinación de colores",
             maxSelections: 2,
             cards: [
-                { cardId: 1, cardTitle: "Blanco laca" },
-                { cardId: 2, cardTitle: "Gris grafito" },
-                { cardId: 3, cardTitle: "Tribal" },
-                { cardId: 4, cardTitle: "Enchapado en madera" },
-                { cardId: 5, cardTitle: "Simil madera" },
-                { cardId: 6, cardTitle: "Simil madera" },
-                { cardId: 7, cardTitle: "Simil madera" },
-                { cardId: 8, cardTitle: "Simil madera" },
+                {
+                    cardId: 1, cardTitle: "Melamina",
+                    image: {
+                        imgSlug: "melamina",
+                        imgSrc: "/assets/img/furniture/cocina/colorMelamina.webp",
+                        imgAlt: "Melamina",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 2, cardTitle: "Laqueado",
+                    image: {
+                        imgSlug: "laqueado",
+                        imgSrc: "/assets/img/furniture/cocina/coloresLaqueado.webp",
+                        imgAlt: "Laqueado",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 3, cardTitle: "Enchapado en madera",
+                    image: {
+                        imgSlug: "enchapado-madera",
+                        imgSrc: "/assets/img/furniture/cocina/colorEnchapadoEnMadera.webp",
+                        imgAlt: "Enchapado en madera",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
             ],
         }, {
             tableId: 2,
             tableTitle: "Calidad de herrajes",
             maxSelections: 1,
             cards: [
-                { cardId: 1, cardTitle: "Estandar" },
-                { cardId: 3, cardTitle: "Premium" },
+                {
+                    cardId: 1, cardTitle: "Estandar",
+                    image: {
+                        imgSlug: "herraje-estandar",
+                        imgSrc: "/assets/img/furniture/cocina/herrajesEstandar.webp",
+                        imgAlt: "Herraje estandar",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 2, cardTitle: "Premium",
+                    image: {
+                        imgSlug: "herraje-premium",
+                        imgSrc: "/assets/img/furniture/cocina/herrajesPremium.webp",
+                        imgAlt: "Herraje premium",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
             ],
         }, {
             tableId: 3,

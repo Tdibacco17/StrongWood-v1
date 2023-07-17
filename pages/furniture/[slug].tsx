@@ -16,28 +16,28 @@ export default function FurnitureDetailPage() {
     const { slug, item } = router.query;
 
     let furnitureData: FurnitureTableInterface[];
-    let designTitle: string;
+    let designSlug: string;
 
     //VALIDAR MEJOR ESTO EN EL RUTEO 
     if (slug === "cocina") {
         furnitureData = furnitureCocina.data;
-        designTitle = furnitureCocina.designTitle;
+        designSlug = furnitureCocina.designSlug;
     } else if (slug === "baño") {
         furnitureData = furnitureBaño.data;
-        designTitle = furnitureBaño.designTitle;
+        designSlug = furnitureBaño.designSlug;
     } else if (slug === "placares") {
         furnitureData = furniturePlacares.data
-        designTitle = furniturePlacares.designTitle;
+        designSlug = furniturePlacares.designSlug;
     } else if (slug === "dormitorio") {
         if (item === "cama-1" || item === "cama-2" || item === "cama-3") {
             furnitureData = dormitorioCama.data;
-            designTitle = dormitorioCama.designTitle;
+            designSlug = dormitorioCama.designSlug;
         } else if (item === "mesa-de-luz-1" || item === "mesa-de-luz-2") {
             furnitureData = dormitorioMezaDeLuz.data;
-            designTitle = dormitorioMezaDeLuz.designTitle;
+            designSlug = dormitorioMezaDeLuz.designSlug;
         } else if (item === "comoda-1" || item === "comoda-2") {
             furnitureData = dormitorioComoda.data;
-            designTitle = dormitorioComoda.designTitle;
+            designSlug = dormitorioComoda.designSlug;
         } else {
             return (
                 <LayoutComponent isSlider={false} urlBack={`/design`}>
@@ -55,7 +55,7 @@ export default function FurnitureDetailPage() {
 
     return (
         <LayoutComponent isSlider={false} urlBack={`design/${slug}`}>
-            <FurnitureContainer furnitureData={furnitureData} item={item as string} designTitle={designTitle as string} />
+            <FurnitureContainer furnitureData={furnitureData} item={item as string} designSlug={designSlug as string} />
         </LayoutComponent>
     )
 }

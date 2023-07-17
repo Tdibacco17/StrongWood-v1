@@ -126,7 +126,7 @@ export interface ContactDesignDataInterface {
 }
 
 export interface FurnitureTableDataInterface {
-    designTitle: string,
+    designSlug: string,
     data: FurnitureTableInterface[]
 }
 export interface FurnitureTableInterface {

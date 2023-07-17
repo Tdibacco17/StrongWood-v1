@@ -36,6 +36,7 @@ export default function FurnitureCardComponent({
                     loading="lazy"
                     onLoadingComplete={() => { setImageLoaded(true) }}
                     style={{ opacity: imageLoaded ? "1" : "0" }}
+                    sizes="(max-width: 992px) 12rem, (max-width: 768px) 11rem, (max-width: 576px) 10rem, 14rem"
                 />
             </div>
             <div className={styles["container-overlay-image"]}>
