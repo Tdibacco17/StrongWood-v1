@@ -36,7 +36,17 @@ export const furniturePlacares: FurnitureTableDataInterface = {
                 { cardId: 4, cardTitle: "Barral para perchas" },
                 { cardId: 5, cardTitle: "Puertas aluminio" },
                 { cardId: 6, cardTitle: "Puertas corredizas" },
-                { cardId: 7, cardTitle: "Sin puerta" },
+                {
+                    cardId: 7, cardTitle: "Puertas de vidrio",
+                    image: {
+                        imgSlug: "puertas-de-vidrio",
+                        imgSrc: "/assets/img/furniture/placares/combinacionesPuertaDeVidrio.webp",
+                        imgAlt: "Puertas de vidrio",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                { cardId: 8, cardTitle: "Sin puerta" },
             ],
         }, {
             tableId: 4,

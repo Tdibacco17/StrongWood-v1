@@ -252,14 +252,14 @@ export const designData: DesignDataInterface = {
                 images: [
                     {
                         imgSlug: "vestidor-1",
-                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
+                        imgSrc: "/assets/img/design/placares/categorieVestidor1.webp",
                         imgAlt: "Vestidores1",
                         imgProportionsX: 1,
                         imgProportionsY: 1
                     },
                     {
                         imgSlug: "vestidor-2",
-                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
+                        imgSrc: "/assets/img/design/placares/categorieVestidor1.webp",
                         imgAlt: "Vestidores2",
                         imgProportionsX: 1,
                         imgProportionsY: 1
@@ -270,14 +270,14 @@ export const designData: DesignDataInterface = {
                 images: [
                     {
                         imgSlug: "placar-1",
-                        imgSrc: "/assets/img/furniture/placares/categoriePlacar1.webp",
+                        imgSrc: "/assets/img/design/placares/categoriePlacar1.webp",
                         imgAlt: "Placar1",
                         imgProportionsX: 1,
                         imgProportionsY: 1
                     },
                     {
                         imgSlug: "placar-2",
-                        imgSrc: "/assets/img/furniture/placares/categoriePlacar1.webp",
+                        imgSrc: "/assets/img/design/placares/categoriePlacar1.webp",
                         imgAlt: "Placar2",
                         imgProportionsX: 1,
                         imgProportionsY: 1

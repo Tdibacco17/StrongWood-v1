@@ -8,9 +8,36 @@ export const furnitureCocina: FurnitureTableDataInterface = {
             tableTitle: "Combinación de colores",
             maxSelections: 1,
             cards: [
-                { cardId: 1, cardTitle: "Melamina" },
-                { cardId: 2, cardTitle: "Laqueado" },
-                { cardId: 3, cardTitle: "Enchapado en madera Laqueado" },
+                {
+                    cardId: 1, cardTitle: "Melamina",
+                    image: {
+                        imgSlug: "melamina",
+                        imgSrc: "/assets/img/furniture/cocina/colorMelamina.webp",
+                        imgAlt: "Melamina",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 2, cardTitle: "Laqueado",
+                    image: {
+                        imgSlug: "laqueado",
+                        imgSrc: "/assets/img/furniture/cocina/coloresLaqueado.webp",
+                        imgAlt: "Laqueado",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 3, cardTitle: "Enchapado en madera",
+                    image: {
+                        imgSlug: "enchapado-madera",
+                        imgSrc: "/assets/img/furniture/cocina/colorEnchapadoEnMadera.webp",
+                        imgAlt: "Enchapado en madera",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
             ],
         }, {
             tableId: 2,
@@ -74,21 +101,57 @@ export const furnitureCocina: FurnitureTableDataInterface = {
                         imgProportionsY: 0.6651,
                     }
                 },
-                { cardId: 4, cardTitle: "Carro especiero" },
-                { cardId: 5, cardTitle: "Carro esquinero" },
+                {
+                    cardId: 4, cardTitle: "Carro especiero",
+                    image: {
+                        imgSlug: "carro-especiero",
+                        imgSrc: "/assets/img/furniture/cocina/combinacionesCarroEspeciero.webp",
+                        imgAlt: "Carro especiero",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 5, cardTitle: "Carro esquinero",
+                    image: {
+                        imgSlug: "carro-esquinero",
+                        imgSrc: "/assets/img/furniture/cocina/combinacionesCarroEsquinero.webp",
+                        imgAlt: "Carro esquinero",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
                 { cardId: 6, cardTitle: "Torre de heladera" },
                 {
                     cardId: 7, cardTitle: "Torre de horno + microondas",
                     image: {
                         imgSlug: "Torre-de-horno-microondas",
-                        imgSrc: "/assets/img/furniture/cocina/combinacionesTorreHornoMicroondas.webp",
+                        imgSrc: "/assets/img/furniture/cocina/combinacionesTorreHornoMasMicroondas.webp",
                         imgAlt: "Torre de horno + microondas",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
                     }
                 },
-                { cardId: 8, cardTitle: "Mesada de madera maciza" },
-                { cardId: 9, cardTitle: "Luces led" },
+                {
+                    cardId: 8, cardTitle: "Mesada de madera maciza",
+                    image: {
+                        imgSlug: "mesada-madera-maciza",
+                        imgSrc: "/assets/img/furniture/cocina/combinacionesMesadaMaderaMaciza.webp",
+                        imgAlt: "Mesada de madera maciza",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 9, cardTitle: "Luces LED",
+                    image: {
+                        imgSlug: "Luces-led",
+                        imgSrc: "/assets/img/furniture/cocina/combinacionesLuzLed.webp",
+                        imgAlt: "Luces LED",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
             ],
         }, {
             tableId: 4,
