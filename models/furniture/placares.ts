@@ -98,7 +98,7 @@ export const furniturePlacares: FurnitureTableDataInterface = {
                     cardId: 7, cardTitle: "Sin puerta",
                     image: {
                         imgSlug: "sin-puertas",
-                        imgSrc: "/assets/img/furniture/placares/combinacionesSinPuerta.webp",
+                        imgSrc: "/assets/img/furniture/placares/combinacionesPlacarSinPuerta.webp",
                         imgAlt: "Sin puerta",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,

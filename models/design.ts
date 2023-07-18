@@ -148,19 +148,19 @@ export const designData: DesignDataInterface = {
                     {
                         imgSlug: "cama-1",
                         imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-                        imgAlt: "Cama1",
+                        imgAlt: "Cama 1",
                         imgProportionsX: 1,
                         imgProportionsY: 1
                     }, {
                         imgSlug: "cama-2",
                         imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-                        imgAlt: "Cama2",
+                        imgAlt: "Cama 2",
                         imgProportionsX: 1,
                         imgProportionsY: 1
                     }, {
                         imgSlug: "cama-3",
                         imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-                        imgAlt: "Cama3",
+                        imgAlt: "Cama 3",
                         imgProportionsX: 1,
                         imgProportionsY: 1
                     },
@@ -188,15 +188,15 @@ export const designData: DesignDataInterface = {
                 images: [
                     {
                         imgSlug: "comoda-1",
-                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-                        imgAlt: "Escritorio",
+                        imgSrc: "/assets/img/design/placares/categorieComoda1.webp",
+                        imgAlt: "Comoda 1",
                         imgProportionsX: 1,
                         imgProportionsY: 1
                     },
                     {
                         imgSlug: "comoda-2",
                         imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-                        imgAlt: "Escritorio",
+                        imgAlt: "Comoda 2",
                         imgProportionsX: 1,
                         imgProportionsY: 1
                     },
@@ -266,7 +266,7 @@ export const designData: DesignDataInterface = {
                     },
                     {
                         imgSlug: "vestidor-3",
-                        imgSrc: "/assets/img/design/placares/categorieVestidor3.webp",
+                        imgSrc: "/assets/img/design/placares/categorieVestidor33.webp",
                         imgAlt: "Vestidores3",
                         imgProportionsX: 1,
                         imgProportionsY: 1
