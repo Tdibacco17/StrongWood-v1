@@ -19,17 +19,7 @@ export const furniturePlacares: FurnitureTableDataInterface = {
                     }
                 },
                 {
-                    cardId: 2, cardTitle: "Laqueado",
-                    image: {
-                        imgSlug: "laqueado",
-                        imgSrc: "/assets/img/furniture/cocina/coloresLaqueado.webp",
-                        imgAlt: "Laqueado",
-                        imgProportionsX: 1.5024,
-                        imgProportionsY: 0.6651,
-                    }
-                },
-                {
-                    cardId: 3, cardTitle: "Enchapado en madera",
+                    cardId: 2, cardTitle: "Enchapado en madera",
                     image: {
                         imgSlug: "enchapado-madera",
                         imgSrc: "/assets/img/furniture/cocina/colorEnchapadoEnMadera.webp",
@@ -68,7 +58,7 @@ export const furniturePlacares: FurnitureTableDataInterface = {
         }, {
             tableId: 3,
             tableTitle: "Incluir",
-            maxSelections: 7,
+            maxSelections: 4,
             cards: [
                 { cardId: 1, cardTitle: "Pantalonero" },
                 { cardId: 2, cardTitle: "Zapatero" },
@@ -83,9 +73,15 @@ export const furniturePlacares: FurnitureTableDataInterface = {
                     }
                 },
                 { cardId: 4, cardTitle: "Barral para perchas" },
-                { cardId: 5, cardTitle: "Puertas corredizas" },
+            ],
+        },
+        {
+            tableId: 4,
+            tableTitle: "Puertas",
+            maxSelections: 1,
+            cards: [
                 {
-                    cardId: 6, cardTitle: "Puertas de vidrio",
+                    cardId: 1, cardTitle: "De vidrio",
                     image: {
                         imgSlug: "puertas-de-vidrio",
                         imgSrc: "/assets/img/furniture/placares/combinacionesPuertaDeVidrio.webp",
@@ -94,8 +90,9 @@ export const furniturePlacares: FurnitureTableDataInterface = {
                         imgProportionsY: 0.6651,
                     }
                 },
+                { cardId: 2, cardTitle: "Corredizas" },
                 {
-                    cardId: 7, cardTitle: "Sin puerta",
+                    cardId: 3, cardTitle: "Sin puerta",
                     image: {
                         imgSlug: "sin-puertas",
                         imgSrc: "/assets/img/furniture/placares/combinacionesPlacarSinPuerta.webp",
@@ -106,9 +103,9 @@ export const furniturePlacares: FurnitureTableDataInterface = {
                 },
             ],
         }, {
-            tableId: 4,
+            tableId: 5,
             tableTitle: "Distribución",
-            maxSelections: 7,
+            maxSelections: 1,
             cards: [
                 {
                     cardId: 1, cardTitle: "En L",
@@ -160,8 +157,14 @@ export const furniturePlacares: FurnitureTableDataInterface = {
                         imgProportionsY: 0.6651,
                     }
                 },
+            ],
+        }, {
+            tableId: 6,
+            tableTitle: "Con isla",
+            maxSelections: 1,
+            cards: [
                 {
-                    cardId: 6, cardTitle: "Con isla",
+                    cardId: 1, cardTitle: "Si",
                     image: {
                         imgSlug: "placar-con-isla",
                         imgSrc: "/assets/img/furniture/placares/placarEnIsla.webp",
@@ -170,9 +173,10 @@ export const furniturePlacares: FurnitureTableDataInterface = {
                         imgProportionsY: 0.6651,
                     }
                 },
+                { cardId: 2, cardTitle: "No", },
             ],
         }, {
-            tableId: 5,
+            tableId: 7,
             tableTitle: "Medidas (ancho x largo x profundidad)",
             maxSelections: 1,
             cards: [

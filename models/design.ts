@@ -81,16 +81,16 @@ export const designData: DesignDataInterface = {
             }
         ]
     },
-    "obras": {
-        designSlug: "obras",
-        title: "Obras",
-        image: {
-            imgSlug: 1,
-            imgSrc: "/assets/img/design/obras/Farina1.webp",
-            imgAlt: "Obras",
-            imgProportionsX: 1.5024,
-            imgProportionsY: 0.6651,
-        },
+    // "obras": {
+    //     designSlug: "obras",
+    //     title: "Obras",
+    //     image: {
+    //         imgSlug: 1,
+    //         imgSrc: "/assets/img/design/obras/Farina1.webp",
+    //         imgAlt: "Obras",
+    //         imgProportionsX: 1.5024,
+    //         imgProportionsY: 0.6651,
+    //     },
         // subcategories: [
         //     {
         //         title: "Locales",
@@ -130,90 +130,90 @@ export const designData: DesignDataInterface = {
         //         ]
         //     }
         // ]
-    },
-    "dormitorio": {
-        designSlug: "dormitorio",
-        title: "Dormitorio",
-        image: {
-            imgSlug: 1,
-            imgSrc: "/assets/img/design/dormitorio/Dormitorio1.webp",
-            imgAlt: "Dormitorio",
-            imgProportionsX: 1.5024,
-            imgProportionsY: 0.6651,
-        },
-        subcategories: [
-            {
-                title: "Cama",
-                images: [
-                    {
-                        imgSlug: "cama-1",
-                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-                        imgAlt: "Cama 1",
-                        imgProportionsX: 1,
-                        imgProportionsY: 1
-                    }, {
-                        imgSlug: "cama-2",
-                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-                        imgAlt: "Cama 2",
-                        imgProportionsX: 1,
-                        imgProportionsY: 1
-                    }, {
-                        imgSlug: "cama-3",
-                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-                        imgAlt: "Cama 3",
-                        imgProportionsX: 1,
-                        imgProportionsY: 1
-                    },
-                ]
-            }, {
-                title: "Mesa de Luz",
-                images: [
-                    {
-                        imgSlug: "mesa-de-luz-1",
-                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-                        imgAlt: "Mesa de Luz",
-                        imgProportionsX: 1,
-                        imgProportionsY: 1
-                    },
-                    {
-                        imgSlug: "mesa-de-luz-2",
-                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-                        imgAlt: "Mesa de Luz",
-                        imgProportionsX: 1,
-                        imgProportionsY: 1
-                    },
-                ]
-            }, {
-                title: "Comoda",
-                images: [
-                    {
-                        imgSlug: "comoda-1",
-                        imgSrc: "/assets/img/design/placares/categorieComoda1.webp",
-                        imgAlt: "Comoda 1",
-                        imgProportionsX: 1,
-                        imgProportionsY: 1
-                    },
-                    {
-                        imgSlug: "comoda-2",
-                        imgSrc: "/assets/img/home/twoCategories/strong1.webp",
-                        imgAlt: "Comoda 2",
-                        imgProportionsX: 1,
-                        imgProportionsY: 1
-                    },
-                ]
-            }
-        ]
-    },
-    "oficina-e-industria": {
-        designSlug: "oficina-e-industria",
-        title: "Oficina e Industria",
-        image: {
-            imgSlug: 1,
-            imgSrc: "/assets/img/design/oficinaIndustria/oficina1.webp",
-            imgAlt: "Oficina e industria",
-            imgProportionsX: 1.5024,
-            imgProportionsY: 0.6651,
-        },
+    // },
+    // "dormitorio": {
+    //     designSlug: "dormitorio",
+    //     title: "Dormitorio",
+    //     image: {
+    //         imgSlug: 1,
+    //         imgSrc: "/assets/img/design/dormitorio/Dormitorio1.webp",
+    //         imgAlt: "Dormitorio",
+    //         imgProportionsX: 1.5024,
+    //         imgProportionsY: 0.6651,
+    //     },
+    //     subcategories: [
+    //         {
+    //             title: "Cama",
+    //             images: [
+    //                 {
+    //                     imgSlug: "cama-1",
+    //                     imgSrc: "/assets/img/home/twoCategories/strong1.webp",
+    //                     imgAlt: "Cama 1",
+    //                     imgProportionsX: 1,
+    //                     imgProportionsY: 1
+    //                 }, {
+    //                     imgSlug: "cama-2",
+    //                     imgSrc: "/assets/img/home/twoCategories/strong1.webp",
+    //                     imgAlt: "Cama 2",
+    //                     imgProportionsX: 1,
+    //                     imgProportionsY: 1
+    //                 }, {
+    //                     imgSlug: "cama-3",
+    //                     imgSrc: "/assets/img/home/twoCategories/strong1.webp",
+    //                     imgAlt: "Cama 3",
+    //                     imgProportionsX: 1,
+    //                     imgProportionsY: 1
+    //                 },
+    //             ]
+    //         }, {
+    //             title: "Mesa de Luz",
+    //             images: [
+    //                 {
+    //                     imgSlug: "mesa-de-luz-1",
+    //                     imgSrc: "/assets/img/home/twoCategories/strong1.webp",
+    //                     imgAlt: "Mesa de Luz",
+    //                     imgProportionsX: 1,
+    //                     imgProportionsY: 1
+    //                 },
+    //                 {
+    //                     imgSlug: "mesa-de-luz-2",
+    //                     imgSrc: "/assets/img/home/twoCategories/strong1.webp",
+    //                     imgAlt: "Mesa de Luz",
+    //                     imgProportionsX: 1,
+    //                     imgProportionsY: 1
+    //                 },
+    //             ]
+    //         }, {
+    //             title: "Comoda",
+    //             images: [
+    //                 {
+    //                     imgSlug: "comoda-1",
+    //                     imgSrc: "/assets/img/design/placares/categorieComoda1.webp",
+    //                     imgAlt: "Comoda 1",
+    //                     imgProportionsX: 1,
+    //                     imgProportionsY: 1
+    //                 },
+    //                 {
+    //                     imgSlug: "comoda-2",
+    //                     imgSrc: "/assets/img/home/twoCategories/strong1.webp",
+    //                     imgAlt: "Comoda 2",
+    //                     imgProportionsX: 1,
+    //                     imgProportionsY: 1
+    //                 },
+    //             ]
+    //         }
+    //     ]
+    // },
+    // "oficina-e-industria": {
+    //     designSlug: "oficina-e-industria",
+    //     title: "Oficina e Industria",
+    //     image: {
+    //         imgSlug: 1,
+    //         imgSrc: "/assets/img/design/oficinaIndustria/oficina1.webp",
+    //         imgAlt: "Oficina e industria",
+    //         imgProportionsX: 1.5024,
+    //         imgProportionsY: 0.6651,
+    //     },
         // subcategories: [
         //     {
         //         title: "Escritorios",
@@ -235,7 +235,7 @@ export const designData: DesignDataInterface = {
         //         ]
         //     }
         // ]
-    },
+    // },
     "placares": {
         designSlug: "placares",
         title: "Placares",

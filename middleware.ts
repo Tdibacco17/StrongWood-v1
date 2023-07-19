@@ -3,22 +3,24 @@ import { NextRequest, NextResponse } from "next/server";
 const routesFurniture = [
     "/furniture/cocina",
     "/furniture/ba%C3%B1o",
-    "/furniture/obras",
-    "/furniture/dormitorio",
-    "/furniture/oficina-e-industria",
     "/furniture/placares"
+    // "/furniture/obras",
+    // "/furniture/dormitorio",
+    // "/furniture/oficina-e-industria",
 ];
 
 const routesDesign = [
-    "cocina", "baño", "obras",
-    "dormitorio", "oficina-e-industria", "placares"
+    "placares", "cocina", "baño",
+    // "obras",
+    // "dormitorio", 
+    // "oficina-e-industria", 
 ]
 
 const fornitureItem = [
     "serie-nordica", "serie-new-york", "serie-premium", "serie-nova",
     "vanitory-new-york", "vanitory-escandinavo", "vanitory-nordico",
     "vestidor-1", "vestidor-2", "vestidor-3", "placar-1",
-    "cama-1", "cama-2", "cama-3", "mesa-de-luz-1", "mesa-de-luz-2", "comoda-1", "comoda-2"
+    // "cama-1", "cama-2", "cama-3", "mesa-de-luz-1", "mesa-de-luz-2", "comoda-1", "comoda-2"
 ];
 
 const routesProducts = [
@@ -69,7 +71,7 @@ export function middleware(request: NextRequest) {
         const remainingPath = pathname.replace("/furniture/", "");
         const slug = remainingPath.split("/")[0];
         const encodedSlug = encodeURIComponent(slug);
-    
+
         if (encodedSlug.length > 0 && slug !== "ba%C3%B1o") {
             if (!routesDesign.includes(encodedSlug)) {
                 return NextResponse.redirect(new URL("/design", request.url));
@@ -100,7 +102,7 @@ export function middleware(request: NextRequest) {
     if (pathname.startsWith("/design/")) {
         const remainingPath = pathname.replace("/design/", "");
         const slug = decodeURIComponent(remainingPath);
-    
+
         if (!routesDesign.includes(slug)) {
             return NextResponse.redirect(new URL("/design", request.url));
         }

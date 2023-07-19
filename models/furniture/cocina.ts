@@ -78,7 +78,7 @@ export const furnitureCocina: FurnitureTableDataInterface = {
         }, {
             tableId: 3,
             tableTitle: "Combinaciónes",
-            maxSelections: 9,
+            maxSelections: 11,
             cards: [
                 {
                     cardId: 1, cardTitle: "Cajonera",
@@ -152,11 +152,22 @@ export const furnitureCocina: FurnitureTableDataInterface = {
                         imgProportionsY: 0.6651,
                     }
                 },
+                {
+                    cardId: 10, cardTitle: "Puertas batientes",
+                    image: {
+                        imgSlug: "puertas-batientes",
+                        imgSrc: "/assets/img/furniture/cocina/combinacionesPuertasBatientes.webp",
+                        imgAlt: "Puertas batientes",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                { cardId: 11, cardTitle: "Manijas", },
             ],
         }, {
             tableId: 4,
             tableTitle: "Distribución",
-            maxSelections: 2,
+            maxSelections: 1,
             cards: [
                 {
                     cardId: 1, cardTitle: "En L",
@@ -208,8 +219,15 @@ export const furnitureCocina: FurnitureTableDataInterface = {
                         imgProportionsY: 0.6651,
                     }
                 },
+            ],
+        },
+        {
+            tableId: 5,
+            tableTitle: "Con isla",
+            maxSelections: 1,
+            cards: [
                 {
-                    cardId: 6, cardTitle: "Con isla",
+                    cardId: 1, cardTitle: "Si",
                     image: {
                         imgSlug: "cocina-en-isla",
                         imgSrc: "/assets/img/furniture/cocina/cocinaEnIsla.webp",
@@ -218,6 +236,7 @@ export const furnitureCocina: FurnitureTableDataInterface = {
                         imgProportionsY: 0.6651,
                     }
                 },
+                { cardId: 2, cardTitle: "No", },
             ],
         }
     ]

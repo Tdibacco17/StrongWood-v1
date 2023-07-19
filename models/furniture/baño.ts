@@ -68,11 +68,12 @@ export const furnitureBaño: FurnitureTableDataInterface = {
         }, {
             tableId: 3,
             tableTitle: "Distribución",
-            maxSelections: 1,
+            maxSelections: 4,
             cards: [
                 { cardId: 1, cardTitle: "Puertas" },
                 { cardId: 2, cardTitle: "Cajones" },
                 { cardId: 3, cardTitle: "Estantes" },
+                { cardId: 4, cardTitle: "Manijas" },
             ],
         }
     ]
