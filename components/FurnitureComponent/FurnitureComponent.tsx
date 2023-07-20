@@ -22,7 +22,6 @@ export default function FurnitureComponent({
     buttonClicked: boolean
 }) {
 
-    console.log(furnitureData)
     return (
         <div className={styles["container-section-furniture"]}>
             <div className={styles["container-tables"]}>

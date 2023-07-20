@@ -12,7 +12,7 @@ export const furnitureBaño: FurnitureTableDataInterface = {
                     cardId: 1, cardTitle: "Melamina",
                     image: {
                         imgSlug: "melamina",
-                        imgSrc: "/assets/img/furniture/cocina/colorMelamina.webp",
+                        imgSrc: "/assets/img/furniture/combinacionDeColores/colorMelamina.webp",
                         imgAlt: "Melamina",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
@@ -22,7 +22,7 @@ export const furnitureBaño: FurnitureTableDataInterface = {
                     cardId: 2, cardTitle: "Laqueado",
                     image: {
                         imgSlug: "laqueado",
-                        imgSrc: "/assets/img/furniture/cocina/coloresLaqueado.webp",
+                        imgSrc: "/assets/img/furniture/combinacionDeColores/coloresLaqueado.webp",
                         imgAlt: "Laqueado",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
@@ -32,7 +32,7 @@ export const furnitureBaño: FurnitureTableDataInterface = {
                     cardId: 3, cardTitle: "Enchapado en madera",
                     image: {
                         imgSlug: "enchapado-madera",
-                        imgSrc: "/assets/img/furniture/cocina/colorEnchapadoEnMadera.webp",
+                        imgSrc: "/assets/img/furniture/combinacionDeColores/colorEnchapadoEnMadera.webp",
                         imgAlt: "Enchapado en madera",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
@@ -48,7 +48,7 @@ export const furnitureBaño: FurnitureTableDataInterface = {
                     cardId: 1, cardTitle: "Estandar",
                     image: {
                         imgSlug: "herraje-estandar",
-                        imgSrc: "/assets/img/furniture/cocina/herrajesEstandar.webp",
+                        imgSrc: "/assets/img/furniture/calidadDeHerrajes/herrajesEstandar.webp",
                         imgAlt: "Herraje estandar",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
@@ -58,7 +58,7 @@ export const furnitureBaño: FurnitureTableDataInterface = {
                     cardId: 2, cardTitle: "Premium",
                     image: {
                         imgSlug: "herraje-premium",
-                        imgSrc: "/assets/img/furniture/cocina/herrajesPremium.webp",
+                        imgSrc: "/assets/img/furniture/calidadDeHerrajes/herrajesPremium.webp",
                         imgAlt: "Herraje premium",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,

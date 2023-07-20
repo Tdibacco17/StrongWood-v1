@@ -81,6 +81,49 @@ export const designData: DesignDataInterface = {
             }
         ]
     },
+    "placares": {
+        designSlug: "placares",
+        title: "Placares",
+        image: {
+            imgSlug: 1,
+            imgSrc: "/assets/img/design/placares/placarEstiloModerno1.webp",
+            imgAlt: "Placares",
+            imgProportionsX: 1.5024,
+            imgProportionsY: 0.6651,
+        },
+        subcategories: [
+            {
+                title: "Vestidores",
+                images: [
+                    {
+                        imgSlug: "vestidor-1",
+                        imgSrc: "/assets/img/design/placares/categorieVestidor1.webp",
+                        imgAlt: "Vestidores1",
+                        imgProportionsX: 1,
+                        imgProportionsY: 1
+                    },
+                    {
+                        imgSlug: "vestidor-2",
+                        imgSrc: "/assets/img/design/placares/categorieVestidor2.webp",
+                        imgAlt: "Vestidores2",
+                        imgProportionsX: 1,
+                        imgProportionsY: 1
+                    }
+                ]
+            }, {
+                title: "Placar",
+                images: [
+                    {
+                        imgSlug: "placar-1",
+                        imgSrc: "/assets/img/design/placares/categoriePlacar1.webp",
+                        imgAlt: "Placar1",
+                        imgProportionsX: 1,
+                        imgProportionsY: 1
+                    }
+                ]
+            }
+        ]
+    },
     // "obras": {
     //     designSlug: "obras",
     //     title: "Obras",
@@ -236,47 +279,4 @@ export const designData: DesignDataInterface = {
         //     }
         // ]
     // },
-    "placares": {
-        designSlug: "placares",
-        title: "Placares",
-        image: {
-            imgSlug: 1,
-            imgSrc: "/assets/img/design/placares/placarEstiloModerno1.webp",
-            imgAlt: "Placares",
-            imgProportionsX: 1.5024,
-            imgProportionsY: 0.6651,
-        },
-        subcategories: [
-            {
-                title: "Vestidores",
-                images: [
-                    {
-                        imgSlug: "vestidor-1",
-                        imgSrc: "/assets/img/design/placares/categorieVestidor1.webp",
-                        imgAlt: "Vestidores1",
-                        imgProportionsX: 1,
-                        imgProportionsY: 1
-                    },
-                    {
-                        imgSlug: "vestidor-2",
-                        imgSrc: "/assets/img/design/placares/categorieVestidor2.webp",
-                        imgAlt: "Vestidores2",
-                        imgProportionsX: 1,
-                        imgProportionsY: 1
-                    }
-                ]
-            }, {
-                title: "Placar",
-                images: [
-                    {
-                        imgSlug: "placar-1",
-                        imgSrc: "/assets/img/design/placares/categoriePlacar1.webp",
-                        imgAlt: "Placar1",
-                        imgProportionsX: 1,
-                        imgProportionsY: 1
-                    }
-                ]
-            }
-        ]
-    },
 }
