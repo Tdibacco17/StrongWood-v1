@@ -1,7 +1,7 @@
 .container-outer-image {
-    --design-card-width: 24rem;
-    --design-card-height: 14rem;
-    --design-card-inner-height: 17rem;
+    --design-card-width: 45rem;
+    --design-card-height: 30rem;
+    --design-card-inner-height: 30rem;
 
     --design-card-image-proportion: calc((var(--design-card-inner-height)) * 1.5024);
 
@@ -20,32 +20,31 @@
     cursor: pointer;
 
     @media (max-width:992px) {
-        --design-card-width: 22rem;
+        --design-card-width: 35rem;
     }
 
     @media (max-width:768px) {
-        --design-card-width: 21rem;
+        --design-card-width: 32.5rem;
     }
 
     @media (max-width: 626px) {
-        --design-card-width: 20rem;
+        --design-card-width: 27.5rem;
     }
 
     @media (max-width: 576px) {
-        --design-card-width: 19rem;
-        --design-card-inner-height: 14rem;
+        --design-card-width: 22.5rem;
     }
 
     @media (max-width:480px) {
-        --design-card-width: 18rem;
+        --design-card-width: 20rem;
     }
 
     @media (max-width:400px) {
-        --design-card-width: 16rem;
+        --design-card-width: 18.5rem;
     }
 
     @media (max-width:350px) {
-        --design-card-width: 14rem;
+        --design-card-width: 14.5rem;
     }
 
     .container-inner-image {

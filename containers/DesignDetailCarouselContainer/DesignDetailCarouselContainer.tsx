@@ -2,7 +2,14 @@ import DesignDetailCarouselComponent from "@/components/DesignDetailCarouselComp
 import { ImgDataInterface } from "@/types/Interfaces";
 import { useRef } from "react";
 
-export default function DesignDetailCarouselContainer({ imagesData }: { imagesData: ImgDataInterface[]; }) {
+export default function DesignDetailCarouselContainer({
+    imagesData,
+    titleCategorie
+}: {
+    imagesData: ImgDataInterface[];
+    titleCategorie: string
+}) {
+
     const carouselRef = useRef<HTMLDivElement>(null);
 
     const handleScrollLeft = () => {
@@ -25,8 +32,9 @@ export default function DesignDetailCarouselContainer({ imagesData }: { imagesDa
 
     return <DesignDetailCarouselComponent
         imagesData={imagesData}
+        carouselRef={carouselRef}
         handleScrollLeft={handleScrollLeft}
         handleScrollRight={handleScrollRight}
-        carouselRef={carouselRef}
+        titleCategorie={titleCategorie}
     />
 }

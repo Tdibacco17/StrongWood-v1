@@ -263,14 +263,7 @@ export const designData: DesignDataInterface = {
                         imgAlt: "Vestidores2",
                         imgProportionsX: 1,
                         imgProportionsY: 1
-                    },
-                    {
-                        imgSlug: "vestidor-3",
-                        imgSrc: "/assets/img/design/placares/categorieVestidor33.webp",
-                        imgAlt: "Vestidores3",
-                        imgProportionsX: 1,
-                        imgProportionsY: 1
-                    },
+                    }
                 ]
             }, {
                 title: "Placar",
