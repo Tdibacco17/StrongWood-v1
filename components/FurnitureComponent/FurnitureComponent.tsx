@@ -22,6 +22,7 @@ export default function FurnitureComponent({
     buttonClicked: boolean
 }) {
 
+    console.log(furnitureData)
     return (
         <div className={styles["container-section-furniture"]}>
             <div className={styles["container-tables"]}>
@@ -45,7 +46,7 @@ export default function FurnitureComponent({
                     (visibleTables.length > furnitureData.length && buttonClicked && (validated === false)) &&
                     <p className={styles["error-text-msg"]}>Seleccione todas las opciones.</p>
                 }
-                {visibleTables.length > furnitureData.length &&
+                {visibleTables.length > furnitureData.length && furnitureData.length !== 0 &&
                     <button className={`${styles["button-consultation-price"]}`}
                         onClick={handleValidation}>COTIZAR</button>
                 }
