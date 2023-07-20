@@ -77,14 +77,14 @@ export const furnitureCocina: FurnitureTableDataInterface = {
             ],
         }, {
             tableId: 3,
-            tableTitle: "Combinaciónes",
-            maxSelections: 11,
+            tableTitle: "Incluir",
+            maxSelections: 9,
             cards: [
                 {
                     cardId: 1, cardTitle: "Cajonera",
                     image: {
                         imgSlug: "cajonera",
-                        imgSrc: "/assets/img/furniture/cocina/combinacionesCajonera.webp",
+                        imgSrc: "/assets/img/furniture/incluir/cajonera.webp",
                         imgAlt: "Cajonera",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
@@ -92,80 +92,87 @@ export const furnitureCocina: FurnitureTableDataInterface = {
                 },
                 { cardId: 2, cardTitle: "Tacho" },
                 {
-                    cardId: 3, cardTitle: "Puertas",
-                    image: {
-                        imgSlug: "puertas",
-                        imgSrc: "/assets/img/furniture/cocina/combinacionesPuertas.webp",
-                        imgAlt: "Puertas",
-                        imgProportionsX: 1.5024,
-                        imgProportionsY: 0.6651,
-                    }
-                },
-                {
-                    cardId: 4, cardTitle: "Carro especiero",
+                    cardId: 3, cardTitle: "Carro especiero",
                     image: {
                         imgSlug: "carro-especiero",
-                        imgSrc: "/assets/img/furniture/cocina/combinacionesCarroEspeciero.webp",
+                        imgSrc: "/assets/img/furniture/incluir/carroEspeciero.webp",
                         imgAlt: "Carro especiero",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
                     }
                 },
                 {
-                    cardId: 5, cardTitle: "Carro esquinero",
+                    cardId: 4, cardTitle: "Carro esquinero",
                     image: {
                         imgSlug: "carro-esquinero",
-                        imgSrc: "/assets/img/furniture/cocina/combinacionesCarroEsquinero.webp",
+                        imgSrc: "/assets/img/furniture/incluir/carroEsquinero.webp",
                         imgAlt: "Carro esquinero",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
                     }
                 },
-                { cardId: 6, cardTitle: "Torre de heladera" },
+                { cardId: 5, cardTitle: "Torre de heladera" },
                 {
-                    cardId: 7, cardTitle: "Torre de horno + microondas",
+                    cardId: 6, cardTitle: "Torre de horno + microondas",
                     image: {
                         imgSlug: "Torre-de-horno-microondas",
-                        imgSrc: "/assets/img/furniture/cocina/combinacionesTorreHornoMasMicroondas.webp",
+                        imgSrc: "/assets/img/furniture/incluir/torreHornoMasMicroondas.webp",
                         imgAlt: "Torre de horno + microondas",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
                     }
                 },
                 {
-                    cardId: 8, cardTitle: "Mesada de madera maciza",
+                    cardId: 7, cardTitle: "Mesada de madera maciza",
                     image: {
                         imgSlug: "mesada-madera-maciza",
-                        imgSrc: "/assets/img/furniture/cocina/combinacionesMesadaMaderaMaciza.webp",
+                        imgSrc: "/assets/img/furniture/incluir/mesadaMaderaMaciza.webp",
                         imgAlt: "Mesada de madera maciza",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
                     }
                 },
                 {
-                    cardId: 9, cardTitle: "Luces LED",
+                    cardId: 8, cardTitle: "Luces LED",
                     image: {
                         imgSlug: "Luces-led",
-                        imgSrc: "/assets/img/furniture/cocina/combinacionesLuzLed.webp",
+                        imgSrc: "/assets/img/furniture/incluir/luzLed.webp",
                         imgAlt: "Luces LED",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
                     }
                 },
+                { cardId: 9, cardTitle: "Manijas", },
+            ],
+        }, {
+            tableId: 4,
+            tableTitle: "Puertas",
+            maxSelections: 2,
+            cards: [
                 {
-                    cardId: 10, cardTitle: "Puertas batientes",
+                    cardId: 1, cardTitle: "Puertas batiente",
                     image: {
-                        imgSlug: "puertas-batientes",
-                        imgSrc: "/assets/img/furniture/cocina/combinacionesPuertasBatientes.webp",
-                        imgAlt: "Puertas batientes",
+                        imgSlug: "puertas-batiente",
+                        imgSrc: "/assets/img/furniture/puertas/cocina/combinacionesPuertasBatiente.webp",
+                        imgAlt: "Puertas batiente",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
                     }
                 },
-                { cardId: 11, cardTitle: "Manijas", },
+                {
+                    cardId: 2, cardTitle: "Puertas con piston",
+                    image: {
+                        imgSlug: "puertas-con-piston",
+                        imgSrc: "/assets/img/furniture/puertas/cocina/combinacionesPuertasConPiston.webp",
+                        imgAlt: "Puertas con piston",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
             ],
-        }, {
-            tableId: 4,
+        },
+        {
+            tableId: 5,
             tableTitle: "Distribución",
             maxSelections: 1,
             cards: [
@@ -173,7 +180,7 @@ export const furnitureCocina: FurnitureTableDataInterface = {
                     cardId: 1, cardTitle: "En L",
                     image: {
                         imgSlug: "cocina-en-l",
-                        imgSrc: "/assets/img/furniture/cocina/cocinaEnL.webp",
+                        imgSrc: "/assets/img/furniture/distribucion/cocina/cocinaLineal.webp",
                         imgAlt: "Cocina en L",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
@@ -183,7 +190,7 @@ export const furnitureCocina: FurnitureTableDataInterface = {
                     cardId: 2, cardTitle: "En U",
                     image: {
                         imgSlug: "cocina-en-u",
-                        imgSrc: "/assets/img/furniture/cocina/cocinaEnU.webp",
+                        imgSrc: "/assets/img/furniture/distribucion/cocina/cocinaEnU.webp",
                         imgAlt: "Cocina en U",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
@@ -193,7 +200,7 @@ export const furnitureCocina: FurnitureTableDataInterface = {
                     cardId: 3, cardTitle: "En G",
                     image: {
                         imgSlug: "cocina-en-g",
-                        imgSrc: "/assets/img/furniture/cocina/cocinaEnG.webp",
+                        imgSrc: "/assets/img/furniture/distribucion/cocina/cocinaEnG.webp",
                         imgAlt: "Cocina en G",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
@@ -203,7 +210,7 @@ export const furnitureCocina: FurnitureTableDataInterface = {
                     cardId: 4, cardTitle: "Lineal",
                     image: {
                         imgSlug: "cocina-lineal",
-                        imgSrc: "/assets/img/furniture/cocina/cocinaLineal.webp",
+                        imgSrc: "/assets/img/furniture/distribucion/cocina/cocinaLineal.webp",
                         imgAlt: "Cocina lineal",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
@@ -213,7 +220,7 @@ export const furnitureCocina: FurnitureTableDataInterface = {
                     cardId: 5, cardTitle: "En paralelo",
                     image: {
                         imgSlug: "cocina-en-paralelo",
-                        imgSrc: "/assets/img/furniture/cocina/cocinaEnParalelo.webp",
+                        imgSrc: "/assets/img/furniture/distribucion/cocina/cocinaEnParalelo.webp",
                         imgAlt: "Cocina en paralelo",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
@@ -222,7 +229,7 @@ export const furnitureCocina: FurnitureTableDataInterface = {
             ],
         },
         {
-            tableId: 5,
+            tableId: 6,
             tableTitle: "Con isla",
             maxSelections: 1,
             cards: [
@@ -230,7 +237,7 @@ export const furnitureCocina: FurnitureTableDataInterface = {
                     cardId: 1, cardTitle: "Si",
                     image: {
                         imgSlug: "cocina-en-isla",
-                        imgSrc: "/assets/img/furniture/cocina/cocinaEnIsla.webp",
+                        imgSrc: "/assets/img/furniture/isla/cocina/cocinaEnIsla.webp",
                         imgAlt: "Cocina en isla",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
