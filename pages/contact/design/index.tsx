@@ -13,14 +13,14 @@ export default function ContactFurnituretPage() {
 
     if (infoFurniture?.designSlug === "") {
         return (
-            <LayoutComponent isSlider={false} urlBack={`design/`}>
+            <LayoutComponent  buttonBack={true} isSlider={false} urlBack={`design/`}>
                 <BackLinkUrlComponent textData={"Ocurrió algo inesperado"} backUrl={"/design"} />
             </LayoutComponent>
         )
     }
     
     return (
-        <LayoutComponent isSlider={false}
+        <LayoutComponent  buttonBack={true} isSlider={false}
             urlBack={`furniture/${infoFurniture?.designSlug}?item=${infoFurniture?.designItem}`}>
             <ContactDesignContainer slug={infoFurniture?.designSlug} item={infoFurniture?.designItem} />
         </LayoutComponent>

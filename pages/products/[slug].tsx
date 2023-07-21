@@ -5,7 +5,7 @@ import ProductDetailContainer from "@/containers/ProductDetailContainer/DetailsP
 export default function ProductDetailPage() {
 
     return (
-        <LayoutComponent isSlider={false} urlBack={"products"}>
+        <LayoutComponent  buttonBack={true} isSlider={false} urlBack={"products"}>
             <ProductDetailProvider>
                     <ProductDetailContainer />
             </ProductDetailProvider>

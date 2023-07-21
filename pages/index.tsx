@@ -4,7 +4,7 @@ import LayoutComponent from "@/layout/LayoutComponent";
 
 export default function HomePage() {
   return (
-    <LayoutComponent isSlider={true} urlBack={""}>
+    <LayoutComponent buttonBack={false} isSlider={true} urlBack={""}>
       <HomeProvider>
         <HomeContainer />
       </HomeProvider>

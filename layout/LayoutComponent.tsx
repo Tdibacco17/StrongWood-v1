@@ -6,15 +6,17 @@ import { ProductsProvider } from "@/context/ProductsContextProvider";
 export default function LayoutComponent({
     children,
     isSlider,
-    urlBack
+    urlBack,
+    buttonBack
 }: {
     children: React.ReactNode,
     isSlider: boolean,
-    urlBack: string
+    urlBack: string,
+    buttonBack: boolean
 }) {
     return (
         <div>
-            <NavbarComponent isSlider={isSlider} urlBack={urlBack} />
+            <NavbarComponent buttonBack={true} isSlider={isSlider} urlBack={urlBack} />
             <main>
                 <ProductsProvider>
                     <DesignsProvider>

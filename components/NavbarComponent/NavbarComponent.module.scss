@@ -40,8 +40,6 @@
 
         transition: top 0.3s ease-in-out;
 
-
-
         .title {
             font-family: var(--strong-font-Knucklehead);
             font-size: var(--navbar-title-size);
@@ -52,25 +50,25 @@
         }
 
         &:hover {
-            background-color: var(--strong-bluegray-16);
+            background-color: var(--strong-bluegray-11);
             transition: background-color 0.3s ease-in-out;
         }
 
         &.isTransparency {
             &:hover {
-                background-color: var(--strong-bluegray-16);
+                background-color: var(--strong-bluegray-11);
                 transition: background-color 0.3s ease-in-out;
             }
         }
 
         &.isDark {
-            background-color: var(--strong-bluegray-16);
+            background-color: var(--strong-bluegray-11);
         }
 
         &.isOtherSection {
             background-color: var(--strong-bluegray-11);
-            border-bottom: none;
-            border-bottom: 1px solid var(--strong-bluegray-5);
+            // border-bottom: none;
+            // border-bottom: 1px solid var(--strong-bluegray-5);
 
             .title {
                 color: var(--strong-bluegray-1);
@@ -78,56 +76,56 @@
         }
     }
 
-    .container-secondary-nav {
-        min-height: 3.1rem;
-        height: 3.1rem;
-        max-height: 3.1rem;
-        min-width: 100vw;
-        max-width: 100vw;
+    // .container-secondary-nav {
+    //     min-height: 3.1rem;
+    //     height: 3.1rem;
+    //     max-height: 3.1rem;
+    //     min-width: 100vw;
+    //     max-width: 100vw;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     overflow: hidden;
 
-        background-color: var(--strong-bluegray-11);
-        border-bottom: 1px solid var(--strong-bluegray-5);
+    //     background-color: var(--strong-bluegray-11);
+    //     border-bottom: 1px solid var(--strong-bluegray-5);
 
-        @media (max-width: 768px) {
-            min-height: 3rem;
-            height: 3rem;
-            max-height: 3rem;
-        }
+    //     @media (max-width: 768px) {
+    //         min-height: 3rem;
+    //         height: 3rem;
+    //         max-height: 3rem;
+    //     }
 
-        @media (max-width: 480px) {
-            min-height: 2.9rem;
-            height: 2.9rem;
-            max-height: 2.9rem;
-        }
+    //     @media (max-width: 480px) {
+    //         min-height: 2.9rem;
+    //         height: 2.9rem;
+    //         max-height: 2.9rem;
+    //     }
 
-        .title {
-            font-family: var(--strong-font-Roboto-Regular);
-            font-size: var(--strong-font-xxmedium);
-            font-weight: var(--strong-weight-400);
+    //     .title {
+    //         font-family: var(--strong-font-Roboto-Regular);
+    //         font-size: var(--strong-font-xxmedium);
+    //         font-weight: var(--strong-weight-400);
 
-            color: var(--strong-bluegray-1);
-        }
+    //         color: var(--strong-bluegray-1);
+    //     }
 
-        .back-title {
-            font-family: var(--strong-font-Roboto-Regular);
-            font-size: var(--strong-font-xxmedium);
-            font-weight: var(--strong-weight-400);
+    //     .back-title {
+    //         font-family: var(--strong-font-Roboto-Regular);
+    //         font-size: var(--strong-font-xxmedium);
+    //         font-weight: var(--strong-weight-400);
 
-            color: var(--strong-bluegray-1);
-            cursor: pointer;
-            transition: color 0.25s ease-in;
+    //         color: var(--strong-bluegray-1);
+    //         cursor: pointer;
+    //         transition: color 0.25s ease-in;
 
-            &:hover {
-                color: var(--strong-bluegray-5);
-                transition: color 0.25s ease-in;
-            }
-        }
-    }
+    //         &:hover {
+    //             color: var(--strong-bluegray-5);
+    //             transition: color 0.25s ease-in;
+    //         }
+    //     }
+    // }
 
     &.hidden {
         top: -3.7rem;
@@ -171,9 +169,10 @@
 
     .img-back {
         filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg);
-    }    
+    }
+
     @media (max-width:325px) {
         top: 0.45rem;
-        left: 0.20rem;          
+        left: 0.20rem;
     }
 }

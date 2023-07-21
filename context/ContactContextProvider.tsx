@@ -1,4 +1,4 @@
-import { ContactDataContextInterface } from "@/types/Interfaces";
+import { ContactDataContextInterface, ImgDataInterface } from "@/types/Interfaces";
 import { ReactNode, createContext, useEffect, useState } from "react";
 
 interface ProductProps {
@@ -11,6 +11,7 @@ interface DesignProps {
     designSlug:string,
     designItem: string,
     data?: any,
+    imgDesign?: ImgDataInterface
 }
 
 export const ContactContext = createContext<ContactDataContextInterface | {}>({});

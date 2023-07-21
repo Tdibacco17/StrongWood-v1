@@ -14,14 +14,14 @@ export default function ContactProductPage() {
 
     if (infoProduct?.productSlug === "") {
         return (
-            <LayoutComponent isSlider={false} urlBack={`products/`}>
+            <LayoutComponent buttonBack={true} isSlider={false} urlBack={`products/`}>
                 <BackLinkUrlComponent textData={"Ocurrió algo inesperado"} backUrl={"/products"} />
             </LayoutComponent>
         )
     }
 
     return (
-        <LayoutComponent isSlider={false} urlBack={`products/${infoProduct?.productSlug}`}>
+        <LayoutComponent buttonBack={true} isSlider={false} urlBack={`products/${infoProduct?.productSlug}`}>
             <ProductDetailProvider>
                 <ContactProductContainer
                     slug={infoProduct?.productSlug}

@@ -5,7 +5,7 @@ import DesignDetailContainer from "@/containers/DesignDetailContainer/DesignDeta
 export default function DesignDetailPage() {
 
     return (
-        <LayoutComponent isSlider={false} urlBack={"design"}>
+        <LayoutComponent  buttonBack={true} isSlider={false} urlBack={"design"}>
             <DesignDetailProvider>
                 <DesignDetailContainer />
             </DesignDetailProvider>

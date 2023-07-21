@@ -3,14 +3,34 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
+    gap: 4rem;
 
     min-width: 100vw;
     max-width: 100vw;
-    padding-top: 8.5rem;
+    // padding-top: 8.5rem; 
     padding-bottom: 5rem;
     margin: 0 auto;
+    .title-slogan {
+        font-family: var(--strong-font-Roboto-Bold);
+        font-weight: var(--strong-weight-700);
+        font-size: var(--strong-font-xxxmedium);
+        letter-spacing: 0.2rem;
+        line-height: 2rem;
+        color: var(--strong-bluegray-1);
+        text-align: center;
+        min-width: var(--strong-calc-7rem);
+        max-width: var(--strong-calc-7rem);
 
+        @media (max-width: 768px) {
+            min-width: var(--strong-calc-5rem);
+            max-width: var(--strong-calc-5rem);
+        }
+
+        @media (max-width: 480px) {
+            min-width: var(--strong-calc-3rem);
+            max-width: var(--strong-calc-3rem);
+        }
+    }
     .container-tables {
         display: flex;
         flex-direction: column;

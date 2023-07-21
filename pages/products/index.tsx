@@ -3,7 +3,7 @@ import LayoutComponent from "@/layout/LayoutComponent";
 
 export default function ProductsPage() {
     return (
-        <LayoutComponent isSlider={false} urlBack={""}>
+        <LayoutComponent  buttonBack={true} isSlider={false} urlBack={""}>
             <ProductsContainer />
         </LayoutComponent>
     )

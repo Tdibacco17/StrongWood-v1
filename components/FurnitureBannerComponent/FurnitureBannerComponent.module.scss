@@ -1,0 +1,72 @@
+.container-outer-image {
+    --banner-image-outer-height: 80vh;
+    --banner-image-outer-width: 100vw;
+    // 0.6651 1.5024
+    --banner-proportion-height: calc((var(--banner-image-outer-width)) * 0.6651);
+    --banner-proportion-width: calc(100vh * 1.5024);
+
+    position: relative;
+    min-height: var(--banner-image-outer-height);
+    max-height: var(--banner-image-outer-height);
+    min-width: var(--banner-image-outer-width);
+    max-width: var(--banner-image-outer-width);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    @media (max-width: 1300px) {
+        --banner-image-outer-height: 70vh;
+    }
+
+    @media (max-width: 1100px) {
+        --banner-image-outer-height: 65vh;
+    }
+
+    @media (max-width: 768px) {
+        min-height: 65vh;
+        max-height: 65vh;
+        min-width: var(--banner-image-outer-width);
+        max-width: var(--banner-image-outer-width);
+    }
+
+    .container-inner-image {
+        position: relative;
+        min-height: var(--banner-proportion-height);
+        max-height: var(--banner-proportion-height);
+        min-width: var(--banner-image-outer-width);
+        max-width: var(--banner-image-outer-width);
+        user-select: none;
+
+        @media (max-width: 768px) {
+            min-height: 100vh;
+            max-height: 100vh;
+            min-width: var(--banner-proportion-width);
+            max-width: var(--banner-proportion-width);
+        }
+    }
+
+    .container-inner-placeholder {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        min-height: var(--banner-image-outer-height);
+        max-height: var(--banner-image-outer-height);
+        min-width: var(--banner-image-outer-width);
+        max-width: var(--banner-image-outer-width);
+
+        font-family: var(--strong-font-Roboto-Regular);
+        font-size: var(--strong-font-xxxsmall);
+        font-weight: var(--strong-weight-400);
+        color: var(--strong-bluegray-1);
+
+        // @media (max-width: 992px) {
+        //     min-height: 100vh;
+        //     max-height: 100vh;
+        //     min-width: var(--banner-image-outer-width);
+        //     max-width: var(--banner-image-outer-width);
+        // }
+    }
+}

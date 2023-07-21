@@ -1,6 +1,7 @@
 import FurnitureTableContainer from "@/containers/FurnitureTableContainer/FurnitureTableContainer"
 import styles from "./FurnitureComponent.module.scss"
-import { FurnitureDataCardsInterface, FurnitureTableInterface } from "@/types/Interfaces";
+import { FurnitureDataCardsInterface, FurnitureTableInterface, ImgDataInterface } from "@/types/Interfaces";
+import FurnitureBannerComponent from "../FurnitureBannerComponent/FurnitureBannerComponent";
 
 export default function FurnitureComponent({
     furnitureData,
@@ -10,7 +11,8 @@ export default function FurnitureComponent({
     validated,
     handleCardClick,
     handleValidation,
-    buttonClicked
+    buttonClicked,
+    imgData
 }: {
     furnitureData: FurnitureTableInterface[];
     visibleTables: number[];
@@ -19,11 +21,14 @@ export default function FurnitureComponent({
     validated: boolean;
     handleCardClick: (tableId: number, cardId: number, cardTitle: string, tableTitle: string) => void;
     handleValidation: () => void;
-    buttonClicked: boolean
+    buttonClicked: boolean,
+    imgData: ImgDataInterface | undefined
 }) {
 
     return (
         <div className={styles["container-section-furniture"]}>
+            <FurnitureBannerComponent imgData={imgData} />
+            <p className={styles["title-slogan"]}>SELECCIONÁ TU MUEBLE IDEAL</p>
             <div className={styles["container-tables"]}>
                 {furnitureData.map((TABLEelement: FurnitureTableInterface) => {
                     return (

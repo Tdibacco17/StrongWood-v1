@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 
-export default function NavbarComponent({ isSlider, urlBack }: { isSlider: boolean, urlBack: string }) {
+export default function NavbarComponent({ buttonBack, isSlider, urlBack }: { buttonBack: boolean, isSlider: boolean, urlBack: string }) {
 
     const { isScrolled, isAtTop } = useScrollPosition() // 57.6px === 3.6rem
     const hiddenRef = useRef<boolean>(false);
@@ -31,9 +31,9 @@ export default function NavbarComponent({ isSlider, urlBack }: { isSlider: boole
                     (isAtTop ? styles['isOtherSection'] : styles['isOtherSection'])
                 }
                 `}>
-                {!isSlider &&
+                {buttonBack &&
                     <div className={styles["back-link"]}
-                        onClick={() => { router.push(`/${urlBack}`) }} >
+                        onClick={() => { router.push(`/${urlBack}`) }}>
                         <Image
                             className={styles["img-back"]}
                             src="/assets/icons/arrowLeft.svg"

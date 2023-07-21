@@ -1,6 +1,6 @@
 import FurnitureComponent from "@/components/FurnitureComponent/FurnitureComponent";
 import { ContactContext } from "@/context/ContactContextProvider";
-import { ContactDataContextInterface, FurnitureDataCardsInterface, FurnitureTableInterface } from "@/types/Interfaces";
+import { ContactDataContextInterface, FurnitureDataCardsInterface, FurnitureTableInterface, ImgDataInterface } from "@/types/Interfaces";
 import { useRouter } from "next/router";
 import { useCallback, useContext, useEffect, useState } from "react";
 
@@ -22,14 +22,33 @@ export default function FurnitureContainer({
     const [clickedImages, setClickedImages] = useState<{ [key: number]: FurnitureDataCardsInterface[] }>({});
     const [validated, setValidated] = useState(false);
     const [showMissingFields, setShowMissingFields] = useState(false);
-
     const [buttonClicked, setButtonClicked] = useState(false);
+    const [imgData, setImgData] = useState<ImgDataInterface | undefined>(undefined)
 
     const router = useRouter();
 
     useEffect(() => {
+        if (router.query.slug) {
+            const fetchData = async () => {
+                if (setImgData) {
+                    const rawData = await fetch(
+                        `/api/design/getDesignBySlug?slug=${router.query.slug}`
+                    );
+                    const parsedData = await rawData.json();
+                    if (parsedData.error) {
+                        return;
+                    }
 
-    }, [])
+                    setImgData && setImgData(
+                        parsedData.data.subcategories
+                            .flatMap((subcategory: any) => subcategory.images)
+                            .find((image: ImgDataInterface) => image.imgSlug === router.query.item)
+                    );
+                }
+            };
+            fetchData();
+        }
+    }, [router.query]);
 
     useEffect(() => {
         const allTablesHaveSelections = Array.from({ length: furnitureData.length }, (_, i) => i + 1).every(
@@ -95,5 +114,6 @@ export default function FurnitureContainer({
         handleCardClick={handleCardClick}
         handleValidation={handleValidation}
         buttonClicked={buttonClicked}
+        imgData={imgData}
     />
 }
