@@ -3,7 +3,8 @@
     --banner-image-outer-width: 100vw;
     // 0.6651 1.5024
     --banner-proportion-height: calc((var(--banner-image-outer-width)) * 0.6651);
-    --banner-proportion-width: calc(100vh * 1.5024);
+    --banner-proportion-mobile: 100vh;
+    --banner-proportion-width: calc(var(--banner-proportion-mobile) * 1.5024);
 
     position: relative;
     min-height: var(--banner-image-outer-height);
@@ -31,6 +32,10 @@
         max-width: var(--banner-image-outer-width);
     }
 
+    @media (max-width: 442px) {
+        --banner-proportion-mobile: 65vh
+    }
+
     .container-inner-image {
         position: relative;
         min-height: var(--banner-proportion-height);
@@ -40,8 +45,8 @@
         user-select: none;
 
         @media (max-width: 768px) {
-            min-height: 100vh;
-            max-height: 100vh;
+            min-height: var(--banner-proportion-mobile);
+            max-height: var(--banner-proportion-mobile);
             min-width: var(--banner-proportion-width);
             max-width: var(--banner-proportion-width);
         }
