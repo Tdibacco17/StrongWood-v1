@@ -24,7 +24,7 @@ export default function ProductDetailGalleryContainer() {
     const handleScrollUp = () => {
         if (carouselRef.current) {
             carouselRef.current.scrollBy({
-                top: -165, // Ajusta la cantidad de desplazamiento hacia arriba
+                top: -325, // Ajusta la cantidad de desplazamiento hacia arriba
                 behavior: "smooth",
             });
         }
@@ -33,7 +33,7 @@ export default function ProductDetailGalleryContainer() {
     const handleScrollDown = () => {
         if (carouselRef.current) {
             carouselRef.current.scrollBy({
-                top: 165, // Ajusta la cantidad de desplazamiento hacia abajo
+                top: 325, // Ajusta la cantidad de desplazamiento hacia abajo
                 behavior: "smooth",
             });
         }
@@ -42,7 +42,7 @@ export default function ProductDetailGalleryContainer() {
     const handleScrollLeft = () => {
         if (width < 768 && carouselRef.current) {
             carouselRef.current.scrollBy({
-                left: -165, // Ajusta la cantidad de desplazamiento hacia la izquierda para formato mobile
+                left: -325, // Ajusta la cantidad de desplazamiento hacia la izquierda para formato mobile
                 behavior: 'smooth',
             });
         }
@@ -51,7 +51,7 @@ export default function ProductDetailGalleryContainer() {
     const handleScrollRight = () => {
         if (width < 768 && carouselRef.current) {
             carouselRef.current.scrollBy({
-                left: 165, // Ajusta la cantidad de desplazamiento hacia la derecha para formato mobile
+                left: 325, // Ajusta la cantidad de desplazamiento hacia la derecha para formato mobile
                 behavior: 'smooth',
             });
         }

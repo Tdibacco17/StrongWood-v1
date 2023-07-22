@@ -12,7 +12,7 @@ export const furnitureCocina: FurnitureTableDataInterface = {
                     cardId: 1, cardTitle: "Melamina",
                     image: {
                         imgSlug: "melamina",
-                        imgSrc: "/assets/img/furniture/combinacionDeColores/colorMelamina.webp",
+                        imgSrc: "/assets/img/furniture/combinacionDeColores/melamina.webp",
                         imgAlt: "Melamina",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
@@ -22,7 +22,7 @@ export const furnitureCocina: FurnitureTableDataInterface = {
                     cardId: 2, cardTitle: "Laqueado",
                     image: {
                         imgSlug: "laqueado",
-                        imgSrc: "/assets/img/furniture/combinacionDeColores/coloresLaqueado.webp",
+                        imgSrc: "/assets/img/furniture/combinacionDeColores/laqueado.webp",
                         imgAlt: "Laqueado",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
@@ -32,7 +32,7 @@ export const furnitureCocina: FurnitureTableDataInterface = {
                     cardId: 3, cardTitle: "Enchapado en madera",
                     image: {
                         imgSlug: "enchapado-madera",
-                        imgSrc: "/assets/img/furniture/combinacionDeColores/colorEnchapadoEnMadera.webp",
+                        imgSrc: "/assets/img/furniture/combinacionDeColores/enchapadoMadera.webp",
                         imgAlt: "Enchapado en madera",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
@@ -84,13 +84,22 @@ export const furnitureCocina: FurnitureTableDataInterface = {
                     cardId: 1, cardTitle: "Cajonera",
                     image: {
                         imgSlug: "cajonera",
-                        imgSrc: "/assets/img/furniture/incluir/cajonera.webp",
+                        imgSrc: "/assets/img/furniture/incluir/cajoneraCocina.webp",
                         imgAlt: "Cajonera",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
                     }
                 },
-                { cardId: 2, cardTitle: "Tacho" },
+                {
+                    cardId: 2, cardTitle: "Tacho",
+                    image: {
+                        imgSlug: "tacho",
+                        imgSrc: "/assets/img/furniture/incluir/tacho.webp",
+                        imgAlt: "Tacho",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
                 {
                     cardId: 3, cardTitle: "Carro especiero",
                     image: {
@@ -142,7 +151,16 @@ export const furnitureCocina: FurnitureTableDataInterface = {
                         imgProportionsY: 0.6651,
                     }
                 },
-                { cardId: 9, cardTitle: "Manijas", },
+                {
+                    cardId: 9, cardTitle: "Manijas",
+                    image: {
+                        imgSlug: "manijas",
+                        imgSrc: "/assets/img/furniture/incluir/manijas.webp",
+                        imgAlt: "Manijas",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
             ],
         }, {
             tableId: 4,
@@ -180,7 +198,7 @@ export const furnitureCocina: FurnitureTableDataInterface = {
                     cardId: 1, cardTitle: "En L",
                     image: {
                         imgSlug: "cocina-en-l",
-                        imgSrc: "/assets/img/furniture/distribucion/cocina/cocinaLineal.webp",
+                        imgSrc: "/assets/img/furniture/distribucion/cocina/cocinaEnL.webp",
                         imgAlt: "Cocina en L",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
@@ -236,14 +254,23 @@ export const furnitureCocina: FurnitureTableDataInterface = {
                 {
                     cardId: 1, cardTitle: "Si",
                     image: {
-                        imgSlug: "cocina-en-isla",
+                        imgSlug: "cocina-con-isla",
                         imgSrc: "/assets/img/furniture/isla/cocina/cocinaEnIsla.webp",
-                        imgAlt: "Cocina en isla",
+                        imgAlt: "Cocina con isla",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
                     }
                 },
-                { cardId: 2, cardTitle: "No", },
+                {
+                    cardId: 2, cardTitle: "No",
+                    image: {
+                        imgSlug: "cocina-sin-isla",
+                        imgSrc: "/assets/img/furniture/isla/cocina/cocinaSinIsla.webp",
+                        imgAlt: "Cocina sin isla",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
             ],
         }
     ]

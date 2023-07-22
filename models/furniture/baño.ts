@@ -12,7 +12,7 @@ export const furnitureBaño: FurnitureTableDataInterface = {
                     cardId: 1, cardTitle: "Melamina",
                     image: {
                         imgSlug: "melamina",
-                        imgSrc: "/assets/img/furniture/combinacionDeColores/colorMelamina.webp",
+                        imgSrc: "/assets/img/furniture/combinacionDeColores/melamina.webp",
                         imgAlt: "Melamina",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
@@ -22,7 +22,7 @@ export const furnitureBaño: FurnitureTableDataInterface = {
                     cardId: 2, cardTitle: "Laqueado",
                     image: {
                         imgSlug: "laqueado",
-                        imgSrc: "/assets/img/furniture/combinacionDeColores/coloresLaqueado.webp",
+                        imgSrc: "/assets/img/furniture/combinacionDeColores/laqueado.webp",
                         imgAlt: "Laqueado",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
@@ -32,7 +32,7 @@ export const furnitureBaño: FurnitureTableDataInterface = {
                     cardId: 3, cardTitle: "Enchapado en madera",
                     image: {
                         imgSlug: "enchapado-madera",
-                        imgSrc: "/assets/img/furniture/combinacionDeColores/colorEnchapadoEnMadera.webp",
+                        imgSrc: "/assets/img/furniture/combinacionDeColores/enchapadoMadera.webp",
                         imgAlt: "Enchapado en madera",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,

@@ -15,7 +15,7 @@ export default function DesignDetailCarouselContainer({
     const handleScrollLeft = () => {
         if (carouselRef.current) {
             carouselRef.current.scrollBy({
-                left: -350, // Ajusta la cantidad de desplazamiento hacia la izquierda para formato mobile
+                left: -475, // Ajusta la cantidad de desplazamiento hacia la izquierda para formato mobile
                 behavior: 'smooth',
             });
         }
@@ -24,7 +24,7 @@ export default function DesignDetailCarouselContainer({
     const handleScrollRight = () => {
         if (carouselRef.current) {
             carouselRef.current.scrollBy({
-                left: 350, // Ajusta la cantidad de desplazamiento hacia la derecha para formato mobile
+                left: 475, // Ajusta la cantidad de desplazamiento hacia la derecha para formato mobile
                 behavior: 'smooth',
             });
         }

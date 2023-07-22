@@ -12,7 +12,7 @@ export const furniturePlacares: FurnitureTableDataInterface = {
                     cardId: 1, cardTitle: "Melamina",
                     image: {
                         imgSlug: "melamina",
-                        imgSrc: "/assets/img/furniture/combinacionDeColores/colorMelamina.webp",
+                        imgSrc: "/assets/img/furniture/combinacionDeColores/melamina.webp",
                         imgAlt: "Melamina",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
@@ -22,7 +22,7 @@ export const furniturePlacares: FurnitureTableDataInterface = {
                     cardId: 2, cardTitle: "Enchapado en madera",
                     image: {
                         imgSlug: "enchapado-madera",
-                        imgSrc: "/assets/img/furniture/combinacionDeColores/colorEnchapadoEnMadera.webp",
+                        imgSrc: "/assets/img/furniture/combinacionDeColores/enchapadoMadera.webp",
                         imgAlt: "Enchapado en madera",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
@@ -60,19 +60,66 @@ export const furniturePlacares: FurnitureTableDataInterface = {
             tableTitle: "Incluir",
             maxSelections: 4,
             cards: [
-                { cardId: 1, cardTitle: "Pantalonero" },
-                { cardId: 2, cardTitle: "Zapatero" },
+                {
+                    cardId: 1, cardTitle: "Pantalonero",
+                    image: {
+                        imgSlug: "pantalonero",
+                        imgSrc: "/assets/img/furniture/incluir/pantalonero.webp",
+                        imgAlt: "Pantalonero",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 2, cardTitle: "Zapatero",
+                    image: {
+                        imgSlug: "zapatero",
+                        imgSrc: "/assets/img/furniture/incluir/zapatero.webp",
+                        imgAlt: "Zapatero",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
                 {
                     cardId: 3, cardTitle: "Luces LED",
                     image: {
-                        imgSlug: "Luces-led",
+                        imgSlug: "luces-led",
                         imgSrc: "/assets/img/furniture/incluir/luzLed.webp",
                         imgAlt: "Luces LED",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
                     }
                 },
-                { cardId: 4, cardTitle: "Barral para perchas" },
+                {
+                    cardId: 4, cardTitle: "Barral para perchas",
+                    image: {
+                        imgSlug: "barral-para-perchas",
+                        imgSrc: "/assets/img/furniture/incluir/barralParaPerchas.webp",
+                        imgAlt: "Barral para perchas",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 5, cardTitle: "Cajonera",
+                    image: {
+                        imgSlug: "cajonera",
+                        imgSrc: "/assets/img/furniture/incluir/cajoneraPlacar.webp",
+                        imgAlt: "Cajonera",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 6, cardTitle: "Estantes",
+                    image: {
+                        imgSlug: "estantes",
+                        imgSrc: "/assets/img/furniture/incluir/estantes.webp",
+                        imgAlt: "Estantes",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
             ],
         },
         {
@@ -90,7 +137,16 @@ export const furniturePlacares: FurnitureTableDataInterface = {
                         imgProportionsY: 0.6651,
                     }
                 },
-                { cardId: 2, cardTitle: "Corredizas" },
+                {
+                    cardId: 2, cardTitle: "Corredizas",
+                    image: {
+                        imgSlug: "corredizas",
+                        imgSrc: "/assets/img/furniture/puertas/placares/puertasCorredizas.webp",
+                        imgAlt: "Corredizas",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
                 {
                     cardId: 3, cardTitle: "Sin puerta",
                     image: {
@@ -173,7 +229,16 @@ export const furniturePlacares: FurnitureTableDataInterface = {
                         imgProportionsY: 0.6651,
                     }
                 },
-                { cardId: 2, cardTitle: "No", },
+                {
+                    cardId: 2, cardTitle: "No",
+                    image: {
+                        imgSlug: "placar-sin-isla",
+                        imgSrc: "/assets/img/furniture/isla/placares/placarSinIsla.webp",
+                        imgAlt: "Placar sin isla",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
             ],
         }, {
             tableId: 7,
