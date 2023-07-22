@@ -240,16 +240,17 @@ export const furniturePlacares: FurnitureTableDataInterface = {
                     }
                 },
             ],
-        }, {
-            tableId: 7,
-            tableTitle: "Medidas (ancho x largo x profundidad)",
-            maxSelections: 1,
-            cards: [
-                { cardId: 1, cardTitle: "45cm x 60cm x 40cm" },
-                { cardId: 2, cardTitle: "45cm x 60cm x 40cm" },
-                { cardId: 3, cardTitle: "45cm x 60cm x 40cm" },
-                { cardId: 4, cardTitle: "45cm x 60cm x 40cm" },
-            ],
-        }
+        },
+        //  {
+        //     tableId: 7,
+        //     tableTitle: "Medidas (ancho x largo x profundidad)",
+        //     maxSelections: 1,
+        //     cards: [
+        //         { cardId: 1, cardTitle: "45cm x 60cm x 40cm" },
+        //         { cardId: 2, cardTitle: "45cm x 60cm x 40cm" },
+        //         { cardId: 3, cardTitle: "45cm x 60cm x 40cm" },
+        //         { cardId: 4, cardTitle: "45cm x 60cm x 40cm" },
+        //     ],
+        // }
     ]
 }
