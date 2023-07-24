@@ -135,7 +135,7 @@ export default function ContactProductComponent({
                                     </select>
                                 </label>
                                 <button
-                                    disabled={noteRef.length > 0}
+                                    disabled={noteRef.trim().length > 0}
                                     className={styles["form-footer-btn"]}
                                     onClick={handleChangeIsNote}
                                     type="button">
