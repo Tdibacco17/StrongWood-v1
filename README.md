@@ -1,3 +1,3 @@
 ## STRONG WOOD
 
-titulos en models/es.json
+https://strong-wood-blue.vercel.app/
