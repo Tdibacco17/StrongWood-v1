@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 
 export default async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
-    const { name = "", phone = "", email = "", direction = "", product = "", paymentMethod = "", price = "" } = req.body;
+    const { name = "", phone = "", email = "", direction = "", product = "", paymentMethod = "", price = "", note = "" } = req.body;
 
     const contentHtml = `
     <!DOCTYPE html>
@@ -62,16 +62,22 @@ export default async function sendEmail(req: NextApiRequest, res: NextApiRespons
                 margin-bottom: 5px;
                 color: #555;
             }
-    
-            .footer {
-                text-align: center;
-                padding-top: 20px;
-                color: #777;
-            }
-    
+        
             .link {
                 color: #007bff;
                 text-decoration: none;
+            }
+
+            .footer {
+                margin-bottom: 15px;
+                text-align: left;
+                padding-top: 20px;
+            }
+
+            .footer li {
+                list-style-type: none;
+                margin-bottom: 5px;
+                color: #777;
             }
         </style>
     </head>
@@ -102,6 +108,7 @@ export default async function sendEmail(req: NextApiRequest, res: NextApiRespons
                 </div>
             </div>
             <div class="footer">
+                <li><strong>Nota: </strong>${note}</li>
             </div>
         </div>
     </body>

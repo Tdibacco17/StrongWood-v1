@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 
 export default async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
-    const { name = "", phone = "", email = "", direction = "", selections = "", paymentMethod = "" } = req.body;
+    const { name = "", phone = "", email = "", direction = "", selections = "", paymentMethod = "", note="" } = req.body;
 
     const contentHtml = `
     <!DOCTYPE html>
@@ -63,15 +63,21 @@ export default async function sendEmail(req: NextApiRequest, res: NextApiRespons
                 color: #555;
             }
     
-            .footer {
-                text-align: center;
-                padding-top: 20px;
-                color: #777;
-            }
-    
             .link {
                 color: #007bff;
                 text-decoration: none;
+            }
+
+            .footer {
+                margin-bottom: 15px;
+                text-align: left;
+                padding-top: 20px;
+            }
+
+            .footer li {
+                list-style-type: none;
+                margin-bottom: 5px;
+                color: #777;
             }
         </style>
     </head>
@@ -98,17 +104,18 @@ export default async function sendEmail(req: NextApiRequest, res: NextApiRespons
                         <li><strong>Producto: </strong>${selections.designSlug}-${selections.designItem}</li>
                         <li><strong>Abona en: </strong>${paymentMethod}</li>
                         ${selections.cardData
-                            .filter((item: { cardId: number, cardTitle: string, tableTitle: string }[]) => item.length > 0) // Filtra los elementos que tengan al menos un subItem
-                            .map((item: { cardId: number, cardTitle: string, tableTitle: string }[]) => {
-                                const tableTitle = item[0].tableTitle; // Toma el primer tableTitle en cada grupo
-                                const cardTitles = item.map((subItem: { cardId: number, cardTitle: string, tableTitle: string }) => subItem.cardTitle).join(', '); // Combina todos los cardTitle separados por comas
-                                return `<li><strong>${tableTitle}: </strong>${cardTitles}</li>`;
-                            })
-                            .join('')}
+            .filter((item: { cardId: number, cardTitle: string, tableTitle: string }[]) => item.length > 0) // Filtra los elementos que tengan al menos un subItem
+            .map((item: { cardId: number, cardTitle: string, tableTitle: string }[]) => {
+                const tableTitle = item[0].tableTitle; // Toma el primer tableTitle en cada grupo
+                const cardTitles = item.map((subItem: { cardId: number, cardTitle: string, tableTitle: string }) => subItem.cardTitle).join(', '); // Combina todos los cardTitle separados por comas
+                return `<li><strong>${tableTitle}: </strong>${cardTitles}</li>`;
+            })
+            .join('')}
                     </ul>
                 </div>
             </div>
             <div class="footer">
+                <li><strong>Nota: </strong>${note}</li>
             </div>
         </div>
     </body>

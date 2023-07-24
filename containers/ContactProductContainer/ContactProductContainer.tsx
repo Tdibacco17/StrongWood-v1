@@ -46,6 +46,11 @@ export default function ContactProductContainer({
     const [isModal, setIsModal] = useState<boolean>(false);
     const [isCheck, setIsCheck] = useState<boolean>(true);
     const [loadingText, setLoadingText] = useState<boolean>(false);
+    const [errorMessage, setErrorMessage] = useState<string>("");
+    const [isNote, setIsNote] = useState<boolean>(false);
+    const handleChangeIsNote = () => {
+        setIsNote(!isNote);
+    }
 
     const handlePaymentChange = (event: React.ChangeEvent<HTMLSelectElement>): void => {
         if (event.target.value === "Efectivo" || event.target.value === "Tarjeta") {
@@ -58,13 +63,16 @@ export default function ContactProductContainer({
     };
 
     const selectRef = useRef<HTMLSelectElement | null>(null);
-
     const nameRef = useRef<HTMLInputElement>(null);
     const phoneRef = useRef<HTMLInputElement>(null);
     const emailRef = useRef<HTMLInputElement>(null);
     const directiongeRef = useRef<HTMLInputElement>(null);
+    const [noteRef, setNoteRef] = useState<string>("");
 
-    const [errorMessage, setErrorMessage] = useState<string>("");
+    const handleChangeNoteRef = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+        const text = event.target.value;
+        setNoteRef(text);
+    };
 
     const handleValidation = () => {
         const regex = /^[0-9]+$/;
@@ -79,12 +87,12 @@ export default function ContactProductContainer({
             return false;
         }
 
-        if(phoneRef.current?.value && !(regex.test(phoneRef.current?.value.trim()))){
+        if (phoneRef.current?.value && !(regex.test(phoneRef.current?.value.trim()))) {
             setErrorMessage("Numero de telefono tiene que ser solo caracteres numericos.");
             return false;
         }
 
-        if(phoneRef.current?.value && !(phoneRef.current?.value.length >= 8)){
+        if (phoneRef.current?.value && !(phoneRef.current?.value.length >= 8)) {
             setErrorMessage("El número de teléfono no cumple con la longitud mínima.");
             return false;
         }
@@ -114,6 +122,7 @@ export default function ContactProductContainer({
             phone: phoneRef.current?.value.trim() || "No se paso un telefono",
             email: emailRef.current?.value.trim() || "No se paso un email",
             direction: directiongeRef.current?.value || "No se paso una dirección",
+            note: noteRef.trim().length > 0 ? noteRef.trim() : "No se paso una nota",
             product: productData?.title || "No se paso un producto",
             paymentMethod: selectedPayment !== "" ? selectedPayment : (pay || "No se pasó un método de pago"),
             price: selectedPayment !== "" ?
@@ -121,7 +130,7 @@ export default function ContactProductContainer({
                     : productData?.detail?.payment?.card.offerPrice ?? ""
                 ) : productPrice
         };
-        
+
         try {
             const response = await fetch("/api/contact/product", {
                 method: "POST",
@@ -161,6 +170,7 @@ export default function ContactProductContainer({
         phoneRef={phoneRef}
         emailRef={emailRef}
         directiongeRef={directiongeRef}
+        noteRef={noteRef}
         handleSubmitEmail={handleSubmitEmail}
         errorMessage={errorMessage}
         pay={pay}
@@ -171,5 +181,8 @@ export default function ContactProductContainer({
         isModal={isModal}
         loadingText={loadingText}
         isCheck={isCheck}
+        handleChangeIsNote={handleChangeIsNote}
+        isNote={isNote}
+        handleChangeNoteRef={handleChangeNoteRef}
     />
 }

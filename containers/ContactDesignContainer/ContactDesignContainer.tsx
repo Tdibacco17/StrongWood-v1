@@ -23,6 +23,10 @@ export default function ContactDesignContainer({
     const [isModal, setIsModal] = useState<boolean>(false);
     const [isCheck, setIsCheck] = useState<boolean>(true);
     const [loadingText, setLoadingText] = useState<boolean>(false);
+    const [isNote, setIsNote] = useState<boolean>(false);
+    const handleChangeIsNote = () => {
+        setIsNote(!isNote);
+    }
 
     const selectRef = useRef<HTMLSelectElement | null>(null);
 
@@ -30,7 +34,13 @@ export default function ContactDesignContainer({
     const phoneRef = useRef<HTMLInputElement>(null);
     const emailRef = useRef<HTMLInputElement>(null);
     const directiongeRef = useRef<HTMLInputElement>(null);
+    const [noteRef, setNoteRef] = useState<string>("");
     const [errorMessage, setErrorMessage] = useState<string>("");
+
+    const handleChangeNoteRef = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+        const text = event.target.value;
+        setNoteRef(text);
+    };
     
     const handlePaymentChange = (event: React.ChangeEvent<HTMLSelectElement>): void => {
         if (event.target.value === "Efectivo" || event.target.value === "Tarjeta") {
@@ -89,6 +99,7 @@ export default function ContactDesignContainer({
             phone: phoneRef.current?.value.trim() || "No se paso un telefono",
             email: emailRef.current?.value.trim() || "No se paso un email",
             direction: directiongeRef.current?.value || "No se paso una dirección",
+            note: noteRef.trim().length > 0 ? noteRef.trim() : "No se paso una nota",
             selections: {
                 designSlug: infoFurniture.designSlug,
                 designItem: infoFurniture.designItem,
@@ -136,6 +147,7 @@ export default function ContactDesignContainer({
         phoneRef={phoneRef}
         emailRef={emailRef}
         directiongeRef={directiongeRef}
+        noteRef={noteRef}
         handleSubmitEmail={handleSubmitEmail}
         errorMessage={errorMessage}
         isSelect={isSelect}
@@ -145,5 +157,8 @@ export default function ContactDesignContainer({
         isModal={isModal}
         loadingText={loadingText}
         isCheck={isCheck}
+        handleChangeIsNote={handleChangeIsNote}
+        isNote={isNote}
+        handleChangeNoteRef={handleChangeNoteRef}
     />
 }

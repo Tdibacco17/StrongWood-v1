@@ -108,7 +108,8 @@ export interface ContactProductDataInterface {
     direction: string,
     product: string
     paymentMethod: string,
-    price: string
+    price: string,
+    note?: string
 }
 
 // contact desing
@@ -118,6 +119,7 @@ export interface ContactDesignDataInterface {
     email: string,
     direction: string,
     paymentMethod: string,
+    note?: string,
     selections: {
         designSlug: string,
         designItem: string,
