@@ -7,6 +7,7 @@ export const dormitorioCama: FurnitureTableDataInterface = {
             tableId: 1,
             tableTitle: "Combinación de colores",
             maxSelections: 2,
+            askMeasure: false,
             cards: [
                 {
                     cardId: 1, cardTitle: "Melamina",
@@ -43,6 +44,7 @@ export const dormitorioCama: FurnitureTableDataInterface = {
             tableId: 2,
             tableTitle: "Calidad de herrajes",
             maxSelections: 1,
+            askMeasure: false,
             cards: [
                 {
                     cardId: 1, cardTitle: "Estandar",
@@ -69,6 +71,7 @@ export const dormitorioCama: FurnitureTableDataInterface = {
             tableId: 3,
             tableTitle: "Incluir",
             maxSelections: 2,
+            askMeasure: false,
             cards: [
                 { cardId: 1, cardTitle: "Cajones" },
                 { cardId: 2, cardTitle: "Respaldo" },
@@ -77,6 +80,7 @@ export const dormitorioCama: FurnitureTableDataInterface = {
             tableId: 4,
             tableTitle: "Medidas del colchon",
             maxSelections: 1,
+            askMeasure: false,
             cards: [
                 { cardId: 1, cardTitle: "90cm x 1,90cm" },
                 { cardId: 2, cardTitle: "90cm x 1,90cm" },
@@ -94,6 +98,7 @@ export const dormitorioMezaDeLuz: FurnitureTableDataInterface = {
             tableId: 1,
             tableTitle: "Combinación de colores",
             maxSelections: 2,
+            askMeasure: false,
             cards: [
                 {
                     cardId: 1, cardTitle: "Melamina",
@@ -130,6 +135,7 @@ export const dormitorioMezaDeLuz: FurnitureTableDataInterface = {
             tableId: 2,
             tableTitle: "Calidad de herrajes",
             maxSelections: 1,
+            askMeasure: false,
             cards: [
                 {
                     cardId: 1, cardTitle: "Estandar",
@@ -156,6 +162,7 @@ export const dormitorioMezaDeLuz: FurnitureTableDataInterface = {
             tableId: 3,
             tableTitle: "Incluir",
             maxSelections: 2,
+            askMeasure: false,
             cards: [
                 { cardId: 1, cardTitle: "Cajones" },
                 { cardId: 2, cardTitle: "Respaldo" },
@@ -164,6 +171,7 @@ export const dormitorioMezaDeLuz: FurnitureTableDataInterface = {
             tableId: 4,
             tableTitle: "Medidas (ancho x largo x profundidad)",
             maxSelections: 1,
+            askMeasure: false,
             cards: [
                 { cardId: 1, cardTitle: "45cm x 60cm x 40cm" },
                 { cardId: 2, cardTitle: "45cm x 60cm x 40cm" },
@@ -181,6 +189,7 @@ export const dormitorioComoda: FurnitureTableDataInterface = {
             tableId: 1,
             tableTitle: "Combinación de colores",
             maxSelections: 2,
+            askMeasure: false,
             cards: [
                 {
                     cardId: 1, cardTitle: "Melamina",
@@ -217,6 +226,7 @@ export const dormitorioComoda: FurnitureTableDataInterface = {
             tableId: 2,
             tableTitle: "Calidad de herrajes",
             maxSelections: 1,
+            askMeasure: false,
             cards: [
                 {
                     cardId: 1, cardTitle: "Estandar",
@@ -243,6 +253,7 @@ export const dormitorioComoda: FurnitureTableDataInterface = {
             tableId: 3,
             tableTitle: "Medidas (ancho x largo x profundidad)",
             maxSelections: 1,
+            askMeasure: false,
             cards: [
                 { cardId: 1, cardTitle: "45cm x 60cm x 40cm" },
                 { cardId: 2, cardTitle: "45cm x 60cm x 40cm" },

@@ -135,6 +135,7 @@ export interface FurnitureTableInterface {
     tableId: number,
     tableTitle: string,
     maxSelections: number,
+    askMeasure: boolean,
     cards: FurnitureDataCardsInterface[]
 }
 
@@ -142,4 +143,26 @@ export interface FurnitureDataCardsInterface {
     cardId: number,
     cardTitle: string,
     image?: ImgDataInterface
+}
+
+
+export interface MeasureDataInterface {
+    [id: string]: AskMeasure;
+}
+
+export interface AskMeasure {
+    a: MeasureType,
+    b?: MeasureType,
+    c?: MeasureType,
+    d?: MeasureType,
+}
+
+export interface MeasureType {
+    measure_id: number,
+    title: string,
+    measure: number
+}
+
+export interface MeasureValues {
+    [measureName: string]: number;
 }

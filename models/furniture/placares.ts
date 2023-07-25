@@ -1,4 +1,4 @@
-import { FurnitureTableDataInterface } from "@/types/Interfaces";
+import { FurnitureTableDataInterface, MeasureDataInterface } from "@/types/Interfaces";
 
 export const furniturePlacares: FurnitureTableDataInterface = {
     designSlug: "placar",
@@ -7,6 +7,7 @@ export const furniturePlacares: FurnitureTableDataInterface = {
             tableId: 1,
             tableTitle: "Combinación de colores",
             maxSelections: 1,
+            askMeasure: false,
             cards: [
                 {
                     cardId: 1, cardTitle: "Melamina",
@@ -33,6 +34,7 @@ export const furniturePlacares: FurnitureTableDataInterface = {
             tableId: 2,
             tableTitle: "Calidad de herrajes",
             maxSelections: 1,
+            askMeasure: false,
             cards: [
                 {
                     cardId: 1, cardTitle: "Estandar",
@@ -59,6 +61,7 @@ export const furniturePlacares: FurnitureTableDataInterface = {
             tableId: 3,
             tableTitle: "Incluir",
             maxSelections: 4,
+            askMeasure: false,
             cards: [
                 {
                     cardId: 1, cardTitle: "Pantalonero",
@@ -126,6 +129,7 @@ export const furniturePlacares: FurnitureTableDataInterface = {
             tableId: 4,
             tableTitle: "Puertas",
             maxSelections: 1,
+            askMeasure: false,
             cards: [
                 {
                     cardId: 1, cardTitle: "De vidrio",
@@ -162,6 +166,7 @@ export const furniturePlacares: FurnitureTableDataInterface = {
             tableId: 5,
             tableTitle: "Distribución",
             maxSelections: 1,
+            askMeasure: true,
             cards: [
                 {
                     cardId: 1, cardTitle: "En L",
@@ -218,6 +223,7 @@ export const furniturePlacares: FurnitureTableDataInterface = {
             tableId: 6,
             tableTitle: "Con isla",
             maxSelections: 1,
+            askMeasure: false,
             cards: [
                 {
                     cardId: 1, cardTitle: "Si",
@@ -241,16 +247,79 @@ export const furniturePlacares: FurnitureTableDataInterface = {
                 },
             ],
         },
-        //  {
-        //     tableId: 7,
-        //     tableTitle: "Medidas (ancho x largo x profundidad)",
-        //     maxSelections: 1,
-        //     cards: [
-        //         { cardId: 1, cardTitle: "45cm x 60cm x 40cm" },
-        //         { cardId: 2, cardTitle: "45cm x 60cm x 40cm" },
-        //         { cardId: 3, cardTitle: "45cm x 60cm x 40cm" },
-        //         { cardId: 4, cardTitle: "45cm x 60cm x 40cm" },
-        //     ],
-        // }
     ]
+}
+
+
+export const measuresPlacares: MeasureDataInterface = {
+    "placar-en-l": {
+        a: {
+            measure_id: 1,
+            title: "Medida A",
+            measure: 0
+        },
+        b: {
+            measure_id: 2,
+            title: "Medida B",
+            measure: 0
+        },
+    },
+    "placar-en-c": {
+        a: {
+            measure_id: 1,
+            title: "Medida A",
+            measure: 0
+        },
+        b: {
+            measure_id: 2,
+            title: "Medida B",
+            measure: 0
+        },
+        c: {
+            measure_id: 3,
+            title: "Medida C",
+            measure: 0
+        },
+    },
+    "placar-en-g": {
+        a: {
+            measure_id: 1,
+            title: "Medida A",
+            measure: 0
+        },
+        b: {
+            measure_id: 2,
+            title: "Medida B",
+            measure: 0
+        },
+        c: {
+            measure_id: 3,
+            title: "Medida C",
+            measure: 0
+        },
+        d: {
+            measure_id: 4,
+            title: "Medida D",
+            measure: 0
+        },
+    },
+    "placar-lineal": {
+        a: {
+            measure_id: 1,
+            title: "Medida A",
+            measure: 0
+        },
+    },
+    "placar-en-paralelo": {
+        a: {
+            measure_id: 1,
+            title: "Medida A",
+            measure: 0
+        },
+        b: {
+            measure_id: 2,
+            title: "Medida B",
+            measure: 0
+        },
+    }
 }

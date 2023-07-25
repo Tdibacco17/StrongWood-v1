@@ -1,4 +1,4 @@
-import { FurnitureTableDataInterface } from "@/types/Interfaces";
+import { FurnitureTableDataInterface, MeasureDataInterface } from "@/types/Interfaces";
 
 export const furnitureCocina: FurnitureTableDataInterface = {
     designSlug: "cocina",
@@ -7,6 +7,7 @@ export const furnitureCocina: FurnitureTableDataInterface = {
             tableId: 1,
             tableTitle: "Combinación de colores",
             maxSelections: 1,
+            askMeasure: false,
             cards: [
                 {
                     cardId: 1, cardTitle: "Melamina",
@@ -43,6 +44,7 @@ export const furnitureCocina: FurnitureTableDataInterface = {
             tableId: 2,
             tableTitle: "Calidad de herrajes",
             maxSelections: 1,
+            askMeasure: false,
             cards: [
                 {
                     cardId: 1, cardTitle: "Estandar",
@@ -79,6 +81,7 @@ export const furnitureCocina: FurnitureTableDataInterface = {
             tableId: 3,
             tableTitle: "Incluir",
             maxSelections: 9,
+            askMeasure: false,
             cards: [
                 {
                     cardId: 1, cardTitle: "Cajonera",
@@ -120,14 +123,16 @@ export const furnitureCocina: FurnitureTableDataInterface = {
                         imgProportionsY: 0.6651,
                     }
                 },
-                { cardId: 5, cardTitle: "Torre de heladera",
-                image: {
-                    imgSlug: "Torre-de-heladera",
-                    imgSrc: "/assets/img/furniture/incluir/torreHeladera.webp",
-                    imgAlt: "Torre de heladera",
-                    imgProportionsX: 1.5024,
-                    imgProportionsY: 0.6651,
-                } },
+                {
+                    cardId: 5, cardTitle: "Torre de heladera",
+                    image: {
+                        imgSlug: "Torre-de-heladera",
+                        imgSrc: "/assets/img/furniture/incluir/torreHeladera.webp",
+                        imgAlt: "Torre de heladera",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
                 {
                     cardId: 6, cardTitle: "Torre de horno + microondas",
                     image: {
@@ -173,6 +178,7 @@ export const furnitureCocina: FurnitureTableDataInterface = {
             tableId: 4,
             tableTitle: "Puertas",
             maxSelections: 2,
+            askMeasure: false,
             cards: [
                 {
                     cardId: 1, cardTitle: "Puertas batiente",
@@ -200,6 +206,7 @@ export const furnitureCocina: FurnitureTableDataInterface = {
             tableId: 5,
             tableTitle: "Distribución",
             maxSelections: 1,
+            askMeasure: true,
             cards: [
                 {
                     cardId: 1, cardTitle: "En L",
@@ -257,6 +264,7 @@ export const furnitureCocina: FurnitureTableDataInterface = {
             tableId: 6,
             tableTitle: "Con isla",
             maxSelections: 1,
+            askMeasure: false,
             cards: [
                 {
                     cardId: 1, cardTitle: "Si",
@@ -281,4 +289,88 @@ export const furnitureCocina: FurnitureTableDataInterface = {
             ],
         }
     ]
+}
+
+
+export const measuresCocina: MeasureDataInterface = {
+    "cocina-en-l": {
+        // numValuesToComplete: 2,
+        // measure_slug: "cocina-en-l",
+        a: {
+            measure_id: 1,
+            title: "Medida A",
+            measure: 0
+        },
+        b: {
+            measure_id: 2,
+            title: "Medida B",
+            measure: 0
+        },
+    },
+    "cocina-en-u": {
+        // numValuesToComplete: 3,
+        // measure_slug: "cocina-en-u",
+        a: {
+            measure_id: 1,
+            title: "Medida A",
+            measure: 0
+        },
+        b: {
+            measure_id: 2,
+            title: "Medida B",
+            measure: 0
+        },
+        c: {
+            measure_id: 3,
+            title: "Medida C",
+            measure: 0
+        },
+    },
+    "cocina-en-g": {
+        // numValuesToComplete: 4,
+        // measure_slug: "cocina-en-g",
+        a: {
+            measure_id: 1,
+            title: "Medida A",
+            measure: 0
+        },
+        b: {
+            measure_id: 2,
+            title: "Medida B",
+            measure: 0
+        },
+        c: {
+            measure_id: 3,
+            title: "Medida C",
+            measure: 0
+        },
+        d: {
+            measure_id: 4,
+            title: "Medida D",
+            measure: 0
+        },
+    },
+    "cocina-lineal": {
+        // numValuesToComplete: 1,
+        // measure_slug: "cocina-lineal",
+        a: {
+            measure_id: 1,
+            title: "Medida A",
+            measure: 0
+        },
+    },
+    "cocina-en-paralelo": {
+        // numValuesToComplete: 2,
+        // measure_slug: "cocina-en-paralelo",
+        a: {
+            measure_id: 1,
+            title: "Medida A",
+            measure: 0
+        },
+        b: {
+            measure_id: 2,
+            title: "Medida B",
+            measure: 0
+        },
+    }
 }

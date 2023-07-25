@@ -1,7 +1,8 @@
 import FurnitureTableContainer from "@/containers/FurnitureTableContainer/FurnitureTableContainer"
 import styles from "./FurnitureComponent.module.scss"
-import { FurnitureDataCardsInterface, FurnitureTableInterface, ImgDataInterface } from "@/types/Interfaces";
+import { FurnitureDataCardsInterface, FurnitureTableInterface, ImgDataInterface, MeasureDataInterface, MeasureValues } from "@/types/Interfaces";
 import FurnitureBannerComponent from "../FurnitureBannerComponent/FurnitureBannerComponent";
+import { FurnitureMeasureComponent } from "../FurnitureMeasureComponent/FurnitureMeasureComponent";
 
 export default function FurnitureComponent({
     furnitureData,
@@ -12,7 +13,11 @@ export default function FurnitureComponent({
     handleCardClick,
     handleValidation,
     buttonClicked,
-    imgData
+    imgData,
+    measureData,
+    imgSlugsWithAskMeasure,
+    handleMeasureChange,
+    measureValues
 }: {
     furnitureData: FurnitureTableInterface[];
     visibleTables: number[];
@@ -22,7 +27,11 @@ export default function FurnitureComponent({
     handleCardClick: (tableId: number, cardId: number, cardTitle: string, tableTitle: string) => void;
     handleValidation: () => void;
     buttonClicked: boolean,
-    imgData: ImgDataInterface | undefined
+    imgData: ImgDataInterface | undefined,
+    measureData: MeasureDataInterface,
+    imgSlugsWithAskMeasure: string[],
+    handleMeasureChange: (measureName: string, value: number) => void,
+    measureValues: MeasureValues
 }) {
 
     return (
@@ -45,6 +54,15 @@ export default function FurnitureComponent({
                     )
                 })}
             </div>
+            {
+                visibleTables.length > furnitureData.length && furnitureData.length !== 0 &&
+                <FurnitureMeasureComponent
+                    measureData={measureData}
+                    imgSlugsWithAskMeasure={imgSlugsWithAskMeasure}
+                    handleMeasureChange={handleMeasureChange}
+                    measureValues={measureValues}
+                />
+            }
             <div className={styles["container-button-finish"]}>
                 {
                     (visibleTables.length > furnitureData.length && buttonClicked && (validated === false)) &&

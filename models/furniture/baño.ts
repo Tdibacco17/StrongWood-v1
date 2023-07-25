@@ -7,6 +7,7 @@ export const furnitureBaño: FurnitureTableDataInterface = {
             tableId: 1,
             tableTitle: "Combinación de colores",
             maxSelections: 1,
+            askMeasure: false,
             cards: [
                 {
                     cardId: 1, cardTitle: "Melamina",
@@ -43,6 +44,7 @@ export const furnitureBaño: FurnitureTableDataInterface = {
             tableId: 2,
             tableTitle: "Calidad de herrajes",
             maxSelections: 1,
+            askMeasure: false,
             cards: [
                 {
                     cardId: 1, cardTitle: "Estandar",
@@ -69,6 +71,7 @@ export const furnitureBaño: FurnitureTableDataInterface = {
             tableId: 3,
             tableTitle: "Distribución",
             maxSelections: 4,
+            askMeasure: false,
             cards: [
                 {
                     cardId: 1, cardTitle: "Puertas",

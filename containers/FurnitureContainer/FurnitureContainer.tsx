@@ -1,22 +1,38 @@
 import FurnitureComponent from "@/components/FurnitureComponent/FurnitureComponent";
 import { ContactContext } from "@/context/ContactContextProvider";
-import { ContactDataContextInterface, FurnitureDataCardsInterface, FurnitureTableInterface, ImgDataInterface } from "@/types/Interfaces";
+import { AskMeasure, ContactDataContextInterface, FurnitureDataCardsInterface, FurnitureTableInterface, ImgDataInterface, MeasureDataInterface, MeasureValues } from "@/types/Interfaces";
 import { useRouter } from "next/router";
 import { useCallback, useContext, useEffect, useState } from "react";
 
 export default function FurnitureContainer({
     designSlug,
     item,
-    furnitureData
+    furnitureData,
+    measureData
 }: {
     designSlug: string,
     item: string | undefined,
-    furnitureData: FurnitureTableInterface[]
+    furnitureData: FurnitureTableInterface[],
+    measureData: MeasureDataInterface
 }) {
 
     const { setInfoFurniture } = useContext(
         ContactContext
     ) as ContactDataContextInterface;
+
+    const [selectedImgSlug, setSelectedImgSlug] = useState<string | undefined>(undefined);
+    const [measureValues, setMeasureValues] = useState<MeasureValues>({});
+
+    const handleMeasureChange = (measureName: string, value: number) => {
+        setMeasureValues((prevMeasureValues) => ({
+            ...prevMeasureValues,
+            [measureName]: value,
+        }));
+    };
+
+    useEffect(() => {
+        setMeasureValues({});
+    }, [selectedImgSlug]);
 
     const [visibleTables, setVisibleTables] = useState([1]);
     const [clickedImages, setClickedImages] = useState<{ [key: number]: FurnitureDataCardsInterface[] }>({});
@@ -57,32 +73,63 @@ export default function FurnitureContainer({
         setValidated(allTablesHaveSelections);
     }, [clickedImages]);
 
-    const handleCardClick = useCallback((tableId: number, cardId: number, cardTitle: string, tableTitle: string) => {
-        const nextTableId = tableId + 1;
-        if (!visibleTables.includes(nextTableId)) {
-            setVisibleTables(prevTables => [...prevTables, nextTableId]);
+    const getImgSlugsWithAskMeasure = (clickedImages: any) => {
+        const imgSlugs = [];
+
+        for (const key in clickedImages) {
+            const cardArr = clickedImages[key];
+            const hasAskMeasure = cardArr.some((card: any) => card.askMeasure === true);
+
+            if (hasAskMeasure) {
+                const imgSlug = cardArr.find((card: any) => card.askMeasure === true)?.imgSlug;
+                if (imgSlug) {
+                    imgSlugs.push(imgSlug);
+                }
+            }
         }
 
-        setClickedImages(prevImages => {
-            const prevTableImages = prevImages[tableId] || [];
-            const isCardSelected = prevTableImages.some(image => image.cardId === cardId);
+        return imgSlugs;
+    };
 
-            let updatedImages = [];
-            if (
-                furnitureData[tableId - 1]?.maxSelections &&
-                prevTableImages.length >= furnitureData[tableId - 1].maxSelections &&
-                !isCardSelected
-            ) {
-                updatedImages = [...prevTableImages.slice(1), { cardId, cardTitle, tableTitle }];
-            } else {
-                updatedImages = isCardSelected
-                    ? prevTableImages.filter(image => image.cardId !== cardId)
-                    : [...prevTableImages, { cardId, cardTitle, tableTitle }];
+    const handleCardClick = useCallback(
+        (tableId: number, cardId: number, cardTitle: string, tableTitle: string) => {
+            const nextTableId = tableId + 1;
+            if (!visibleTables.includes(nextTableId)) {
+                setVisibleTables(prevTables => [...prevTables, nextTableId]);
             }
 
-            return { ...prevImages, [tableId]: updatedImages };
-        });
-    }, [visibleTables]);
+            const currentTable = furnitureData.find(table => table.tableId === tableId);
+            const currentTableAskMeasure = currentTable ? currentTable.askMeasure : false;
+
+            const selectedImageSlug = furnitureData[tableId - 1]?.cards.find(card => card.cardId === cardId)?.image?.imgSlug;
+            const selectedImageSlugAsString = String(selectedImageSlug);
+
+            setSelectedImgSlug(selectedImageSlugAsString);
+
+            setClickedImages(prevImages => {
+                const prevTableImages = prevImages[tableId] || [];
+                const isCardSelected = prevTableImages.some(image => image.cardId === cardId);
+
+                let updatedImages = [];
+                if (
+                    furnitureData[tableId - 1]?.maxSelections &&
+                    prevTableImages.length >= furnitureData[tableId - 1].maxSelections &&
+                    !isCardSelected
+                ) {
+                    updatedImages = [...prevTableImages.slice(1), { cardId, cardTitle, tableTitle, askMeasure: currentTableAskMeasure, imgSlug: currentTableAskMeasure ? furnitureData[tableId - 1]?.cards.find(card => card.cardId === cardId)?.image?.imgSlug : undefined }];
+                } else {
+                    updatedImages = isCardSelected
+                        ? prevTableImages.filter(image => image.cardId !== cardId)
+                        : [...prevTableImages, { cardId, cardTitle, tableTitle, askMeasure: currentTableAskMeasure, imgSlug: currentTableAskMeasure ? furnitureData[tableId - 1]?.cards.find(card => card.cardId === cardId)?.image?.imgSlug : undefined }];
+                }
+
+                return { ...prevImages, [tableId]: updatedImages };
+            });
+        },
+        [visibleTables, furnitureData]
+    );
+
+    const imgSlugsWithAskMeasure: string[] = getImgSlugsWithAskMeasure(clickedImages);
 
     const handleValidation = useCallback(() => {
         const tablesWithMissingFields = Array.from({ length: furnitureData.length }, (_, i) => i + 1).filter(
@@ -105,6 +152,19 @@ export default function FurnitureContainer({
         setShowMissingFields(true);
     }, [clickedImages]);
 
+    // Object.values(measureData).map((e: AskMeasure) => {
+    //     if (e.measure_slug === imgSlugsWithAskMeasure[0]) {
+    //         if (Object.keys(measureValues).length >= e.numValuesToComplete) {
+    //             console.log(true)
+    //         }
+    //     }
+    //     console.log(false, "[MEASURE-DATA]")
+    // })
+
+    // console.log(imgSlugsWithAskMeasure, "selecionado")
+
+    // console.log(measureValues, "valores")
+
     return <FurnitureComponent
         furnitureData={furnitureData}
         visibleTables={visibleTables}
@@ -115,5 +175,9 @@ export default function FurnitureContainer({
         handleValidation={handleValidation}
         buttonClicked={buttonClicked}
         imgData={imgData}
+        measureData={measureData}
+        imgSlugsWithAskMeasure={imgSlugsWithAskMeasure}
+        handleMeasureChange={handleMeasureChange}
+        measureValues={measureValues}
     />
 }
