@@ -1,4 +1,4 @@
-import { MeasureDataInterface, MeasureType, MeasureValues } from "@/types/Interfaces";
+import { Measure, MeasureDataInterface, MeasureType, MeasureValues } from "@/types/Interfaces";
 import { ChangeEvent } from "react";
 
 export function FurnitureMeasureComponent({
@@ -16,7 +16,9 @@ export function FurnitureMeasureComponent({
         return <></>
     }
 
-    const selectedAskMeasure = imgSlugsWithAskMeasure.length > 0 ? measureData[imgSlugsWithAskMeasure[0]] : undefined;
+    console.log(measureData[imgSlugsWithAskMeasure[0]].leters)
+
+    const selectedAskMeasure: MeasureType[] | undefined = imgSlugsWithAskMeasure.length > 0 ? measureData[imgSlugsWithAskMeasure[0]].leters : undefined;
 
     return (
         <div>

@@ -147,14 +147,13 @@ export interface FurnitureDataCardsInterface {
 
 
 export interface MeasureDataInterface {
-    [id: string]: AskMeasure;
+    [id: string]: Measure;
 }
 
-export interface AskMeasure {
-    a: MeasureType,
-    b?: MeasureType,
-    c?: MeasureType,
-    d?: MeasureType,
+export interface Measure {
+    numValuesToComplete: number,
+    measure_slug: string,
+    leters: MeasureType[]
 }
 
 export interface MeasureType {

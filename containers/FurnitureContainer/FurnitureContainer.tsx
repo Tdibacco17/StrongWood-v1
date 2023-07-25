@@ -1,6 +1,6 @@
 import FurnitureComponent from "@/components/FurnitureComponent/FurnitureComponent";
 import { ContactContext } from "@/context/ContactContextProvider";
-import { AskMeasure, ContactDataContextInterface, FurnitureDataCardsInterface, FurnitureTableInterface, ImgDataInterface, MeasureDataInterface, MeasureValues } from "@/types/Interfaces";
+import { ContactDataContextInterface, FurnitureDataCardsInterface, FurnitureTableInterface, ImgDataInterface, MeasureDataInterface, MeasureValues } from "@/types/Interfaces";
 import { useRouter } from "next/router";
 import { useCallback, useContext, useEffect, useState } from "react";
 

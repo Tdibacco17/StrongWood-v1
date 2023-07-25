@@ -253,73 +253,93 @@ export const furniturePlacares: FurnitureTableDataInterface = {
 
 export const measuresPlacares: MeasureDataInterface = {
     "placar-en-l": {
-        a: {
-            measure_id: 1,
-            title: "Medida A",
-            measure: 0
-        },
-        b: {
-            measure_id: 2,
-            title: "Medida B",
-            measure: 0
-        },
+        numValuesToComplete: 2,
+        measure_slug: "placar-en-l",
+        leters: [
+            {
+                measure_id: 1,
+                title: "Medida A",
+                measure: 0
+            },
+            {
+                measure_id: 2,
+                title: "Medida B",
+                measure: 0
+            }
+        ]
     },
     "placar-en-c": {
-        a: {
-            measure_id: 1,
-            title: "Medida A",
-            measure: 0
-        },
-        b: {
-            measure_id: 2,
-            title: "Medida B",
-            measure: 0
-        },
-        c: {
-            measure_id: 3,
-            title: "Medida C",
-            measure: 0
-        },
+        numValuesToComplete: 3,
+        measure_slug: "placar-en-c",
+        leters: [
+            {
+                measure_id: 1,
+                title: "Medida A",
+                measure: 0
+            },
+            {
+                measure_id: 2,
+                title: "Medida B",
+                measure: 0
+            },
+            {
+                measure_id: 3,
+                title: "Medida C",
+                measure: 0
+            },
+        ]
     },
     "placar-en-g": {
-        a: {
-            measure_id: 1,
-            title: "Medida A",
-            measure: 0
-        },
-        b: {
-            measure_id: 2,
-            title: "Medida B",
-            measure: 0
-        },
-        c: {
-            measure_id: 3,
-            title: "Medida C",
-            measure: 0
-        },
-        d: {
-            measure_id: 4,
-            title: "Medida D",
-            measure: 0
-        },
+        numValuesToComplete: 4,
+        measure_slug:  "placar-en-g",
+        leters: [
+            {
+                measure_id: 1,
+                title: "Medida A",
+                measure: 0
+            },
+            {
+                measure_id: 2,
+                title: "Medida B",
+                measure: 0
+            },
+            {
+                measure_id: 3,
+                title: "Medida C",
+                measure: 0
+            },
+            {
+                measure_id: 4,
+                title: "Medida D",
+                measure: 0
+            }
+        ]
     },
     "placar-lineal": {
-        a: {
-            measure_id: 1,
-            title: "Medida A",
-            measure: 0
-        },
+        numValuesToComplete: 1,
+        measure_slug: "placar-lineal",
+        leters: [
+            {
+                measure_id: 1,
+                title: "Medida A",
+                measure: 0
+            },
+        ]
     },
     "placar-en-paralelo": {
-        a: {
-            measure_id: 1,
-            title: "Medida A",
-            measure: 0
-        },
-        b: {
-            measure_id: 2,
-            title: "Medida B",
-            measure: 0
-        },
+        numValuesToComplete: 2,
+        measure_slug: "placar-en-paralelo",
+        leters: [
+            {
+                measure_id: 1,
+                title: "Medida A",
+                measure: 0
+            },
+            {
+                measure_id: 2,
+                title: "Medida B",
+                measure: 0
+            },
+        ]
     }
 }

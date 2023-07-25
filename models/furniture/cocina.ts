@@ -294,83 +294,91 @@ export const furnitureCocina: FurnitureTableDataInterface = {
 
 export const measuresCocina: MeasureDataInterface = {
     "cocina-en-l": {
-        // numValuesToComplete: 2,
-        // measure_slug: "cocina-en-l",
-        a: {
-            measure_id: 1,
-            title: "Medida A",
-            measure: 0
-        },
-        b: {
-            measure_id: 2,
-            title: "Medida B",
-            measure: 0
-        },
+        numValuesToComplete: 2,
+        measure_slug: "cocina-en-l",
+        leters: [
+            {
+                measure_id: 1,
+                title: "Medida A",
+                measure: 0
+            }, {
+                measure_id: 2,
+                title: "Medida B",
+                measure: 0
+            }
+        ]
     },
     "cocina-en-u": {
-        // numValuesToComplete: 3,
-        // measure_slug: "cocina-en-u",
-        a: {
-            measure_id: 1,
-            title: "Medida A",
-            measure: 0
-        },
-        b: {
-            measure_id: 2,
-            title: "Medida B",
-            measure: 0
-        },
-        c: {
-            measure_id: 3,
-            title: "Medida C",
-            measure: 0
-        },
+        numValuesToComplete: 3,
+        measure_slug: "cocina-en-u",
+        leters: [
+            {
+                measure_id: 1,
+                title: "Medida A",
+                measure: 0
+            },
+            {
+                measure_id: 2,
+                title: "Medida B",
+                measure: 0
+            },
+            {
+                measure_id: 3,
+                title: "Medida C",
+                measure: 0
+            }
+        ]
     },
     "cocina-en-g": {
-        // numValuesToComplete: 4,
-        // measure_slug: "cocina-en-g",
-        a: {
-            measure_id: 1,
-            title: "Medida A",
-            measure: 0
-        },
-        b: {
-            measure_id: 2,
-            title: "Medida B",
-            measure: 0
-        },
-        c: {
-            measure_id: 3,
-            title: "Medida C",
-            measure: 0
-        },
-        d: {
-            measure_id: 4,
-            title: "Medida D",
-            measure: 0
-        },
+        numValuesToComplete: 4,
+        measure_slug: "cocina-en-g",
+        leters: [
+            {
+                measure_id: 1,
+                title: "Medida A",
+                measure: 0
+            },
+            {
+                measure_id: 2,
+                title: "Medida B",
+                measure: 0
+            },
+            {
+                measure_id: 3,
+                title: "Medida C",
+                measure: 0
+            },
+            {
+                measure_id: 4,
+                title: "Medida D",
+                measure: 0
+            }
+        ]
     },
     "cocina-lineal": {
-        // numValuesToComplete: 1,
-        // measure_slug: "cocina-lineal",
-        a: {
+        numValuesToComplete: 1,
+        measure_slug: "cocina-lineal",
+        leters: [{
             measure_id: 1,
             title: "Medida A",
             measure: 0
-        },
+        }]
+
     },
     "cocina-en-paralelo": {
-        // numValuesToComplete: 2,
-        // measure_slug: "cocina-en-paralelo",
-        a: {
-            measure_id: 1,
-            title: "Medida A",
-            measure: 0
-        },
-        b: {
-            measure_id: 2,
-            title: "Medida B",
-            measure: 0
-        },
+        numValuesToComplete: 2,
+        measure_slug: "cocina-en-paralelo",
+        leters: [
+            {
+                measure_id: 1,
+                title: "Medida A",
+                measure: 0
+            },
+            {
+                measure_id: 2,
+                title: "Medida B",
+                measure: 0
+            }
+        ]
     }
 }
