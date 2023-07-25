@@ -16,9 +16,7 @@ export function FurnitureMeasureComponent({
         return <></>
     }
 
-    console.log(measureData[imgSlugsWithAskMeasure[0]].leters)
-
-    const selectedAskMeasure: MeasureType[] | undefined = imgSlugsWithAskMeasure.length > 0 ? measureData[imgSlugsWithAskMeasure[0]].leters : undefined;
+    const selectedAskMeasure: MeasureType[] | undefined = imgSlugsWithAskMeasure.length > 0  ? measureData[imgSlugsWithAskMeasure[0]].leters : undefined;
 
     return (
         <div>

@@ -103,9 +103,10 @@ export default function ContactDesignContainer({
             selections: {
                 designSlug: infoFurniture.designSlug,
                 designItem: infoFurniture.designItem,
-                cardData: Object.values(infoFurniture.data)
+                cardData: Object.values(infoFurniture.data),
             },
             paymentMethod: selectedPayment !== "" ? selectedPayment : "No se pasó un método de pago",
+            measures: infoFurniture.measures
         };
         try {
             const response = await fetch("/api/contact/design", {

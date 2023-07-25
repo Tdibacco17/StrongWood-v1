@@ -125,6 +125,7 @@ export interface ContactDesignDataInterface {
         designItem: string,
         cardData: any[]
     }
+    measures: any
 }
 
 export interface FurnitureTableDataInterface {

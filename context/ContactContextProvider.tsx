@@ -11,7 +11,7 @@ interface DesignProps {
     designSlug:string,
     designItem: string,
     data?: any,
-    imgDesign?: ImgDataInterface
+    measures?: any
 }
 
 export const ContactContext = createContext<ContactDataContextInterface | {}>({});

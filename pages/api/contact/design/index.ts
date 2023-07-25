@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 
 export default async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
-    const { name = "", phone = "", email = "", direction = "", selections = "", paymentMethod = "", note="" } = req.body;
+    const { name = "", phone = "", email = "", direction = "", selections = "", paymentMethod = "", note = "", measures = "" } = req.body;
 
     const contentHtml = `
     <!DOCTYPE html>
@@ -111,6 +111,9 @@ export default async function sendEmail(req: NextApiRequest, res: NextApiRespons
                 return `<li><strong>${tableTitle}: </strong>${cardTitles}</li>`;
             })
             .join('')}
+                    </ul>
+                    <ul>
+                        ${Object.entries(measures).map(([key, value]) => `<li><strong>${key}: </strong>${value}</li>`).join('')}
                     </ul>
                 </div>
             </div>
