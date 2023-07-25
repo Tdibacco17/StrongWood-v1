@@ -120,7 +120,14 @@ export const furnitureCocina: FurnitureTableDataInterface = {
                         imgProportionsY: 0.6651,
                     }
                 },
-                { cardId: 5, cardTitle: "Torre de heladera" },
+                { cardId: 5, cardTitle: "Torre de heladera",
+                image: {
+                    imgSlug: "Torre-de-heladera",
+                    imgSrc: "/assets/img/furniture/incluir/torreHeladera.webp",
+                    imgAlt: "Torre de heladera",
+                    imgProportionsX: 1.5024,
+                    imgProportionsY: 0.6651,
+                } },
                 {
                     cardId: 6, cardTitle: "Torre de horno + microondas",
                     image: {

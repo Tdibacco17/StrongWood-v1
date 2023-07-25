@@ -70,10 +70,46 @@ export const furnitureBaño: FurnitureTableDataInterface = {
             tableTitle: "Distribución",
             maxSelections: 4,
             cards: [
-                { cardId: 1, cardTitle: "Puertas" },
-                { cardId: 2, cardTitle: "Cajones" },
-                { cardId: 3, cardTitle: "Estantes" },
-                { cardId: 4, cardTitle: "Manijas" },
+                {
+                    cardId: 1, cardTitle: "Puertas",
+                    image: {
+                        imgSlug: "puertas-batiente",
+                        imgSrc: "/assets/img/furniture/puertas/cocina/combinacionesPuertasBatiente.webp",
+                        imgAlt: "Puertas batiente",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 2, cardTitle: "Cajones",
+                    image: {
+                        imgSlug: "cajonera",
+                        imgSrc: "/assets/img/furniture/incluir/cajoneraCocina.webp",
+                        imgAlt: "Cajonera",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 3, cardTitle: "Estantes",
+                    image: {
+                        imgSlug: "estantes",
+                        imgSrc: "/assets/img/furniture/incluir/estantes.webp",
+                        imgAlt: "Estantes",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 4, cardTitle: "Manijas",
+                    image: {
+                        imgSlug: "manijas",
+                        imgSrc: "/assets/img/furniture/incluir/manijas.webp",
+                        imgAlt: "Manijas",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
             ],
         }
     ]
