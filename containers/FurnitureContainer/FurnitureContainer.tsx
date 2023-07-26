@@ -27,11 +27,10 @@ export default function FurnitureContainer({
     const [measureValues, setMeasureValues] = useState<MeasureValues>({});
     const [visibleTables, setVisibleTables] = useState([1]);
     const [clickedImages, setClickedImages] = useState<{ [key: number]: FurnitureDataCardsInterface[] }>({});
-    const [validated, setValidated] = useState(false);
+    const [validated, setValidated] = useState<boolean>(false);
     const [showMissingFields, setShowMissingFields] = useState(false);
     const [buttonClicked, setButtonClicked] = useState(false);
-    const [imgData, setImgData] = useState<ImgDataInterface | undefined>(undefined)
-
+    const [imgData, setImgData] = useState<ImgDataInterface | undefined>(undefined);
     //gestiona la cocina que eligio el usuario
     const getImgSlugsWithAskMeasure = (clickedImages: any) => {
         const imgSlugs = [];
@@ -51,6 +50,12 @@ export default function FurnitureContainer({
     };
     //variable de que distribucion eligio
     const imgSlugsWithAskMeasure: string[] = getImgSlugsWithAskMeasure(clickedImages);
+
+    const matchedObject = (currentTableId && furnitureData[currentTableId - 1].cards.find((e: any) => {
+        return e.image?.imgSlug === imgSlugsWithAskMeasure[0];
+    })) as FurnitureDataCardsInterface | undefined;
+
+    const imageProp = matchedObject?.image;
 
     //FetchData
     useEffect(() => {
@@ -81,9 +86,7 @@ export default function FurnitureContainer({
         const allTablesHaveSelections = Array.from({ length: furnitureData.length }, (_, i) => i + 1).every(
             i => clickedImages[i] && clickedImages[i].length > 0
         );
-
         const isMeasureValidated = validateMeasureInputs(imgSlugsWithAskMeasure, measureData, measureValues);
-
         setValidated(allTablesHaveSelections && isMeasureValidated);
     }, [clickedImages, furnitureData, imgSlugsWithAskMeasure, measureData, measureValues]);
 
@@ -129,7 +132,6 @@ export default function FurnitureContainer({
         },
         [visibleTables, furnitureData]
     );
-
     //BOTON COTIZAR
     const handleValidation = useCallback(() => {
         const noMissingFields = hasMissingFields(furnitureData, clickedImages);
@@ -146,7 +148,8 @@ export default function FurnitureContainer({
                 designSlug: designSlug,
                 designItem: item,
                 data: clickedImages,
-                measures: measureValues
+                measures: measureValues,
+                imageData: imageProp
             })
             router.push("/contact/design");
         } else {
@@ -156,6 +159,7 @@ export default function FurnitureContainer({
 
         setShowMissingFields(true);
     }, [clickedImages, furnitureData, imgSlugsWithAskMeasure, measureData, measureValues, currentTableId]);
+
     //VALIDACION DE IMAGES
     const hasMissingFields = (furnitureData: FurnitureTableInterface[], clickedImages: { [key: number]: FurnitureDataCardsInterface[] }) => {
         const tablesWithMissingFields = Array.from({ length: furnitureData.length }, (_, i) => i + 1).filter(
@@ -178,13 +182,24 @@ export default function FurnitureContainer({
                 }
             });
         }
-
         return isMeasureValidated;
     };
     //MANEJADOR DE DATOS DEL INPUTS
     const handleMeasureChange = (measureName: string, value: number) => {
+        // setMeasureValues((prevMeasureValues) => {
+        //     if (value > 0) {
+        //         return {
+        //             ...prevMeasureValues,
+        //             [measureName]: value,
+        //         };
+        //     } else {
+        //         const updatedMeasureValues = { ...prevMeasureValues };
+        //         delete updatedMeasureValues[measureName];
+        //         return updatedMeasureValues;
+        //     }
+        // });
         setMeasureValues((prevMeasureValues) => {
-            if (value > 0) {
+            if (!isNaN(value)) {
                 return {
                     ...prevMeasureValues,
                     [measureName]: value,
@@ -200,6 +215,7 @@ export default function FurnitureContainer({
     useEffect(() => {
         setMeasureValues({});
     }, [currentTableId]);
+
     return <FurnitureComponent
         furnitureData={furnitureData}
         visibleTables={visibleTables}

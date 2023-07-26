@@ -162,8 +162,37 @@ export const furniturePlacares: FurnitureTableDataInterface = {
                     }
                 },
             ],
-        }, {
+        },
+        {
             tableId: 5,
+            tableTitle: "Con isla",
+            maxSelections: 1,
+            askMeasure: false,
+            cards: [
+                {
+                    cardId: 1, cardTitle: "Si",
+                    image: {
+                        imgSlug: "placar-con-isla",
+                        imgSrc: "/assets/img/furniture/isla/placares/placarEnIsla.webp",
+                        imgAlt: "Placar con isla",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 2, cardTitle: "No",
+                    image: {
+                        imgSlug: "placar-sin-isla",
+                        imgSrc: "/assets/img/furniture/isla/placares/placarSinIsla.webp",
+                        imgAlt: "Placar sin isla",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+            ],
+        },
+        {
+            tableId: 6,
             tableTitle: "Distribución",
             maxSelections: 1,
             askMeasure: true,
@@ -219,34 +248,7 @@ export const furniturePlacares: FurnitureTableDataInterface = {
                     }
                 },
             ],
-        }, {
-            tableId: 6,
-            tableTitle: "Con isla",
-            maxSelections: 1,
-            askMeasure: false,
-            cards: [
-                {
-                    cardId: 1, cardTitle: "Si",
-                    image: {
-                        imgSlug: "placar-con-isla",
-                        imgSrc: "/assets/img/furniture/isla/placares/placarEnIsla.webp",
-                        imgAlt: "Placar con isla",
-                        imgProportionsX: 1.5024,
-                        imgProportionsY: 0.6651,
-                    }
-                },
-                {
-                    cardId: 2, cardTitle: "No",
-                    image: {
-                        imgSlug: "placar-sin-isla",
-                        imgSrc: "/assets/img/furniture/isla/placares/placarSinIsla.webp",
-                        imgAlt: "Placar sin isla",
-                        imgProportionsX: 1.5024,
-                        imgProportionsY: 0.6651,
-                    }
-                },
-            ],
-        },
+        }
     ]
 }
 
@@ -291,7 +293,7 @@ export const measuresPlacares: MeasureDataInterface = {
     },
     "placar-en-g": {
         numValuesToComplete: 4,
-        measure_slug:  "placar-en-g",
+        measure_slug: "placar-en-g",
         leters: [
             {
                 measure_id: 1,

@@ -41,7 +41,7 @@ export default function ContactDesignContainer({
         const text = event.target.value;
         setNoteRef(text);
     };
-    
+
     const handlePaymentChange = (event: React.ChangeEvent<HTMLSelectElement>): void => {
         if (event.target.value === "Efectivo" || event.target.value === "Tarjeta") {
             setIsSelect(true);
@@ -65,12 +65,12 @@ export default function ContactDesignContainer({
             return false;
         }
 
-        if(phoneRef.current?.value && !(regex.test(phoneRef.current?.value.trim()))){
+        if (phoneRef.current?.value && !(regex.test(phoneRef.current?.value.trim()))) {
             setErrorMessage("Numero de telefono tiene que ser solo caracteres numericos.");
             return false;
         }
 
-        if(phoneRef.current?.value && !(phoneRef.current?.value.length >= 8)){
+        if (phoneRef.current?.value && !(phoneRef.current?.value.length >= 8)) {
             setErrorMessage("El número de teléfono no cumple con la longitud mínima.");
             return false;
         }
@@ -106,7 +106,8 @@ export default function ContactDesignContainer({
                 cardData: Object.values(infoFurniture.data),
             },
             paymentMethod: selectedPayment !== "" ? selectedPayment : "No se pasó un método de pago",
-            measures: infoFurniture.measures
+            measures: infoFurniture.measures || "No se pasaron medidas",
+            imageData: infoFurniture.imageData || ""
         };
         try {
             const response = await fetch("/api/contact/design", {

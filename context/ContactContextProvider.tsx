@@ -8,10 +8,11 @@ interface ProductProps {
 }
 
 interface DesignProps {
-    designSlug:string,
+    designSlug: string,
     designItem: string,
     data?: any,
-    measures?: any
+    measures?: any,
+    imageData?: ImgDataInterface
 }
 
 export const ContactContext = createContext<ContactDataContextInterface | {}>({});
@@ -32,7 +33,7 @@ export const ContactProvider = ({ children, }: { children: ReactNode; }) => {
     useEffect(() => {
 
     }, [infoProduct])
-    
+
     return (
         <ContactContext.Provider
             value={{

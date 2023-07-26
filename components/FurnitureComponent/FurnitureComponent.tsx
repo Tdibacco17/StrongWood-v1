@@ -54,22 +54,25 @@ export default function FurnitureComponent({
                     )
                 })}
             </div>
-            {/* {
-                visibleTables.length > furnitureData.length && furnitureData.length !== 0 && */}
-            <FurnitureMeasureComponent
-                measureData={measureData}
-                imgSlugsWithAskMeasure={imgSlugsWithAskMeasure}
-                handleMeasureChange={handleMeasureChange}
-                measureValues={measureValues}
-            />
-            {/* } */}
+            {
+                visibleTables.length > furnitureData.length && furnitureData.length !== 0 &&
+                imgSlugsWithAskMeasure[0] &&
+                <div className={`${styles["container-all-inputs-measures"]} ${!validated && buttonClicked ? styles["error-input-measure"] : ""}`}>
+                    <FurnitureMeasureComponent
+                        measureData={measureData}
+                        imgSlugsWithAskMeasure={imgSlugsWithAskMeasure}
+                        handleMeasureChange={handleMeasureChange}
+                        measureValues={measureValues}
+                    />
+                </div>
+            }
             <div className={styles["container-button-finish"]}>
                 {
                     (visibleTables.length > furnitureData.length && buttonClicked && (validated === false)) &&
                     <p className={styles["error-text-msg"]}>Seleccione todas las opciones.</p>
                 }
                 {visibleTables.length > furnitureData.length && furnitureData.length !== 0 &&
-                    <button className={`${styles["button-consultation-price"]}`}
+                    <button className={`${styles["button-consultation-price"]} ${validated ? styles["complete"] : ""}`}
                         onClick={handleValidation}>COTIZAR</button>
                 }
             </div>

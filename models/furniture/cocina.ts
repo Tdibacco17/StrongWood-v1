@@ -204,6 +204,34 @@ export const furnitureCocina: FurnitureTableDataInterface = {
         },
         {
             tableId: 5,
+            tableTitle: "Con isla",
+            maxSelections: 1,
+            askMeasure: false,
+            cards: [
+                {
+                    cardId: 1, cardTitle: "Si",
+                    image: {
+                        imgSlug: "cocina-con-isla",
+                        imgSrc: "/assets/img/furniture/isla/cocina/cocinaEnIsla.webp",
+                        imgAlt: "Cocina con isla",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 2, cardTitle: "No",
+                    image: {
+                        imgSlug: "cocina-sin-isla",
+                        imgSrc: "/assets/img/furniture/isla/cocina/cocinaSinIsla.webp",
+                        imgAlt: "Cocina sin isla",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+            ],
+        },
+        {
+            tableId: 6,
             tableTitle: "Distribución",
             maxSelections: 1,
             askMeasure: true,
@@ -260,34 +288,6 @@ export const furnitureCocina: FurnitureTableDataInterface = {
                 },
             ],
         },
-        {
-            tableId: 6,
-            tableTitle: "Con isla",
-            maxSelections: 1,
-            askMeasure: false,
-            cards: [
-                {
-                    cardId: 1, cardTitle: "Si",
-                    image: {
-                        imgSlug: "cocina-con-isla",
-                        imgSrc: "/assets/img/furniture/isla/cocina/cocinaEnIsla.webp",
-                        imgAlt: "Cocina con isla",
-                        imgProportionsX: 1.5024,
-                        imgProportionsY: 0.6651,
-                    }
-                },
-                {
-                    cardId: 2, cardTitle: "No",
-                    image: {
-                        imgSlug: "cocina-sin-isla",
-                        imgSrc: "/assets/img/furniture/isla/cocina/cocinaSinIsla.webp",
-                        imgAlt: "Cocina sin isla",
-                        imgProportionsX: 1.5024,
-                        imgProportionsY: 0.6651,
-                    }
-                },
-            ],
-        }
     ]
 }
 

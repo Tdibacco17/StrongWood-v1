@@ -2,8 +2,13 @@ import { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 
 export default async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
-    const { name = "", phone = "", email = "", direction = "", selections = "", paymentMethod = "", note = "", measures = "" } = req.body;
-
+    const { name = "", phone = "", email = "", direction = "", selections = "",
+        paymentMethod = "", note = "", measures = "", imageData = "" } = req.body;
+    /*
+                        <div>
+                    ${imageData ? `<img src="${imageData.imgSrc}" alt="${imageData.imgAlt}" style="width: 300px; height: 200px;" />` : ''}
+                    </div>
+    */
     const contentHtml = `
     <!DOCTYPE html>
     <html>
