@@ -60,10 +60,6 @@
             border: 1px solid var(--strong-error-color)
         }
 
-        &.complete {
-            border: 1px solid var(--strong-success-color);
-        }
-
         @media (max-width: 1230px) {
             display: grid;
             grid-template-columns: repeat(2, 1fr);

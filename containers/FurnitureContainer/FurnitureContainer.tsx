@@ -188,20 +188,8 @@ export default function FurnitureContainer({
     };
     //MANEJADOR DE DATOS DEL INPUTS
     const handleMeasureChange = (measureName: string, value: number) => {
-        // setMeasureValues((prevMeasureValues) => {
-        //     if (value > 0) {
-        //         return {
-        //             ...prevMeasureValues,
-        //             [measureName]: value,
-        //         };
-        //     } else {
-        //         const updatedMeasureValues = { ...prevMeasureValues };
-        //         delete updatedMeasureValues[measureName];
-        //         return updatedMeasureValues;
-        //     }
-        // });
         setMeasureValues((prevMeasureValues) => {
-            if (!isNaN(value)) {
+            if (!isNaN(value) && value > 0) {
                 return {
                     ...prevMeasureValues,
                     [measureName]: value,

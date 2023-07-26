@@ -58,7 +58,7 @@ export default function FurnitureComponent({
             </div>
             {
                 visibleTables.length > furnitureData.length && imgSlugsWithAskMeasure[0] &&
-                <div className={`${styles["container-all-inputs-measures"]} ${!inputError && buttonClicked ? styles["error-input-measure"] : ""}`}>
+                <div className={`${styles["container-all-inputs-measures"]} ${!inputError && buttonClicked ? styles["error-input-measure"] : ""} `}>
                     <FurnitureMeasureComponent
                         measureData={measureData}
                         imgSlugsWithAskMeasure={imgSlugsWithAskMeasure}
@@ -73,7 +73,7 @@ export default function FurnitureComponent({
                     <p className={styles["error-text-msg"]}>Seleccione todas las opciones.</p>
                 }
                 {visibleTables.length > furnitureData.length && furnitureData.length !== 0 &&
-                    <button className={`${styles["button-consultation-price"]} ${validated ? styles["complete"] : ""}`}
+                    <button className={`${styles["button-consultation-price"]}`}
                         onClick={handleValidation}>COTIZAR</button>
                 }
             </div>

@@ -9,9 +9,10 @@ export function FurnitureMeasureComponent({
     measureValues,
 }: {
     measureData: MeasureDataInterface,
-    imgSlugsWithAskMeasure: string[]
+    imgSlugsWithAskMeasure: string[],
     handleMeasureChange: (measureName: string, value: number) => void,
     measureValues: MeasureValues,
+
 }) {
     if (Object.keys(measureData).length === 0) {
         return <></>
@@ -25,7 +26,7 @@ export function FurnitureMeasureComponent({
                 selectedAskMeasure && (Object.values(selectedAskMeasure) as MeasureType[]).map((item: MeasureType) => {
                     return (
                         <div className={`${styles["container-section-input-measures"]}`} key={item.measure_id}>
-                            <p className={styles["input-title"]}>{item.title}</p>
+                            <p className={`${styles["input-title"]}`}>{item.title}</p>
                             {/* <input
                                 className={styles["input-measure"]}
                                 type="number"
@@ -35,10 +36,10 @@ export function FurnitureMeasureComponent({
                                 }
                             /> */}
                             <input
-                                className={styles["input-measure"]}
+                                className={`${styles["input-measure"]}`}
                                 type="number" // Cambiar el tipo de "text" a "number"
                                 value={measureValues[item.title] || ""}
-                                placeholder="En metros"
+                                placeholder="En cm"
                                 onChange={(e: ChangeEvent<HTMLInputElement>) =>
                                     handleMeasureChange(item.title, parseFloat(e.target.value))
                                     // Convertir el valor a un número válido
