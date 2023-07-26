@@ -23,6 +23,7 @@ export default function FurnitureContainer({
     ) as ContactDataContextInterface;
     const router = useRouter();
 
+    const [inputError, setInputError] = useState<boolean>(false);
     const [currentTableId, setCurrentTableId] = useState<number | null>(null);
     const [measureValues, setMeasureValues] = useState<MeasureValues>({});
     const [visibleTables, setVisibleTables] = useState([1]);
@@ -182,6 +183,7 @@ export default function FurnitureContainer({
                 }
             });
         }
+        setInputError(isMeasureValidated)
         return isMeasureValidated;
     };
     //MANEJADOR DE DATOS DEL INPUTS
@@ -230,5 +232,6 @@ export default function FurnitureContainer({
         imgSlugsWithAskMeasure={imgSlugsWithAskMeasure}
         handleMeasureChange={handleMeasureChange}
         measureValues={measureValues}
+        inputError={inputError}
     />
 }

@@ -17,7 +17,8 @@ export default function FurnitureComponent({
     measureData,
     imgSlugsWithAskMeasure,
     handleMeasureChange,
-    measureValues
+    measureValues,
+    inputError
 }: {
     furnitureData: FurnitureTableInterface[];
     visibleTables: number[];
@@ -31,7 +32,8 @@ export default function FurnitureComponent({
     measureData: MeasureDataInterface,
     imgSlugsWithAskMeasure: string[],
     handleMeasureChange: (measureName: string, value: number) => void,
-    measureValues: MeasureValues
+    measureValues: MeasureValues,
+    inputError: boolean
 }) {
 
     return (
@@ -55,9 +57,8 @@ export default function FurnitureComponent({
                 })}
             </div>
             {
-                visibleTables.length > furnitureData.length && furnitureData.length !== 0 &&
-                imgSlugsWithAskMeasure[0] &&
-                <div className={`${styles["container-all-inputs-measures"]} ${!validated && buttonClicked ? styles["error-input-measure"] : ""}`}>
+                visibleTables.length > furnitureData.length && imgSlugsWithAskMeasure[0] &&
+                <div className={`${styles["container-all-inputs-measures"]} ${!inputError && buttonClicked ? styles["error-input-measure"] : ""}`}>
                     <FurnitureMeasureComponent
                         measureData={measureData}
                         imgSlugsWithAskMeasure={imgSlugsWithAskMeasure}
