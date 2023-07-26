@@ -118,7 +118,7 @@ export default async function sendEmail(req: NextApiRequest, res: NextApiRespons
             .join('')}
                     </ul>
                     <ul>
-                        ${Object.entries(measures).map(([key, value]) => `<li><strong>${key}: </strong>${value}</li>`).join('')}
+                        ${Object.entries(measures).map(([key, value]) => `<li><strong>${key}: </strong>${value}cm</li>`).join('')}
                     </ul>
                 </div>
             </div>
