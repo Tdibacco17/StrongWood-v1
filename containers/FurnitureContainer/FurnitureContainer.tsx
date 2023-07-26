@@ -18,30 +18,13 @@ export default function FurnitureContainer({
     furnitureData: FurnitureTableInterface[],
     measureData: MeasureDataInterface
 }) {
-
     const { setInfoFurniture } = useContext(
         ContactContext
     ) as ContactDataContextInterface;
+    const router = useRouter();
 
-
-
+    const [currentTableId, setCurrentTableId] = useState<number | null>(null);
     const [measureValues, setMeasureValues] = useState<MeasureValues>({});
-
-    const handleMeasureChange = (measureName: string, value: number) => {
-        setMeasureValues((prevMeasureValues) => {
-            if (value > 0) {
-                return {
-                    ...prevMeasureValues,
-                    [measureName]: value,
-                };
-            } else {
-                const updatedMeasureValues = { ...prevMeasureValues };
-                delete updatedMeasureValues[measureName];
-                return updatedMeasureValues;
-            }
-        });
-    };
-
     const [visibleTables, setVisibleTables] = useState([1]);
     const [clickedImages, setClickedImages] = useState<{ [key: number]: FurnitureDataCardsInterface[] }>({});
     const [validated, setValidated] = useState(false);
@@ -49,8 +32,7 @@ export default function FurnitureContainer({
     const [buttonClicked, setButtonClicked] = useState(false);
     const [imgData, setImgData] = useState<ImgDataInterface | undefined>(undefined)
 
-    const router = useRouter();
-
+    //gestiona la cocina que eligio el usuario
     const getImgSlugsWithAskMeasure = (clickedImages: any) => {
         const imgSlugs = [];
 
@@ -67,8 +49,10 @@ export default function FurnitureContainer({
         }
         return imgSlugs;
     };
+    //variable de que distribucion eligio
     const imgSlugsWithAskMeasure: string[] = getImgSlugsWithAskMeasure(clickedImages);
 
+    //FetchData
     useEffect(() => {
         if (router.query.slug) {
             const fetchData = async () => {
@@ -92,6 +76,7 @@ export default function FurnitureContainer({
         }
     }, [router.query]);
 
+    //Actualizacion validaciones
     useEffect(() => {
         const allTablesHaveSelections = Array.from({ length: furnitureData.length }, (_, i) => i + 1).every(
             i => clickedImages[i] && clickedImages[i].length > 0
@@ -102,7 +87,7 @@ export default function FurnitureContainer({
         setValidated(allTablesHaveSelections && isMeasureValidated);
     }, [clickedImages, furnitureData, imgSlugsWithAskMeasure, measureData, measureValues]);
 
-
+    // boton click en imagenes
     const handleCardClick = useCallback(
         (tableId: number, cardId: number, cardTitle: string, tableTitle: string) => {
             const nextTableId = tableId + 1;
@@ -110,6 +95,7 @@ export default function FurnitureContainer({
                 setVisibleTables(prevTables => [...prevTables, nextTableId]);
             }
 
+            //busco que tabla tiene la prop askMeasure en true (pedir medidas)
             const currentTable = furnitureData.find(table => table.tableId === tableId);
             const currentTableAskMeasure = currentTable ? currentTable.askMeasure : false;
 
@@ -129,21 +115,32 @@ export default function FurnitureContainer({
                         ? prevTableImages.filter(image => image.cardId !== cardId)
                         : [...prevTableImages, { cardId, cardTitle, tableTitle, askMeasure: currentTableAskMeasure, imgSlug: currentTableAskMeasure ? furnitureData[tableId - 1]?.cards.find(card => card.cardId === cardId)?.image?.imgSlug : undefined }];
                 }
-
                 return { ...prevImages, [tableId]: updatedImages };
             });
+
+            // Limpiar el estado de measureValues solo si el tableId es igual a currentTableId
+            if (currentTableAskMeasure && tableId === currentTableId) {
+                setMeasureValues({});
+            }
+            //agarro el tableId de la distribucion
+            if (currentTableAskMeasure) {
+                setCurrentTableId(tableId); // Actualiza currentTableId solo si es una tabla con askMeasure
+            }
         },
         [visibleTables, furnitureData]
     );
 
+    //BOTON COTIZAR
     const handleValidation = useCallback(() => {
-        const tablesWithMissingFields = Array.from({ length: furnitureData.length }, (_, i) => i + 1).filter(
-            i => !clickedImages[i] || clickedImages[i].length === 0
-        );
+        const noMissingFields = hasMissingFields(furnitureData, clickedImages);
+        const hasAskMeasure = furnitureData.some((table) => table.askMeasure === true);
 
-        const isMeasureValidated = validateMeasureInputs(imgSlugsWithAskMeasure, measureData, measureValues);
+        let isMeasureValidated = true;
+        if (hasAskMeasure) {
+            isMeasureValidated = validateMeasureInputs(imgSlugsWithAskMeasure, measureData, measureValues);
+        }
 
-        if (tablesWithMissingFields.length === 0 && isMeasureValidated) {
+        if (noMissingFields && isMeasureValidated) {
             setValidated(true);
             setInfoFurniture({
                 designSlug: designSlug,
@@ -158,9 +155,15 @@ export default function FurnitureContainer({
         }
 
         setShowMissingFields(true);
-    }, [clickedImages, furnitureData, imgSlugsWithAskMeasure, measureData, measureValues]);
-
-
+    }, [clickedImages, furnitureData, imgSlugsWithAskMeasure, measureData, measureValues, currentTableId]);
+    //VALIDACION DE IMAGES
+    const hasMissingFields = (furnitureData: FurnitureTableInterface[], clickedImages: { [key: number]: FurnitureDataCardsInterface[] }) => {
+        const tablesWithMissingFields = Array.from({ length: furnitureData.length }, (_, i) => i + 1).filter(
+            i => !clickedImages[i] || clickedImages[i].length === 0
+        );
+        return tablesWithMissingFields.length === 0;
+    };
+    //VALIDACION DE INPUTS
     const validateMeasureInputs = (imgSlugsWithAskMeasure: string[], measureData: MeasureDataInterface, measureValues: MeasureValues) => {
         let isMeasureValidated = false;
 
@@ -178,7 +181,25 @@ export default function FurnitureContainer({
 
         return isMeasureValidated;
     };
+    //MANEJADOR DE DATOS DEL INPUTS
+    const handleMeasureChange = (measureName: string, value: number) => {
+        setMeasureValues((prevMeasureValues) => {
+            if (value > 0) {
+                return {
+                    ...prevMeasureValues,
+                    [measureName]: value,
+                };
+            } else {
+                const updatedMeasureValues = { ...prevMeasureValues };
+                delete updatedMeasureValues[measureName];
+                return updatedMeasureValues;
+            }
+        });
+    };
 
+    useEffect(() => {
+        setMeasureValues({});
+    }, [currentTableId]);
     return <FurnitureComponent
         furnitureData={furnitureData}
         visibleTables={visibleTables}

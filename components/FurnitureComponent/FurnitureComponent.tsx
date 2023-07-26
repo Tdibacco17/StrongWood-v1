@@ -54,15 +54,15 @@ export default function FurnitureComponent({
                     )
                 })}
             </div>
-            {
-                visibleTables.length > furnitureData.length && furnitureData.length !== 0 &&
-                <FurnitureMeasureComponent
-                    measureData={measureData}
-                    imgSlugsWithAskMeasure={imgSlugsWithAskMeasure}
-                    handleMeasureChange={handleMeasureChange}
-                    measureValues={measureValues}
-                />
-            }
+            {/* {
+                visibleTables.length > furnitureData.length && furnitureData.length !== 0 && */}
+            <FurnitureMeasureComponent
+                measureData={measureData}
+                imgSlugsWithAskMeasure={imgSlugsWithAskMeasure}
+                handleMeasureChange={handleMeasureChange}
+                measureValues={measureValues}
+            />
+            {/* } */}
             <div className={styles["container-button-finish"]}>
                 {
                     (visibleTables.length > furnitureData.length && buttonClicked && (validated === false)) &&
