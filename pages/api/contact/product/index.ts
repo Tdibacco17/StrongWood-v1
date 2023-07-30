@@ -130,21 +130,21 @@ export default async function sendEmail(req: NextApiRequest, res: NextApiRespons
         //     },
         // });
         const transporter = nodemailer.createTransport({
-            host: "smtp.gmail.com",
+            host: `${process.env.EMAIL_SERVICE}`,
             port: 587, //465
             secure: false,//true
             //     tls: {
             //         ciphers: 'SSLv3'
             //     },
             auth: {
-                user: 'tomasdibacco@gmail.com',
+                user: `${process.env.EMAIL_USERNAME}`,
                 pass: `${process.env.PASS_TEST}`
             }
         })
 
         const mailOptions = {
             from: `StrongWood`, //<${"tdibacco-prueba25watts@outlook.com"}>
-            to: "tdibacco-prueba25watts@outlook.com", //strongwoodventas@gmail.com
+            to: `${process.env.EMAIL_SENDER}`, //strongwoodventas@gmail.com
             subject: "Nueva venta",
             // text: "prueba",
             html: contentHtml,
