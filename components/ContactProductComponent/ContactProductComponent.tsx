@@ -143,7 +143,7 @@ export default function ContactProductComponent({
                                 </button>
                             </div>
 
-                            <button className={styles["form-button"]} type="submit">
+                            <button className={`${styles["form-button"]} ${loadingText ? styles['isLoadingBtn'] : ""}`} type="submit">
                                 {loadingText ? "Cargando.." : "Enviar"}
                             </button>
                             <p className={styles["form-note"]}>Nos pondremos en contacto dentro de las proximias 72hs.</p>

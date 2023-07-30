@@ -348,6 +348,10 @@
                             background: var(--strong-bluegray-12);
                             transition: background-color 0.25s ease-in-out;
                         }
+
+                        &.isLoadingBtn {
+                            cursor: not-allowed;
+                        }
                     }
 
                     .form-error {

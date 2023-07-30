@@ -43,7 +43,7 @@ export default function ContactDesignComponent({
         <div className={styles["container-section-contact"]}>
             {isModal && <ContactModalComponent check={isCheck} />}
             <div className={styles["container-colum-dividers"]}>
-            <div className={`${styles["container-row-dividers"]} ${isNote ? styles["isBorderRadius"] : ""}`}>
+                <div className={`${styles["container-row-dividers"]} ${isNote ? styles["isBorderRadius"] : ""}`}>
                     <div className={styles["container-section-form"]}>
                         <p className={styles["form-title"]}>CONSULTAR</p>
 
@@ -124,7 +124,7 @@ export default function ContactDesignComponent({
                                 </button>
                             </div>
 
-                            <button className={styles["form-button"]} type="submit">
+                            <button className={`${styles["form-button"]} ${loadingText ? styles['isLoadingBtn'] : ""}`} type="submit">
                                 {loadingText ? "Cargando.." : "Enviar"}
                             </button>
                             <p className={styles["form-note"]}>Nos pondremos en contacto dentro de las proximias 72hs.</p>
@@ -133,8 +133,8 @@ export default function ContactDesignComponent({
                     </div>
                 </div>
                 <div className={`${styles["contact-note-enter-active"]} ${isNote ? styles["show-note"] : styles["contact-note-exit"]}`}>
-                        {isNote && <ContactNoteComponent handleChangeNoteRef={handleChangeNoteRef} />}
-                    </div>
+                    {isNote && <ContactNoteComponent handleChangeNoteRef={handleChangeNoteRef} />}
+                </div>
             </div>
         </div>
     )

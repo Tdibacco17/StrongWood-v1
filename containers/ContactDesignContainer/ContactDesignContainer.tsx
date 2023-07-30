@@ -109,7 +109,9 @@ export default function ContactDesignContainer({
             measures: infoFurniture.measures || "No se pasaron medidas",
             imageData: infoFurniture.imageData || ""
         };
+
         try {
+
             const response = await fetch("/api/contact/design", {
                 method: "POST",
                 headers: {
