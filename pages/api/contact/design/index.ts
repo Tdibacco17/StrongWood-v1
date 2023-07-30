@@ -4,11 +4,6 @@ import nodemailer from "nodemailer";
 export default async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
     const { name = "", phone = "", email = "", direction = "", selections = "",
         paymentMethod = "", note = "", measures = "", imageData = "" } = req.body;
-    /*
-                        <div>
-                    ${imageData ? `<img src="${imageData.imgSrc}" alt="${imageData.imgAlt}" style="width: 300px; height: 200px;" />` : ''}
-                    </div>
-    */
     const contentHtml = `
     <!DOCTYPE html>
     <html>
@@ -145,21 +140,21 @@ export default async function sendEmail(req: NextApiRequest, res: NextApiRespons
         //     },
         // });
         const transporter = nodemailer.createTransport({
-            host: "smtp.gmail.com",
+            host: `${process.env.EMAIL_SERVICE}`,
             port: 587, //465
             secure: false,//true
             //     tls: {
             //         ciphers: 'SSLv3'
             //     },
             auth: {
-                user: 'tomasdibacco@gmail.com',
+                user: `${process.env.EMAIL_USERNAME}`,
                 pass: `${process.env.PASS_TEST}`
             }
         })
 
         const mailOptions = {
             from: `STRONG WOOD`, //<${"tdibacco-prueba25watts@outlook.com"}>
-            to: "tdibacco-prueba25watts@outlook.com", //strongwoodventas@gmail.com
+            to: `${process.env.EMAIL_SENDER}`, //strongwoodventas@gmail.com
             subject: "Nueva venta",
             // text: "prueba",
             html: contentHtml,
