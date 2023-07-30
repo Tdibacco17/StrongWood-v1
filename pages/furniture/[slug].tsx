@@ -34,6 +34,15 @@ export default function FurnitureDetailPage() {
         furnitureData = furniturePlacares.data
         designSlug = furniturePlacares.designSlug;
         measureData = measuresPlacares;
+    } else if (slug === "dormitorio") {
+        if (item === "comoda-fusion" || item === "comoda-zenit") {
+        } else if (item === "escritorio-fusion" || item === "escritorio-zenit") {
+
+        } else if (item === "mesa-de-luz-zenit" || item === "mesa-de-luz-fusion") {
+
+        } else if (item === "individual-zenit" || item === "individual-fusion" || item === "matrimonial-zenit" || item === "matrimonial-fusion"){
+
+        }
     }
 
     return (

@@ -3,24 +3,26 @@ import { NextRequest, NextResponse } from "next/server";
 const routesFurniture = [
     "/furniture/cocina",
     "/furniture/ba%C3%B1o",
-    "/furniture/placares"
+    "/furniture/placares",
+    "/furniture/dormitorio",
     // "/furniture/obras",
-    // "/furniture/dormitorio",
     // "/furniture/oficina-e-industria",
 ];
 
 const routesDesign = [
-    "placares", "cocina", "baño",
+    "placares", "cocina", "baño", "dormitorio",
     // "obras",
-    // "dormitorio", 
     // "oficina-e-industria", 
 ]
 
 const fornitureItem = [
     "serie-nordica", "serie-new-york", "serie-premium", "serie-nova",
     "vanitory-new-york", "vanitory-escandinavo", "vanitory-nordico",
-    "vestidor-1", "vestidor-2", "placar-1",
-    // "cama-1", "cama-2", "cama-3", "mesa-de-luz-1", "mesa-de-luz-2", "comoda-1", "comoda-2"
+    "vestidor-de-luxe", "vestidor-fusion", "placard-UrbanWood",
+    "comoda-fusion", "comoda-zenit",
+    "escritorio-fusion", "escritorio-zenit",
+    "mesa-de-luz-zenit", "mesa-de-luz-fusion",
+    "individual-zenit", "individual-fusion", "matrimonial-zenit", "matrimonial-fusion"
 ];
 
 const routesProducts = [
