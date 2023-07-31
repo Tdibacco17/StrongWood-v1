@@ -38,6 +38,7 @@ export interface DesignInterface {
 
 export interface SubCategorieDataInterface {
     title: string,
+    subtitle: string,
     images: ImgDataInterface[]
 }
 

@@ -16,13 +16,10 @@ const routesDesign = [
 ]
 
 const fornitureItem = [
-    "serie-nordica", "serie-new-york", "serie-premium", "serie-nova",
+    "serie-nordica", "serie-new-york", "serie-premium", "serie-nova", "serie-de-luxe",
     "vanitory-new-york", "vanitory-escandinavo", "vanitory-nordico",
     "vestidor-de-luxe", "vestidor-fusion", "placard-UrbanWood",
-    "comoda-fusion", "comoda-zenit",
-    "escritorio-fusion", "escritorio-zenit",
-    "mesa-de-luz-zenit", "mesa-de-luz-fusion",
-    "individual-zenit", "individual-fusion", "matrimonial-zenit", "matrimonial-fusion"
+    "comoda", "escritorio", "mesa-de-luz", "cama-individual", "cama-matrimonial"
 ];
 
 const routesProducts = [

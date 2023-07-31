@@ -4,10 +4,12 @@ import { useRef } from "react";
 
 export default function DesignDetailCarouselContainer({
     imagesData,
-    titleCategorie
+    titleCategorie,
+    subtitle
 }: {
     imagesData: ImgDataInterface[];
-    titleCategorie: string
+    titleCategorie: string,
+    subtitle: string
 }) {
 
     const carouselRef = useRef<HTMLDivElement>(null);
@@ -36,5 +38,6 @@ export default function DesignDetailCarouselContainer({
         handleScrollLeft={handleScrollLeft}
         handleScrollRight={handleScrollRight}
         titleCategorie={titleCategorie}
+        subtitle={subtitle}
     />
 }

@@ -3,7 +3,6 @@ import { DesignDataContextInterface, SubCategorieDataInterface } from "@/types/I
 import React, { useContext } from "react"
 import styles from "./DesignDetailComponent.module.scss"
 import DesignDetailCarouselContainer from "@/containers/DesignDetailCarouselContainer/DesignDetailCarouselContainer"
-import Image from "next/image"
 
 export default function DesignDetailComponent() {
     const { designData } = useContext(
@@ -17,7 +16,7 @@ export default function DesignDetailComponent() {
                     designData.subcategories?.map((e: SubCategorieDataInterface) => {
                         return (
                             <div className={styles["subcategorie"]} key={e.title}>
-                                <DesignDetailCarouselContainer titleCategorie={e.title} imagesData={e.images} />
+                                <DesignDetailCarouselContainer titleCategorie={e.title} subtitle={e.subtitle} imagesData={e.images} />
                             </div>
                         );
                     })}

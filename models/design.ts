@@ -14,6 +14,7 @@ export const designData: DesignDataInterface = {
         subcategories: [
             {
                 title: "Cocinas",
+                subtitle: "Selecciona tu cocina a cotizar",
                 images: [
                     {
                         imgSlug: "serie-nordica",
@@ -39,6 +40,12 @@ export const designData: DesignDataInterface = {
                         imgAlt: "Serie Nova",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
+                    }, {
+                        imgSlug: "serie-de-luxe",
+                        imgSrc: "/assets/img/design/cocina/serieDeLuxe.webp",
+                        imgAlt: "Serie De Luxe",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
                     },
                 ]
             }
@@ -57,6 +64,7 @@ export const designData: DesignDataInterface = {
         subcategories: [
             {
                 title: "Vanitory",
+                subtitle: "Selecciona tu vanitory a cotizar",
                 images: [
                     {
                         imgSlug: "vanitory-new-york",
@@ -94,6 +102,7 @@ export const designData: DesignDataInterface = {
         subcategories: [
             {
                 title: "Vestidores",
+                subtitle: "Selecciona tu vestidor a cotizar",
                 images: [
                     {
                         imgSlug: "vestidor-de-luxe",
@@ -112,6 +121,7 @@ export const designData: DesignDataInterface = {
                 ]
             }, {
                 title: "Placar",
+                subtitle: "Selecciona tu placar a cotizar",
                 images: [
                     {
                         imgSlug: "placard-UrbanWood",
@@ -137,83 +147,55 @@ export const designData: DesignDataInterface = {
         subcategories: [
             {
                 title: "Cama",
+                subtitle: "Selecciona tu cama a cotizar",
                 images: [
                     {
-                        imgSlug: "individual-zenit",
-                        imgSrc: "/assets/img/design/dormitorio/camaSimple1.webp",
-                        imgAlt: "Individual Zenit",
+                        imgSlug: "cama-individual",
+                        imgSrc: "/assets/img/design/dormitorio/camaIndividual1.webp",
+                        imgAlt: "Individual",
                         imgProportionsX: 1,
                         imgProportionsY: 1
-                    }, {
-                        imgSlug: "individual-fusion",
-                        imgSrc: "/assets/img/design/dormitorio/camaSimple2.webp",
-                        imgAlt: "Individual Fusion",
-                        imgProportionsX: 1,
-                        imgProportionsY: 1
-                    }, {
-                        imgSlug: "matrimonial-zenit",
-                        imgSrc: "/assets/img/design/dormitorio/camaDoble1.webp",
-                        imgAlt: "Matrimonial Zenit",
-                        imgProportionsX: 1,
-                        imgProportionsY: 1
-                    }, {
-                        imgSlug: "matrimonial-fusion",
-                        imgSrc: "/assets/img/design/dormitorio/camaDoble2.webp",
-                        imgAlt: "Matrimonial Fusion",
+                    },
+                    {
+                        imgSlug: "cama-matrimonial",
+                        imgSrc: "/assets/img/design/dormitorio/camaMatrimonial1.webp",
+                        imgAlt: "Matrimonial",
                         imgProportionsX: 1,
                         imgProportionsY: 1
                     },
                 ]
             }, {
                 title: "Mesa de Luz",
+                subtitle: "Selecciona tu meda de luz a cotizar",
                 images: [
                     {
-                        imgSlug: "mesa-de-luz-zenit",
-                        imgSrc: "/assets/img/design/dormitorio/mesaDeLuz1.webp",
-                        imgAlt: "Mesa de Luz Zenit",
-                        imgProportionsX: 1,
-                        imgProportionsY: 1
-                    },
-                    {
-                        imgSlug: "mesa-de-luz-fusion",
-                        imgSrc: "/assets/img/design/dormitorio/mesaDeLuz2.webp",
-                        imgAlt: "Mesa de Luz Fusion",
+                        imgSlug: "mesa-de-luz",
+                        imgSrc: "/assets/img/design/dormitorio/mesa-de-luz-1.webp",
+                        imgAlt: "Mesa de Luz",
                         imgProportionsX: 1,
                         imgProportionsY: 1
                     },
                 ]
             }, {
                 title: "Comoda",
+                subtitle: "Selecciona tu comoda a cotizar",
                 images: [
                     {
-                        imgSlug: "comoda-zenit",
-                        imgSrc: "/assets/img/design/dormitorio/comoda1.webp",
-                        imgAlt: "Comoda Zenit",
-                        imgProportionsX: 1,
-                        imgProportionsY: 1
-                    },
-                    {
-                        imgSlug: "comoda-fusion",
-                        imgSrc: "/assets/img/design/dormitorio/comoda2.webp",
-                        imgAlt: "Comoda Fusion",
+                        imgSlug: "comoda",
+                        imgSrc: "/assets/img/design/dormitorio/comoda-1.webp",
+                        imgAlt: "Comoda",
                         imgProportionsX: 1,
                         imgProportionsY: 1
                     },
                 ]
             }, {
                 title: "Escritorio",
+                subtitle: "Selecciona tu escritorio a cotizar",
                 images: [
                     {
-                        imgSlug: "escritorio-zenit",
-                        imgSrc: "/assets/img/design/dormitorio/escritorio2.webp",
-                        imgAlt: "Escritorio Zenit",
-                        imgProportionsX: 1,
-                        imgProportionsY: 1
-                    },
-                    {
-                        imgSlug: "escritorio-fusion",
-                        imgSrc: "/assets/img/design/dormitorio/escritorio1.webp",
-                        imgAlt: "Escritorio Fusion",
+                        imgSlug: "escritorio",
+                        imgSrc: "/assets/img/design/dormitorio/escritorio-1.webp",
+                        imgAlt: "Escritorio",
                         imgProportionsX: 1,
                         imgProportionsY: 1
                     },

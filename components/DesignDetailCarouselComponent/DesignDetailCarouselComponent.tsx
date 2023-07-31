@@ -9,19 +9,24 @@ export default function DesignDetailCarouselComponent({
     carouselRef,
     handleScrollLeft,
     handleScrollRight,
-    titleCategorie
+    titleCategorie,
+    subtitle
 }: {
     imagesData: ImgDataInterface[];
     carouselRef: React.RefObject<HTMLDivElement>;
     handleScrollLeft: () => void,
     handleScrollRight: () => void,
-    titleCategorie: string
+    titleCategorie: string,
+    subtitle: string
 }) {
 
     return (
         <>
             <div className={styles["subcategorie-header"]}>
-                <p className={styles["title"]}>{titleCategorie}</p>
+                <div>
+                    <p className={styles["title"]}>{titleCategorie}</p>
+                    <p className={styles["subTitle"]}>{subtitle}</p>
+                </div>
                 <div className={styles['buttons-subcategories']}>
                     <button
                         className={styles['buttons']}

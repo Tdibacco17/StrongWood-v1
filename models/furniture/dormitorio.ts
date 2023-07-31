@@ -1,6 +1,6 @@
 import { FurnitureTableDataInterface } from "@/types/Interfaces";
 
-export const dormitorioCama: FurnitureTableDataInterface = {
+export const furnitureCamaIndividual: FurnitureTableDataInterface = {
     designSlug: "dormitorio",
     data: [
         {
@@ -10,31 +10,21 @@ export const dormitorioCama: FurnitureTableDataInterface = {
             askMeasure: false,
             cards: [
                 {
-                    cardId: 1, cardTitle: "Melamina",
+                    cardId: 1, cardTitle: "Blanco",
                     image: {
-                        imgSlug: "melamina",
-                        imgSrc: "/assets/img/furniture/cocina/colorMelamina.webp",
-                        imgAlt: "Melamina",
+                        imgSlug: "blanco",
+                        imgSrc: "/assets/img/design/dormitorio/camaIndividual1.webp",
+                        imgAlt: "Blanco",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
                     }
                 },
                 {
-                    cardId: 2, cardTitle: "Laqueado",
+                    cardId: 2, cardTitle: "Con detalle",
                     image: {
-                        imgSlug: "laqueado",
-                        imgSrc: "/assets/img/furniture/cocina/coloresLaqueado.webp",
-                        imgAlt: "Laqueado",
-                        imgProportionsX: 1.5024,
-                        imgProportionsY: 0.6651,
-                    }
-                },
-                {
-                    cardId: 3, cardTitle: "Enchapado en madera",
-                    image: {
-                        imgSlug: "enchapado-madera",
-                        imgSrc: "/assets/img/furniture/cocina/colorEnchapadoEnMadera.webp",
-                        imgAlt: "Enchapado en madera",
+                        imgSlug: "con-detalle",
+                        imgSrc: "/assets/img/design/dormitorio/camaIndividual2.webp",
+                        imgAlt: "Con detalle",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
                     }
@@ -42,42 +32,6 @@ export const dormitorioCama: FurnitureTableDataInterface = {
             ],
         }, {
             tableId: 2,
-            tableTitle: "Calidad de herrajes",
-            maxSelections: 1,
-            askMeasure: false,
-            cards: [
-                {
-                    cardId: 1, cardTitle: "Estandar",
-                    image: {
-                        imgSlug: "herraje-estandar",
-                        imgSrc: "/assets/img/furniture/cocina/herrajesEstandar.webp",
-                        imgAlt: "Herraje estandar",
-                        imgProportionsX: 1.5024,
-                        imgProportionsY: 0.6651,
-                    }
-                },
-                {
-                    cardId: 2, cardTitle: "Premium",
-                    image: {
-                        imgSlug: "herraje-premium",
-                        imgSrc: "/assets/img/furniture/cocina/herrajesPremium.webp",
-                        imgAlt: "Herraje premium",
-                        imgProportionsX: 1.5024,
-                        imgProportionsY: 0.6651,
-                    }
-                },
-            ],
-        }, {
-            tableId: 3,
-            tableTitle: "Incluir",
-            maxSelections: 2,
-            askMeasure: false,
-            cards: [
-                { cardId: 1, cardTitle: "Cajones" },
-                { cardId: 2, cardTitle: "Respaldo" },
-            ],
-        }, {
-            tableId: 4,
             tableTitle: "Medidas del colchon",
             maxSelections: 1,
             askMeasure: false,
@@ -90,8 +44,7 @@ export const dormitorioCama: FurnitureTableDataInterface = {
         }
     ]
 }
-
-export const dormitorioMezaDeLuz: FurnitureTableDataInterface = {
+export const furnitureCamaMatrimonial: FurnitureTableDataInterface = {
     designSlug: "dormitorio",
     data: [
         {
@@ -101,31 +54,21 @@ export const dormitorioMezaDeLuz: FurnitureTableDataInterface = {
             askMeasure: false,
             cards: [
                 {
-                    cardId: 1, cardTitle: "Melamina",
+                    cardId: 1, cardTitle: "Blanco",
                     image: {
-                        imgSlug: "melamina",
-                        imgSrc: "/assets/img/furniture/cocina/colorMelamina.webp",
-                        imgAlt: "Melamina",
+                        imgSlug: "blanco",
+                        imgSrc: "/assets/img/design/dormitorio/camaMatrimonial1.webp",
+                        imgAlt: "Blanco",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
                     }
                 },
                 {
-                    cardId: 2, cardTitle: "Laqueado",
+                    cardId: 2, cardTitle: "Con detalle",
                     image: {
-                        imgSlug: "laqueado",
-                        imgSrc: "/assets/img/furniture/cocina/coloresLaqueado.webp",
-                        imgAlt: "Laqueado",
-                        imgProportionsX: 1.5024,
-                        imgProportionsY: 0.6651,
-                    }
-                },
-                {
-                    cardId: 3, cardTitle: "Enchapado en madera",
-                    image: {
-                        imgSlug: "enchapado-madera",
-                        imgSrc: "/assets/img/furniture/cocina/colorEnchapadoEnMadera.webp",
-                        imgAlt: "Enchapado en madera",
+                        imgSlug: "con-detalle",
+                        imgSrc: "/assets/img/design/dormitorio/camaMatrimonial2.webp",
+                        imgAlt: "Con detalle",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
                     }
@@ -133,42 +76,51 @@ export const dormitorioMezaDeLuz: FurnitureTableDataInterface = {
             ],
         }, {
             tableId: 2,
-            tableTitle: "Calidad de herrajes",
+            tableTitle: "Medidas del colchon",
             maxSelections: 1,
             askMeasure: false,
             cards: [
-                {
-                    cardId: 1, cardTitle: "Estandar",
-                    image: {
-                        imgSlug: "herraje-estandar",
-                        imgSrc: "/assets/img/furniture/cocina/herrajesEstandar.webp",
-                        imgAlt: "Herraje estandar",
-                        imgProportionsX: 1.5024,
-                        imgProportionsY: 0.6651,
-                    }
-                },
-                {
-                    cardId: 2, cardTitle: "Premium",
-                    image: {
-                        imgSlug: "herraje-premium",
-                        imgSrc: "/assets/img/furniture/cocina/herrajesPremium.webp",
-                        imgAlt: "Herraje premium",
-                        imgProportionsX: 1.5024,
-                        imgProportionsY: 0.6651,
-                    }
-                },
+                { cardId: 1, cardTitle: "90cm x 1,90cm" },
+                { cardId: 2, cardTitle: "90cm x 1,90cm" },
+                { cardId: 3, cardTitle: "90cm x 1,90cm" },
+                { cardId: 4, cardTitle: "90cm x 1,90cm" },
             ],
-        }, {
-            tableId: 3,
-            tableTitle: "Incluir",
+        }
+    ]
+}
+// IMAGENES EN PUBLIC/ASSETS/IMG/DESING
+export const furnitureComoda: FurnitureTableDataInterface = {
+    designSlug: "dormitorio",
+    data: [
+        {
+            tableId: 1,
+            tableTitle: "Combinación de colores",
             maxSelections: 2,
             askMeasure: false,
             cards: [
-                { cardId: 1, cardTitle: "Cajones" },
-                { cardId: 2, cardTitle: "Respaldo" },
+                {
+                    cardId: 1, cardTitle: "Blanco",
+                    image: {
+                        imgSlug: "blanco",
+                        imgSrc: "/assets/img/design/dormitorio/comoda-1.webp",
+                        imgAlt: "Blanco",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 2, cardTitle: "Con detalle",
+                    image: {
+                        imgSlug: "con-detalle",
+                        imgSrc: "/assets/img/design/dormitorio/comoda-2.webp",
+                        imgAlt: "Con detalle",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
             ],
         }, {
-            tableId: 4,
+            tableId: 2,
             tableTitle: "Medidas (ancho x largo x profundidad)",
             maxSelections: 1,
             askMeasure: false,
@@ -182,7 +134,7 @@ export const dormitorioMezaDeLuz: FurnitureTableDataInterface = {
     ]
 }
 
-export const dormitorioComoda: FurnitureTableDataInterface = {
+export const furnitureMesaDeLuz: FurnitureTableDataInterface = {
     designSlug: "dormitorio",
     data: [
         {
@@ -192,31 +144,21 @@ export const dormitorioComoda: FurnitureTableDataInterface = {
             askMeasure: false,
             cards: [
                 {
-                    cardId: 1, cardTitle: "Melamina",
+                    cardId: 1, cardTitle: "Blanco",
                     image: {
-                        imgSlug: "melamina",
-                        imgSrc: "/assets/img/furniture/cocina/colorMelamina.webp",
-                        imgAlt: "Melamina",
+                        imgSlug: "blanco",
+                        imgSrc: "/assets/img/design/dormitorio/mesa-de-luz-1.webp",
+                        imgAlt: "Blanco",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
                     }
                 },
                 {
-                    cardId: 2, cardTitle: "Laqueado",
+                    cardId: 2, cardTitle: "Con detalle",
                     image: {
-                        imgSlug: "laqueado",
-                        imgSrc: "/assets/img/furniture/cocina/coloresLaqueado.webp",
-                        imgAlt: "Laqueado",
-                        imgProportionsX: 1.5024,
-                        imgProportionsY: 0.6651,
-                    }
-                },
-                {
-                    cardId: 3, cardTitle: "Enchapado en madera",
-                    image: {
-                        imgSlug: "enchapado-madera",
-                        imgSrc: "/assets/img/furniture/cocina/colorEnchapadoEnMadera.webp",
-                        imgAlt: "Enchapado en madera",
+                        imgSlug: "con-detalle",
+                        imgSrc: "/assets/img/design/dormitorio/mesa-de-luz-2.webp",
+                        imgAlt: "Con detalle",
                         imgProportionsX: 1.5024,
                         imgProportionsY: 0.6651,
                     }
@@ -224,33 +166,6 @@ export const dormitorioComoda: FurnitureTableDataInterface = {
             ],
         }, {
             tableId: 2,
-            tableTitle: "Calidad de herrajes",
-            maxSelections: 1,
-            askMeasure: false,
-            cards: [
-                {
-                    cardId: 1, cardTitle: "Estandar",
-                    image: {
-                        imgSlug: "herraje-estandar",
-                        imgSrc: "/assets/img/furniture/cocina/herrajesEstandar.webp",
-                        imgAlt: "Herraje estandar",
-                        imgProportionsX: 1.5024,
-                        imgProportionsY: 0.6651,
-                    }
-                },
-                {
-                    cardId: 2, cardTitle: "Premium",
-                    image: {
-                        imgSlug: "herraje-premium",
-                        imgSrc: "/assets/img/furniture/cocina/herrajesPremium.webp",
-                        imgAlt: "Herraje premium",
-                        imgProportionsX: 1.5024,
-                        imgProportionsY: 0.6651,
-                    }
-                },
-            ],
-        }, {
-            tableId: 3,
             tableTitle: "Medidas (ancho x largo x profundidad)",
             maxSelections: 1,
             askMeasure: false,
@@ -259,6 +174,40 @@ export const dormitorioComoda: FurnitureTableDataInterface = {
                 { cardId: 2, cardTitle: "45cm x 60cm x 40cm" },
                 { cardId: 3, cardTitle: "45cm x 60cm x 40cm" },
                 { cardId: 4, cardTitle: "45cm x 60cm x 40cm" },
+            ],
+        }
+    ]
+}
+
+export const furnitureEscritorio: FurnitureTableDataInterface = {
+    designSlug: "dormitorio",
+    data: [
+        {
+            tableId: 1,
+            tableTitle: "Combinación de colores",
+            maxSelections: 2,
+            askMeasure: false,
+            cards: [
+                {
+                    cardId: 1, cardTitle: "Blanco",
+                    image: {
+                        imgSlug: "blanco",
+                        imgSrc: "/assets/img/design/dormitorio/escritorio-1.webp",
+                        imgAlt: "Blanco",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 2, cardTitle: "Con detalle",
+                    image: {
+                        imgSlug: "con-detalle",
+                        imgSrc: "/assets/img/design/dormitorio/escritorio-2.webp",
+                        imgAlt: "Con detalle",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
             ],
         }
     ]

@@ -21,6 +21,22 @@
         }
     }
 
+    .subTitle {
+        font-family: var(--strong-font-Roboto-Regular);
+        font-size: var(--strong-font-xmedium);
+        font-weight: var(--strong-weight-400);
+        color: var(--strong-bluegray-1);
+        padding-left: 3.5rem;
+
+        @media (max-width:768px) {
+            padding-left: 2.5rem;
+        }
+
+        @media (max-width:480px) {
+            padding-left: 1.5rem;
+        }
+    }
+
     .buttons-subcategories {
         display: flex;
         justify-content: space-between;
