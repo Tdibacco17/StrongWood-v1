@@ -39,6 +39,16 @@ export const furnitureCocina: FurnitureTableDataInterface = {
                         imgProportionsY: 0.6651,
                     }
                 },
+                {
+                    cardId: 4, cardTitle: "Perfect sense",
+                    image: {
+                        imgSlug: "perfect-sense",
+                        imgSrc: "/assets/img/furniture/combinacionDeColores/perfectSens.webp",
+                        imgAlt: "Perfect sense",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
             ],
         }, {
             tableId: 2,

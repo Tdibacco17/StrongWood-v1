@@ -37,8 +37,26 @@ export const furnitureCamaIndividual: FurnitureTableDataInterface = {
             maxSelections: 1,
             askMeasure: false,
             cards: [
-                { cardId: 1, cardTitle: "90cm x 1,90cm" },
-                { cardId: 2, cardTitle: "100cm x 200cm" },
+                {
+                    cardId: 1, cardTitle: "90cm x 1,90cm",
+                    image: {
+                        imgSlug: "colchon",
+                        imgSrc: "/assets/img/furniture/medidas/colchon.webp",
+                        imgAlt: "Colchon",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 2, cardTitle: "100cm x 200cm",
+                    image: {
+                        imgSlug: "colchon",
+                        imgSrc: "/assets/img/furniture/medidas/colchon.webp",
+                        imgAlt: "Colchon",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
             ],
         }
     ]
@@ -80,12 +98,66 @@ export const furnitureCamaMatrimonial: FurnitureTableDataInterface = {
             maxSelections: 1,
             askMeasure: false,
             cards: [
-                { cardId: 1, cardTitle: "90cm x 190cm" },
-                { cardId: 2, cardTitle: "140cm x 190cm" },
-                { cardId: 3, cardTitle: "160cm x 190cm" },
-                { cardId: 4, cardTitle: "180cm x 190cm" },
-                { cardId: 5, cardTitle: "190cm x 200cm" },
-                { cardId: 6, cardTitle: "200cm x 200cm" },
+                {
+                    cardId: 1, cardTitle: "90cm x 190cm",
+                    image: {
+                        imgSlug: "colchon-1",
+                        imgSrc: "/assets/img/furniture/medidas/colchon.webp",
+                        imgAlt: "Colchon",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 2, cardTitle: "140cm x 190cm",
+                    image: {
+                        imgSlug: "colchon-1",
+                        imgSrc: "/assets/img/furniture/medidas/colchon.webp",
+                        imgAlt: "Colchon",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 3, cardTitle: "160cm x 190cm",
+                    image: {
+                        imgSlug: "colchon-1",
+                        imgSrc: "/assets/img/furniture/medidas/colchon.webp",
+                        imgAlt: "Colchon",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 4, cardTitle: "180cm x 190cm",
+                    image: {
+                        imgSlug: "colchon-1",
+                        imgSrc: "/assets/img/furniture/medidas/colchon.webp",
+                        imgAlt: "Colchon",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 5, cardTitle: "190cm x 200cm",
+                    image: {
+                        imgSlug: "colchon-1",
+                        imgSrc: "/assets/img/furniture/medidas/colchon.webp",
+                        imgAlt: "Colchon",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
+                {
+                    cardId: 6, cardTitle: "200cm x 200cm",
+                    image: {
+                        imgSlug: "colchon-1",
+                        imgSrc: "/assets/img/furniture/medidas/colchon.webp",
+                        imgAlt: "Colchon",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
             ],
         }
     ]
