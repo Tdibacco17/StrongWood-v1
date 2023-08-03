@@ -210,6 +210,16 @@ export const furnitureCocina: FurnitureTableDataInterface = {
                         imgProportionsY: 0.6651,
                     }
                 },
+                {
+                    cardId: 3, cardTitle: "Sin puertas",
+                    image: {
+                        imgSlug: "cocina-sin-isla",
+                        imgSrc: "/assets/img/furniture/isla/cocina/cocinaSinIsla.webp",
+                        imgAlt: "Cocina sin isla",
+                        imgProportionsX: 1.5024,
+                        imgProportionsY: 0.6651,
+                    }
+                },
             ],
         },
         {
