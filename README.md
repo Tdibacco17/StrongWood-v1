@@ -1,1 +1,1 @@
-#### Sitio en desarrollo: [www.strongwood.com.ar](https://strongwood-v1.vercel.app/)
+#### Sitio en desarrollo: [strongwood-v1.vercel.app](https://strongwood-v1.vercel.app/)
